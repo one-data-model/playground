@@ -2,19 +2,23 @@
   "info": {
     "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
-    "title": "OCF airflow",
+    "title": "odmObject airflow",
     "version": "20190530"
   },
 
   "odmObject": {
     "airflow": {
-      "desc": "",
+      "description": " airflow ",
       "name": "airflow",
       "odmProperty": {
         "automode": {
           "description": "The status of the automode feature, if on speed is set by the Device.",
           "name": "automode",
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "On",
+            "Off"
+          ],
         },
         "direction": {
           "description": "The directionality of the air flow, a value indicated by \"supporteddirections\".",
@@ -22,7 +26,7 @@
           "type": "string"
         },
         "range": {
-          "desc": "applies to the allowed values of speed",
+          "description": "applies to the allowed values of speed",
           "items": {
             "type": "integer"
           },
