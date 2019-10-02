@@ -14,13 +14,11 @@
         "automode": {
           "description": "The status of the automode feature, if on speed is set by the Device.",
           "name": "automode",
-          "optional": true,
           "type": "string"
         },
         "direction": {
           "description": "The directionality of the air flow, a value indicated by \"supporteddirections\".",
           "name": "direction",
-          "optional": true,
           "type": "string"
         },
         "range": {
@@ -29,7 +27,6 @@
             "type": "integer"
           },
           "name": "range",
-          "optional": false,
           "readOnly": true,
           "type": "array"
         },
@@ -46,11 +43,12 @@
             "uniqueItems": true
           },
           "name": "supporteddirections",
-          "optional": true,
           "readOnly": true,
           "type": "array"
         }
-      }
+      },
+      "odmRequired" : [ "0/odmProperties/speed", "0/odmProperties/range"]
+      
     }
   }
 }
