@@ -1,0 +1,33 @@
+{
+  "info": {
+    "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "odmObject foaming",
+    "version": "20190530"
+  },
+  "odmObject": {
+    "foaming": {
+      "description": "This odmObject describes the attributes associated with foaming. The Property \"foamstrength\" of the liquid is represented as an integer.\nThe foam strength is an integer, the range of which may be enforced by the presence of the Property \"range\".",
+      "name": "foaming",
+      "odmProperty": {
+        "foamstrength": {
+          "description": "The desired foaminess of the liquid.",
+          "name": "foamstrength",
+          "type": "integer"
+        },
+        "range": {
+          "description": "applies to the allowed values of speed",
+          "items": {
+            "type": "integer"
+          },
+          "name": "range",
+          "writable": false,
+          "type": "array"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/range"
+      ]
+    }
+  }
+}

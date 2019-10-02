@@ -1,0 +1,28 @@
+{
+  "info": {
+    "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "odmObject audio",
+    "version": "20190530"
+  },
+  "odmObject": {
+   "audio": {
+      "description": "This odmObject describes basic audio control functions.\nThe Property \"volume\" is an integer containing a percentage [0,100].\nA volume of 0 (zero) means no sound produced.\nA volume of 100 means maximum sound production.\nThe Property \"mute\" is implemented as a boolean.\nA mute value of true means that the device is muted (no audio).\nA mute value of false means that the device is not muted (audio).",
+      "name": "Audio",
+      "odmProperty": {
+        "mute": {
+          "description": "The mute setting of an audio rendering device.",
+          "name": "mute",
+          "type": "boolean"
+        },
+        "volume": {
+          "description": "The volume setting of an audio rendering device.",
+          "maximum": 100,
+          "minimum": 0,
+          "name": "volume",
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

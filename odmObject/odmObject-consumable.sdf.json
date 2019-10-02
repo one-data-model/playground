@@ -1,0 +1,45 @@
+{
+  "info": {
+    "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "odmObject consumable",
+    "version": "20190530"
+  },
+  "odmObject": {
+    "consumable": {
+      "desc": "This odmObject specifies a thing that can be consumed such as filter material, printer toner etc\nThe Propert \"typeofconsumable\" is an enumeration defining the thing being consumed as defined by the Smart Home Device Specification\nThe Property \"remaining\" is an integer capturing the percentatge remaining life\nThe Property \"orderpercentage\" is an integer capturing the percentage life at which replacement or replenishment is recommended by the manufacturer\nThe Property \"url\" is a string containing a URL at which further information may be obtained with respect to the consumable.",
+      "name": "consumable",
+      "odmProperty": {
+        "orderpercentage": {
+          "description": "The percentage at which re-ordering is recommended by the manufacturer.",
+          "maximum": 100,
+          "minimum": 0,
+          "name": "orderpercentage",
+          "writable": false,
+          "type": "integer"
+        },
+        "remaining": {
+          "description": "The percentage remaining lifespan.",
+          "maximum": 100,
+          "minimum": 0,
+          "name": "remaining",
+          "writable": false,
+          "type": "integer"
+        },
+        "typeofconsumable": {
+          "description": "The thing that is being consumed.",
+          "name": "typeofconsumable",
+          "writable": false,
+          "type": "string"
+        },
+        "url": {
+          "description": "The URL at which additional ordering information may be found.",
+          "format": "uri",
+          "name": "url",
+          "writable": false,
+          "type": "string"
+        }
+      }
+    }
+  }
+}

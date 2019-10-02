@@ -1,0 +1,35 @@
+{
+  "info": {
+    "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "odmObject door",
+    "version": "20190530"
+  },
+  "odmObject": {
+    "door": {
+      "description": "This odmObject describes the open state of the door.\nA door is modelled by means of openState (Open/Closed), openDuration (ISO 8601 Time), and openAlarm (boolean).\nFor Property \"openState\", the value 'Open' indicates the door is open.\nThe value 'Closed' indicates the door is closed.\nThe type of Property \"openDuration\" is an RFC Time encoded string.\nThe Property \"openAlarm\" value 'true' indicates that the open alarm is active.\nThe openAlarm value 'false' indicates that open alarm is not active.\nretrieves the state of the Door.",
+      "name": "door",
+      "odmProperty": {
+        "openAlarm": {
+          "description": "The state of the door open alarm.",
+          "name": "openAlarm",
+          "type": "boolean"
+        },
+        "openDuration": {
+          "description": "A string representing duration formatted as defined in ISO 8601. Allowable formats are: P[n]Y[n]M[n]DT[n]H[n]M[n]S, P[n]W, P[n]Y[n]-M[n]-DT[0-23]H[0-59]:M[0-59]:S, and P[n]W, P[n]Y[n]M[n]DT[0-23]H[0-59]M[0-59]S. P is mandatory, all other elements are optional, time elements must follow a T.",
+          "name": "openDuration",
+          "pattern": "^(P(?!$)([0-9]+Y)?([0-9]+M)?([0-9]+W)?([0-9]+D)?((T(?=[0-9]+[HMS])([0-9]+H)?([0-9]+M)?([0-9]+S)?)?))$|^(P[0-9]+W)$|^(P[0-9]{4})-(1[0-2]|0[1-9])-(3[0-1]|2[0-9]|1[0-9]|0[1-9])T(2[0-3]|1[0-9]|0[1-9]):([0-5][0-9]):([0-5][0-9])$|^(P[0-9]{4})(1[0-2]|0[1-9])(3[0-1]|2[0-9]|1[0-9]|0[1-9])T(2[0-3]|1[0-9]|0[1-9])([0-5][0-9])([0-5][0-9])$",
+          "type": "string"
+        },
+        "openState": {
+          "description": "The state of the door (open or closed).",
+
+          "name": "openState",
+          "writable": false,
+          "type": "string"
+        }
+      },
+      "x-problem": "uses external definition"
+    }
+  }
+}

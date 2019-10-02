@@ -1,0 +1,22 @@
+{
+  "info": {
+    "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "odmObject sensor.water",
+    "version": "20190530"
+  },
+  "odmObject": {
+    "sensor.water": {
+      "description": "This odmObject describes whether water has been sensed or not.\nThe Property \"value\" is a boolean.\nA value of 'true' means that water has been sensed.\nA value of 'false' means that water not been sensed.",
+      "name": "sensor.water",
+      "odmProperty": {
+        "value": {
+          "description": "The water sensor, true = sensed, false = not sensed.",
+          "name": "value",
+          "writable": false,
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

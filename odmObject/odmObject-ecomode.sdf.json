@@ -1,0 +1,50 @@
+{
+  "info": {
+    "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "odmObject ecomode",
+    "version": "20190530"
+  },
+  "odmObject": {
+    "ecomode": {
+      "description": "This odmObject specifies the supported and currently active Eco Mode of a Device\nThe Resource is a deriviative of the Mode Resource (mode) with a restriction that the population of supportedmodes and modes Properties is restricted to the set of values:\n\"disabled\",\"enabled\",\"notsupported\".\nThe adminforced Property indicates that the value has been set by another party (e.g. via some offboard Smart Energy interaction)\n",
+      "name": "ecomode",
+      "odmProperty": {
+        "adminforced": {
+          "description": "The indicator that the current mode of operation has been forced by admin action.",
+          "name": "adminforced",
+          "writable": false,
+          "type": "boolean"
+        },
+        "modes": {
+          "description": "The array of the currently active mode(s).",
+          "items": {
+            "enum": [
+              "disabled",
+              "enabled",
+              "notsupported"
+            ],
+            "type": "string"
+          },
+          "name": "modes",
+          "type": "array",
+          "uniqueItems": true
+        },
+        "supportedModes": {
+          "description": "The array of possible modes the device supports.",
+          "items": {
+            "enum": [
+              "disabled",
+              "enabled",
+              "notsupported"
+            ],
+            "type": "string"
+          },
+          "name": "supportedModes",
+          "writable": false,
+          "type": "array"
+        }
+      }
+    }
+  }
+}
