@@ -8,7 +8,7 @@
 
   "odmObject": {
     "temperature": {
-      "desc": "This odmObject describes a sensed or actuated Temperature value.\nThe Property \"temperature\" describes the current value measured. The unit of measurement for the \"temperature\" value is in Celcius.\n When the Property \"range\" is omitted the default is +/- MAXINT.",
+      "description": "This odmObject describes a sensed or actuated Temperature value.\nThe Property \"temperature\" describes the current value measured. The unit of measurement for the \"temperature\" value is in Celcius.\n When the Property \"range\" is omitted the default is +/- MAXINT.",
       "name": "temperature",
       "odmProperty": {
         "temperature": {
@@ -16,12 +16,13 @@
           "type": "number"
         },       
         "range": {
-          "desc": "applies to the range of allowed values of temperature",
+          "comment" : "will be an type that can be referenced",
+          "description": "applies to the range of allowed values of temperature",
           "items": {
             "type": "number"
           },
           "name": "range",
-          "readOnly": true,
+          "writeable": false,
           "type": "array"
         }
       },
