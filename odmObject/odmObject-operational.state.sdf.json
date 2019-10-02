@@ -1,0 +1,66 @@
+{
+  "info": {
+    "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "odmObject Mode",
+    "version": "20190530"
+  },
+  "odmObject": {
+      "operational.state": {
+      "name": "operational state",
+      "odmProperty": {
+        "currentJobState": {
+          "description": "Array of the currently active jobs(s)",
+          "name": "currentJobState",
+          "type": "string"
+        },
+        "currentMachineState": {
+          "description": "Array of the currently active mode(s)",
+          "name": "currentMachineState",
+          "type": "string"
+        },
+        "jobStates": {
+          "description": "Array of possible job the device supports.",
+          "items": {
+            "type": "string"
+          },
+          "name": "jobStates",
+          "writable": false,
+          "type": "array"
+        },
+        "machineStates": {
+          "description": "Array of possible states the device supports.",
+          "items": {
+            "type": "string"
+          },
+          "name": "machineStates",
+          "writable": false,
+          "type": "array"
+        },
+        "progressPercentage": {
+          "description": "The percentage completeness of the current jobState.",
+          "maximum": 100,
+          "minimum": 0,
+          "name": "progressPercentage",
+          "writable": false,
+          "type": "integer"
+        },
+        "remainingTime": {
+          "description": "remaining time of the operation",
+          "name": "remainingTime",
+          "pattern": "^(P(?!$)([0-9]+Y)?([0-9]+M)?([0-9]+W)?([0-9]+D)?((T(?=[0-9]+[HMS])([0-9]+H)?([0-9]+M)?([0-9]+S)?)?))$|^(P[0-9]+W)$|^(P[0-9]{4})-(1[0-2]|0[1-9])-(3[0-1]|2[0-9]|1[0-9]|0[1-9])T(2[0-3]|1[0-9]|0[1-9]):([0-5][0-9]):([0-5][0-9])$|^(P[0-9]{4})(1[0-2]|0[1-9])(3[0-1]|2[0-9]|1[0-9]|0[1-9])T(2[0-3]|1[0-9]|0[1-9])([0-5][0-9])([0-5][0-9])$",
+          "writable": false,
+          "type": "string"
+        },
+        "runningTime": {
+          "description": "running time of the operation",
+          "name": "running time",
+          "pattern": "^(P(?!$)([0-9]+Y)?([0-9]+M)?([0-9]+W)?([0-9]+D)?((T(?=[0-9]+[HMS])([0-9]+H)?([0-9]+M)?([0-9]+S)?)?))$|^(P[0-9]+W)$|^(P[0-9]{4})-(1[0-2]|0[1-9])-(3[0-1]|2[0-9]|1[0-9]|0[1-9])T(2[0-3]|1[0-9]|0[1-9]):([0-5][0-9]):([0-5][0-9])$|^(P[0-9]{4})(1[0-2]|0[1-9])(3[0-1]|2[0-9]|1[0-9]|0[1-9])T(2[0-3]|1[0-9]|0[1-9])([0-5][0-9])([0-5][0-9])$",
+          "writable": false,
+          "type": "string"
+        }
+      },
+      "odmRequired" : [ "0/odmProperty/currentMachineState", "0/odmProperty/machineStates" ]
+    }
+  }
+}
