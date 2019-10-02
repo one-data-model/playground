@@ -1,0 +1,28 @@
+{
+  "info": {
+    "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Heating zone",
+    "version": "20190530"
+  },
+  "odmObject": {
+      "heatingzone": {
+      "desc": "This odmObject provides information about the status of a (single) heating zone of a Cook-Top.\nIt describes the case of a Cook-Top whose zones can be activated dynamically (i.e. the device implements pot recognition).\nThe Property \"maxheatinglevel\" defines the max level for the heating zone\nThe Property \"heatinglevel\" is the current heating level of the zone\n  For each element, the value range is from 0 (indication that the zone is not heating) to \"maxheatinglevel\".",
+      "name": "Heating Zone",
+      "odmProperty": {
+        "heatinglevel": {
+          "description": "The current heating level for the zone.",
+          "name": "heating level",
+          "writable": false,
+          "type": "integer"
+        },
+        "maxheatinglevel": {
+          "description": "The maximum heating level for the zone.",
+          "name": "maximum heating level",
+          "writable": false,
+          "type": "integer"
+        }
+      }
+    }
+  }
+}
