@@ -1,0 +1,31 @@
+{
+  "info": {
+    "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Humidity",
+    "version": "20190530"
+  },
+  "odmObject": {
+      "humidity": {
+      "desc": "This odmObject describes a sensed or desired humidity.\nThe Property \"humidity\" is an integer describing the percentage measured relative humidity.\nThe Property \"desiredHumidity\" is an integer showing the desired target relative humidity.",
+      "name": "humidity",
+      "odmProperty": {
+        "desiredHumidity": {
+          "description": "The desired value for humidity.",
+          "maximum": 100,
+          "minimum": 0,
+          "name": "desired Humidity",
+          "type": "integer"
+        },
+        "humidity": {
+          "description": "The current sensed value for humidity.",
+          "maximum": 100,
+          "minimum": 0,
+          "name": "Humidity",
+          "writable": false,
+          "type": "integer"
+        }
+      }
+    }
+  }
+}
