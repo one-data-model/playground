@@ -1,0 +1,56 @@
+{
+  "info": {
+    "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "OCF airflow",
+    "version": "20190530"
+  },
+
+  "odmObject": {
+    "airflow": {
+      "desc": "",
+      "name": "airflow",
+      "odmProperty": {
+        "automode": {
+          "description": "The status of the automode feature, if on speed is set by the Device.",
+          "name": "automode",
+          "optional": true,
+          "type": "string"
+        },
+        "direction": {
+          "description": "The directionality of the air flow, a value indicated by \"supporteddirections\".",
+          "name": "direction",
+          "optional": true,
+          "type": "string"
+        },
+        "range": {
+          "desc": "applies to the allowed values of speed",
+          "items": {
+            "type": "integer"
+          },
+          "name": "range",
+          "optional": false,
+          "readOnly": true,
+          "type": "array"
+        },
+        "speed": {
+          "description": "The current speed level.",
+          "name": "speed",
+          "type": "integer"
+        },
+        "supporteddirections": {
+          "description": "The array of possible direction settings for this instance of the Resource Type.",
+          "items": {
+            "minItems": 1,
+            "type": "string",
+            "uniqueItems": true
+          },
+          "name": "supporteddirections",
+          "optional": true,
+          "readOnly": true,
+          "type": "array"
+        }
+      }
+    }
+  }
+}
