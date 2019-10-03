@@ -28,7 +28,7 @@
           "type": "string"
         }
       },
-      "x-problem": "full should not be allowed to set"
+       "odmRequired": ["0/odmProperty/startTime"]
     }
   }
 }
