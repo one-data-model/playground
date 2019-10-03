@@ -14,7 +14,7 @@
           "description": "The percentage at which re-ordering is recommended by the manufacturer.",
           "maximum": 100,
           "minimum": 0,
-          "name": "orderpercentage",
+          "name": "order percentage",
           "writable": false,
           "type": "integer"
         },
@@ -28,7 +28,7 @@
         },
         "typeofconsumable": {
           "description": "The thing that is being consumed.",
-          "name": "typeofconsumable",
+          "name": "type of consumable",
           "writable": false,
           "type": "string"
         },
@@ -39,7 +39,8 @@
           "writable": false,
           "type": "string"
         }
-      }
+      },
+      "odmRequired" : ["0/odmProperty/typeofconsumable", "0/odmProperty/remaining"]
     }
   }
 }
