@@ -51,7 +51,7 @@
           "type": "array"
         }
       },
-      "odmRequired" : [ "0/odmProperties/speed", "0/odmProperties/range"]
+      "odmRequired" : [ "0/odmProperty/speed", "0/odmProperty/range"]
       
     }
   }

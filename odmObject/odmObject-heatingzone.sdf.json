@@ -23,7 +23,7 @@
           "type": "integer"
         }
       },
-      "odmRequired" : ["0/odmProperty/heatinglevel", "0/odmProperty/maxheatinglevel"]
+      "odmRequired": [ "0/odmProperty/heatinglevel", "0/odmProperty/maxheatinglevel" ]
     }
   }
 }

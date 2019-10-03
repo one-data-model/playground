@@ -14,7 +14,7 @@
           "description": "The desired value for humidity.",
           "maximum": 100,
           "minimum": 0,
-          "name": "desired Humidity",
+          "name": "desired humidity",
           "type": "integer"
         },
         "humidity": {

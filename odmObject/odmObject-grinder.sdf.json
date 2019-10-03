@@ -24,7 +24,8 @@
           "type": "integer"
         }
       },
-      "odmRequired" : ["0/odmProperty/coarseness"]
+
+      "odmRequired": [ "0/odmProperty/coarseness" ]
     }
   }
 }

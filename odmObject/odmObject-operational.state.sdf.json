@@ -11,12 +11,12 @@
       "odmProperty": {
         "currentJobState": {
           "description": "Array of the currently active jobs(s)",
-          "name": "currentJobState",
+          "name": "current job state",
           "type": "string"
         },
         "currentMachineState": {
           "description": "Array of the currently active mode(s)",
-          "name": "currentMachineState",
+          "name": "current machine state",
           "type": "string"
         },
         "jobStates": {
@@ -24,7 +24,7 @@
           "items": {
             "type": "string"
           },
-          "name": "jobStates",
+          "name": "job states",
           "writable": false,
           "type": "array"
         },
@@ -33,7 +33,7 @@
           "items": {
             "type": "string"
           },
-          "name": "machineStates",
+          "name": "machine states",
           "writable": false,
           "type": "array"
         },
@@ -41,13 +41,13 @@
           "description": "The percentage completeness of the current jobState.",
           "maximum": 100,
           "minimum": 0,
-          "name": "progressPercentage",
+          "name": "progress percentage",
           "writable": false,
           "type": "integer"
         },
         "remainingTime": {
           "description": "remaining time of the operation",
-          "name": "remainingTime",
+          "name": "remaining time",
           "pattern": "^(P(?!$)([0-9]+Y)?([0-9]+M)?([0-9]+W)?([0-9]+D)?((T(?=[0-9]+[HMS])([0-9]+H)?([0-9]+M)?([0-9]+S)?)?))$|^(P[0-9]+W)$|^(P[0-9]{4})-(1[0-2]|0[1-9])-(3[0-1]|2[0-9]|1[0-9]|0[1-9])T(2[0-3]|1[0-9]|0[1-9]):([0-5][0-9]):([0-5][0-9])$|^(P[0-9]{4})(1[0-2]|0[1-9])(3[0-1]|2[0-9]|1[0-9]|0[1-9])T(2[0-3]|1[0-9]|0[1-9])([0-5][0-9])([0-5][0-9])$",
           "writable": false,
           "type": "string"

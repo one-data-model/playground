@@ -1,0 +1,34 @@
+{
+  "info": {
+    "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "odmObject time.period",
+    "version": "20190530"
+  },
+  "odmObject": {
+    "time.period": {
+      "description": "This odmObject describes the time period over which any additionally provided information is derived or bounded.\nThe Property \"startTime\" and \"stopTime\" are RFC3339 encoded strings. The Property \"startTime\" must be present.\nThe interval is the interval of the time period in minutes, if present this value must be no less than 1 minute.\nThe Property \"stoptime\" and \"interval\" are mutually exclusive; both Properties cannot be present in a Resource instance.\nThe Resource defines a time period for information retrieval, action or other behaviour.",
+      "name": "time.period",
+      "odmProperty": {
+        "interval": {
+          "description": "The time interval in minutes after the \"startTime\", if present the Property \"stopTime\" cannot be present.",
+          "name": "interval",
+          "type": "integer"
+        },
+        "startTime": {
+          "description": "The start time for the time period.",
+          "format": "date-time",
+          "name": "start time",
+          "type": "string"
+        },
+        "stopTime": {
+          "description": "The stop time for the time period, if present the Property \"interval\" cannot be present.",
+          "format": "date-time",
+          "name": "stop time",
+          "type": "string"
+        }
+      },
+       "odmRequired": ["0/odmProperty/startTime"]
+    }
+  }
+}
