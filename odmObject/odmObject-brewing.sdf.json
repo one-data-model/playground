@@ -6,13 +6,13 @@
     "version": "20190530"
   },
   "odmObject": {
-    "oic.r.brewing": {
+    "brewing": {
       "description": "This odmObject describes the attributes associated with brewing. This resource is used for configuration only. The Operation of the Device is handled independently of this Resource. The amount requested is in ml. The strength of a brewed drink is an integer, the range of which may be enforced by the presence of a strengthrange Property.\n",
-      "name": "oic.r.brewing",
+      "name": "brewing",
       "odmProperty": {
         "amountrequested": {
           "description": "The amount requested in ml.",
-          "name": "amountrequested",
+          "name": "amount requested",
           "type": "integer"
         },
         "strength": {
@@ -26,11 +26,12 @@
           },
           "maxItems": 2,
           "minItems": 2,
-          "name": "strengthrange",
+          "name": "strength range",
           "writable": false,
           "type": "array"
         }
-      }
+      },
+      "odmRequired" : ["0/odmProperty/amountrequested"]
     }
   }
 }
