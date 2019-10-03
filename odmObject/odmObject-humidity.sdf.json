@@ -24,8 +24,9 @@
           "name": "Humidity",
           "writable": false,
           "type": "integer"
-        }
-      }
+       }
+      },
+      "odmRequired" : ["0/odmProperty/desiredHumidity", "0/odmProperty/humidity"]
     }
   }
 }
