@@ -22,7 +22,8 @@
           "name": "volume",
           "type": "integer"
         }
-      }
+      },
+      "odmRequired": ["0/odmProperties/mute", "0/odmProperties/volume"]
     }
   }
 }
