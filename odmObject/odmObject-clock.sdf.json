@@ -22,7 +22,8 @@
           "name": "datetime",
           "type": "string"
         }
-      }
+      },
+      "odmRequired": ["0/odmProperty/datetime"]
     }
   }
 }
