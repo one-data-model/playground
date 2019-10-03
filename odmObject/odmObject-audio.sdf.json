@@ -23,7 +23,7 @@
           "type": "integer"
         }
       },
-      "odmRequired": ["0/odmProperties/mute", "0/odmProperties/volume"]
+      "odmRequired": ["0/odmProperty/mute", "0/odmProperty/volume"]
     }
   }
 }

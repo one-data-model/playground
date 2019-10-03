@@ -12,7 +12,7 @@
       "odmProperty": {
         "foamstrength": {
           "description": "The desired foaminess of the liquid.",
-          "name": "foamstrength",
+          "name": "foam strength",
           "type": "integer"
         },
         "range": {
@@ -25,9 +25,7 @@
           "type": "array"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/range"
-      ]
+      "odmRequired": [ "0/odmProperty/range" ]
     }
   }
 }

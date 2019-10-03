@@ -45,7 +45,7 @@
           "type": "array"
         }
       },
-      "odmRequired": ["0/odmProperties/supportedModes", "0/odmProperties/modes"]
+      "odmRequired": ["0/odmProperty/supportedModes", "0/odmProperty/modes"]
     }
   }
 }

@@ -25,15 +25,16 @@
         },
         "rapidCool": {
           "description": "Indicates whether the unit has a rapid cool capability active.",
-          "name": "rapidCool",
+          "name": "rapid cool",
           "type": "boolean"
         },
         "rapidFreeze": {
           "description": "Indicates whether the unit has a rapid freeze capability active.",
-          "name": "rapidFreeze",
+          "name": "rapid freeze",
           "type": "boolean"
         }
-      }
+      },
+      "x-problem": "Uses one of odmRequired, i.e. one of defrost, filter, rapidCool, or rapidFreeze"
     }
   }
 }

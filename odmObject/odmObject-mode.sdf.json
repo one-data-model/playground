@@ -23,7 +23,7 @@
           "items": {
             "type": "string"
           },
-          "name": "supportedModes",
+          "name": "supported modes",
           "writable": false,
           "type": "array"
         }

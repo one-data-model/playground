@@ -22,7 +22,8 @@
           "writable": false,
           "type": "number"
         }
-      }
+      },
+      "odmRequired": ["0/odmProperties/power", "0/odmProperties/energy"]
     }
   }
 }

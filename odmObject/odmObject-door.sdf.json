@@ -28,7 +28,7 @@
           "type": "string"
         }
       },
-      "odmRequired": ["0/odmProperties/openState"],
+      "odmRequired": ["0/odmProperty/openState"],
       "x-problem": "1: uses external definition, 2: post has openAlarm as odmRequired"
     }
   }
