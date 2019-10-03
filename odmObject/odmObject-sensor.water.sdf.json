@@ -8,7 +8,7 @@
   "odmObject": {
     "sensor.water": {
       "description": "This odmObject describes whether water has been sensed or not.\nThe Property \"value\" is a boolean.\nA value of 'true' means that water has been sensed.\nA value of 'false' means that water not been sensed.",
-      "name": "sensor.water",
+      "name": "sensor water",
       "odmProperty": {
         "value": {
           "description": "The water sensor, true = sensed, false = not sensed.",
@@ -16,7 +16,8 @@
           "writable": false,
           "type": "boolean"
         }
-      }
+      },
+      "odmRequired" : ["0/odmProperty/value"]
     }
   }
 }

@@ -15,9 +15,7 @@
           "type": "boolean"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/value"
-      ]
+      "odmRequired": [ "0/odmProperty/value" ]
     }
   }
 }

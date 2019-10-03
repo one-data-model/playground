@@ -18,13 +18,13 @@
         "startTime": {
           "description": "The start time for the time period.",
           "format": "date-time",
-          "name": "startTime",
+          "name": "start time",
           "type": "string"
         },
         "stopTime": {
           "description": "The stop time for the time period, if present the Property \"interval\" cannot be present.",
           "format": "date-time",
-          "name": "stopTime",
+          "name": "stop time",
           "type": "string"
         }
       },
