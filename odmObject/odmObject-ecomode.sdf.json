@@ -12,7 +12,7 @@
       "odmProperty": {
         "adminforced": {
           "description": "The indicator that the current mode of operation has been forced by admin action.",
-          "name": "adminforced",
+          "name": "admin forced",
           "writable": false,
           "type": "boolean"
         },
@@ -40,11 +40,12 @@
             ],
             "type": "string"
           },
-          "name": "supportedModes",
+          "name": "supported modes",
           "writable": false,
           "type": "array"
         }
-      }
+      },
+      "odmRequired": ["0/odmProperties/supportedModes", "0/odmProperties/modes"]
     }
   }
 }

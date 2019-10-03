@@ -17,9 +17,9 @@
           "type": "number"
         },
         "datetime": {
-          "description": "Rhe date time using RFC3339 datetime format (e.g: 2007-04-05T14:30:00Z, 2007-04-05T14:30:00+09:00).",
+          "description": "The date time using RFC3339 datetime format (e.g: 2007-04-05T14:30:00Z, 2007-04-05T14:30:00+09:00).",
           "format": "date-time",
-          "name": "datetime",
+          "name": "date time",
           "type": "string"
         }
       },

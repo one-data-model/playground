@@ -12,24 +12,24 @@
       "odmProperty": {
         "openAlarm": {
           "description": "The state of the door open alarm.",
-          "name": "openAlarm",
+          "name": "open alarm",
           "type": "boolean"
         },
         "openDuration": {
           "description": "A string representing duration formatted as defined in ISO 8601. Allowable formats are: P[n]Y[n]M[n]DT[n]H[n]M[n]S, P[n]W, P[n]Y[n]-M[n]-DT[0-23]H[0-59]:M[0-59]:S, and P[n]W, P[n]Y[n]M[n]DT[0-23]H[0-59]M[0-59]S. P is mandatory, all other elements are optional, time elements must follow a T.",
-          "name": "openDuration",
+          "name": "open duration",
           "pattern": "^(P(?!$)([0-9]+Y)?([0-9]+M)?([0-9]+W)?([0-9]+D)?((T(?=[0-9]+[HMS])([0-9]+H)?([0-9]+M)?([0-9]+S)?)?))$|^(P[0-9]+W)$|^(P[0-9]{4})-(1[0-2]|0[1-9])-(3[0-1]|2[0-9]|1[0-9]|0[1-9])T(2[0-3]|1[0-9]|0[1-9]):([0-5][0-9]):([0-5][0-9])$|^(P[0-9]{4})(1[0-2]|0[1-9])(3[0-1]|2[0-9]|1[0-9]|0[1-9])T(2[0-3]|1[0-9]|0[1-9])([0-5][0-9])([0-5][0-9])$",
           "type": "string"
         },
         "openState": {
           "description": "The state of the door (open or closed).",
-
-          "name": "openState",
+          "name": "open state",
           "writable": false,
           "type": "string"
         }
       },
-      "x-problem": "uses external definition"
+      "odmRequired": ["0/odmProperties/openState"],
+      "x-problem": "1: uses external definition, 2: post has openAlarm as odmRequired"
     }
   }
 }
