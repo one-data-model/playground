@@ -1,0 +1,65 @@
+{
+  "info": {
+    "title": "OMA LwM2M Illuminance (Object ID 3301)",
+    "version": "20191002",
+    "copyright": "Copyright (c) 2018 IPSO.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+  },
+  "namespace": {
+    "lwm2m": "http://example.com/lwm2m/odm"
+  },
+  "defaultNamespace": "lwm2m",
+  "odmObject": {
+    "Illuminance": {
+      "name": "Illuminance",
+      "description": "Illuminance sensor, example units = lx",
+      "odmProperty": {
+        "Sensor_Value": {
+          "name": "Sensor Value",
+          "description": "The current value of the luminosity sensor.",
+          "writeable": false,
+          "type": "number"
+        },
+        "Min_Measured_Value": {
+          "name": "Min Measured Value",
+          "description": "The minimum value measured by the sensor since power ON or reset",
+          "writeable": false,
+          "type": "number"
+        },
+        "Max_Measured_Value": {
+          "name": "Max Measured Value",
+          "description": "The maximum value measured by the sensor since power ON or reset",
+          "writeable": false,
+          "type": "number"
+        },
+        "Min_Range_Value": {
+          "name": "Min Range Value",
+          "description": "The minimum value that can be measured by the sensor",
+          "writeable": false,
+          "type": "number"
+        },
+        "Max_Range_Value": {
+          "name": "Max Range Value",
+          "description": "The maximum value that can be measured by the sensor",
+          "writeable": false,
+          "type": "number"
+        },
+        "Sensor_Units": {
+          "name": "Sensor Units",
+          "description": "Measurement Units Definition.",
+          "writeable": false,
+          "type": "string"
+        }
+      },
+      "odmAction": {
+        "Reset_Min_and_Max_Measured_Values": {
+          "name": "Reset Min and Max Measured Values",
+          "description": "Reset the Min and Max Measured Values to Current Value"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/Sensor_Value"
+      ]
+    }
+  }
+}

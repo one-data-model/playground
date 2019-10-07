@@ -1,0 +1,142 @@
+{
+  "info": {
+    "title": "OMA LwM2M Power Measurement (Object ID 3305)",
+    "version": "20191002",
+    "copyright": "Copyright (c) 2018 IPSO.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+  },
+  "namespace": {
+    "lwm2m": "http://example.com/lwm2m/odm"
+  },
+  "defaultNamespace": "lwm2m",
+  "odmObject": {
+    "Power_Measurement": {
+      "name": "Power Measurement",
+      "description": "This IPSO object should be used over a power measurement sensor to report a remote power measurement.  It also provides resources for minimum/maximum measured values and the minimum/maximum range for both active and reactive power. Il also provides resources for cumulative energy, calibration, and the power factor.",
+      "odmProperty": {
+        "Instantaneous_active_power": {
+          "name": "Instantaneous active power",
+          "description": "The current active power",
+          "writeable": false,
+          "type": "number",
+          "units": "W"
+        },
+        "Min_Measured_active_power": {
+          "name": "Min Measured active power",
+          "description": "The minimum active power measured by the sensor since it is ON",
+          "writeable": false,
+          "type": "number",
+          "units": "W"
+        },
+        "Max_Measured_active_power": {
+          "name": "Max Measured active power",
+          "description": "The maximum active power measured by the sensor since it is ON",
+          "writeable": false,
+          "type": "number",
+          "units": "W"
+        },
+        "Min_Range_active_power": {
+          "name": "Min Range active power",
+          "description": "The minimum active power that can be measured by the sensor",
+          "writeable": false,
+          "type": "number",
+          "units": "W"
+        },
+        "Max_Range_active_power": {
+          "name": "Max Range active power",
+          "description": "The maximum active power that can be measured by the sensor",
+          "writeable": false,
+          "type": "number",
+          "units": "W"
+        },
+        "Cumulative_active_power": {
+          "name": "Cumulative active power",
+          "description": "The cumulative active power since the last cumulative energy reset or device start",
+          "writeable": false,
+          "type": "number",
+          "units": "Wh"
+        },
+        "Active_Power_Calibration": {
+          "name": "Active Power Calibration",
+          "description": "Request an active power calibration by writing the value of a calibrated load.",
+          "readable": false,
+          "type": "number",
+          "units": "W"
+        },
+        "Instantaneous_reactive_power": {
+          "name": "Instantaneous reactive power",
+          "description": "The current reactive power",
+          "writeable": false,
+          "type": "number",
+          "units": "var"
+        },
+        "Min_Measured_reactive_power": {
+          "name": "Min Measured reactive power",
+          "description": "The minimum reactive power measured by the sensor since it is ON",
+          "writeable": false,
+          "type": "number",
+          "units": "var"
+        },
+        "Max_Measured_reactive_power": {
+          "name": "Max Measured reactive power",
+          "description": "The maximum reactive power measured by the sensor since it is ON",
+          "writeable": false,
+          "type": "number",
+          "units": "var"
+        },
+        "Min_Range_reactive_power": {
+          "name": "Min Range reactive power",
+          "description": "The minimum active power that can be measured by the sensor",
+          "writeable": false,
+          "type": "number",
+          "units": "var"
+        },
+        "Max_Range_reactive_power": {
+          "name": "Max Range reactive power",
+          "description": "The maximum reactive power that can be measured by the sensor",
+          "writeable": false,
+          "type": "number",
+          "units": "var"
+        },
+        "Cumulative_reactive_power": {
+          "name": "Cumulative reactive power",
+          "description": "The cumulative reactive power since the last cumulative energy reset or device start",
+          "writeable": false,
+          "type": "number",
+          "units": "varh"
+        },
+        "Reactive_Power_Calibration": {
+          "name": "Reactive Power Calibration",
+          "description": "Request a reactive power calibration by writing the value of a calibrated load.",
+          "readable": false,
+          "type": "number",
+          "units": "var"
+        },
+        "Power_factor": {
+          "name": "Power factor",
+          "description": "If applicable, the power factor of the current consumption.",
+          "writeable": false,
+          "type": "number"
+        },
+        "Current_Calibration": {
+          "name": "Current Calibration",
+          "description": "Read or Write the current calibration coefficient",
+          "type": "number"
+        }
+      },
+      "odmAction": {
+        "Reset_Cumulative_energy": {
+          "name": "Reset Cumulative energy",
+          "description": "Reset both cumulative active/reactive power"
+        },
+        "Reset_Min_and_Max_Measured_Values": {
+          "name": "Reset Min and Max Measured Values",
+          "description": "Reset the Min and Max Measured Values to Current Value"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/Instantaneous_active_power"
+      ]
+    }
+  }
+}

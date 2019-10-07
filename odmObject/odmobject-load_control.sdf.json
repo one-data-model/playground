@@ -1,0 +1,59 @@
+{
+  "info": {
+    "title": "OMA LwM2M Load Control (Object ID 3310)",
+    "version": "20191002",
+    "copyright": "Copyright (c) 2018 IPSO.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+  },
+  "namespace": {
+    "lwm2m": "http://example.com/lwm2m/odm"
+  },
+  "defaultNamespace": "lwm2m",
+  "odmObject": {
+    "Load_Control": {
+      "name": "Load Control",
+      "description": "This Object is used for demand-response load control and other load control in automation application (not limited to power).",
+      "odmProperty": {
+        "Event_Identifier": {
+          "name": "Event Identifier",
+          "description": "The event identifier as a string.",
+          "type": "string"
+        },
+        "Start_Time": {
+          "name": "Start Time",
+          "description": "Time when the load control event will start started.",
+          "subtype": "unixtime"
+        },
+        "Duration_In_Min": {
+          "name": "Duration In Min",
+          "description": "The duration of the load control event.",
+          "type": "integer",
+          "units": "min"
+        },
+        "Criticality_Level": {
+          "name": "Criticality Level",
+          "description": "The criticality of the event.  The device receiving the event will react in an appropriate fashion for the device.",
+          "type": "integer"
+        },
+        "Avg_Load_AdjPct": {
+          "name": "Avg Load AdjPct",
+          "description": "Defines the maximum energy usage of the receivng device, as a percentage of the device's normal maximum energy usage.",
+          "type": "integer",
+          "units": "%"
+        },
+        "Duty_Cycle": {
+          "name": "Duty Cycle",
+          "description": "Defines the duty cycle for the load control event, i.e, what percentage of time the receiving device is allowed to be on.",
+          "type": "integer",
+          "units": "%"
+        }
+      },
+      "odmAction": {},
+      "odmRequired": [
+        "0/odmProperty/Event_Identifier",
+        "0/odmProperty/Start_Time",
+        "0/odmProperty/Duration_In_Min"
+      ]
+    }
+  }
+}
