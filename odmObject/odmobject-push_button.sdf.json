@@ -1,0 +1,41 @@
+{
+  "info": {
+    "title": "OMA LwM2M Push button (Object ID 3347)",
+    "version": "20191002",
+    "copyright": "Copyright (c) 2018 IPSO.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+  },
+  "namespace": {
+    "lwm2m": "http://example.com/lwm2m/odm"
+  },
+  "defaultNamespace": "lwm2m",
+  "odmObject": {
+    "Push_button": {
+      "name": "Push button",
+      "description": "This IPSO object is used to report the state of a momentary action push button control and to count the number of times the control has been operated since the last observation.",
+      "odmProperty": {
+        "Digital_Input_State": {
+          "name": "Digital Input State",
+          "description": "The current state of a digital input.",
+          "writeable": false,
+          "type": "boolean"
+        },
+        "Digital_Input_Counter": {
+          "name": "Digital Input Counter",
+          "description": "The number of times the input transitions from 0 to 1.",
+          "writeable": false,
+          "type": "integer"
+        },
+        "Application_Type": {
+          "name": "Application Type",
+          "description": "The application type of the sensor or actuator as a string depending on the use case.",
+          "type": "string"
+        }
+      },
+      "odmAction": {},
+      "odmRequired": [
+        "0/odmProperty/Digital_Input_State"
+      ]
+    }
+  }
+}

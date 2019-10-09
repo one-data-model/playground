@@ -1,0 +1,39 @@
+{
+  "info": {
+    "title": "OMA LwM2M Digital Output (Object ID 3201)",
+    "version": "20191002",
+    "copyright": "Copyright (c) 2018 IPSO.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+  },
+  "namespace": {
+    "lwm2m": "http://example.com/lwm2m/odm"
+  },
+  "defaultNamespace": "lwm2m",
+  "odmObject": {
+    "Digital_Output": {
+      "name": "Digital Output",
+      "description": "Generic digital output for non-specific actuators",
+      "odmProperty": {
+        "Digital_Output_State": {
+          "name": "Digital Output State",
+          "description": "The current state of a digital output.",
+          "type": "boolean"
+        },
+        "Digital_Output_Polarity": {
+          "name": "Digital Output Polarity",
+          "description": "The polarity of a digital ouput as a Boolean (0 = Normal, 1= Reversed).",
+          "type": "boolean"
+        },
+        "Application_Type": {
+          "name": "Application Type",
+          "description": "The application type of the output as a string, for instance, “LED”",
+          "type": "string"
+        }
+      },
+      "odmAction": {},
+      "odmRequired": [
+        "0/odmProperty/Digital_Output_State"
+      ]
+    }
+  }
+}
