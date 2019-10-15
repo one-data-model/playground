@@ -2,13 +2,9 @@
   "info": {
     "title": "OMA LwM2M Set Point (Object ID 3308)",
     "version": "20191002",
-    "copyright": "Copyright (c) 2018 IPSO.",
+    "copyright": "Copyright (c) 2018, 2019 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "namespace": {
-    "lwm2m": "http://example.com/lwm2m/odm"
-  },
-  "defaultNamespace": "lwm2m",
   "odmObject": {
     "Set_Point": {
       "name": "Set Point",
