@@ -1,0 +1,167 @@
+{
+  "info": {
+    "title": "Example ODM model for a relatively simple composed thing using\n    IPSO Smart Object Components", 
+    "version": "20190524", 
+    "copyright": "no copyright", 
+    "license": "not licensed"
+  }, 
+  "namespace": {
+    "ex": "http://example.com/"
+  }, 
+  "defaultnamespace": "ex", 
+  "odmProduct": {
+    "SKU_19934774": {
+      "productTypeListing": "Compound Vacuum Gauge", 
+      "required": [
+        { "$ref": "0/odmObject/3300~10" }
+      ],
+      "odmObject": {
+        "3300/0": {
+          "type": {
+            "$ref": "#/odmObject/genericSensor"
+          }, 
+          "odmProperty": {
+            "minimumRange": {
+              "const": -120000
+            }, 
+            "maximumRange": {
+              "const": 120000
+            }, 
+            "applicationType": {
+              "const": "Vacuum Gauge"
+            }, 
+            "sensorType": {
+              "const": "absolutePressure"
+            }, 
+            "units": {
+              "const": "Pa"
+            }
+          }
+        }, 
+        "3300/1": {
+          "type": {
+            "$ref": "#/odmObject/genericSensor"
+          }, 
+          "odmProperty": {
+            "minimumRange": {
+              "const": 0
+            }, 
+            "maximumRange": {
+              "const": 20000
+            }, 
+            "applicationType": {
+              "const": "Vacuum Gauge"
+            }, 
+            "sensorType": {
+              "const": "vacuum"
+            }, 
+            "units": {
+              "const": "micron"
+            }
+          }
+        }
+      }
+    }
+  }, 
+  "odmObject": {
+    "genericSensor": {
+      "id": 3300, 
+      "required": [
+        { "$ref": "0/odmProperty/sensorValue" }
+      ],
+      "odmProperty": {
+        "sensorValue": {
+          "odmType": {
+            "$ref": "#/odmProperty/sensorValue"
+          }
+        }, 
+        "minimumMeasuredValue": {
+          "odmType": {
+            "$ref": "#/odmProperty/minimumMeasuredValue"
+          }
+        }, 
+        "maximumMeasuredValue": {
+          "odmType": {
+            "$ref": "#/odmProperty/maximumMeasuredValue"
+          }
+        }, 
+        "minimumRangeValue": {
+          "odmType": {
+            "$ref": "#/odmProperty/minimumRangeValue"
+          }
+        }, 
+        "maximumRangeValue": {
+          "odmType": {
+            "$ref": "#/odmProperty/maximumRangeValue"
+          }
+        }, 
+        "applicationType": {
+          "odmType": {
+            "$ref": "#/odmProperty/applicationType"
+          }
+        }, 
+        "sensorType": {
+          "odmType": {
+            "$ref": "#/odmProperty/sensorType"
+          }
+        }, 
+        "units": {
+          "odmType": {
+            "$ref": "#/odmProperty/units"
+          }
+        }
+      }, 
+      "odmAction": {
+        "resetMinMax": {
+          "odmType": {
+            "$ref": "#/odmProperty/resetMinMax"
+          }
+        }
+      }
+    }
+  }, 
+  "odmProperty": {
+    "sensorValue": {
+      "id": 5700, 
+      "type": "number", 
+      "subtype": "float"
+    }, 
+    "minimumMeasuredValue": {
+      "id": 5601, 
+      "type": "number", 
+      "subtype": "float"
+    }, 
+    "maximumMeasuredValue": {
+      "id": 5602, 
+      "type": "number", 
+      "subtype": "float"
+    }, 
+    "minimumRangeValue": {
+      "id": 5603, 
+      "type": "number", 
+      "subtype": "float"
+    }, 
+    "maximumRangeValue": {
+      "id": 5604, 
+      "type": "number", 
+      "subtype": "float"
+    }, 
+    "applicationType": {
+      "id": 5750, 
+      "type": "string"
+    }, 
+    "sensorType": {
+      "id": 5750, 
+      "type": "string"
+    }, 
+    "units": {
+      "id": 5750, 
+      "type": "string"
+    }
+  }, 
+  "odmAction": {
+    "resetMinMax": {
+      "id": 5605
+    }
+  }
+}

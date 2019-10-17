@@ -1,0 +1,126 @@
+{
+  "info": {
+    "title": "Example file for BT Mesh Sensor Temperature type definition in OneDM SDF format", 
+    "version": "20190910", 
+    "copyright": "Copyright 2019 Example Corp. All rights reserved.", 
+    "license": "http://example.com/license"
+  }, 
+  "namespace": {
+    "btm": "http://example.com/btm-example/#"
+  }, 
+  "defaultnamespace": "btm", 
+  "odmThing": {
+    "TemperatureSensor": {
+      "odmObject": {
+        "SensorDescriptor": {
+          "$ref": "btm:/odmObject/SensorDescriptor"
+        }, 
+        "SensorSetting": {
+          "$ref": "btm:/odmObject/SensorSetting"
+        }, 
+        "SensorCadence": {
+          "$ref": "btm:/odmObject/SensorCadence"
+        }, 
+        "SensorData": {
+          "$ref": "btm:/odmObject/SensorData"
+        }
+      }
+    }
+  }, 
+  "odmData": {
+    "PresentAmbientTemperature": {
+      "odmType": {
+        "$ref": "#/odmData/Temperature8"
+      }
+    }, 
+    "OutdoorStatisticalValues": {
+      "odmType": {
+        "$ref": "#/odmData/Temperature8Statistics"
+      }
+    }, 
+    "Temperature8": {
+      "type": "number", 
+      "minimum": 0, 
+      "maximum": 254, 
+      "scaleMinimum": -64, 
+      "scaleMaximum": 63.5, 
+      "scaleUnit": "org.bluetooth.unit.thermodynamic_temperature.degree_celsius"
+    }, 
+    "Temperature8InAPeriodOfDay": {
+      "type": "object", 
+      "properties": {
+        "Temperature": {
+          "odmType": {
+            "$ref": "#/odmData/Temperature8"
+          }
+        }, 
+        "StartTime": {
+          "odmType": {
+            "$ref": "#/odmData/TimeDecihour8"
+          }
+        }, 
+        "EndTime": {
+          "odmType": {
+            "$ref": "#/odmData/TimeDecihour8"
+          }
+        }
+      }
+    }, 
+    "Temperature8Statistics": {
+      "type": "object", 
+      "properties": {
+        "Average": {
+          "odmType": {
+            "$ref": "#/odmData/Temperature8"
+          }
+        }, 
+        "StandardDeviationValue": {
+          "odmType": {
+            "$ref": "#/odmData/Temperature8"
+          }
+        }, 
+        "MinimumValue": {
+          "odmType": {
+            "$ref": "#/odmData/Temperature8"
+          }
+        }, 
+        "MaximumValue": {
+          "odmType": {
+            "$ref": "#/odmData/Temperature8"
+          }
+        }, 
+        "SensingDuration": {
+          "odmType": {
+            "$ref": "#/odmData/TimeExponential8"
+          }
+        }
+      }
+    }, 
+    "TimeDecihour8": {
+      "type": "number", 
+      "minimum": 0, 
+      "maximum": 240, 
+      "scaleMinimum": 0.0, 
+      "scaleMaximum": 24.0, 
+      "scaleUnit": "org.bluetooth.unit.time.hour"
+    }, 
+    "TimeExponential8": {
+      "oneOf": [
+        {
+          "type": "number", 
+          "minimum": 0, 
+          "maximum": 254, 
+          "multipleOf": 1, 
+          "scaleMinimum": 0, 
+          "scaleMaximum": 73216705, 
+          "scaleRule": "1.1^N-64", 
+          "scaleUnit": "org.bluetooth.unit.time.second"
+        }, 
+        {
+          "type": "number", 
+          "const": 255
+        }
+      ]
+    }
+  }
+}
