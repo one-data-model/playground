@@ -1,0 +1,90 @@
+{
+  "info": {
+    "title": "OCF odmObject libarary",
+    "version": "20190530",
+    "copyright": "OCF (TBD)",
+    "license": "OCF (TBD)"
+  },
+
+  "odmObject": {
+    "oic.r.switch.binary": {
+      "name": "oic.r.switch.binary",
+      "desc" : "This odmObject describes a binary switch (on/off).\nThe Property \"value\" is a boolean.\nA value of 'true' means that the switch is on.\nA value of 'false' means that the switch is off.\n",
+      "required": [
+        "0/odmProperty/value"
+      ],
+      "odmProperty": {
+        "value": {
+          "name": "value",
+          "type": "boolean"
+        }
+      }
+    },
+
+    "oic.r.airflow": {
+      "name": "oic.r.airflow",
+      "desc" : "",
+      "required": [
+        "0/odmProperty/speed",
+        "0/odmProperty/range"
+      ],
+      "odmProperty": {
+        "speed" : {
+          "name": "speed",
+          "description": "The current speed level.",
+          "type": "integer"
+        },
+        "direction" : {
+          "name": "direction",
+          "description": "The directionality of the air flow, a value indicated by \"supporteddirections\".",
+          "type": "string"
+        },
+        "automode" : {
+          "name": "automode",
+          "description": "The status of the automode feature, if on speed is set by the Device.",
+          "type": "string",
+          "enum": [
+            "On",
+            "Off"
+          ]
+        },
+        "supporteddirections" : {
+          "description": "The array of possible direction settings for this instance of the Resource Type.",
+          "writeable": false,
+          "type": "array",
+          "items": {
+            "minItems": 1,
+            "type": "string",
+            "uniqueItems": true
+          }
+        },
+        "range": {
+          "name": "range",
+          "desc" : "applies to the allowed values of speed",
+          "readOnly": true,
+          "type": "array",
+          "items": {
+            "type": "integer"
+           }
+        }
+      }
+    }
+  },
+
+  "odmThing": {
+    "oic.r.airflowcontrol": {
+      "name": "oic.r.airflowcontrol",
+      "desc" : "",
+      "odmObject": {
+        "_b0": {
+          "odmRef": "#/odmObject/oic.r.switch.binary",
+          "semanticTag": "power"
+        },
+        "_b1": {
+          "odmRef": "#/odmObject/oic.r.airflow",
+          "semanticTag": "airflow"
+        }
+      }
+    }
+  }
+}

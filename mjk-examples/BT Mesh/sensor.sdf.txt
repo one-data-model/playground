@@ -1,0 +1,174 @@
+info {
+    title "Example file for BT Mesh Sensor Model definition in OneDM SDF format" 
+    version "20190910"
+    copyright "Copyright 2019 Example Corp. All rights reserved."
+    license http://example.com/license
+}
+
+namespace {
+    btm http://example.com/btm-example/#
+}
+defaultnamespace btm
+
+odmObject {
+    SensorDescriptor {
+        odmProperty {
+            SensorPropertyID {
+                odmType { $ref #/odmData/PropertyIdType }
+            }
+            SensorPositiveTolerance {
+                type number
+                multipleOf 1
+                minimum 1
+                maximum 4095
+                widthInBits 12
+            }
+            SensorNegativeTolerance {
+                type number
+                multipleOf 1
+                minimum 1
+                maximum 4095
+                widthInBits 12
+            }
+            SensorSamplingFunciton {
+                enum [
+                    { Unspecified 0 }
+                    { Instantaneous 1 }
+                    { ArithmeticMean 2 }
+                    { RMS 3 }
+                    { Maximum 4 }
+                    { Minimum 5 }
+                    { Accumulated 6 }
+                    { Count 7 }
+                ]
+                widthInBits 8
+            }
+            SensorMeasurementPeriod {
+                type number
+                multipleOf 1
+                minimum 1
+                maximum 255
+                widthInBits 8
+            }
+            SensorUpdateInterval {
+                type number
+                multipleOf 1
+                minimum 1
+                maximum 255
+                widthInBits 8
+            }
+        }
+    }
+    SensorSetting {
+        odmProperty {
+            SensorPropertyID {
+                odmType { $ref #/odmData/PropertyIdType }
+            }
+            SensorSettingPropertyID {
+                odmType { $ref #/odmData/PropertyIdType }
+            }
+            SensorSettingAccess {
+                enum [ { read 1 } { readwrite 3 }]
+                widthInBits 8
+            }
+            SensorSettingRaw {
+                odmType { $ref 1/odmData/SensorSettingRawValueType }
+            }
+        }
+        odmData {
+            SensorSettingRawValueType {
+            }
+        }
+    }
+    SensorCadence {
+        odmProperty {
+            SensorPropertyID {
+                odmType { $ref #/odmData/PropertyIdType }
+            }
+            FastCadencePeriodDivisor {
+                type number
+                minimum 0
+                maximum 15
+                widthInBits 7
+            }
+            StatusTriggerType {
+                enum [ 
+                    { formattype 0 } 
+                    { unitless 1 } 
+                ]
+            }
+            StatusTriggerDeltaDown {
+                type number 
+            }
+            StatusTriggerDeltaUp {
+                type number 
+            }
+            StatusMinInterval {
+                type number
+                multipleOf 1
+                minumum 0
+                maximum 26
+                widthInBits 8
+            }
+            FastCadenceLow {
+                type number
+            }
+            FastCadenceHigh {
+                type number
+            }
+        }
+    }
+    SensorData {
+        odmProperty {
+            SensorData {
+                odmType { $ref 1/odmData/SensorDataType }
+            }
+        }
+        odmData {
+            SensorDataType {
+                type array
+                items [
+                    {
+                        type array 
+                        items [
+                            {
+                                odmType { $ref #/odmData/PropertyIdType }
+                            }
+                            {
+                                odmType { $ref #/odmData/SensorDataRawValueType }
+                            }
+                        ]
+                    }
+                ]
+            }
+            SensorDataRawValueType {
+            }
+        }
+    }
+}
+odmData {
+    PropertyIdType {
+        type number
+        multipleOf 1
+        minumum 1
+        maximum 65535
+        widthInBits 16
+    }
+    SensorSeriesColumnType {
+        type Object 
+        properties {
+            SensorPropertyID {
+                odmType { $ref #/odmData/PropertyIdType }
+            }
+            SensorRawValueX {
+                type number
+            }
+            SensorColumnWidth {
+                type number
+            }
+            SensorRawValueY {
+                type number
+            }
+        }
+    }
+}

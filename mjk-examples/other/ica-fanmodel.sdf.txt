@@ -1,0 +1,232 @@
+info {
+    title "Example file for ICA Fan definition in OneDM SDF format" 
+    version "20190820"
+    copyright "Copyright 2019 Example Corp. All rights reserved."
+    license http://example.com/license
+}
+
+namespace {
+    ica http://ecample.com/ica-example/#
+}
+defaultnamespace ica
+
+odmObject {
+    Fan {
+        id 152
+        name Fan
+
+        required [ 
+            { $ref 0/odmEvent/faultReporting }
+            { $ref 0/odmProperty/PowerSwitch }
+        ]
+
+        odmEvent {
+            faultReporting {
+                odmData {
+                    faultCode { 
+                        type string 
+                        id 743
+                        name faultCode
+                    }
+                }
+                outputData [
+                    { $ref 0/odmData/faultCode }
+                ]
+                required [
+                    { $ref 0/odmData/faultCode }
+                ]
+           }
+        }
+
+        odmProperty {
+            PowerSwitch {
+                id 409
+                name PowerSwitch
+                enum [ { on 1 } { off 0 } ]
+            }
+            CurrentHumidity {
+                id 410
+                name CurrentHumidity
+                type integer
+                minimum 0
+                maximum 100
+                unit %
+                readOnly true
+            }
+            TargetHumidity {
+                id 411
+                name TargetHumidity
+                type integer
+                minimum 0
+                maximum 100
+                unit %
+            }
+            CurrentTemperature {
+                id 412
+                name CurrentTemperature
+                type numnber
+                minimum -20
+                maximum 55
+                unit C
+                readOnly true
+            }
+            TargetTemperature {
+                id 413
+                name TargetTemperature
+                type number
+                minumum 16
+                maximum 32
+                unit C
+            }
+            WaterShortage {
+                id 414
+                name WaterShortage
+                enum [ { notSensed 0 } { sensed 1 } ]
+            }
+            IonSwitch {
+                id 415
+                name IonSwitch 
+                enum [ { off 0 } { on 1 } ]
+            }
+            OscillatingSwitch {
+                id 416
+                name OscillatingSwitch
+                enum [ { off 0 } { on 1 } ]
+            }
+            ScreenSwitch {
+                id 417
+                name ScreenSwitch
+                enum [ { off 0 } { on 1 } ]                
+            }
+            HumidificationSwitch {
+                id 418
+                name HumidificationSwitch
+                enum [ { off 0 } { on 1 } ]                
+            }
+            WindSpeed {
+                id 419
+                name WindSpeed
+                enum [
+                    { off 0 }
+                    { speed_1 1 }
+                    { speed_2 2 }
+                    { speed_3 3 }
+                    { speed_4 4 }
+                    { speed_5 5 }
+                    { speed_6 6 }
+                    { speed_7 7 }
+                    { speed_8 8 }
+                    { speed_9 9 }
+                    { violent_wind 10 }
+                ]
+            }
+            WorkMode {
+                id 420
+                name WorkMode
+                enum [
+                    { normal_wind 1 }
+                    { natural_wind 2 }
+                    { sleep_wind 3 }
+                    { silent_wind 4 }
+                ]
+            }
+            CountdownRemainingTime {
+                id 421
+                name CountdownRemainingTime
+                type number
+                unit min
+                minimum 0
+                maximum 1440
+            }
+        }
+
+        odmAction {
+            StopCountdown {
+                id 122
+                name StopCountdown
+            }
+            SetPowerSwitchTImer {
+                name SetPowerSwitchTimer
+                id 123
+                odmData {
+                    Timer {
+                        id 759
+                        name Timer
+                        type number
+                        minimum 0
+                        maximum 1440
+                        multipleOf 0.01
+                        unit min
+                    }
+                    PowerSwitch {
+                        id 745
+                        name PowerSwitch
+                        enum [ { on 1 } { off 0 } ]
+                    }
+                }
+                inputData [
+                    { $ref 0/odmData/Timer }
+                    { $ref 0/odmData/PowerSwitch }
+                ]
+                required [
+                    { $ref 0/odmData/Timer }
+                    { $ref 0/odmData/PowerSwitch }
+                ]
+            }
+        }
+    }
+}
+
+/* metadata schema */
+icaQualities {
+
+    /* generic to all types */
+
+    resourceType { type string enum [ PROPERTY EVENT SERVICE ] } /* defined by odmClass */
+    id { type number } /* defined by id quality */
+    name { type string } /* defined by name quality */
+    required { type boolean } /* handled by the JSON schema style pattern on SDF */
+    
+    /* these could be added as metadata qualities */
+    categoryId { type number }
+    categoryName { type string }
+    contributor { type string }
+    contributorID { type number }
+    featureState { type string enum [ APPROVED ] }
+    flag { type string }
+    identifier { type string }
+    thingTemplateId { type number }
+    version { type string }
+    versionID { type number }
+    gmtCreate { type string format datetime }
+    gmtModified { type string format datetime }
+    base { type boolean }
+    baseFlag { type boolean }
+    isDeleted { type boolean }
+
+    /* base IDs for definitions */
+    baseServiceId { type number }
+    basePropertyId { type number }
+    baseEventId { type number }
+
+    /* specific to property type, mostly handled by SDF use of JSON Schema */
+    dataType { type string enum [ INT DOUBLE BOOL ] } /* JSON Schema type */
+    unit { type string } /* SDF unit */
+    min { type number } /* JSON Schema minimum */
+    max { type number } /* JSON Schema maximum */
+    step { type number } /* JSON Schema multipleOf */
+    accessMode { type string enum [ READ_ONLY READ_WRITE ] } /* readOnly, writeOnly or readable, writeable */
+
+    /* could be added qualities */
+    unitName { type string } /* ? */
+    unitType { type numnber } /* ? */
+    value { type string } /* ? */
+    valueName { type string } /* ? */
+
+    /* specific to parameters */
+    direction { type string enum [ PARAM_INPUT PARAM_OUTPUT ] } /* defined by inputData, outputData */
+    paraOrder { type number } /* binding hint, could use the array order or add explicit order flag */
+    inputParams { type array } /* defined by inputData */
+    outputParams { type array } /* defined by outputData */
+
+}

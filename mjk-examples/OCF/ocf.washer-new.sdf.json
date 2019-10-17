@@ -1,0 +1,39 @@
+{
+  "info": {
+    "title": "OCF washer", 
+    "version": "20190530", 
+    "copyright": "OCF (TBD)", 
+    "license": "OCF (TBD)"
+  }, 
+  
+  "namespace": {
+    "ocf": "<TBD ocf namespace uri>"
+  },
+  "defaultnamespace": "ocf",
+
+  "odmThing": {
+    "oic.d.washer" : {
+      "id": 1,
+      "name" : "oic.d.washer",
+      "title" : "washing machine",
+      "required": [
+        { "$ref": "0/odmObject/powerswitch" },
+        { "$ref": "0/odmObject/washerstate" }
+      ],
+      "odmObject": {
+        "powerswitch": {
+          "odmType": { "$ref": "<library>#/odmObject/oic.r.switch.binary" }
+        },
+        "washerstate": {
+            "odmType": { "$ref": "<library>#/odmObject/oic.r.operational.state" }
+        },
+        "washermode": {
+            "odmType": { "$ref": "<library>#/odmObject/oic.r.mode" }
+        },
+        "watertemperature": {
+            "odmType": { "$ref": "<library>#/odmObject/oic.r.temperature" }
+        }
+      }
+    }
+  }
+}

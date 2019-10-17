@@ -1,0 +1,1032 @@
+//
+//  Incept Date: 9/17/2019
+//  Author:  Bryan Mann, robert.mann@resideo.com
+//
+//  Comments and notes to the interested reader appear in C++ single
+//  line styled comments.
+//
+//
+//  The data file below is based on understandings from:
+//    One Data Model Language-
+//
+//    https://github.com/mjkoster/language/blob/master/sdf.md
+//
+//  And the zcl dotdot release zip file:
+//
+//    19-01018-000-zcl7.0 Dotdot.zip
+//    ../odm-industry-specs/dot-dot/19-01018-000-zcl7.0_release
+//          --/Thermostat.xml
+//
+//  Ideally a thermostat would be an odmProduct that is built from
+//  odmThings that are built from odmObjects.  In this first instance of
+//  the thermostat the entire thing, pun not intended, is built from/as an
+//  odmObject.
+
+//  The information preamble to match the zcl definition
+
+{
+  "info": {
+    "title": "Example ODM Model for the zigbee/DotDot Thermostat",
+    "version": "20190917",
+    "copyright": "No Copyright Yet.",
+    "license": "No Applicable License Yet."
+  },
+  "namespace": {
+// Fake a global repo.
+    "zcl": "http://oneDataModel.io/repo/zcl/odm"
+  },
+  "defaultnamespace": "zcl",
+  "odmObject": {
+    "Thermostat Application": {
+      "name": "ODM Thermostat",
+      "id": "0201",
+      "required": [
+//
+// Server oriented commands...
+//
+        { "$ref": "0/odmAction/setpointraiseorlower" },
+        { "$ref": "0/odmAction/setweeklyschedule" },
+        { "$ref": "0/odmAction/getweeklyschedule" },
+        { "$ref": "0/odmAction/clearweeklyschedule" },
+        { "$ref": "0/odmAction/getrelaystatuslog" },
+//
+// Client oriented commands...
+//  Lines 352 - XXX EOF
+//
+        { "$ref": "0/odmAction/getweeklyscheduleresponse" },
+        { "$ref": "0/odmAction/getrelaystatuslogresponse" },
+      ],
+//
+//Lines 18 - 27 of Thermostat.xml
+//
+//  odmProperty - taken together represents the state of the thermostat.
+//
+      "odmProperty": {
+        "TransitionType": {
+          "odmType": { "$ref": "#/odmData/transitiontypedata" },
+
+//
+// It's not clear how to model HeatSetPoint, CoolSetPoint since they
+// are only present if the mode is 'Mode.Heat' and 'Mode.Cool' as set
+// in the TstatScheduleMode for any command.
+//  Maybe need:  'requiredIf'
+//
+          "odmData": {
+            "transitiontypedata": {
+              "required": [
+                { $ref": "0/transitiontype/odmData/transitiontime" },
+                { $ref": "0/transitiontype/odmData/heatsetpoint" },
+                { $ref": "0/transitiontype/odmData/coolsetpoint" },
+              ],
+              "inputData": [
+                { $ref": "0/transitiontype/odmData/transitiontime" },
+                { $ref": "0/transitiontype/odmData/heatsetpoint" },
+                { $ref": "0/transitiontype/odmData/coolsetpoint" },
+              ],
+              "odmData": {
+                "transitiontime": {
+                  "name": "Transition time",
+                  "type": "number",
+                  "widthInBits": 16,
+                  "minimum": 1,
+                  "maximum": 65536,
+                  "multipleOf": 1,
+                  "unit": "seconds",
+                  "scaleMinimum": 1,
+                  "scaleMaximum": 65536,
+                },
+                "heatsetpoint": {
+                  "name": "Heating set point",
+                  "type": "number",
+                  "widthInBits": 16,
+                  "minimum": 1,
+                  "maximum": 65536,
+                },
+                "coolsetpoint": {
+                  "name": "Cooling set point",
+                  "type": "number",
+                  "widthInBits": 16,
+                  "minimum": 1,
+                  "maximum": 65536,
+                },
+              }//end odmData block
+            }//end tranistiontypedata
+          }//end odmData --tranistiontypedata
+        },//end TransitionType
+
+        "TstatScheduleDOW": {
+          "odmData": {
+            "$ref": "0/odmData/dayoftheweek"
+          },
+        },//end TstatScheduleDOW
+//
+//  Lines 42 - 47 of Thermostat.xml
+//
+      "odmData": {
+        "tstatschedulemode": {
+          "name": "ScheduleMode",
+            "odmData": { 
+               "name": "Heat",
+               "$ref": "0/odmData/zclboolean"
+            },
+            "odmData": { 
+               "name": "Cool",
+               "$ref": "0/odmData/zclboolean"
+            },
+        },//end tstatschedulemode
+      },//end odmData
+//
+// Server attributes Lines 49 - XXX
+//
+// begin <attributes>
+//
+        "LocalTemperature": {
+          "name":  "Local Temperature",
+          "type": "number",
+          "widthInBits": 16,
+          "minimum": 0,
+          "maximum": 65536
+        },//end LocalTemperature
+
+        "OutdoorTemperature": {
+          "name":  "Outdoor Temperature",
+          "type": "number",
+          "widthInBits": 16,
+          "minimum": 0,
+          "maximum": 65536
+        },//end OutdoorTemperature
+
+        "Occupancy": {
+          "name": "Occupancy",
+          "type": "boolean",
+          "default": "false"
+        },//end Occupancy
+
+        "AbsMinHeatSetpointLimit": {
+          "name":  "Absolute Minimum Heat Setpoint Limit",
+          "type": "number",
+          "widthInBits": 16,
+          "minimum": 0,
+          "maximum": 65536
+        },//end AbsMinHeatSetpointLimit
+
+        "AbsMaxHeatSetpointLimit": {
+          "name":  "Absolute Maximum Heat Setpoint Limit",
+          "type": "number",
+          "widthInBits": 16,
+          "minimum": 0,
+          "maximum": 65536
+        },//end AbsMaxHeatSetpointLimit
+
+        "AbsMinCoolSetPointLimit": {
+          "name":  "Absolute Minimum Cool Setpoint Limit",
+          "type": "number",
+          "widthInBits": 16,
+          "minimum": 0,
+          "maximum": 65536
+        },//end AbsMinCoolSetPointLimit
+
+        "AbsMaxCoolSetpointLiit": {
+          "name":  "Absolute Maximum Cool Setpoint Limit",
+          "type": "number",
+          "widthInBits": 16,
+          "minimum": 0,
+          "maximum": 65536
+        },//end AbsMaxCoolSetpointLiit
+
+        "PICoolingDemand": {
+          "name":  "PI Cooling Demand",
+          "type": "number",
+          "widthInBits": 8,
+          "minimum": 0,
+          "maximum": 255
+        },//end PICoolingDemand
+
+        "PIHeatingDemand": {
+          "name":  "PI Heating Demand",
+          "type": "number",
+          "widthInBits": 8,
+          "minimum": 0,
+          "maximum": 255
+        },//end PIHeatingDemand
+
+        "HVACSystemTypeConfiguration": {
+          //should be an enum
+          "hvacsystemtypeconfiguration": {
+            "name": "HVAC System Type Configuration",
+            "enum": [
+              { "coolingsystemstage": {
+                  "enum": [
+                    { "coolstage1": 0 }, 
+                    { "coolstage1": 1 }, 
+                    { "coolstage1": 2 }, 
+                  ]
+                }
+              },
+              { "heatingsystemstage": {
+                  "enum": [
+                    { "heatstage1": 0 }, 
+                    { "heatstage1": 1 }, 
+                    { "heatstage1": 2 }, 
+                  ]
+                 }
+              },
+              { "heatingsystemtype": {
+                  "enum": [
+                    { "conventional": 0 }, 
+                    { "heatpump": 1 } 
+                  ]
+                 }
+              },
+              { "heatingfuelsource": {
+                  "enum": [
+                    { "electricorb": 0 }, 
+                    { "gasorb": 1 } 
+                  ]
+                 }
+              },
+            ]
+          }//end hvacsytemtypeconfiguration
+        },//end HVACSystemTypeConfiguration
+//
+//  Thermostat Settings Attribute Set, line 95 in original xml file
+//
+        "LocalTemperatureCalibration": {
+          "name":  "Local Temperature Calibration",
+          "type": "number",
+          "widthInBits": 8,
+          "minimum": -25,
+          "maximum": 25
+        },//end LocalTemperatureCalibration
+
+        "OccupiedCoolingSetPoint": {
+          "name":  "Occupied Cooling Setpoint",
+          "type": "number",
+          "widthInBits": 16,
+          "minimum": -25,
+          "maximum": 25,
+          "odmData": {
+            "$ref": "0/odmData/mincoolsetpointlimit"
+          },
+          "odmData": {
+            "$ref": "0/odmData/maxcoolsetpointlimit"
+          },
+        },//end OccupiedCoolingSetPoint
+
+        "OccupiedHeatingSetpoint": {
+          "name":  "Occupied Heating Setpoint",
+          "type": "number",
+          "widthInBits": 16,
+          "minimum": -25,
+          "maximum": 25,
+          "odmData": {
+            "$ref": "0/odmData/minheatsetpointlimit"
+          },
+          "odmData": {
+            "$ref": "0/odmData/maxheatsetpointlimit"
+          },
+        },//end OccupiedHeatingSetPoint
+
+        "UnoccupiedCoolingSetpoint": {
+          "name":  "Unoccupied Cooling Setpoint",
+          "type": "number",
+          "widthInBits": 16,
+          "default": 2600,
+          "minimum": -25,
+          "maximum": 25,
+          "odmData": {
+            "$ref": "0/odmData/mincoolsetpointlimit"
+          },
+          "odmData": {
+            "$ref": "0/odmData/maxcoolsetpointlimit"
+          },
+        },//end UnoccupiedCoolingSetpoint
+
+        "UnoccupiedHeatingSetpoint": {
+          "name":  "Unoccupied Heating Setpoint",
+          "type": "number",
+          "widthInBits": 16,
+          "default": 2000,
+          "minimum": -25,
+          "maximum": 25,
+          "odmData": {
+            "$ref": "0/odmData/minheatsetpointlimit"
+          },
+          "odmData": {
+            "$ref": "0/odmData/maxheatsetpointlimit"
+          }
+        },//end UnoccupiedHeatingSetpoint
+
+        "RemoteSensing": {
+          "name": "Remote Sensing",
+          "enum": [
+            { "LocalTemperatureRemote": 1 },
+            { "OutdoorTemperatureRemote":  2 },
+            { "OccupancyRemote": 4 },
+          ]
+        },//end RemoteSensing
+
+        "ControlSequenceOfOperation": {
+          "name": "Control Sequence Of Operation",
+          "enum": [
+            { "CoolingOnly": 0 },
+            { "CoolingWithReheat":  1 },
+            { "HeatingOnly": 2 },
+            { "HeatingWithReheat":  3 },
+            { "CoolingAndHeating4Pipes":  4 },
+            { "CoolingAndHeating4PipesWithReheat":  5 },
+          ]
+        },//end ControlSequenceOfOperation
+
+        "SystemMode": {
+          "name": "System Mode",
+          "enum": [
+            { "Off": 0 },
+            { "Auto":  1 },
+            { "Cool": 3 },
+            { "Heat":  4 },
+            { "EmergencyHeating":  5 },
+            { "Precooling":  6 },
+            { "FanOnly":  7 },
+            { "Dry":  8 },
+            { "Sleep":  9 }
+          ]
+        },//end SystemMode
+
+        "AlarmMask": {
+          "name": "Alarm Mask",
+          "enum": [
+            { "InitializationFailure": 1 },
+            { "HardwareFailure":  2 },
+            { "SelfCalibrationFailure": 4 },
+          ]
+        },//end AlarmMask
+
+        "ThermostatRunningMode": {
+          "name": "Thermostat Running Mode",
+          "enum": [
+            { "Off": 0 },
+            { "Cool":  3 },
+            { "Heat": 4 },
+          ]
+        },//end ThermostatRunningMode
+//
+// Schedule Attribute Set 0x002-0x0028
+//
+        "StartOfWeek": {
+          "name": "Start of Week",
+          "enum": [
+            { "Sunday": 0 },
+            { "Monday":  1 },
+            { "Tuesday": 2 },
+            { "Wednesday": 3 },
+            { "Thursday": 4 },
+            { "Friday": 4 },
+            { "Saturday": 5 }
+//
+// Appears in original but must be a bug
+//          { "Sunday": 6 },
+
+          ]
+        },//end StartOfWeek
+
+        "NumberOfWeeklyTransitions": {
+          "name":  "Number Of Weekly Transitions",
+          "type": "number",
+          "widthInBits": 8,
+          "minimum": 0,
+          "maximum": 255
+        },//end NumberOfWeeklyTransitions
+
+        "NumberOfDailyTransitions": {
+          "name":  "Number Of Daily Transitions",
+          "type": "number",
+          "widthInBits": 8,
+          "minimum": 0,
+          "maximum": 255
+        },//end NumberOfDailyTransitions
+
+        "TemperatureSetpointHold": {
+          "name": "Temperature Setpoint Hold",
+          "enum": [
+            { "SetpointHoldOff": 0 },
+            { "SetpointHoldOn":  1 },
+          ]
+        },//end TemperatureSetpointHold
+
+//
+//  Why does this(below) make sense?? Seems to be another bug.
+//  The default can't be greater than the maximum.
+//
+        "TemperatureSetpointHoldDuration": {
+          "name":  "Temperature Setpoint Hold Duration",
+          "type": "number",
+          "widthInBits": 16,
+          "default": 65536,
+          "minimum": 0,
+          "maximum": 1440
+        },//end TemperatureSetpointHoldDuration
+
+        "ThermostatProgrammingOperationMode": {
+          "name": "Thermostat Programming Operation Mode",
+          "odmData": {
+            "programmingmode": {
+              "name":  "Programming Mode",
+              "enum": [
+                { "SimpleOrSetpoint": 0 },
+                { "Schedule": 1 },
+              ]
+            }
+            "odmData": {
+              "name": "AutoRecovery",
+              "type": "boolean",
+              "default": false,
+            },
+            "odmData": {
+              "name": "EconomyOrEnergyStar",
+              "type": "boolean",
+              "default": false
+            }
+          }
+        },//end ThermostatProgrammingOperationMode
+//
+// HVA Relay Attribute Set 0x0029-0x002F Line 205 in original file.
+//
+        "ThermostatRunningState": {
+          "name": "Thermostat Running State",
+            "odmData": { 
+               "name": "HeatOn",
+               "$ref": "0/odmData/zclboolean"
+            },
+            "odmData": { 
+               "name": "CoolOn",
+               "$ref": "0/odmData/zclboolean"
+            },
+            "odmData": { 
+               "name": "FanOn",
+               "$ref": "0/odmData/zclboolean"
+            },
+            "odmData": { 
+               "name": "HeatSecondStageOn",
+               "$ref": "0/odmData/zclboolean"
+            },
+            "odmData": { 
+               "name": "CoolSecondStageOn",
+               "$ref": "0/odmData/zclboolean"
+            },
+            "odmData": { 
+               "name": "FanSecondStageOn",
+               "$ref": "0/odmData/zclboolean"
+            },
+            "odmData": { 
+               "name": "FanThirdStageOn",
+               "$ref": "0/odmData/zclboolean"
+            }
+        },//end ThermostatRunningState
+
+        "SetpointChangeSource": {
+          "name": "Setpoint Change Source",
+          "enum": [
+            { "Manual": 0 },
+            { "ScheduleOrInternalProgramming":  1 },
+            { "External":  2 },
+          ]
+        },//end SetpointChangeSource
+
+        "SetpointChangeAmount": {
+          "name":  "Setpoint Change Amount",
+          "type": "number",
+          "widthInBits": 16,
+          "default": 32768,
+        },//end SetpointChangeAmount
+//
+//  This should be a UTC time, for now is just int32 since UTC
+//  should be defined some common place in OneDM.
+//
+        "SetpointChangeSourceTimestamp": {
+          "name":  "Setpoint Change Source Timestamp",
+          "type": "number",
+          "widthInBits": 32,
+          "default": 0,
+        },//end SetpointChangeSourceTimestamp
+
+        "OccupiedSetback": {
+          "name":  "Occupied Heating Setpoint",
+          "type": "number",
+          "widthInBits": 16,
+          "default": 255
+          "odmData": {
+            "$ref": "0/odmData/occupiedsetbackmin"
+          },
+          "odmData": {
+            "$ref": "0/odmData/occupiedsetbackmax"
+          }
+        },//end OccupiedSetback
+
+        "UnoccupiedSetback": {
+          "name":  "Unoccupied Setback",
+          "type": "number",
+          "widthInBits": 8,
+          "default": 255
+          "odmData": {
+            "$ref": "0/odmData/unoccupiedsetbackmin"
+          },
+          "odmData": {
+            "$ref": "0/odmData/unoccupiedsetbackmax"
+          }
+        },//end UnoccupiedSetback
+
+        "EmergencyHeatDelta": {
+          "name":  "Emergency Heat Delta",
+          "type": "number",
+          "widthInBits": 8,
+          "default": 255,
+          "minimum": 0,
+          "maximun": 255,
+        },//end EmergencyHeatDelta
+
+        "ACType": {
+          "name": "AC Type",
+          "enum": [
+            { "CoolingAndFixedSpeed": 1 },
+            { "HeatPumpAndFixedSpeed":  2 },
+            { "CoolingAndInverter":  3 },
+            { "HeatPumpAndInverter":  4 },
+          ]
+        },//end ACType
+
+        "ACCapacity": {
+          "name":  "AC Capacity",
+          "type": "number",
+          "widthInBits": 16,
+          "default": 0,
+        },//end ACCapacity
+
+        "ACRefrigerantType": {
+          "name":  "AC Refrigerant Type",
+          "default": 0,
+          "enum": [
+            { "R22": 1 },
+            { "R410a":  2 },
+            { "R407c":  3 },
+          ]
+        },//end ACRefrigerantType
+
+        "ACCompressorType": {
+          "name":  "AC Compressor Type",
+          "default": 0,
+          "enum": [
+            { "T1": 1 },
+            { "T2":  2 },
+            { "T3":  3 },
+          ]
+        },//end ACCompressorType
+
+        "ACErrorCode": {
+          "name": "AC Error Code",
+          "odmData": { 
+             "name": "CompressorFailureOrRefrigerantLeakage",
+             "$ref": "0/odmData/zclboolean"
+          },
+          "odmData": { 
+             "name": "RoomTemperatureSensorFailure",
+             "$ref": "0/odmData/zclboolean"
+          },
+          "odmData": { 
+             "name": "OutdoorTemperatureSensorFailure",
+             "$ref": "0/odmData/zclboolean"
+          },
+          "odmData": { 
+             "name": "IndoorCoilTemperatureSensorFailure",
+             "$ref": "0/odmData/zclboolean"
+          },
+          "odmData": { 
+             "name": "FanFailure",
+             "$ref": "0/odmData/zclboolean"
+          }
+        },//end ACErrorCode
+
+        "ACLouverPosition": {
+          "name": "AC Louver Position",
+          "enum": [
+            { "FullyClosed": 1 },
+            { "FullyOpen": 2 },
+            { "QuarterOpen": 3 },
+            { "HalfOpen": 4 },
+            { "ThreeQuartersOpen": 5 },
+          ]
+        },//end ACLouverPosition
+
+        "ACCoilTemperature": {
+          "name":  "AC Coil Temperature",
+          "type": "number",
+          "widthInBits": 16,
+          "minimum": -27315,
+          "maximun": 32767,
+        },//end ACCoilTemperature
+
+        "ACCapacityFormat": {
+          "name":  "AC Capcity Format",
+          "default": 0,
+          "enum": [
+            { "BTUh": 0 },
+          ]
+        },//end ACCapacityFormat
+      },//end odmProperty
+//
+// end </attributes>
+//
+
+//
+// Server commands
+//
+      "odmAction": {
+        "SetpointRaiseOrLower": {
+          "name": "Set Point Raise Or Lower",
+          "id": 0,
+          "required": [
+            { "$ref": "#/odmData/mode" },
+            { "$ref": "#/odmData/amount" },
+          ],
+          "inputData": [
+            { "$ref": "#/odmAction/mode" },
+            { "$ref": "#/odmAction/amount" },
+          ],
+          "odmData": {
+             "mode": {
+               "name": "Mode",
+                "enum": [
+                  { "Heat": 0 },
+                  { "Cool": 1 },
+                  { "Both": 2 },
+                ]
+             },
+             "amount": {
+               "name": "Amount",
+               "type": "number",
+               "widthInBits": 8,
+               "minimum": 0,
+               "maximum": 255
+             }  
+          }
+        },//end SetpointRaiseOrLower
+
+        "SetWeeklySchedule": {
+          "name": "Set Weekly Schedule",
+          "id": 1,
+          "required": [
+            { "$ref": "#/odmData/numberoftransitions" },
+            { "$ref": "#/odmData/dayoftheweek" },
+            { "$ref": "#/odmData/mode" },
+            { "$ref": "#/odmData/transitions" },
+          ],
+          "inputData": [
+            { "$ref": "#/odmData/numberoftransitions" },
+            { "$ref": "#/odmData/dayoftheweek" },
+            { "$ref": "#/odmData/mode" },
+            { "$ref": "#/odmData/transitions" },
+          ],
+          "odmData": {
+            "numberoftransitions": {
+              "name": "NumberOfTransitions",
+              "type": "number",
+              "widthInBits": 8,
+              "minimum": 0,
+              "maximum": 10
+            },
+            "dayofweek": {
+              "name": "DayOfWeek"
+              "odmType": { "$ref": "0/odmData/dayoftheweek" } 
+            },  
+            "mode": {
+              "name": "Mode"
+              "odmType": { "$ref": "0/odmData/tstatschedulemode" } 
+            },  
+            "transitions": {
+              "name": "Transitions"
+              //
+              //  This should be an array of type 'TransitionType' or as
+              //  defined in this file 'transitiontypedata'. 
+              //  One DM doesn't have an 'array' so I'm adding it.
+              //  Here as:  array:[ { type }, { size } ]
+              //
+              "odmType": array [ 
+                "type": { "$ref": "0/odmData/transitiontypedata" },
+                "size": {
+                  { "$ref": "#/odmData/numberoftransitions" }
+                }
+              ] 
+            }  
+          }
+        },//end SetWeeklySchedule
+
+        "GetWeeklySchedule": {
+          "name": "Get Weekly Schedule",
+          "id": 2,
+          "required": [
+            { "$ref": "0/odmData/daystoreturn" },
+            { "$ref": "0/odmData/modetoreturn" }
+          ],
+          "inputData": [
+            { "$ref": "0/odmData/dayoftheweek" },
+            { "$ref": "0/odmData/tstatschedulemode" }
+          ],
+          "daystoreturn": {
+            "name": "Days to Return",
+            "required": [
+              { "$ref": "0/odmData/dayoftheweek" }
+            ],
+            "inputData": [
+              { "$ref": "0/odmData/dayoftheweek" }
+            ],
+          },
+          "modetoreturn": {
+            "name": "Mode to Return",
+            "required": [
+              { "$ref": "0/odmData/tstatschedulemode" }
+            ],
+            "inputData": [
+              { "$ref": "0/odmData/tstatschedulemode" }
+            ],
+          },
+
+          "odmData": {
+            "numberoftransitions": {
+              "name": "NumberOfTransitions",
+              "type": "number",
+              "widthInBits": 8,
+              "minimum": 0,
+              "maximum": 10
+            },
+            "dayofweek": {
+              "name": "DayOfWeek"
+              "odmType": { "$ref": "0/odmData/dayoftheweek" } 
+            },  
+            "mode": {
+              "name": "Mode"
+              "odmType": { "$ref": "0/odmData/tstatschedulemode" } 
+            },  
+            "transitions": {
+              "name": "Transitions"
+              "odmType": { "$ref": "0/odmData/transitiontypedata" } 
+            }  
+          }
+        },//end GetWeeklySchedule
+
+//
+// How to represent a command that has no parameters?
+//
+        "ClearWeeklySchedule": {
+          "name": "Clear Weekly Schedule",
+          "id": 3,
+          "required": [ ],
+          "inputData": [ ]
+        },//end ClearWeeklySchedule
+//
+// Again, how to represent a command that has no parameters?
+//
+        "GetRelayStatusLog": {
+          "name": "Get Relay Status Log",
+          "id": 4,
+          "required": [ ],
+          "inputData": [ ]
+        }//end GetRelayStatusLog
+      },//end odmActin [ server commands ]
+//
+// Client oriented commands...
+//  Lines 352 - XXX EOF
+//
+      "odmAction": {
+        "GetWeeklyScheduleResponse": {
+          "name": "Get Weekly Schedule Response",
+          //
+          // Client ID clashes with server ID so start at 100
+          //
+          "id": 101,
+          "required": [
+            { "$ref": "#/odmData/numberoftransitions" },
+            { "$ref": "#/odmData/dayoftheweek" },
+            { "$ref": "#/odmData/mode" },
+            { "$ref": "#/odmData/transitions" }
+          ],
+          "inputData": [
+            { "$ref": "#/odmData/numberoftransitions" },
+            { "$ref": "#/odmData/dayoftheweek" },
+            { "$ref": "#/odmData/mode" },
+            { "$ref": "#/odmData/transitions" }
+          ],
+          "odmData": {
+            "numberoftransitions": {
+              "name": "NumberOfTransitions",
+              "type": "number",
+              "widthInBits": 8,
+              "minimum": 0,
+              "maximum": 10
+            },
+            "dayofweek": {
+              "name": "DayOfWeek"
+              "odmType": { "$ref": "0/odmData/dayoftheweek" } 
+            },  
+            "mode": {
+              "name": "Mode"
+              "odmType": { "$ref": "0/odmData/tstatschedulemode" } 
+            },  
+            "transitions": {
+              "name": "Transitions"
+              //
+              //  This should be an array of type 'TransitionType' or as
+              //  defined in this file 'transitiontypedata'. 
+              //  One DM language doesn't have it so I added it.
+              //  Here as:  array:[ { type }, { size } ]
+              //
+              "odmType": array [ 
+                { "$ref": "0/odmData/transitiontypedata" },
+                { "$ref": "#/odmData/numberoftransitions" }
+              ] 
+            }
+          }
+        },//end GetWeeklyScheduleResponse
+
+        "GetRelayStatusLogResponse": {
+          "name": "Get Relay Status Log Response",
+          //
+          // Client ID clashes with server ID so start at 100
+          //
+          "id": 101,
+          "required": [
+            { "$ref": "#/odmData/timeofday" },
+            { "$ref": "#/odmData/relaystatus" },
+            { "$ref": "#/odmData/localtemperature" },
+            { "$ref": "#/odmData/humiditypercentage" },
+            { "$ref": "#/odmData/setpoint" },
+            { "$ref": "#/odmData/unreadentries" }
+          ],
+          "inputData": [
+            { "$ref": "#/odmData/timeofday" },
+            { "$ref": "#/odmData/relaystatus" },
+            { "$ref": "#/odmData/localtemperature" },
+            { "$ref": "#/odmData/humiditypercentage" },
+            { "$ref": "#/odmData/setpoint" },
+            { "$ref": "#/odmData/unreadentries" }
+          ],
+          "odmData": {
+            "timeofday": {
+              "name": "TimeOfDay",
+              "type": "number",
+              "widthInBits": 16
+            },
+            //
+            // XML says should be map8...?
+            //
+            "relaystatus": {
+              "name": "RelayStatus",
+              "type": "number",
+              "widthInBits": 16
+            },
+            "localtemperature": {
+              "name": "LocalTemperature",
+              "type": "number",
+              "widthInBits": 16
+            },
+            "humiditypercentage": {
+              "name": "HumidityPercentage",
+              "type": "number",
+              "widthInBits": 8
+            },
+            "setpoint": {
+              "name": "SetPoint",
+              "type": "number",
+              "widthInBits": 16
+            },
+            "unreadentries": {
+              "name": "UnreadEntries",
+              "type": "number",
+              "widthInBits": 16
+            },
+          }//end odmData
+        },//end GetWeeklyScheduleResponse
+
+      }//end odmAction [ client commands ]
+//
+//  referenced odmData
+//
+      "odmData": {
+        "dayoftheweek": {
+          "name": "day of the week",
+          "enum": [
+            { "Sunday": 0 },
+            { "Monday": 1 },
+            { "Tuesday": 2 },
+            { "Wednesday": 3 },
+            { "Thursday": 4 },
+            { "Friday": 5 },
+            { "Saturday": 6 },
+            { "AwayOrVacation": 7 }
+          ]
+        }
+      },//end odmData dayoftheweek 
+
+      "odmData": {
+        "name": "zclboolean",
+        "type": "boolean",
+        "default": false
+      }//end odmData odmBoolean
+
+      "odmData": {
+        "mincoolsetpointlimit": {
+          "type": "number",
+          "widthInBits": 16,
+          "default": 1600,
+          "minimum": -27315,
+          "maximum": 32767
+        }
+      },
+
+      "odmData": {
+        "maxcoolsetpointlimit": {
+          "type": "number",
+          "widthInBits": 16,
+          "default": 3200,
+          "minimum": -27315,
+          "maximum": 32767
+        }
+      },
+
+      "odmData": {
+        "minheatsetpointlimit": {
+          "type": "number",
+          "widthInBits": 16,
+          "default": 700,
+          "minimum": -27315,
+          "maximum": 32767
+        }
+      },
+
+      "odmData": {
+        "maxheatsetpointlimit": {
+          "type": "number",
+          "widthInBits": 16,
+          "default": 3000,
+          "minimum": -27315,
+          "maximum": 32767
+        }
+      },
+
+      "odmData": {
+        "minsetpointdeadband": {
+          "type": "number",
+          "widthInBits": 16,
+          "default": 3000,
+          "minimum": 10,
+          "maximum": 25
+        }
+      }
+
+//
+//  Circular references are flattened... see Lines 234-245 in source file.
+//
+      "odmData": {
+        "occupiedsetbackmin": {
+          "type": "number",
+          "widthInBits": 8,
+          "default": 255,
+          "minimum": 0,
+          "maximum": 255
+        }
+      }
+
+      "odmData": {
+        "occupiedsetbackmax": {
+          "type": "number",
+          "widthInBits": 8,
+          "default": 255,
+          "minimum": 0,
+          "maximum": 255
+        }
+      }
+//
+//  Again flattened circular reference.
+//
+      "odmData": {
+        "unoccupiedsetbackmin": {
+          "type": "number",
+          "widthInBits": 8,
+          "default": 255,
+          "minimum": 0,
+          "maximum": 255
+        }
+      }
+
+      "odmData": {
+        "unoccupiedsetbackmax": {
+          "type": "number",
+          "widthInBits": 8,
+          "default": 255,
+          "minimum": 0,
+          "maximum": 255
+        }
+      }
+
+    }//end Thermostat Application
+  }//end odmObject
+}// end of JSON definition

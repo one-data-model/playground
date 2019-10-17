@@ -1,0 +1,212 @@
+{
+  "info": {
+    "title": "Example ODM model for the ZCL Level cluster", 
+    "version": "20190504", 
+    "copyright": "no copyright", 
+    "license": "not licensed",
+    "validationschema": "http://github.com/one-data-model/language/v1/sdf-schema.json"
+  }, 
+  "namespace": {
+    "zcl": "http://example.com/zcl/odm"
+  }, 
+  "defaultnamespace": "zcl", 
+  "odmObject": {
+    "Level": {
+      "name": "Level Control", 
+      "odmRequired": [
+        "0/odmProperty/CurrentLevel", 
+        "0/odmAction/MoveToLevel", 
+        "0/odmAction/Move", 
+        "0/odmAction/Stop", 
+        "0/odmAction/MoveToLevelwithOnOff", 
+        "0/odmAction/MovewithOnOff", 
+        "0/odmAction/StepwithOnOff", 
+        "0/odmAction/StopwithOnOff"
+      ],
+      "odmProperty": {
+        "CurrentLevel": {
+          "name": "Current Level", 
+          "type": "number", 
+          "widthInBits": 8, 
+          "minimum": 0, 
+          "maximum": 254
+        }, 
+        "RemainingTime": {
+          "odmType": {
+            "$ref": "#/odmData/transitiontimedata"
+          }, 
+          "name": "Remaining Time", 
+          "default": 0
+        }, 
+        "OnOffTransitionTime": {
+          "odmType": {
+            "$ref": "#/odmData/transitiontimedata"
+          }, 
+          "name": "On Off Transition Time", 
+          "default": 0
+        }, 
+        "OnLevel": {
+          "name": "On Level", 
+          "type": "number", 
+          "widthInBits": 8, 
+          "minimum": 0, 
+          "maximum": 255, 
+          "default": 255
+        }, 
+        "OnTransitionTime": {
+            "odmRef": "#/odmData/transitiontimedata", 
+          "name": "On Transition Time", 
+          "odmRequired": true 
+        }, 
+        "OffTransitionTime": {
+          "odmType": {
+            "$ref": "#/odmData/transitiontimedata"
+          }, 
+          "name": "Off Transition Time", 
+          "id": 19
+        }, 
+        "DefaultMoveRate": {
+          "name": "Default Move Rate", 
+          "id": 20, 
+          "type": "number", 
+          "widthInBits": 16, 
+          "minimum": 0, 
+          "maximum": 254
+        }
+      }, 
+      "odmAction": {
+        "MoveToLevel": {
+          "name": "Move to Level", 
+          "odmRequired": [
+            "0/odmData/level", 
+            "0/odmData/transitiontime"
+          ],
+          "odmInputData": [
+            "0/odmData/level", 
+            "0/odmData/transitiontime"
+          ],
+          "odmData": {
+            "level": {
+              "name": "Level", 
+              "type": "number", 
+              "widthInBits": 8, 
+              "minimum": 0, 
+              "maximum": 254
+            }, 
+            "transitiontime": {
+              "name": "Transition Time", 
+              "odmType": {
+                "$ref": "#/odmData/transitiontimedata"
+              }
+            }
+          }
+        }, 
+        "Move": {
+          "name": "Move", 
+          "odmRequired": [
+            "0/odmData/movemode", 
+            "0/odmData/rate"
+          ],
+          "odmInputData": [
+            "0/odmData/movemode", 
+            "0/odmData/rate"
+          ],
+          "odmData": {
+            "movemode": {
+              "name": "Move mode", 
+              "type": "number", 
+              "widthInBits": 8, 
+              "enum": [
+                { "up": 0 }, 
+                { "down": 1 }
+             ]
+            }, 
+            "rate": {
+              "name": "Move rate", 
+              "type": "number", 
+              "widthInBits": 8, 
+              "minimum": 0, 
+              "maximum": 255
+            }
+          }
+        }, 
+        "Step": {
+          "name": "Step", 
+          "odmRequired": [
+            "0/odmData/stepmode",
+            "0/odmData/stepsize",
+            "0/odmData/transitiontime"
+          ],
+          "odmInputData": [
+            "0/odmData/stepmode",
+            "0/odmData/stepsize",
+            "0/odmData/transitiontime"
+          ],
+          "odmData": {
+            "stepmode": {
+              "name": "Step mode", 
+              "type": "number", 
+              "widthInBits": 8, 
+              "enum": [
+                { "up": 0 }, 
+                { "down": 1 }
+              ]
+            }, 
+            "stepsize": {
+              "name": "Step size", 
+              "type": "number", 
+              "widthInBits": 8, 
+              "minimum": 0, 
+              "maximum": 255
+            }, 
+            "transitiontime": {
+              "name": "Step Transition Time", 
+              "odmType": {
+                "$ref": "#/odmData/transitiontimedata"
+              }
+            }
+          }
+        }, 
+        "Stop": {
+          "name": "Stop"
+        }, 
+        "MoveToLevelwithOnOff": {
+          "odmType": {
+            "$ref": "1/MoveToLevel"
+          }, 
+          "name": "Move To Level with On/Off"
+        }, 
+        "MovewithOnOff": {
+          "odmType": {
+            "$ref": "1/Move"
+          }, 
+          "name": "Move with On/Off"
+        }, 
+        "StepwithOnOff": {
+          "odmType": {
+            "$ref": "1/Step"
+          }, 
+          "name": "Step with On/Off"
+        }, 
+        "StopwithOnOff": {
+          "odmType": {
+            "$ref": "1/Stop"
+          }, 
+          "name": "Stop with On/Off"
+        }
+      }, 
+      "odmData": {
+        "transitiontimedata": {
+          "type": "number", 
+          "widthInBits": 16, 
+          "minimum": 0, 
+          "maximum": 65535, 
+          "multipleOf": 1, 
+          "unit": "seconds", 
+          "scaleMinimum": 0, 
+          "scaleMaximum": 6553.5
+        }
+      }
+    }
+  }
+}
