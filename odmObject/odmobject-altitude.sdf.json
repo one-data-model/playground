@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Altitude (Object ID 3321)",
-    "version": "20191002",
+    "version": "20191025",
     "copyright": "Copyright (c) 2018, 2019 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },

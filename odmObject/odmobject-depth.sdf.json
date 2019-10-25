@@ -1,14 +1,14 @@
 {
   "info": {
     "title": "OMA LwM2M Depth (Object ID 3319)",
-    "version": "20191002",
+    "version": "20191025",
     "copyright": "Copyright (c) 2018, 2019 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "odmObject": {
     "Depth": {
       "name": "Depth",
-      "description": "This IPSO object should be used to report depth measurements. It can, for example, be used to describe a generic rain gauge that measures the accumulated rainfall in millimetres (mm) or in fathoms (fth).",
+      "description": "This IPSO object should be used to report depth measurements. It can, for example, be used to describe a generic rain gauge that measures the accumulated rainfall in millimetres (mm).",
       "odmProperty": {
         "Sensor_Value": {
           "name": "Sensor Value",

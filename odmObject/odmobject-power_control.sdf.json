@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Power Control (Object ID 3312)",
-    "version": "20191002",
+    "version": "20191025",
     "copyright": "Copyright (c) 2018, 2019 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -19,7 +19,9 @@
           "name": "Dimmer",
           "description": "This resource represents a power dimmer setting, which has an Integer value between 0 and 100 as a percentage.",
           "type": "integer",
-          "units": "%"
+          "units": "/100",
+          "minimum": "0",
+          "maximum": "100"
         },
         "On_time": {
           "name": "On time",

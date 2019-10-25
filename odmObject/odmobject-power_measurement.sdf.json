@@ -1,14 +1,14 @@
 {
   "info": {
     "title": "OMA LwM2M Power Measurement (Object ID 3305)",
-    "version": "20191002",
+    "version": "20191025",
     "copyright": "Copyright (c) 2018, 2019 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "odmObject": {
     "Power_Measurement": {
       "name": "Power Measurement",
-      "description": "This IPSO object should be used over a power measurement sensor to report a remote power measurement.  It also provides resources for minimum/maximum measured values and the minimum/maximum range for both active and reactive power. Il also provides resources for cumulative energy, calibration, and the power factor.",
+      "description": "This IPSO object should be used over a power measurement sensor to report a remote power measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range for both active and reactive power. It also provides resources for cumulative energy, calibration, and the power factor.",
       "odmProperty": {
         "Instantaneous_active_power": {
           "name": "Instantaneous active power",

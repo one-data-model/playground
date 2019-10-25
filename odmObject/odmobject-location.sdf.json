@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Location (Object ID 3336)",
-    "version": "20191002",
+    "version": "20191025",
     "copyright": "Copyright (c) 2018, 2019 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -30,10 +30,12 @@
         },
         "Compass_Direction": {
           "name": "Compass Direction",
-          "description": "Measured Direction.",
+          "description": "The measured compass direction.",
           "writeable": false,
           "type": "number",
-          "units": "deg"
+          "units": "deg",
+          "minimum": "0",
+          "maximum": "360"
         },
         "Velocity": {
           "name": "Velocity",
@@ -43,7 +45,7 @@
         },
         "Timestamp": {
           "name": "Timestamp",
-          "description": "The timestamp of when the location measurement was performed.",
+          "description": "The timestamp of when the measurement was performed.",
           "writeable": false,
           "subtype": "unixtime"
         },
