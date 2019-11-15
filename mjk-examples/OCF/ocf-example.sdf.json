@@ -12,7 +12,6 @@
   "odmObject": {
     "oic.r.temperature": {
       "name": "oic.r.temperature", 
-      "id": 1234, 
       "odmProperty": {
         "temperature": {
           "type": "number"
@@ -26,39 +25,25 @@
           ]
         }, 
         "range": {
-          "odmType": {
-            "$ref": "ocf:/odmData/rangeData"
-          }
+          "odmRef": "ocf:/odmData/rangeData"
         }, 
         "step": {
-          "odmType": {
-            "$ref": "ocf:/odmData/stepData"
-          }
+          "odmRef": "ocf:/odmData/stepData"
         }, 
         "precision": {
-          "odmType": {
-            "$ref": "ocf:/odmData/precisionData"
-          }
+          "odmRef": "ocf:/odmData/precisionData"
         }, 
         "rt": {
-          "odmType": {
-            "$ref": "ocf:/odmData/rtData"
-          }
+          "odmRef": "ocf:/odmData/rtData"
         }, 
         "if": {
-          "odmType": {
-            "$ref": "ocf:/odmData/ifData"
-          }
+          "odmRef": "ocf:/odmData/ifData"
         }, 
         "n": {
-          "odmType": {
-            "$ref": "ocf:/odmData/nData"
-          }
+          "odmRef": "ocf:/odmData/nData"
         }, 
         "id": {
-          "odmType": {
-            "$ref": "ocf:/odmData/idData"
-          }
+          "odmRef": "ocf:/odmData/idData"
         }
       }
     }
@@ -66,73 +51,37 @@
   "odmView": {
     "oic.if.s": {
       "isDefaultView": true, 
-      "include": [
-        {
-          "$ref": "#/odmObject/oic.r.temperature/odmProperty/temperature"
-        }, 
-        {
-          "$ref": "#/odmObject/oic.r.temperature/odmProperty/units"
-        }
+      "odmComponent": [
+        "#/odmObject/oic.r.temperature/odmProperty/temperature",
+        "#/odmObject/oic.r.temperature/odmProperty/units"
       ]
     }, 
     "oic.if.a": {
-      "include": [
-        {
-          "$ref": "#/odmObject/odmProperty/temperature"
-        }, 
-        {
-          "$ref": "#/odmObject/odmProperty/units"
-        }
+      "odmComponent": [
+        "#/odmObject/odmProperty/temperature",
+        "#/odmObject/odmProperty/units"
       ]
     }, 
     "oic.if.rw": {
-      "include": [
-        {
-          "$ref": "#/odmObject/odmProperty/temperature"
-        }, 
-        {
-          "$ref": "#/odmObject/odmProperty/units"
-        }, 
-        {
-          "$ref": "#/odmObject/odmProperty/range"
-        }, 
-        {
-          "$ref": "#/odmObject/odmProperty/step"
-        }, 
-        {
-          "$ref": "#/odmObject/odmProperty/precision"
-        }
+      "odmComponent": [
+        "#/odmObject/odmProperty/temperature",
+        "#/odmObject/odmProperty/units",
+        "#/odmObject/odmProperty/range",
+        "#/odmObject/odmProperty/step",
+        "#/odmObject/odmProperty/precision"
       ]
     }, 
     "oic.if.baseline": {
-      "include": [
-        {
-          "$ref": "#/odmObject/odmProperty/temperature"
-        }, 
-        {
-          "$ref": "#/odmObject/odmProperty/units"
-        }, 
-        {
-          "$ref": "#/odmObject/odmProperty/range"
-        }, 
-        {
-          "$ref": "#/odmObject/odmProperty/step"
-        }, 
-        {
-          "$ref": "#/odmObject/odmProperty/precision"
-        }, 
-        {
-          "$ref": "#/odmObject/odmProperty/rt"
-        }, 
-        {
-          "$ref": "#/odmObject/odmProperty/if"
-        }, 
-        {
-          "$ref": "#/odmObject/odmProperty/n"
-        }, 
-        {
-          "$ref": "#/odmObject/odmProperty/id"
-        }
+      "odmComponent": [
+        "#/odmObject/odmProperty/temperature",
+        "#/odmObject/odmProperty/units",
+        "#/odmObject/odmProperty/range",
+        "#/odmObject/odmProperty/step",
+        "#/odmObject/odmProperty/precision",
+        "#/odmObject/odmProperty/rt",
+        "#/odmObject/odmProperty/if",
+        "#/odmObject/odmProperty/n",
+        "#/odmObject/odmProperty/id"
       ]
     }
   }
