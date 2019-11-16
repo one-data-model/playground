@@ -1,0 +1,24 @@
+{
+  "info": {
+    "title": "Example ODM model for the ZCL Level cluster", 
+    "version": "20190504", 
+    "copyright": "no copyright", 
+    "license": "not licensed"
+  }, 
+  "namespace": {
+    "zcl": "http://example.com/zcl/odm"
+  }, 
+  "defaultnamespace": "zcl", 
+  "odmData": {
+    "transitiontimedata": {
+      "type": "number", 
+      "widthInBits": 16, 
+      "minimum": 0, 
+      "maximum": 65535, 
+      "multipleOf": 1, 
+      "unit": "seconds", 
+      "scaleMinimum": 0, 
+      "scaleMaximum": 6553.5
+    }
+  }
+}

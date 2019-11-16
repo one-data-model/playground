@@ -13,25 +13,24 @@
 
   "odmThing": {
     "oic.d.washer" : {
-      "id": 1,
       "name" : "oic.d.washer",
       "title" : "washing machine",
       "required": [
-        { "$ref": "0/odmObject/powerswitch" },
-        { "$ref": "0/odmObject/washerstate" }
+        "0/odmObject/powerswitch",
+        "0/odmObject/washerstate"
       ],
       "odmObject": {
         "powerswitch": {
-          "odmType": { "$ref": "<library>#/odmObject/oic.r.switch.binary" }
+          "odmRef": "<library>#/odmObject/oic.r.switch.binary"
         },
         "washerstate": {
-            "odmType": { "$ref": "<library>#/odmObject/oic.r.operational.state" }
+            "odmRef": "<library>#/odmObject/oic.r.operational.state"
         },
         "washermode": {
-            "odmType": { "$ref": "<library>#/odmObject/oic.r.mode" }
+            "odmRef": "<library>#/odmObject/oic.r.mode"
         },
         "watertemperature": {
-            "odmType": { "$ref": "<library>#/odmObject/oic.r.temperature" }
+            "odmRef": "<library>#/odmObject/oic.r.temperature"
         }
       }
     }

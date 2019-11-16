@@ -9,7 +9,7 @@
   "odmObject": {
     "oic.r.switch.binary": {
       "name": "oic.r.switch.binary",
-      "desc" : "This odmObject describes a binary switch (on/off).\nThe Property \"value\" is a boolean.\nA value of 'true' means that the switch is on.\nA value of 'false' means that the switch is off.\n",
+      "description" : "This odmObject describes a binary switch (on/off).\nThe Property \"value\" is a boolean.\nA value of 'true' means that the switch is on.\nA value of 'false' means that the switch is off.\n",
       "required": [
         "0/odmProperty/value"
       ],
@@ -23,7 +23,7 @@
 
     "oic.r.airflow": {
       "name": "oic.r.airflow",
-      "desc" : "",
+      "description" : "",
       "required": [
         "0/odmProperty/speed",
         "0/odmProperty/range"
@@ -60,8 +60,8 @@
         },
         "range": {
           "name": "range",
-          "desc" : "applies to the allowed values of speed",
-          "readOnly": true,
+          "description" : "applies to the allowed values of speed",
+          "writeable": false,
           "type": "array",
           "items": {
             "type": "integer"
@@ -74,7 +74,7 @@
   "odmThing": {
     "oic.r.airflowcontrol": {
       "name": "oic.r.airflowcontrol",
-      "desc" : "",
+      "description" : "",
       "odmObject": {
         "_b0": {
           "odmRef": "#/odmObject/oic.r.switch.binary",
