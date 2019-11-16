@@ -50,8 +50,7 @@
         }, 
         "OnTransitionTime": {
           "odmRef": "#/odmData/transitiontimedata", 
-          "name": "On Transition Time", 
-          "odmRequired": true 
+          "name": "On Transition Time"
         }, 
         "OffTransitionTime": {
           "odmRef": "#/odmData/transitiontimedata", 
