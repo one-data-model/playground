@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Positioner (Object ID 3337)",
-    "version": "20191025",
+    "version": "20191116",
     "copyright": "Copyright (c) 2018, 2019 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -15,8 +15,8 @@
           "description": "Current position or desired position of a positioner actuator.",
           "type": "number",
           "units": "/100",
-          "minimum": "0",
-          "maximum": "100"
+          "minimum": 0,
+          "maximum": 100
         },
         "Transition_Time": {
           "name": "Transition Time",

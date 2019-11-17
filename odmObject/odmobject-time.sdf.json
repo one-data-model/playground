@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Time (Object ID 3333)",
-    "version": "20191025",
+    "version": "20191116",
     "copyright": "Copyright (c) 2018, 2019 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -20,8 +20,8 @@
           "description": "Fractional part of the time when sub-second precision is used (e.g., 0.23 for 230 ms).",
           "type": "number",
           "units": "s",
-          "minimum": "0",
-          "maximum": "1"
+          "minimum": 0,
+          "maximum": 1
         },
         "Application_Type": {
           "name": "Application Type",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Addressable Text Display (Object ID 3341)",
-    "version": "20191025",
+    "version": "20191116",
     "copyright": "Copyright (c) 2018, 2019 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -42,16 +42,16 @@
           "description": "Brightness control, integer value between 0 and 100 as a percentage.",
           "type": "number",
           "units": "/100",
-          "minimum": "0",
-          "maximum": "100"
+          "minimum": 0,
+          "maximum": 100
         },
         "Contrast": {
           "name": "Contrast",
           "description": "Proportional control, integer value between 0 and 100 as a percentage.",
           "type": "number",
           "units": "/100",
-          "minimum": "0",
-          "maximum": "100"
+          "minimum": 0,
+          "maximum": 100
         },
         "Application_Type": {
           "name": "Application Type",

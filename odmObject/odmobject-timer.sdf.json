@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Timer (Object ID 3340)",
-    "version": "20191025",
+    "version": "20191116",
     "copyright": "Copyright (c) 2018, 2019 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -61,8 +61,8 @@
           "name": "Timer Mode",
           "description": "Type of timer pattern used by the patterns.",
           "type": "integer",
-          "minimum": "0",
-          "maximum": "4"
+          "minimum": 0,
+          "maximum": 4
         },
         "Application_Type": {
           "name": "Application Type",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Location (Object ID 3336)",
-    "version": "20191025",
+    "version": "20191116",
     "copyright": "Copyright (c) 2018, 2019 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -34,8 +34,8 @@
           "writeable": false,
           "type": "number",
           "units": "deg",
-          "minimum": "0",
-          "maximum": "360"
+          "minimum": 0,
+          "maximum": 360
         },
         "Velocity": {
           "name": "Velocity",
