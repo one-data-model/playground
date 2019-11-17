@@ -1,6 +1,7 @@
+#!/bin/bash
 # CI for http://github.com/one-data-model/playground
 
-function lint1 {
+lint1() {
     if node ipso-odm/odmlint/odmlint.js "$1" "$2" >out
     then :
     else echo "---"
