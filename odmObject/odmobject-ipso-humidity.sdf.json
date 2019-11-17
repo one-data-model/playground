@@ -1,14 +1,10 @@
 {
   "info": {
     "title": "OMA LwM2M Humidity (Object ID 3304)",
-    "version": "20191002",
-    "copyright": "Copyright (c) 2018 IPSO.",
+    "version": "20191116",
+    "copyright": "Copyright (c) 2018, 2019 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "namespace": {
-    "lwm2m": "http://example.com/lwm2m/odm"
-  },
-  "defaultNamespace": "lwm2m",
   "odmObject": {
     "Humidity": {
       "name": "Humidity",

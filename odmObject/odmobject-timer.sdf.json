@@ -1,14 +1,14 @@
 {
   "info": {
     "title": "OMA LwM2M Timer (Object ID 3340)",
-    "version": "20191002",
+    "version": "20191116",
     "copyright": "Copyright (c) 2018, 2019 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "odmObject": {
     "Timer": {
       "name": "Timer",
-      "description": "This IPSO object is used to time events and actions, using patterns common to industrial timers. A write to the trigger resource or On/Off input state change starts the timing operation, and the timer remaining time shows zero when the operation is complete. The patterns supported are One-Shot (mode 1), On-Time or Interval (mode 2), Time delay on pick-up or TDPU (tmode 3), and Time Delay on Drop-Out or TDDO (mode 4). Mode 0 disables the timer, so the output follows the input with no delay. A counter is provided to count occurrences of the timer output changing from 0 to 1. Writing a value of zero resets the counter. The Digital Input State resource reports the state of the timer output.",
+      "description": "This IPSO object is used to time events and actions, using patterns common to industrial timers. A write to the trigger resource or On/Off input state change starts the timing operation, and the timer remaining time shows zero when the operation is complete. The patterns supported are One-Shot (mode 1), On-Time or Interval (mode 2), Time delay on pick-up or TDPU (mode 3), and Time Delay on Drop-Out or TDDO (mode 4). Mode 0 disables the timer, so the output follows the input with no delay. A counter is provided to count occurrences of the timer output changing from 0 to 1. Writing a value of zero resets the counter. The Digital Input State resource reports the state of the timer output.",
       "odmProperty": {
         "Delay_Duration": {
           "name": "Delay Duration",
@@ -60,7 +60,9 @@
         "Timer_Mode": {
           "name": "Timer Mode",
           "description": "Type of timer pattern used by the patterns.",
-          "type": "integer"
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
         },
         "Application_Type": {
           "name": "Application Type",

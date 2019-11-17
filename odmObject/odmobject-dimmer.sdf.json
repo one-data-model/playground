@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Dimmer (Object ID 3343)",
-    "version": "20191002",
+    "version": "20191116",
     "copyright": "Copyright (c) 2018, 2019 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -14,7 +14,9 @@
           "name": "Level",
           "description": "Proportional control, integer value between 0 and 100 as a percentage.",
           "type": "number",
-          "units": "%"
+          "units": "/100",
+          "minimum": 0,
+          "maximum": 100
         },
         "On_time": {
           "name": "On time",

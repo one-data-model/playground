@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Audio Clip (Object ID 3339)",
-    "version": "20191002",
+    "version": "20191116",
     "copyright": "Copyright (c) 2018, 2019 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -12,14 +12,16 @@
       "odmProperty": {
         "Clip": {
           "name": "Clip",
-          "description": "Audio Clip that is playable (i.e. short audio recording indicating the floor in an elevator).",
+          "description": "Audio clip that is playable (e.g., a short audio recording indicating the floor in an elevator).",
           "subtype": "bytestring"
         },
         "Level": {
           "name": "Level",
           "description": "Audio volume control, float value between 0 and 100 as a percentage.",
           "type": "number",
-          "units": "%"
+          "units": "/100",
+          "minimum": 0,
+          "maximum": 100
         },
         "Duration": {
           "name": "Duration",

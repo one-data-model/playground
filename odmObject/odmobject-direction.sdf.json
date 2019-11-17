@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Direction (Object ID 3332)",
-    "version": "20191002",
+    "version": "20191116",
     "copyright": "Copyright (c) 2018, 2019 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -12,10 +12,12 @@
       "odmProperty": {
         "Compass_Direction": {
           "name": "Compass Direction",
-          "description": "This indicates the compass direction of some phenomenon (i.e. direction of travel, wind direction...).",
+          "description": "The measured compass direction.",
           "writeable": false,
           "type": "number",
-          "units": "deg"
+          "units": "deg",
+          "minimum": 0,
+          "maximum": 360
         },
         "Min_Measured_Value": {
           "name": "Min Measured Value",
