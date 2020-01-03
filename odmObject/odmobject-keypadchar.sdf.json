@@ -1,0 +1,38 @@
+{
+  "info": {
+    "copyright": "copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "KeyPadChar",
+    "version": "12122018"
+  },
+  "odmObject": {
+    "keypadchar": {
+      "name": "keypadchar",
+      "description": "This Resource describes a char (0-9,*,#) which is selected on a number keypad.",
+      "odmProperty": {
+        "keyvalue": {
+          "name": "keyvalue",
+          "type": "string",
+          "enum": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "*",
+            "#"
+          ],
+          "description": "The value of the key pad char."
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/keyvalue"
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "info": {
+    "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Sleep Sensor",
+    "version": "20190215"
+  },
+  "odmObject": {
+    "sensor.sleep": {
+      "name": "sensor.sleep",
+      "description": "This Resource describes whether human sleep has been sensed or not. The Property \"value\" is a boolean. A value of 'true' means that sleep has been sensed. A value of 'false' means that sleep not been sensed.",
+      "odmProperty": {
+        "value": {
+          "name": "value",
+          "description": "The sleep sensor, true = sleep sensed, false = sleep not sensed.",
+          "writeable": false,
+          "type": "boolean"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/value"
+      ]
+    }
+  }
+}

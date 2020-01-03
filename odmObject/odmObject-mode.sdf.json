@@ -1,34 +1,36 @@
 {
   "info": {
-    "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
-    "title": "odmObject Mode",
-    "version": "20190530"
+    "title": "Mode",
+    "version": "20190215"
   },
   "odmObject": {
-      "mode": {
-      "desc": "This odmObject describes the modes of operation that a Device can provide.\nThe mode can be read or set.\nThe Property \"supportedModes\" is an array of possible modes the device supports.\nThe Property \"modes\" is an array of the currently active mode(s).",
+    "mode": {
       "name": "mode",
+      "description": "This Resource describes the modes of operation that a Device can provide. The mode can be read or set. The Property \"supportedModes\" is an array of possible modes the device supports. The Property \"modes\" is an array of the currently active mode(s).",
       "odmProperty": {
-        "Modes": {
-          "desc": "Array of the currently active mode(s)",
+        "modes": {
+          "name": "modes",
+          "description": "The array of the currently active mode(s).",
           "items": {
             "type": "string"
           },
-          "name": "Modes",
           "type": "array"
         },
         "supportedModes": {
-          "desc": "Array of possible modes the device supports.",
+          "name": "supported modes",
+          "description": "The array of possible modes the device supports.",
           "items": {
             "type": "string"
           },
-          "name": "supported modes",
-          "writable": false,
+          "writeable": false,
           "type": "array"
         }
       },
-      "odmRequired" : ["0/odmProperty/Modes", "0/odmProperty/supportedModes"]
+      "odmRequired": [
+        "0/odmProperty/modes"
+      ]
     }
   }
 }

@@ -1,0 +1,27 @@
+{
+  "info": {
+    "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Muscle Oxygen Saturation",
+    "version": "2019-08-20"
+  },
+  "odmObject": {
+    "muscleoxygensaturation": {
+      "name": "muscleoxygensaturation",
+      "description": "This Resource describes the muscle oxygen saturation (SmO2), which is the percentage of hemoglobin that is saturated with oxygen in the capillaries of a muscle. The unit is percentage. The smo2 Property is a read-only value that is provided by the server.",
+      "odmProperty": {
+        "muscleoxygensaturation": {
+          "name": "muscleoxygensaturation",
+          "description": "This Property describes the muscle oxygen saturation (SmO2), which is the percentage of hemoglobin that is saturated with oxygen in the capillaries of a muscle. The unit is percentage.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "writeable": false
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/muscleoxygensaturation"
+      ]
+    }
+  }
+}

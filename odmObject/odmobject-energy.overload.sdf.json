@@ -1,0 +1,25 @@
+{
+  "info": {
+    "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Energy Overload/Circuit Breaker",
+    "version": "20190215"
+  },
+  "odmObject": {
+    "energy.overload": {
+      "name": "energy.overload",
+      "description": "This Resource describes whether an energy overload detector/circuit breaker is currently tripped. The Property \"value\" is a boolean. A value of 'true' means that energy overload has been tripped. A value of 'false' means that energy overload has not been tripped.",
+      "odmProperty": {
+        "value": {
+          "name": "value",
+          "description": "The energy overload indication,true = tripped, false = not tripped.",
+          "writeable": false,
+          "type": "boolean"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/value"
+      ]
+    }
+  }
+}

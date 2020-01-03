@@ -1,0 +1,122 @@
+{
+  "info": {
+    "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "IAS Zone Info",
+    "version": "20190513"
+  },
+  "odmObject": {
+    "iaszoneinfo": {
+      "name": "iaszoneinfo",
+      "description": "This Resource describes information associated with an Intruder Alert System (IAS) Zone. Zone Type provides the information about the type of device/alarm. Zone Status provides an array which has 10 items representing various status information(e. g. , battery status, mode, alarm (Up to two), supervision of IAS network, etc. A Device implementing this Resource can be enrolled to IAS Control and Indicator Equipment (CIE). IAS CIE can allocate an ID for the Device and update this Resource on the Device. This Resource may provide multiple sensitivity levels (>2). NumberofZoneSensitivityLevelSupported provides the number of the levels. A specific level can be selected as currentzonesensitivityLevel.",
+      "odmProperty": {
+        "zonestate": {
+          "name": "zonestate",
+          "description": "The IAS zone state. True = enrolled, False = not enrolled.",
+          "writeable": false,
+          "type": "boolean"
+        },
+        "zonestatus": {
+          "name": "zonestatus",
+          "description": "Set of alarm indicators.",
+          "properties": {
+            "alarms": {
+              "name": "alarms",
+              "type": "array",
+              "description": "Array of alarms. The alarms exposed are dependent on the zonetype.",
+              "writeable": false,
+              "minItems": 1,
+              "maxItems": 2,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "system",
+                  "intrusion",
+                  "presence",
+                  "1stportalopenclose",
+                  "2ndportalopenclose",
+                  "fire",
+                  "wateroverflow",
+                  "CO",
+                  "cooking",
+                  "fall",
+                  "emergencybutton",
+                  "movement",
+                  "vibration",
+                  "panic",
+                  "emergency",
+                  "glassbreak"
+                ]
+              }
+            },
+            "zonestatusreports": {
+              "name": "zonestatusreports",
+              "description": "Controls the generation of status indications",
+              "type": "string",
+              "enum": [
+                "none",
+                "statuschangeonly",
+                "alarmclearonly",
+                "statuschangeandalarmclear"
+              ]
+            },
+            "tamper": {
+              "name": "tamper",
+              "description": "Tamper status. True = tampered, False = not tampered.",
+              "writeable": false,
+              "type": "boolean"
+            },
+            "test": {
+              "name": "test",
+              "description": "Test mode indicator. True = sensor is in test mode, False = sensor is in operational mode",
+              "writeable": false,
+              "type": "boolean"
+            },
+            "fault": {
+              "name": "fault",
+              "description": "Fault indicator. True = fault detected, False = no fault detected",
+              "writeable": false,
+              "type": "boolean"
+            }
+          },
+          "writeable": false,
+          "type": "object"
+        },
+        "numzonesensitivitylevel": {
+          "name": "numzonesensitivitylevel",
+          "description": "Number of supported zone sensitivity levels",
+          "minimum": 2,
+          "writeable": false,
+          "type": "integer"
+        },
+        "zoneid": {
+          "name": "zoneid",
+          "description": "ID allocated by the IAS CIE",
+          "writeable": false,
+          "type": "integer"
+        },
+        "iascieaddress": {
+          "name": "iascieaddress",
+          "description": "EUI-64 Address of the enrolled IAS Control and Indicating Equipment (CIE)",
+          "writeable": false,
+          "type": "string"
+        },
+        "zonetype": {
+          "name": "zonetype",
+          "description": "IAS zone type. See OCF enumeration map for set of valid values.",
+          "writeable": false,
+          "type": "string"
+        },
+        "currentzonesensitivitylevel": {
+          "name": "currentzonesensitivitylevel",
+          "description": "Current zone sensitivity level",
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/currentzonesensitivitylevel"
+      ]
+    }
+  }
+}
