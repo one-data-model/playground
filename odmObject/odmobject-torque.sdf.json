@@ -1,0 +1,43 @@
+{
+  "info": {
+    "copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Torque",
+    "version": "2019-09-25"
+  },
+  "odmObject": {
+    "torque": {
+      "name": "torque",
+      "description": "This Resource describes the torque, which is the rotational equivalent of linear force. The unit, which is the default SI unit, is N*m (Newton metre). The torque Property is a read-only value that is provided by the server. When range (from \"oic. r. baseresource\") is omitted the default is 0 to +MAXFLOAT.",
+      "odmProperty": {
+        "torque": {
+          "name": "torque",
+          "description": "This Resource describes the torque, which is the rotational equivalent of linear force, in N*m (Newton metre).",
+          "type": "number",
+          "minimum": 0.0,
+          "writeable": false
+        },
+        "range": {
+          "name": "range",
+          "type": "array",
+          "description": "The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.",
+          "writeable": false,
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "number"
+          }
+        },
+        "step": {
+          "name": "step",
+          "description": "Step value across the defined range an integer when the range is a number.  This is the increment for valid values across the range; so if range is 0.0..10.0 and step is 2.5 then valid values are 0.0,2.5,5.0,7.5,10.0.",
+          "writeable": false,
+          "type": "number"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/torque"
+      ]
+    }
+  }
+}

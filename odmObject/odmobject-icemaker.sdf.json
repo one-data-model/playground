@@ -1,0 +1,29 @@
+{
+  "info": {
+    "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Ice Maker",
+    "version": "20190215"
+  },
+  "odmObject": {
+    "icemaker": {
+      "name": "icemaker",
+      "description": "This Resource describes an the operational state of an Ice Maker. The Property \"status\" is a string containing a value from the set of possible ice maker statuses. The possible statuses are defined by the enumeration [\"on\", \"off\", \"full\"] A status of \"on\" means that the Ice Maker is operating. A status of \"off\" means that the Ice Maker is not operating. A status of \"full\" means that the ice collection bin is full (Ice Maker is operating).",
+      "odmProperty": {
+        "status": {
+          "name": "status",
+          "description": "The status of the Ice Maker.",
+          "enum": [
+            "on",
+            "off",
+            "full"
+          ],
+          "type": "string"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/status"
+      ]
+    }
+  }
+}

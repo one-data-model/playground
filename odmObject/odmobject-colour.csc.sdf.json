@@ -1,0 +1,37 @@
+{
+  "info": {
+    "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Colour Space Coordinates",
+    "version": "20190215"
+  },
+  "odmObject": {
+    "colour.csc": {
+      "name": "colour.csc",
+      "description": "This Resource describes the colour using colour space co-ordinates. The Property \"csc\" is the colour space coordinates in CIE colour space. The first item in the array is the X coordinate. The second item in the array is the Y coordinate. If the Property \"precision\" is provided it applies to both the X and Y coordinates. The Resource provides the colour using colour space coordinates.",
+      "odmProperty": {
+        "csc": {
+          "name": "csc",
+          "description": "The X and Y coordinates of the colour in CIE colour space.",
+          "items": {
+            "maximum": true,
+            "minimum": false,
+            "type": "number"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "type": "array"
+        },
+        "precision": {
+          "name": "precision",
+          "type": "number",
+          "writeable": false,
+          "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/csc"
+      ]
+    }
+  }
+}

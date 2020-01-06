@@ -1,31 +1,49 @@
 {
   "info": {
-    "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
-    "title": "odmObject grinder",
-    "version": "20190530"
+    "title": "Grinder",
+    "version": "20190215"
   },
   "odmObject": {
-   "grinder": {
-      "description": "This odmObject describes the attributes associated with a grinder. The Property \"coarseness\" of the grounds is an integer. The higher the value, the less coarse. The Property \"remaining\" is a percentage that represents the unground material left.",
-      "name": "Grinder",
+    "grinder": {
+      "name": "grinder",
+      "description": "This Resource describes the attributes associated with a grinder. The Property \"coarseness\" of the grounds is an integer. The higher the value, the less coarse. The Property \"remaining\" is a percentage that represents the unground material left.",
       "odmProperty": {
         "coarseness": {
-          "description": "The desired coarseness when grinding.",
           "name": "coarseness",
+          "description": "The desired coarseness when grinding.",
           "type": "integer"
         },
         "remaining": {
+          "name": "remaining",
           "description": "The percentage of unground material left.",
           "maximum": 100,
           "minimum": 0,
-          "name": "remaining percentage",
-          "writable": false,
+          "writeable": false,
+          "type": "integer"
+        },
+        "range": {
+          "name": "range",
+          "type": "array",
+          "description": "The valid range for the Property in the Resource as an integer. The first value in the array is the minimum value, the second value in the array is the maximum value.",
+          "writeable": false,
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "integer"
+          }
+        },
+        "step": {
+          "name": "step",
+          "description": "Step value across the defined range when the range is an integer.  This is the increment for valid values across the range; so if range is 0..10 and step is 2 then valid values are 0,2,4,6,8,10.",
+          "writeable": false,
           "type": "integer"
         }
       },
-
-      "odmRequired": [ "0/odmProperty/coarseness" ]
+      "odmRequired": [
+        "0/odmProperty/coarseness"
+      ]
     }
   }
 }

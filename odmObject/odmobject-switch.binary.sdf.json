@@ -1,21 +1,24 @@
 {
   "info": {
-    "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
-    "title": "odmObject binary switch",
-    "version": "20190530"
+    "title": "Binary Switch",
+    "version": "20190222"
   },
   "odmObject": {
-     "switch.binary": {
-      "desc": "This odmObject describes a binary switch (on/off).\nThe Property \"value\" is a boolean.\nA value of 'true' means that the switch is on.\nA value of 'false' means that the switch is off.\n",
-      "name": "binary switch, e.g. on/off",
+    "switch.binary": {
+      "name": "switch.binary",
+      "description": "This Resource describes a binary switch (on/off). The Property \"value\" is a boolean. A value of 'true' means that the switch is on. A value of 'false' means that the switch is off.",
       "odmProperty": {
         "value": {
           "name": "value",
+          "description": "The status of the switch.",
           "type": "boolean"
         }
       },
-      "odmRequired": [ "0/odmProperty/value" ]
+      "odmRequired": [
+        "0/odmProperty/value"
+      ]
     }
   }
 }

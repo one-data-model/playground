@@ -1,0 +1,39 @@
+{
+  "info": {
+    "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Movement",
+    "version": "20190215"
+  },
+  "odmObject": {
+    "movement.linear": {
+      "name": "movement.linear",
+      "description": "This Resource specifies linear movement. The Property \"movementSettings\" is an array of strings containing possible movement values (e. g. spin, stop, left, right). The Property \"movement\" is the currently selected movement value. The Property \"movementModifier\" is a modifier to the movement value (e. g. \"spin\", \"90\")",
+      "odmProperty": {
+        "movementSettings": {
+          "name": "movement settings",
+          "description": "The array of possible movement values.",
+          "items": {
+            "type": "string"
+          },
+          "writeable": false,
+          "type": "array"
+        },
+        "movementModifier": {
+          "name": "movement modifier",
+          "description": "The modifier to the movement value (e.g. spin-90, left-20), units are device dependent.",
+          "type": "string"
+        },
+        "movement": {
+          "name": "movement",
+          "description": "The current movement value.",
+          "type": "string"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/movementSettings",
+        "0/odmProperty/movement"
+      ]
+    }
+  }
+}

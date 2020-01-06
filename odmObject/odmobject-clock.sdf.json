@@ -1,29 +1,31 @@
 {
   "info": {
-    "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
-    "title": "odmObject clock",
-    "version": "20190530"
+    "title": "Clock",
+    "version": "20190327"
   },
   "odmObject": {
     "clock": {
-      "description": "This odmObject describes the properties associated with clock and time.\nClock is a time information.\nThe Property \"datetime\" is using RFC3339 datetime format (e.g: \"2007-04-05T14:30Z\") (Time+Date+Timezone)\nThe Property \"countdown\" is the desired total seconds for countdown.",
       "name": "clock",
+      "description": "This Resource describes the properties associated with clock and time. Clock is a time information. The Property \"datetime\" is using RFC3339 datetime format (e. g: \"2007-04-05T14:30Z\") (Time+Date+Timezone) The Property \"countdown\" is the desired total seconds for countdown.",
       "odmProperty": {
         "countdown": {
+          "name": "countdown",
           "description": "The desired total seconds for countdown.",
           "minimum": 0,
-          "name": "countdown",
           "type": "number"
         },
         "datetime": {
-          "description": "The date time using RFC3339 datetime format (e.g: 2007-04-05T14:30:00Z, 2007-04-05T14:30:00+09:00).",
-          "format": "date-time",
-          "name": "date time",
-          "type": "string"
+          "name": "datetime",
+          "description": "Rhe date time using RFC3339 datetime format (e.g: 2007-04-05T14:30:00Z, 2007-04-05T14:30:00+09:00).",
+          "type": "string",
+          "format": "date-time"
         }
       },
-      "odmRequired": ["0/odmProperty/datetime"]
+      "odmRequired": [
+        "0/odmProperty/datetime"
+      ]
     }
   }
 }

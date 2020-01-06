@@ -1,0 +1,24 @@
+{
+  "info": {
+    "copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Auto Focus",
+    "version": "20190222"
+  },
+  "odmObject": {
+    "autofocus": {
+      "name": "autofocus",
+      "description": "This Resource describes an auto focus on/off feature. The Property \"autoFocus\" is a boolean. An \"autoFocus\" value of 'true' means that the auto focus feature is on. An \"autoFocus\" value of 'false' means that the auto focus feature is off. Note that when Pan Tilt Zoom (see 'Pan Tilt Zoom' Resource definition) is used the autofocus works only in the selected area.",
+      "odmProperty": {
+        "autoFocus": {
+          "name": "auto focus",
+          "description": "The status of the Auto Focus feature.",
+          "type": "boolean"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/autoFocus"
+      ]
+    }
+  }
+}

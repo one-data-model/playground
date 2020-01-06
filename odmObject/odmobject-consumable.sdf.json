@@ -1,46 +1,49 @@
 {
   "info": {
-    "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
-    "title": "odmObject consumable",
+    "title": "Consumable",
     "version": "20190215"
   },
   "odmObject": {
     "consumable": {
-      "desc": "This odmObject specifies a thing that can be consumed such as filter material, printer toner etc\nThe Propert \"typeofconsumable\" is an enumeration defining the thing being consumed as defined by the Smart Home Device Specification\nThe Property \"remaining\" is an integer capturing the percentatge remaining life\nThe Property \"orderpercentage\" is an integer capturing the percentage life at which replacement or replenishment is recommended by the manufacturer\nThe Property \"url\" is a string containing a URL at which further information may be obtained with respect to the consumable.",
       "name": "consumable",
+      "description": "This Resource specifies a thing that can be consumed such as filter material, printer toner etc The Propert \"typeofconsumable\" is an enumeration defining the thing being consumed as defined by the Smart Home Device Specification The Property \"remaining\" is an integer capturing the percentatge remaining life The Property \"orderpercentage\" is an integer capturing the percentage life at which replacement or replenishment is recommended by the manufacturer The Property \"url\" is a string containing a URL at which further information may be obtained with respect to the consumable.",
       "odmProperty": {
-        "orderpercentage": {
-          "description": "The percentage at which re-ordering is recommended by the manufacturer.",
-          "maximum": 100,
-          "minimum": 0,
-          "name": "order percentage",
-          "writable": false,
-          "type": "integer"
-        },
         "remaining": {
+          "name": "remaining",
           "description": "The percentage remaining lifespan.",
           "maximum": 100,
           "minimum": 0,
-          "name": "remaining",
-          "writable": false,
+          "writeable": false,
           "type": "integer"
         },
         "typeofconsumable": {
+          "name": "typeofconsumable",
           "description": "The thing that is being consumed.",
-          "name": "type of consumable",
-          "writable": false,
+          "writeable": false,
           "type": "string"
         },
         "url": {
+          "name": "url",
           "description": "The URL at which additional ordering information may be found.",
           "format": "uri",
-          "name": "url",
-          "writable": false,
+          "writeable": false,
           "type": "string"
+        },
+        "orderpercentage": {
+          "name": "orderpercentage",
+          "description": "The percentage at which re-ordering is recommended by the manufacturer.",
+          "maximum": 100,
+          "minimum": 0,
+          "writeable": false,
+          "type": "integer"
         }
       },
-      "odmRequired" : ["0/odmProperty/typeofconsumable", "0/odmProperty/remaining"]
+      "odmRequired": [
+        "0/odmProperty/typeofconsumable",
+        "0/odmProperty/remaining"
+      ]
     }
   }
 }

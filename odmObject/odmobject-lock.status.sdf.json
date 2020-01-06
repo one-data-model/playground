@@ -1,0 +1,28 @@
+{
+  "info": {
+    "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Lock",
+    "version": "20190215"
+  },
+  "odmObject": {
+    "lock.status": {
+      "name": "lock.status",
+      "description": "The Resource describing a lock. The Property \"lockState\" is a string. The value 'Locked' indicates that the door is Locked. The value 'Unlocked' indicates that the door is Unlocked.",
+      "odmProperty": {
+        "lockState": {
+          "name": "lock state",
+          "description": "The state of the lock.",
+          "enum": [
+            "Locked",
+            "Unlocked"
+          ],
+          "type": "string"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/lockState"
+      ]
+    }
+  }
+}

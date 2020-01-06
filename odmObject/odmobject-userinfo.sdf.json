@@ -1,0 +1,16 @@
+{
+  "info": {
+    "copyright": "copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "User Info for Application Layer",
+    "version": "12122018"
+  },
+  "odmObject": {
+    "userinfo": {
+      "name": "userinfo",
+      "description": "This Resource defines credentials for user to application layer login. This does not relate to OCF Device to Device or Device to Cloud authentication. The username, password and token are strings.",
+      "odmProperty": {},
+      "odmRequired": []
+    }
+  }
+}

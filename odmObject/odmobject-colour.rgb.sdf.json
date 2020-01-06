@@ -1,0 +1,46 @@
+{
+  "info": {
+    "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Colour RGB",
+    "version": "20190215"
+  },
+  "odmObject": {
+    "colour.rgb": {
+      "name": "colour.rgb",
+      "description": "This Resource specifies the actual colour in the RGB space represented as an array of integers. Each colour value is described with a Red, Green, Blue component. These colour values are encoded as an array of integer values ([R,G,B]). The minimum and maximum colour value per component may be described by the Property \"range\". When \"range\" is omitted, then the \"range\" is [0,255].",
+      "odmProperty": {
+        "rgbValue": {
+          "name": "rgb value",
+          "description": "The RGB value; the first item is the R, second the G, third the B.",
+          "items": {
+            "type": "integer"
+          },
+          "maxItems": 3,
+          "minItems": 3,
+          "type": "array"
+        },
+        "range": {
+          "name": "range",
+          "type": "array",
+          "description": "The valid range for the Property in the Resource as an integer. The first value in the array is the minimum value, the second value in the array is the maximum value.",
+          "writeable": false,
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "integer"
+          }
+        },
+        "step": {
+          "name": "step",
+          "description": "Step value across the defined range when the range is an integer.  This is the increment for valid values across the range; so if range is 0..10 and step is 2 then valid values are 0,2,4,6,8,10.",
+          "writeable": false,
+          "type": "integer"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/rgbValue"
+      ]
+    }
+  }
+}

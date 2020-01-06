@@ -1,0 +1,79 @@
+{
+  "info": {
+    "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Pan Tilt Zoom Movement",
+    "version": "20190215"
+  },
+  "odmObject": {
+    "ptz": {
+      "name": "ptz",
+      "description": "This Resource specifies the pan tilt and zoom capabilities of a device. The Resource Type is dynamic and reflects whether the values apply to physical movement of the device or digital/virtual enhancements to the image. For physical movement the Resource Type is \"oic. r. movement. ptz\". For digital/virtual image enhancements the Resource Type is \"oic. r. image. ptz\". The Properties \"pan\" and \"tilt\" are specified in degrees. The Property \"zoomFactor\" is a value in the range 1-100 for linear (optical) zoom. The zoom factor is a value in the range [1x, 2x, 4x, 8x, 16x, 32x] for digital zoom. If there is no zoom value to set the zoom factor shall be '1x'. The value 0 degrees means neutral, this is a vendor defined setting. Note that this resource also can be used to create an offset for physical movement. When that is the case, the Resource Type value is: \"oic. r. movement. offset. ptz\" Note that this resource also can be used to create an offset for image movement. When that is the case, the Resource Type value is: \"oic. r. image. offset. ptz\". When the Property \"pan_range\" value is omitted, then the range is [-180. 0,180. 0]. If \"pan\" is not supported then the range shall be [0. 0,0. 0] When the Property \"tilt_range\" value is omitted, then the range is [-180. 0,180. 0]. If \"tilt\" is not supported then the range shall be [0. 0,0. 0].",
+      "odmProperty": {
+        "tilt_range": {
+          "name": "tilt_range",
+          "type": "array",
+          "description": "The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.",
+          "writeable": false,
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "number"
+          }
+        },
+        "zoomFactor": {
+          "name": "zoom factor",
+          "description": "The zoom factor value.",
+          "type": "string"
+        },
+        "tilt": {
+          "name": "tilt",
+          "description": "The vertical tilt in degrees.",
+          "type": "number"
+        },
+        "precision": {
+          "name": "precision",
+          "type": "number",
+          "writeable": false,
+          "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
+        },
+        "pan_range": {
+          "name": "pan_range",
+          "type": "array",
+          "description": "The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.",
+          "writeable": false,
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "number"
+          }
+        },
+        "zoomFactorRange": {
+          "name": "zoom factor range",
+          "description": "The allowed Zoom Factor values. Linear equates to a 1-100 min/max.",
+          "enum": [
+            "linear",
+            "1x",
+            "2x",
+            "4x",
+            "8x",
+            "16x",
+            "32x"
+          ],
+          "writeable": false,
+          "type": "string"
+        },
+        "pan": {
+          "name": "pan",
+          "description": "The horizontal pan in degrees.",
+          "type": "number"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/pan",
+        "0/odmProperty/tilt",
+        "0/odmProperty/zoomFactor"
+      ]
+    }
+  }
+}
