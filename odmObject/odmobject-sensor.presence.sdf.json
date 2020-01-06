@@ -1,0 +1,25 @@
+{
+  "info": {
+    "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Presence Sensor",
+    "version": "20190215"
+  },
+  "odmObject": {
+    "sensor.presence": {
+      "name": "sensor.presence",
+      "description": "This Resource describes whether presence has been sensed or not. The Property \"value\" is a boolean. A value of 'true' means that presence has been sensed. A value of 'false' means that presence not been sensed.",
+      "odmProperty": {
+        "value": {
+          "name": "value",
+          "description": "The presences sensor, true = precense sensed, false = precensenot sensed.",
+          "writeable": false,
+          "type": "boolean"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/value"
+      ]
+    }
+  }
+}

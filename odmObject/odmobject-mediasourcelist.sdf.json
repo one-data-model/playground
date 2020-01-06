@@ -1,0 +1,55 @@
+{
+  "info": {
+    "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Media Source List",
+    "version": "20190729"
+  },
+  "odmObject": {
+    "mediasourcelist": {
+      "name": "mediasourcelist",
+      "description": "This Resource provides the list of all media sources available on the Device (input and/or output). The sources are an array of mediaSource(s) as separately defined see Resource Type \"oic. r. mediasource\"",
+      "odmProperty": {
+        "sources": {
+          "name": "sources",
+          "items": {
+            "properties": {
+              "sourceName": {
+                "name": "source name",
+                "description": "Specifies a pre-defined media input or output.",
+                "type": "string"
+              },
+              "sourceNumber": {
+                "name": "source number",
+                "description": "Label to specify the instance.",
+                "writeable": false,
+                "type": "string"
+              },
+              "sourceType": {
+                "name": "source type",
+                "description": "Specifies the type of the source.",
+                "enum": [
+                  "audioOnly",
+                  "videoOnly",
+                  "audioPlusVideo"
+                ],
+                "writeable": false,
+                "type": "string"
+              },
+              "status": {
+                "name": "status",
+                "description": "Specifies if the specific source instance is selected or not.",
+                "type": "boolean"
+              }
+            },
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/sources"
+      ]
+    }
+  }
+}

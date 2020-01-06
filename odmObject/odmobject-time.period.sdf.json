@@ -1,34 +1,49 @@
 {
   "info": {
-    "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
-    "title": "odmObject time.period",
-    "version": "20190530"
+    "title": "Time Period",
+    "version": "20190327"
   },
   "odmObject": {
     "time.period": {
-      "description": "This odmObject describes the time period over which any additionally provided information is derived or bounded.\nThe Property \"startTime\" and \"stopTime\" are RFC3339 encoded strings. The Property \"startTime\" must be present.\nThe interval is the interval of the time period in minutes, if present this value must be no less than 1 minute.\nThe Property \"stoptime\" and \"interval\" are mutually exclusive; both Properties cannot be present in a Resource instance.\nThe Resource defines a time period for information retrieval, action or other behaviour.",
       "name": "time.period",
+      "description": "This Resource describes the time period over which any additionally provided information is derived or bounded. The Property \"startTime\" and \"stopTime\" are RFC3339 encoded strings. The Property \"startTime\" must be present. The interval is the interval of the time period in minutes, if present this value must be no less than 0 minute. The intervalsecond is the interval of the time period in seconds, if present this value must be numerical zero or greater. The repeat is the number of the time period's iteration, which means how many times to repeat the time period. The Property \"repeat\" accepts only negative one, numerical zero, and positive number. When this value is numerical zero, the time period will be repeated infinitely until a client makes it stop by inputting negative one for the value. The Property \"stoptime\" and \"interval\" are mutually exclusive; both Properties cannot be present in a Resource instance. The Property \"intervalsecond\" cannot be presented with the Property \"stopTime\". In case of both the Property \"interval\" and \"intervalsecond\" are presented together, the total time interval is the sum of \"interval\" and \"intervalsecond\". The Resource defines a time period for information retrieval, action or other behaviour.",
       "odmProperty": {
         "interval": {
-          "description": "The time interval in minutes after the \"startTime\", if present the Property \"stopTime\" cannot be present.",
           "name": "interval",
-          "type": "integer"
+          "description": "The time interval in minutes after the \"startTime\", if present the Property \"stopTime\" cannot be present.",
+          "type": "integer",
+          "minimum": 0
         },
-        "startTime": {
-          "description": "The start time for the time period.",
-          "format": "date-time",
-          "name": "start time",
-          "type": "string"
+        "intervalsecond": {
+          "name": "intervalsecond",
+          "description": "The time interval in seconds after the \"startTime\", if present the Property \"stopTime\" cannot be present.",
+          "type": "integer",
+          "minimum": 0
         },
         "stopTime": {
-          "description": "The stop time for the time period, if present the Property \"interval\" cannot be present.",
-          "format": "date-time",
           "name": "stop time",
-          "type": "string"
+          "description": "The stop time for the time period, if present the Property \"interval\" or \"intervalsecond\" cannot be present.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "startTime": {
+          "name": "start time",
+          "description": "The start time for the time period.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "repeat": {
+          "name": "repeat",
+          "description": "The number of times to repeat the time period",
+          "type": "integer",
+          "minimum": -1
         }
       },
-       "odmRequired": ["0/odmProperty/startTime"]
+      "odmRequired": [
+        "0/odmProperty/startTime"
+      ]
     }
   }
 }

@@ -1,0 +1,71 @@
+{
+  "info": {
+    "copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Battery",
+    "version": "20190618"
+  },
+  "odmObject": {
+    "energy.battery": {
+      "name": "energy.battery",
+      "description": "This Resource describes the attributes associated with a battery. The Property \"charge\" is an integer showing the current battery charge level as a percentage in the range 0 (fully discharged) to 100 (fully charged). The Property \"capacity\" represents the total capacity of battery in Amp Hours (Ah). The \"charging\" status and \"discharging\" status are represented by boolean values set to \"true\" indicating enabled and \"false\" indicating disabled. Low battery status is represented by a boolean value set to \"true\" indicating low charge level and \"false\" indicating otherwise, based upon the battery threshold represented as a percentage.",
+      "odmProperty": {
+        "discharging": {
+          "name": "discharging",
+          "description": "The status of discharging.",
+          "writeable": false,
+          "type": "boolean"
+        },
+        "lowbattery": {
+          "name": "lowbattery",
+          "description": "The status of the low battery warning based upon the defined threshold.",
+          "writeable": false,
+          "type": "boolean"
+        },
+        "capacity": {
+          "name": "capacity",
+          "description": "The total capacity in Amp-hours (Ah).",
+          "writeable": false,
+          "type": "number"
+        },
+        "batterythreshold": {
+          "name": "batterythreshold",
+          "description": "The threshold percentage for the low battery warning.",
+          "maximum": 100,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "charge": {
+          "name": "charge",
+          "description": "The current charge percentage.",
+          "maximum": 100,
+          "minimum": 0,
+          "writeable": false,
+          "type": "integer"
+        },
+        "charging": {
+          "name": "charging",
+          "description": "The status of charging.",
+          "writeable": false,
+          "type": "boolean"
+        },
+        "defect": {
+          "name": "defect",
+          "description": "Battery defect detected. True = defect, False = no defect",
+          "writeable": false,
+          "type": "boolean"
+        },
+        "timestamp": {
+          "name": "timestamp",
+          "description": "An RFC3339 formatted time indicating when the data was observed (e.g.: 2016-02-15T09:19Z, 1996-12-19T16:39:57-08:00). Note that 1/100 time resolution should be used.",
+          "format": "date-time",
+          "writeable": false,
+          "type": "string"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/batterythreshold"
+      ]
+    }
+  }
+}

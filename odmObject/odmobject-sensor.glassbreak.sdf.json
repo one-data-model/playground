@@ -1,0 +1,25 @@
+{
+  "info": {
+    "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Glass Break Sensor",
+    "version": "20190215"
+  },
+  "odmObject": {
+    "sensor.glassbreak": {
+      "name": "sensor.glassbreak",
+      "description": "This Resource describes a glass break sensor. The Property \"value\" is a boolean. A value of 'true' means that glass break has been sensed. A value of 'false' means that glass break not been sensed.",
+      "odmProperty": {
+        "value": {
+          "name": "value",
+          "description": "The glassbreak indication, true = glass break sensed, false = glass break not sensed.",
+          "writeable": false,
+          "type": "boolean"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/value"
+      ]
+    }
+  }
+}

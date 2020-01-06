@@ -1,0 +1,48 @@
+{
+  "info": {
+    "copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Acceleration Sensor",
+    "version": "20190215"
+  },
+  "odmObject": {
+    "sensor.acceleration": {
+      "name": "sensor.acceleration",
+      "description": "This Resource provides a measure of proper acceleration (g force) as opposed to co-ordinate acceleration (which is dependent on the co-ordinate system and the observer). The Property \"value\" is a float which describes the acceleration experienced by the object in \"g\".",
+      "odmProperty": {
+        "acceleration": {
+          "name": "acceleration",
+          "description": "The sensed acceleration experienced in 'g'.",
+          "writeable": false,
+          "type": "number"
+        },
+        "range": {
+          "name": "range",
+          "type": "array",
+          "description": "The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.",
+          "writeable": false,
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "number"
+          }
+        },
+        "step": {
+          "name": "step",
+          "description": "Step value across the defined range an integer when the range is a number.  This is the increment for valid values across the range; so if range is 0.0..10.0 and step is 2.5 then valid values are 0.0,2.5,5.0,7.5,10.0.",
+          "writeable": false,
+          "type": "number"
+        },
+        "precision": {
+          "name": "precision",
+          "type": "number",
+          "writeable": false,
+          "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/acceleration"
+      ]
+    }
+  }
+}

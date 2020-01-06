@@ -1,0 +1,69 @@
+{
+  "info": {
+    "copyright": "Copyright 2016-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Context Carbohydrates for Glucose Meter",
+    "version": "2019-03-22"
+  },
+  "odmObject": {
+    "glucose.carb": {
+      "name": "glucose.carb",
+      "description": "This Resource describes the Properties associated with a context carbohydrates. The carb Property has a default unit of grams[g]. The carb and meal Properties are read-only values that are provided by the Server. When range is omitted the default is 0 to +MAXFLOAT.",
+      "odmProperty": {
+        "carb": {
+          "name": "carb",
+          "description": "The amount of carbohydrates undertaken in grams",
+          "writeable": false,
+          "type": "number",
+          "minimum": 0.0
+        },
+        "meal": {
+          "name": "meal",
+          "description": "Recorded time of carbohydrates intake",
+          "enum": [
+            "breakfast",
+            "lunch",
+            "dinner",
+            "snack",
+            "drink",
+            "supper",
+            "brunch",
+            "undetermined",
+            "other",
+            "no_entry",
+            "no_ingestion"
+          ],
+          "writeable": false,
+          "type": "string"
+        },
+        "range": {
+          "name": "range",
+          "description": "The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.",
+          "type": "array",
+          "writeable": false,
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "number"
+          }
+        },
+        "step": {
+          "name": "step",
+          "description": "Step value across the defined range an integer when the range is a number.  This is the increment for valid values across the range; so if range is 0.0..10.0 and step is 2.5 then valid values are 0.0,2.5,5.0,7.5,10.0.",
+          "writeable": false,
+          "type": "number"
+        },
+        "precision": {
+          "name": "precision",
+          "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision",
+          "type": "number",
+          "writeable": false
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/carb",
+        "0/odmProperty/meal"
+      ]
+    }
+  }
+}

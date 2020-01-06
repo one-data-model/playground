@@ -1,0 +1,32 @@
+{
+  "info": {
+    "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Optical RFID Tag",
+    "version": "20190215"
+  },
+  "odmObject": {
+    "orfid.tag": {
+      "name": "orfid.tag",
+      "description": "The Property \"tagid\" is an integer showing the currently read optical augmented RFID tag's identity information.",
+      "odmProperty": {
+        "tagid": {
+          "name": "tagid",
+          "description": "The tag read by the RFID reader.",
+          "writeable": false,
+          "type": "integer"
+        },
+        "reading": {
+          "name": "reading",
+          "description": "The reading indication. true: the tagid is read e.g. being valid. false: the tagid is invalid.",
+          "writeable": false,
+          "type": "boolean"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/tagid",
+        "0/odmProperty/reading"
+      ]
+    }
+  }
+}
