@@ -1,0 +1,54 @@
+{
+  "info": {
+    "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Water Sensor",
+    "version": "20191118"
+  },
+  "odmObject": {
+    "sensor.water": {
+      "name": "sensor.water",
+      "description": "This Resource describes whether water has been sensed or not. The Property \"value\" is a boolean. A value of 'true' means that water has been sensed. A value of 'false' means that water not been sensed.",
+      "odmProperty": {
+        "value": {
+          "name": "value",
+          "description": "true = sensed, false = not sensed.",
+          "writeable": false,
+          "type": "boolean"
+        },
+        "measurement": {
+          "name": "measurement",
+          "type": "number",
+          "description": "Measured value for this sensor in units of litres/hr",
+          "writeable": false
+        },
+        "precision": {
+          "name": "precision",
+          "type": "number",
+          "writeable": false,
+          "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
+        },
+        "range": {
+          "name": "range",
+          "type": "array",
+          "description": "The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.",
+          "writeable": false,
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "number"
+          }
+        },
+        "step": {
+          "name": "step",
+          "description": "Step value across the defined range an integer when the range is a number.  This is the increment for valid values across the range; so if range is 0.0..10.0 and step is 2.5 then valid values are 0.0,2.5,5.0,7.5,10.0.",
+          "writeable": false,
+          "type": "number"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/value"
+      ]
+    }
+  }
+}
