@@ -101,28 +101,23 @@
   "odmProperty": {
     "sensorValue": {
       "id": 5700, 
-      "type": "number", 
-      "subtype": "float"
+      "type": "number"
     }, 
     "minimumMeasuredValue": {
       "id": 5601, 
-      "type": "number", 
-      "subtype": "float"
+      "type": "number"
     }, 
     "maximumMeasuredValue": {
       "id": 5602, 
-      "type": "number", 
-      "subtype": "float"
+      "type": "number"
     }, 
     "minimumRangeValue": {
       "id": 5603, 
-      "type": "number", 
-      "subtype": "float"
+      "type": "number"
     }, 
     "maximumRangeValue": {
       "id": 5604, 
-      "type": "number", 
-      "subtype": "float"
+      "type": "number"
     }, 
     "applicationType": {
       "id": 5750, 
