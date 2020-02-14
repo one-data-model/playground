@@ -1,8 +1,8 @@
 {
   "info": {
     "title": "OMA LwM2M Altitude (Object ID 3321)",
-    "version": "20191116",
-    "copyright": "Copyright (c) 2018, 2019 IPSO",
+    "version": "20200214",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "odmObject": {
@@ -11,61 +11,92 @@
       "description": "This IPSO object should be used with an altitude sensor to report altitude above sea level in meters. Note that Altitude can be calculated from the measured pressure given the local sea level pressure.  It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is meters.",
       "odmProperty": {
         "Sensor_Value": {
-          "name": "Sensor Value",
-          "description": "Last or Current Measured Value from the Sensor",
-          "writeable": false,
-          "type": "number"
+          "odmRef": "#/odmProperty/Sensor_Value"
         },
         "Sensor_Units": {
-          "name": "Sensor Units",
-          "description": "Measurement Units Definition.",
-          "writeable": false,
-          "type": "string"
+          "odmRef": "#/odmProperty/Sensor_Units"
         },
         "Min_Measured_Value": {
-          "name": "Min Measured Value",
-          "description": "The minimum value measured by the sensor since power ON or reset",
-          "writeable": false,
-          "type": "number"
+          "odmRef": "#/odmProperty/Min_Measured_Value"
         },
         "Max_Measured_Value": {
-          "name": "Max Measured Value",
-          "description": "The maximum value measured by the sensor since power ON or reset",
-          "writeable": false,
-          "type": "number"
+          "odmRef": "#/odmProperty/Max_Measured_Value"
         },
         "Min_Range_Value": {
-          "name": "Min Range Value",
-          "description": "The minimum value that can be measured by the sensor",
-          "writeable": false,
-          "type": "number"
+          "odmRef": "#/odmProperty/Min_Range_Value"
         },
         "Max_Range_Value": {
-          "name": "Max Range Value",
-          "description": "The maximum value that can be measured by the sensor",
-          "writeable": false,
-          "type": "number"
+          "odmRef": "#/odmProperty/Max_Range_Value"
         },
         "Current_Calibration": {
-          "name": "Current Calibration",
-          "description": "Read or Write the current calibration coefficient",
-          "type": "number"
+          "odmRef": "#/odmProperty/Current_Calibration"
         },
         "Application_Type": {
-          "name": "Application Type",
-          "description": "The application type of the sensor or actuator as a string depending on the use case",
-          "type": "string"
+          "odmRef": "#/odmProperty/Application_Type"
         }
       },
       "odmAction": {
         "Reset_Min_and_Max_Measured_Values": {
-          "name": "Reset Min and Max Measured Values",
-          "description": "Reset the Min and Max Measured Values to Current Value"
+          "odmRef": "#/odmAction/"
         }
       },
       "odmRequired": [
-        "0/odmProperty/Sensor_Value"
+        "#/odmProperty/Sensor_Value"
       ]
+    }
+  },
+  "odmProperty": {
+    "Sensor_Value": {
+      "name": "Sensor Value",
+      "description": "Last or Current Measured Value from the Sensor",
+      "writeable": false,
+      "type": "number"
+    },
+    "Sensor_Units": {
+      "name": "Sensor Units",
+      "description": "Measurement Units Definition.",
+      "writeable": false,
+      "type": "string"
+    },
+    "Min_Measured_Value": {
+      "name": "Min Measured Value",
+      "description": "The minimum value measured by the sensor since power ON or reset",
+      "writeable": false,
+      "type": "number"
+    },
+    "Max_Measured_Value": {
+      "name": "Max Measured Value",
+      "description": "The maximum value measured by the sensor since power ON or reset",
+      "writeable": false,
+      "type": "number"
+    },
+    "Min_Range_Value": {
+      "name": "Min Range Value",
+      "description": "The minimum value that can be measured by the sensor",
+      "writeable": false,
+      "type": "number"
+    },
+    "Max_Range_Value": {
+      "name": "Max Range Value",
+      "description": "The maximum value that can be measured by the sensor",
+      "writeable": false,
+      "type": "number"
+    },
+    "Current_Calibration": {
+      "name": "Current Calibration",
+      "description": "Read or Write the current calibration coefficient",
+      "type": "number"
+    },
+    "Application_Type": {
+      "name": "Application Type",
+      "description": "The application type of the sensor or actuator as a string depending on the use case",
+      "type": "string"
+    }
+  },
+  "odmAction": {
+    "Reset_Min_and_Max_Measured_Values": {
+      "name": "Reset Min and Max Measured Values",
+      "description": "Reset the Min and Max Measured Values to Current Value"
     }
   }
 }

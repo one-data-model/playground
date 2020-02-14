@@ -1,8 +1,8 @@
 {
   "info": {
     "title": "OMA LwM2M Light Control (Object ID 3311)",
-    "version": "20191116",
-    "copyright": "Copyright (c) 2018, 2019 IPSO",
+    "version": "20200214",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "odmObject": {
@@ -11,58 +11,85 @@
       "description": "This Object is used to control a light source, such as a LED or other light.  It allows a light to be turned on or off and its dimmer setting to be control as a % between 0 and 100. An optional colour setting enables a string to be used to indicate the desired colour.",
       "odmProperty": {
         "On_Off": {
-          "name": "On/Off",
-          "description": "On/off control. Boolean value where True is On and False is Off.",
-          "type": "boolean"
+          "odmRef": "#/odmProperty/On_Off"
         },
         "Dimmer": {
-          "name": "Dimmer",
-          "description": "This resource represents a light dimmer setting, which has an Integer value between 0 and 100 as a percentage.",
-          "type": "integer",
-          "units": "/100",
-          "minimum": 0,
-          "maximum": 100
+          "odmRef": "#/odmProperty/Dimmer"
         },
         "On_time": {
-          "name": "On time",
-          "description": "The time in seconds that the light has been on. Writing a value of 0 resets the counter.",
-          "type": "integer",
-          "units": "s"
+          "odmRef": "#/odmProperty/On_time"
         },
         "Cumulative_active_power": {
-          "name": "Cumulative active power",
-          "description": "The total power in Wh that the light has used.",
-          "writeable": false,
-          "type": "number",
-          "units": "Wh"
+          "odmRef": "#/odmProperty/Cumulative_active_power"
         },
         "Power_factor": {
-          "name": "Power factor",
-          "description": "The power factor of the light.",
-          "writeable": false,
-          "type": "number"
+          "odmRef": "#/odmProperty/Power_factor"
         },
         "Colour": {
-          "name": "Colour",
-          "description": "A string representing a value in some color space",
-          "type": "string"
+          "odmRef": "#/odmProperty/Colour"
         },
         "Sensor_Units": {
-          "name": "Sensor Units",
-          "description": "Measurement Units Definition.",
-          "writeable": false,
-          "type": "string"
+          "odmRef": "#/odmProperty/Sensor_Units"
         },
         "Application_Type": {
-          "name": "Application Type",
-          "description": "The application type of the sensor or actuator as a string, for instance, \"Air Pressure\"",
-          "type": "string"
+          "odmRef": "#/odmProperty/Application_Type"
         }
       },
       "odmAction": {},
       "odmRequired": [
-        "0/odmProperty/On_Off"
+        "#/odmProperty/On_Off"
       ]
     }
-  }
+  },
+  "odmProperty": {
+    "On_Off": {
+      "name": "On/Off",
+      "description": "On/off control. Boolean value where True is On and False is Off.",
+      "type": "boolean"
+    },
+    "Dimmer": {
+      "name": "Dimmer",
+      "description": "This resource represents a light dimmer setting, which has an Integer value between 0 and 100 as a percentage.",
+      "type": "integer",
+      "units": "/100",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "On_time": {
+      "name": "On time",
+      "description": "The time in seconds that the light has been on. Writing a value of 0 resets the counter.",
+      "type": "integer",
+      "units": "s"
+    },
+    "Cumulative_active_power": {
+      "name": "Cumulative active power",
+      "description": "The total power in Wh that the light has used.",
+      "writeable": false,
+      "type": "number",
+      "units": "Wh"
+    },
+    "Power_factor": {
+      "name": "Power factor",
+      "description": "The power factor of the light.",
+      "writeable": false,
+      "type": "number"
+    },
+    "Colour": {
+      "name": "Colour",
+      "description": "A string representing a value in some color space",
+      "type": "string"
+    },
+    "Sensor_Units": {
+      "name": "Sensor Units",
+      "description": "Measurement Units Definition.",
+      "writeable": false,
+      "type": "string"
+    },
+    "Application_Type": {
+      "name": "Application Type",
+      "description": "The application type of the sensor or actuator as a string, for instance, \"Air Pressure\"",
+      "type": "string"
+    }
+  },
+  "odmAction": {}
 }

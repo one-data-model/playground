@@ -1,8 +1,8 @@
 {
   "info": {
     "title": "OMA LwM2M Up/Down Control (Object ID 3344)",
-    "version": "20191116",
-    "copyright": "Copyright (c) 2018, 2019 IPSO",
+    "version": "20200214",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "odmObject": {
@@ -11,38 +11,56 @@
       "description": "This IPSO object is used to report the state of an up/down control element like a pair of push buttons or a rotary encoder. Counters for increase and decrease operations are provided for counting pulses from a quadrature encoder.",
       "odmProperty": {
         "Increase_Input_State": {
-          "name": "Increase Input State",
-          "description": "Indicates an increase control action.",
-          "writeable": false,
-          "type": "boolean"
+          "odmRef": "#/odmProperty/Increase_Input_State"
         },
         "Decrease_Input_State": {
-          "name": "Decrease Input State",
-          "description": "Indicates a decrease control action.",
-          "writeable": false,
-          "type": "boolean"
+          "odmRef": "#/odmProperty/Decrease_Input_State"
         },
         "Up_Counter": {
-          "name": "Up Counter",
-          "description": "Counts the number of times the increase control has been operated. Writing a 0 resets the counter.",
-          "type": "integer"
+          "odmRef": "#/odmProperty/Up_Counter"
         },
         "Down_Counter": {
-          "name": "Down Counter",
-          "description": "Counts the times the decrease control has been operated. Writing a 0 resets the counter.",
-          "type": "integer"
+          "odmRef": "#/odmProperty/Down_Counter"
         },
         "Application_Type": {
-          "name": "Application Type",
-          "description": "The application type of the sensor or actuator as a string depending on the use case.",
-          "type": "string"
+          "odmRef": "#/odmProperty/Application_Type"
         }
       },
       "odmAction": {},
       "odmRequired": [
-        "0/odmProperty/Increase_Input_State",
-        "0/odmProperty/Decrease_Input_State"
+        "#/odmProperty/Increase_Input_State",
+        "#/odmProperty/Decrease_Input_State"
       ]
     }
-  }
+  },
+  "odmProperty": {
+    "Increase_Input_State": {
+      "name": "Increase Input State",
+      "description": "Indicates an increase control action.",
+      "writeable": false,
+      "type": "boolean"
+    },
+    "Decrease_Input_State": {
+      "name": "Decrease Input State",
+      "description": "Indicates a decrease control action.",
+      "writeable": false,
+      "type": "boolean"
+    },
+    "Up_Counter": {
+      "name": "Up Counter",
+      "description": "Counts the number of times the increase control has been operated. Writing a 0 resets the counter.",
+      "type": "integer"
+    },
+    "Down_Counter": {
+      "name": "Down Counter",
+      "description": "Counts the times the decrease control has been operated. Writing a 0 resets the counter.",
+      "type": "integer"
+    },
+    "Application_Type": {
+      "name": "Application Type",
+      "description": "The application type of the sensor or actuator as a string depending on the use case.",
+      "type": "string"
+    }
+  },
+  "odmAction": {}
 }
