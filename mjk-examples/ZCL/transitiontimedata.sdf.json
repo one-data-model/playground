@@ -8,7 +8,7 @@
   "namespace": {
     "zcl": "http://example.com/zcl/odm"
   }, 
-  "defaultnamespace": "zcl", 
+  "defaultNamespace": "zcl", 
   "odmData": {
     "transitiontimedata": {
       "type": "number", 

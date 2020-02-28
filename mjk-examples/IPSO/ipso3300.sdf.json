@@ -8,7 +8,7 @@
   "namespace": {
     "ex": "http://example.com/"
   }, 
-  "defaultnamespace": "ex", 
+  "defaultNamespace": "ex", 
   "odmProduct": {
     "SKU_19934774": {
       "productTypeListing": "Compound Vacuum Gauge", 

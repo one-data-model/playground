@@ -9,7 +9,7 @@
   "namespace": {
     "ocf": "<TBD ocf namespace uri>"
   },
-  "defaultnamespace": "ocf",
+  "defaultNamespace": "ocf",
 
   "odmThing": {
     "oic.d.washer" : {
