@@ -8,7 +8,7 @@
   "namespace": {
     "ica": "http://ecample.com/ica-example/#"
   }, 
-  "defaultnamespace": "ica", 
+  "defaultNamespace": "ica", 
   "odmObject": {
     "Fan": {
       "id": 152, 

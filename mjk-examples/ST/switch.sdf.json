@@ -8,7 +8,7 @@
   "namespace": {
     "st": "http://example.com/capability/odm"
   }, 
-  "defaultnamespace": "st", 
+  "defaultNamespace": "st", 
   "odmObject": {
     "Switch": {
       "odmProperty": {
