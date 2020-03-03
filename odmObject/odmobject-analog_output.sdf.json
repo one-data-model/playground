@@ -21,7 +21,7 @@
         },
         "Application_Type": {
           "name": "Application Type",
-          "description": "If present, the application type of the actuator as a string, for instance, “Valve”",
+          "description": "If present, the application type of the actuator as a string, for instance, \"Valve\"",
           "type": "string"
         },
         "Min_Range_Value": {
