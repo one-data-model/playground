@@ -46,7 +46,7 @@
         },
         "Application_Type": {
           "name": "Application Type",
-          "description": "The application type of the sensor or actuator as a string, for instance, “Air Pressure”",
+          "description": "The application type of the sensor or actuator as a string, for instance, \"Air Pressure\"",
           "type": "string"
         },
         "Sensor_Type": {
