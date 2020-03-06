@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Addressable Text Display (Object ID 3341)",
-    "version": "20200214",
+    "version": "20200306",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -37,7 +37,7 @@
       },
       "odmAction": {
         "Clear_Display": {
-          "odmRef": "#/odmAction/"
+          "odmRef": "#/odmAction/Clear_Display"
         }
       },
       "odmRequired": [
@@ -64,13 +64,13 @@
     "Max_X_Coordinate": {
       "name": "Max X Coordinate",
       "description": "The highest X coordinate the display supports before wrapping to the next line.",
-      "writeable": false,
+      "writable": false,
       "type": "integer"
     },
     "Max_Y_Coordinate": {
       "name": "Max Y Coordinate",
       "description": "The highest Y coordinate the display supports before wrapping to the next line.",
-      "writeable": false,
+      "writable": false,
       "type": "integer"
     },
     "Level": {

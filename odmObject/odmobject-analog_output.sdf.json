@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Analog Output (Object ID 3203)",
-    "version": "20200214",
+    "version": "20200306",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -39,19 +39,19 @@
     },
     "Application_Type": {
       "name": "Application Type",
-      "description": "If present, the application type of the actuator as a string, for instance, \"Valve\"",
+      "description": "The application type of the sensor or actuator as a string depending on the use case.",
       "type": "string"
     },
     "Min_Range_Value": {
       "name": "Min Range Value",
       "description": "The minimum value that can be set for the output",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Max_Range_Value": {
       "name": "Max Range Value",
       "description": "The maximum value that can be set for the output",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     }
   },

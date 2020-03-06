@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Multi-state Selector (Object ID 3348)",
-    "version": "20200214",
+    "version": "20200306",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -27,7 +27,7 @@
     "Multi-state_Input": {
       "name": "Multi-state Input",
       "description": "The current state of a Multi-state input or selector.",
-      "writeable": false,
+      "writable": false,
       "type": "integer"
     },
     "Application_Type": {

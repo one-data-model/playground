@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Gyrometer (Object ID 3334)",
-    "version": "20200214",
+    "version": "20200306",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -52,7 +52,7 @@
       },
       "odmAction": {
         "Reset_Min_and_Max_Measured_Values": {
-          "odmRef": "#/odmAction/"
+          "odmRef": "#/odmAction/Reset_Min_and_Max_Measured_Values"
         }
       },
       "odmRequired": [
@@ -64,73 +64,73 @@
     "X_Value": {
       "name": "X Value",
       "description": "The measured value along the X axis.",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Y_Value": {
       "name": "Y Value",
       "description": "The measured value along the Y axis.",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Z_Value": {
       "name": "Z Value",
       "description": "The measured value along the Z axis.",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Sensor_Units": {
       "name": "Sensor Units",
       "description": "Measurement Units Definition.",
-      "writeable": false,
+      "writable": false,
       "type": "string"
     },
     "Min_X_Value": {
       "name": "Min X Value",
       "description": "The minimum measured value along the X axis",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Max_X_Value": {
       "name": "Max X Value",
       "description": "The maximum measured value along the X axis",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Min_Y_Value": {
       "name": "Min Y Value",
       "description": "The minimum measured value along the Y axis",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Max_Y_Value": {
       "name": "Max Y Value",
       "description": "The maximum measured value along the Y axis",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Min_Z_Value": {
       "name": "Min Z Value",
       "description": "The minimum measured value along the Z axis",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Max_Z_Value": {
       "name": "Max Z Value",
       "description": "The maximum measured value along the Z axis",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Min_Range_Value": {
       "name": "Min Range Value",
       "description": "The minimum value that can be measured by the sensor",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Max_Range_Value": {
       "name": "Max Range Value",
       "description": "The maximum value that can be measured by the sensor",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Application_Type": {

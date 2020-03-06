@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Positioner (Object ID 3337)",
-    "version": "20200214",
+    "version": "20200306",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -37,7 +37,7 @@
       },
       "odmAction": {
         "Reset_Min_and_Max_Measured_Values": {
-          "odmRef": "#/odmAction/"
+          "odmRef": "#/odmAction/Reset_Min_and_Max_Measured_Values"
         }
       },
       "odmRequired": [
@@ -63,32 +63,32 @@
     "Remaining_Time": {
       "name": "Remaining Time",
       "description": "The time remaining in an operation.",
-      "writeable": false,
+      "writable": false,
       "type": "number",
       "units": "s"
     },
     "Min_Measured_Value": {
       "name": "Min Measured Value",
       "description": "The minimum value set on the actuator since power ON or reset.",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Max_Measured_Value": {
       "name": "Max Measured Value",
       "description": "The maximum value set on the actuator since power ON or reset.",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Min_Limit": {
       "name": "Min Limit",
       "description": "The minimum value that can be measured by the sensor.",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Max_Limit": {
       "name": "Max Limit",
       "description": "The maximum value that can be measured by the sensor.",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Application_Type": {

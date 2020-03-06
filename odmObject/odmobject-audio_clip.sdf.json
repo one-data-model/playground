@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Audio Clip (Object ID 3339)",
-    "version": "20200214",
+    "version": "20200306",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -25,7 +25,7 @@
       },
       "odmAction": {
         "Trigger": {
-          "odmRef": "#/odmAction/"
+          "odmRef": "#/odmAction/Trigger"
         }
       },
       "odmRequired": [

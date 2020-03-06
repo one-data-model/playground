@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Up/Down Control (Object ID 3344)",
-    "version": "20200214",
+    "version": "20200306",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -37,13 +37,13 @@
     "Increase_Input_State": {
       "name": "Increase Input State",
       "description": "Indicates an increase control action.",
-      "writeable": false,
+      "writable": false,
       "type": "boolean"
     },
     "Decrease_Input_State": {
       "name": "Decrease Input State",
       "description": "Indicates a decrease control action.",
-      "writeable": false,
+      "writable": false,
       "type": "boolean"
     },
     "Up_Counter": {

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Energy (Object ID 3331)",
-    "version": "20200214",
+    "version": "20200306",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -22,7 +22,7 @@
       },
       "odmAction": {
         "Reset_Cumulative_energy": {
-          "odmRef": "#/odmAction/"
+          "odmRef": "#/odmAction/Reset_Cumulative_energy"
         }
       },
       "odmRequired": [
@@ -34,13 +34,13 @@
     "Sensor_Value": {
       "name": "Sensor Value",
       "description": "Last or Current Measured Value from the Sensor.",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Sensor_Units": {
       "name": "Sensor Units",
       "description": "Measurement Units Definition.",
-      "writeable": false,
+      "writable": false,
       "type": "string"
     },
     "Application_Type": {

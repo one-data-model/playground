@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Barometer (Object ID 3315)",
-    "version": "20200214",
+    "version": "20200306",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -31,7 +31,7 @@
       },
       "odmAction": {
         "Reset_Min_and_Max_Measured_Values": {
-          "odmRef": "#/odmAction/"
+          "odmRef": "#/odmAction/Reset_Min_and_Max_Measured_Values"
         }
       },
       "odmRequired": [
@@ -43,37 +43,37 @@
     "Sensor_Value": {
       "name": "Sensor Value",
       "description": "Last or Current Measured Value from the Sensor",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Min_Measured_Value": {
       "name": "Min Measured Value",
       "description": "The minimum value measured by the sensor since power ON or reset",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Max_Measured_Value": {
       "name": "Max Measured Value",
       "description": "The maximum value measured by the sensor since power ON or reset",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Min_Range_Value": {
       "name": "Min Range Value",
       "description": "The minimum value that can be measured by the sensor",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Max_Range_Value": {
       "name": "Max Range Value",
       "description": "The maximum value that can be measured by the sensor",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Sensor_Units": {
       "name": "Sensor Units",
       "description": "Measurement Units Definition.",
-      "writeable": false,
+      "writable": false,
       "type": "string"
     }
   },

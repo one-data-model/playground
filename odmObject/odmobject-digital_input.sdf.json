@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Digital Input (Object ID 3200)",
-    "version": "20200214",
+    "version": "20200306",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -34,7 +34,7 @@
       },
       "odmAction": {
         "Digital_Input_Counter_Reset": {
-          "odmRef": "#/odmAction/"
+          "odmRef": "#/odmAction/Digital_Input_Counter_Reset"
         }
       },
       "odmRequired": [
@@ -46,13 +46,13 @@
     "Digital_Input_State": {
       "name": "Digital Input State",
       "description": "The current state of a digital input.",
-      "writeable": false,
+      "writable": false,
       "type": "boolean"
     },
     "Digital_Input_Counter": {
       "name": "Digital Input Counter",
       "description": "The cumulative value of active state detected.",
-      "writeable": false,
+      "writable": false,
       "type": "integer"
     },
     "Digital_Input_Polarity": {
@@ -75,13 +75,13 @@
     },
     "Application_Type": {
       "name": "Application Type",
-      "description": "The application type of the sensor or actuator as a string, for instance, \"Air Pressure\"",
+      "description": "The application type of the sensor or actuator as a string depending on the use case.",
       "type": "string"
     },
     "Sensor_Type": {
       "name": "Sensor Type",
       "description": "The type of the sensor (for instance PIR type)",
-      "writeable": false,
+      "writable": false,
       "type": "string"
     }
   },

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Colour (Object ID 3335)",
-    "version": "20200214",
+    "version": "20200306",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -35,7 +35,7 @@
     "Sensor_Units": {
       "name": "Sensor Units",
       "description": "Measurement Units Definition.",
-      "writeable": false,
+      "writable": false,
       "type": "string"
     },
     "Application_Type": {

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Timer (Object ID 3340)",
-    "version": "20200214",
+    "version": "20200306",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -43,7 +43,7 @@
       },
       "odmAction": {
         "Trigger": {
-          "odmRef": "#/odmAction/"
+          "odmRef": "#/odmAction/Trigger"
         }
       },
       "odmRequired": [
@@ -61,7 +61,7 @@
     "Remaining_Time": {
       "name": "Remaining Time",
       "description": "The time remaining in an operation.",
-      "writeable": false,
+      "writable": false,
       "type": "number",
       "units": "s"
     },
@@ -79,7 +79,7 @@
     "Digital_Input_Counter": {
       "name": "Digital Input Counter",
       "description": "The number of times the input.",
-      "writeable": false,
+      "writable": false,
       "type": "integer"
     },
     "Cumulative_Time": {
@@ -91,7 +91,7 @@
     "Digital_State": {
       "name": "Digital State",
       "description": "The current state of the timer output.",
-      "writeable": false,
+      "writable": false,
       "type": "boolean"
     },
     "Counter": {

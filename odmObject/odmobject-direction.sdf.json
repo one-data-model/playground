@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Direction (Object ID 3332)",
-    "version": "20200214",
+    "version": "20200306",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -25,7 +25,7 @@
       },
       "odmAction": {
         "Reset_Min_and_Max_Measured_Values": {
-          "odmRef": "#/odmAction/"
+          "odmRef": "#/odmAction/Reset_Min_and_Max_Measured_Values"
         }
       },
       "odmRequired": [
@@ -37,7 +37,7 @@
     "Compass_Direction": {
       "name": "Compass Direction",
       "description": "The measured compass direction.",
-      "writeable": false,
+      "writable": false,
       "type": "number",
       "units": "deg",
       "minimum": 0,
@@ -46,13 +46,13 @@
     "Min_Measured_Value": {
       "name": "Min Measured Value",
       "description": "The minimum value measured by the sensor since power ON or reset.",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Max_Measured_Value": {
       "name": "Max Measured Value",
       "description": "The maximum value measured by the sensor since power ON or reset.",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Application_Type": {

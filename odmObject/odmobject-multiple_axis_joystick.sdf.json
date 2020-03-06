@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Multiple Axis Joystick (Object ID 3345)",
-    "version": "20200214",
+    "version": "20200306",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -37,31 +37,31 @@
     "Digital_Input_State": {
       "name": "Digital Input State",
       "description": "The current state of a digital input.",
-      "writeable": false,
+      "writable": false,
       "type": "boolean"
     },
     "Digital_Input_Counter": {
       "name": "Digital Input Counter",
       "description": "The number of times the input transitions from 0 to 1.",
-      "writeable": false,
+      "writable": false,
       "type": "integer"
     },
     "X_Value": {
       "name": "X Value",
       "description": "The measured value along the X axis.",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Y_Value": {
       "name": "Y Value",
       "description": "The measured value along the Y axis.",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Z_Value": {
       "name": "Z Value",
       "description": "The measured value along the Z axis.",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Application_Type": {

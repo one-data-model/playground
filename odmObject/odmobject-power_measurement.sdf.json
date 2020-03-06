@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Power Measurement (Object ID 3305)",
-    "version": "20200214",
+    "version": "20200306",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -61,10 +61,10 @@
       },
       "odmAction": {
         "Reset_Cumulative_energy": {
-          "odmRef": "#/odmAction/"
+          "odmRef": "#/odmAction/Reset_Cumulative_energy"
         },
         "Reset_Min_and_Max_Measured_Values": {
-          "odmRef": "#/odmAction/"
+          "odmRef": "#/odmAction/Reset_Min_and_Max_Measured_Values"
         }
       },
       "odmRequired": [
@@ -76,42 +76,42 @@
     "Instantaneous_active_power": {
       "name": "Instantaneous active power",
       "description": "The current active power",
-      "writeable": false,
+      "writable": false,
       "type": "number",
       "units": "W"
     },
     "Min_Measured_active_power": {
       "name": "Min Measured active power",
       "description": "The minimum active power measured by the sensor since it is ON",
-      "writeable": false,
+      "writable": false,
       "type": "number",
       "units": "W"
     },
     "Max_Measured_active_power": {
       "name": "Max Measured active power",
       "description": "The maximum active power measured by the sensor since it is ON",
-      "writeable": false,
+      "writable": false,
       "type": "number",
       "units": "W"
     },
     "Min_Range_active_power": {
       "name": "Min Range active power",
       "description": "The minimum active power that can be measured by the sensor",
-      "writeable": false,
+      "writable": false,
       "type": "number",
       "units": "W"
     },
     "Max_Range_active_power": {
       "name": "Max Range active power",
       "description": "The maximum active power that can be measured by the sensor",
-      "writeable": false,
+      "writable": false,
       "type": "number",
       "units": "W"
     },
     "Cumulative_active_power": {
       "name": "Cumulative active power",
       "description": "The cumulative active power since the last cumulative energy reset or device start",
-      "writeable": false,
+      "writable": false,
       "type": "number",
       "units": "Wh"
     },
@@ -125,42 +125,42 @@
     "Instantaneous_reactive_power": {
       "name": "Instantaneous reactive power",
       "description": "The current reactive power",
-      "writeable": false,
+      "writable": false,
       "type": "number",
       "units": "var"
     },
     "Min_Measured_reactive_power": {
       "name": "Min Measured reactive power",
       "description": "The minimum reactive power measured by the sensor since it is ON",
-      "writeable": false,
+      "writable": false,
       "type": "number",
       "units": "var"
     },
     "Max_Measured_reactive_power": {
       "name": "Max Measured reactive power",
       "description": "The maximum reactive power measured by the sensor since it is ON",
-      "writeable": false,
+      "writable": false,
       "type": "number",
       "units": "var"
     },
     "Min_Range_reactive_power": {
       "name": "Min Range reactive power",
       "description": "The minimum active power that can be measured by the sensor",
-      "writeable": false,
+      "writable": false,
       "type": "number",
       "units": "var"
     },
     "Max_Range_reactive_power": {
       "name": "Max Range reactive power",
       "description": "The maximum reactive power that can be measured by the sensor",
-      "writeable": false,
+      "writable": false,
       "type": "number",
       "units": "var"
     },
     "Cumulative_reactive_power": {
       "name": "Cumulative reactive power",
       "description": "The cumulative reactive power since the last cumulative energy reset or device start",
-      "writeable": false,
+      "writable": false,
       "type": "number",
       "units": "varh"
     },
@@ -174,7 +174,7 @@
     "Power_factor": {
       "name": "Power factor",
       "description": "If applicable, the power factor of the current consumption.",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Current_Calibration": {

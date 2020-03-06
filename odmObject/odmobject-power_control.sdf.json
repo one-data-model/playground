@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Power Control (Object ID 3312)",
-    "version": "20200214",
+    "version": "20200306",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -58,19 +58,19 @@
     "Cumulative_active_power": {
       "name": "Cumulative active power",
       "description": "The total power in Wh that has been used by the load.",
-      "writeable": false,
+      "writable": false,
       "type": "number",
       "units": "Wh"
     },
     "Power_factor": {
       "name": "Power factor",
       "description": "The power factor of the load.",
-      "writeable": false,
+      "writable": false,
       "type": "number"
     },
     "Application_Type": {
       "name": "Application Type",
-      "description": "The application type of the sensor or actuator as a string, for instance, \"Air Pressure\"",
+      "description": "The application type of the sensor or actuator as a string depending on the use case.",
       "type": "string"
     }
   },
