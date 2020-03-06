@@ -1,8 +1,8 @@
 {
   "info": {
     "title": "OMA LwM2M Direction (Object ID 3332)",
-    "version": "20191116",
-    "copyright": "Copyright (c) 2018, 2019 IPSO",
+    "version": "20200306",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "odmObject": {
@@ -11,41 +11,60 @@
       "description": "This IPSO object is used to report the direction indicated by a compass, wind vane, or other directional indicator. The units of measure is plane angle degrees.",
       "odmProperty": {
         "Compass_Direction": {
-          "name": "Compass Direction",
-          "description": "The measured compass direction.",
-          "writeable": false,
-          "type": "number",
-          "units": "deg",
-          "minimum": 0,
-          "maximum": 360
+          "odmRef": "#/odmProperty/Compass_Direction"
         },
         "Min_Measured_Value": {
-          "name": "Min Measured Value",
-          "description": "The minimum value measured by the sensor since power ON or reset.",
-          "writeable": false,
-          "type": "number"
+          "odmRef": "#/odmProperty/Min_Measured_Value"
         },
         "Max_Measured_Value": {
-          "name": "Max Measured Value",
-          "description": "The maximum value measured by the sensor since power ON or reset.",
-          "writeable": false,
-          "type": "number"
+          "odmRef": "#/odmProperty/Max_Measured_Value"
         },
         "Application_Type": {
-          "name": "Application Type",
-          "description": "The application type of the sensor or actuator as a string depending on the use case.",
-          "type": "string"
+          "odmRef": "#/odmProperty/Application_Type"
         }
       },
       "odmAction": {
         "Reset_Min_and_Max_Measured_Values": {
-          "name": "Reset Min and Max Measured Values",
-          "description": "Reset the Min and Max Measured Values to Current Value."
+          "odmRef": "#/odmAction/Reset_Min_and_Max_Measured_Values"
         }
       },
       "odmRequired": [
-        "0/odmProperty/Compass_Direction"
+        "#/odmProperty/Compass_Direction"
       ]
+    }
+  },
+  "odmProperty": {
+    "Compass_Direction": {
+      "name": "Compass Direction",
+      "description": "The measured compass direction.",
+      "writable": false,
+      "type": "number",
+      "units": "deg",
+      "minimum": 0,
+      "maximum": 360
+    },
+    "Min_Measured_Value": {
+      "name": "Min Measured Value",
+      "description": "The minimum value measured by the sensor since power ON or reset.",
+      "writable": false,
+      "type": "number"
+    },
+    "Max_Measured_Value": {
+      "name": "Max Measured Value",
+      "description": "The maximum value measured by the sensor since power ON or reset.",
+      "writable": false,
+      "type": "number"
+    },
+    "Application_Type": {
+      "name": "Application Type",
+      "description": "The application type of the sensor or actuator as a string depending on the use case.",
+      "type": "string"
+    }
+  },
+  "odmAction": {
+    "Reset_Min_and_Max_Measured_Values": {
+      "name": "Reset Min and Max Measured Values",
+      "description": "Reset the Min and Max Measured Values to Current Value."
     }
   }
 }
