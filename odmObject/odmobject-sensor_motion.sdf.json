@@ -13,7 +13,7 @@
         "value": {
           "name": "value",
           "description": "The motion sensor, true = motion sensed, false = motion not sensed.",
-          "writeable": false,
+          "writable": false,
           "type": "boolean"
         }
       },

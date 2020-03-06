@@ -13,7 +13,7 @@
         "userid": {
           "name": "userid",
           "description": "Id of a patient/user of healthcare devices",
-          "writeable": false,
+          "writable": false,
           "type": "string"
         }
       },

@@ -13,7 +13,7 @@
         "occurrence": {
           "name": "occurrence",
           "type": "string",
-          "writeable": false,
+          "writable": false,
           "enum": [
             "BEAT",
             "BEAT_MAX_INRUSH",

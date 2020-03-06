@@ -13,7 +13,7 @@
         "value": {
           "name": "value",
           "description": "The contact indication, true = broken (open), false = in place (closed).",
-          "writeable": false,
+          "writable": false,
           "type": "boolean"
         }
       },

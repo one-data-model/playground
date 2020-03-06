@@ -20,7 +20,7 @@
             "Zone4",
             "Zone5"
           ],
-          "writeable": false,
+          "writable": false,
           "type": "string"
         }
       },

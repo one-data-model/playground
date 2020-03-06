@@ -13,7 +13,7 @@
         "energygenerated": {
           "name": "energygenerated",
           "description": "The energy generated in Watt-hour(Wh).",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         }
       },

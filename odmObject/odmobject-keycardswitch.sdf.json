@@ -13,7 +13,7 @@
         "stateofcard": {
           "name": "stateofcard",
           "description": "The status of the keycardswitch. \"validCardInserted\" means that a keycard was inserted and passed validation check. \"validCardNotInserted\" means that a keycard is not inserted or it was inserted but failed to pass validation check.",
-          "writeable": false,
+          "writable": false,
           "type": "string",
           "enum": [
             "validCardInserted",

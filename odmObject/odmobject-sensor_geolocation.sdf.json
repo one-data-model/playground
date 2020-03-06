@@ -13,7 +13,7 @@
         "longitude": {
           "name": "longitude",
           "description": "The Device's Current Longitude coordinate (degrees).",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         },
         "heading": {
@@ -21,40 +21,40 @@
           "description": "The direction of travel of the Device (degree).",
           "maximum": 360,
           "minimum": 0,
-          "writeable": false,
+          "writable": false,
           "type": "number"
         },
         "latitude": {
           "name": "latitude",
           "description": "The Device's Current Latitude coordinate (degrees).",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         },
         "altitudeAccuracy": {
           "name": "altitude accuracy",
           "description": "The accuracy level of the altitude coordinates (metres).",
           "minimum": 0,
-          "writeable": false,
+          "writable": false,
           "type": "number"
         },
         "alt": {
           "name": "alt",
           "description": "The current distance (metres) above or below 'local' sea-level.",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         },
         "accuracy": {
           "name": "accuracy",
           "description": "The accuracy level of the latitude and longitude coordinates (metres).",
           "minimum": 0,
-          "writeable": false,
+          "writable": false,
           "type": "number"
         },
         "speed": {
           "name": "speed",
           "description": "The Device's current velocity (metres per second).",
           "minimum": 0,
-          "writeable": false,
+          "writable": false,
           "type": "number"
         }
       },

@@ -23,7 +23,7 @@
               "AC (Mains) Power",
               "Solar"
             ],
-            "minItems": true,
+            "minItems": 1,
             "type": "string",
             "uniqueItems": true
           },
@@ -32,7 +32,7 @@
         "sourcefault": {
           "name": "sourcefault",
           "description": "Fault detected in currently active power source. True = fault detected",
-          "writeable": false,
+          "writable": false,
           "type": "boolean"
         }
       },

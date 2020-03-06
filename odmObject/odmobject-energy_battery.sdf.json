@@ -13,19 +13,19 @@
         "discharging": {
           "name": "discharging",
           "description": "The status of discharging.",
-          "writeable": false,
+          "writable": false,
           "type": "boolean"
         },
         "lowbattery": {
           "name": "lowbattery",
           "description": "The status of the low battery warning based upon the defined threshold.",
-          "writeable": false,
+          "writable": false,
           "type": "boolean"
         },
         "capacity": {
           "name": "capacity",
           "description": "The total capacity in Amp-hours (Ah).",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         },
         "batterythreshold": {
@@ -40,26 +40,26 @@
           "description": "The current charge percentage.",
           "maximum": 100,
           "minimum": 0,
-          "writeable": false,
+          "writable": false,
           "type": "integer"
         },
         "charging": {
           "name": "charging",
           "description": "The status of charging.",
-          "writeable": false,
+          "writable": false,
           "type": "boolean"
         },
         "defect": {
           "name": "defect",
           "description": "Battery defect detected. True = defect, False = no defect",
-          "writeable": false,
+          "writable": false,
           "type": "boolean"
         },
         "timestamp": {
           "name": "timestamp",
           "description": "An RFC3339 formatted time indicating when the data was observed (e.g.: 2016-02-15T09:19Z, 1996-12-19T16:39:57-08:00). Note that 1/100 time resolution should be used.",
           "format": "date-time",
-          "writeable": false,
+          "writable": false,
           "type": "string"
         }
       },

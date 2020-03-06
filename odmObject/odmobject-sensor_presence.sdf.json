@@ -13,7 +13,7 @@
         "value": {
           "name": "value",
           "description": "The presences sensor, true = precense sensed, false = precensenot sensed.",
-          "writeable": false,
+          "writable": false,
           "type": "boolean"
         }
       },

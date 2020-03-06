@@ -16,14 +16,14 @@
           "items": {
             "type": "string"
           },
-          "writeable": false,
+          "writable": false,
           "uniqueItems": true,
           "type": "array"
         },
         "currentAdfState": {
           "name": "current adf state",
           "description": "The current adf state.",
-          "writeable": false,
+          "writable": false,
           "type": "string"
         }
       },

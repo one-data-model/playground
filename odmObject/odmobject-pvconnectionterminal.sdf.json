@@ -13,44 +13,44 @@
         "ratedarrayvoltage": {
           "name": "ratedarrayvoltage",
           "description": "Rated voltage of array (Nominal values of maximum power voltage * number of modules) (V)",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         },
         "ratedarraycurrent": {
           "name": "ratedarraycurrent",
           "description": "Rated current of array (Nominal values of maximum power current * number of modules) (A), defined at manufacturing time.",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         },
         "arrayvoltage": {
           "name": "arrayvoltage",
           "description": "Output voltage of array in volts (V).",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         },
         "arraycurrent": {
           "name": "arraycurrent",
           "description": "Output current of array in Ampere (A).",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         },
         "leakagecurrent": {
           "name": "leakagecurrent",
           "description": "The leakage current in mA.",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         },
         "insulationresistance": {
           "name": "insulationresistance",
           "description": "Insulation resistance of circuit breaker (M Ohm).",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         },
         "timestamp": {
           "name": "timestamp",
           "description": "An RFC3339 formatted time indicating when the data was observed (e.g.: 2016-02-15T09:19Z, 1996-12-19T16:39:57-08:00). Note that 1/100 time resolution should be used.",
           "format": "date-time",
-          "writeable": false,
+          "writable": false,
           "type": "string"
         }
       },

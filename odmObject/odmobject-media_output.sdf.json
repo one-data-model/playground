@@ -22,7 +22,7 @@
               "sourceNumber": {
                 "name": "source number",
                 "description": "Label to specify the instance",
-                "writeable": false,
+                "writable": false,
                 "type": "string"
               },
               "sourceType": {
@@ -33,7 +33,7 @@
                   "videoOnly",
                   "audioPlusVideo"
                 ],
-                "writeable": false,
+                "writable": false,
                 "type": "string"
               },
               "status": {

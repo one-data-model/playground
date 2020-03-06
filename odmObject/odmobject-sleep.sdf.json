@@ -14,70 +14,70 @@
           "name": "awake",
           "type": "integer",
           "minimum": 0,
-          "writeable": false,
+          "writable": false,
           "description": "Time spent in Awake stage (in seconds)"
         },
         "nrem1": {
           "name": "nrem1",
           "type": "integer",
           "minimum": 0,
-          "writeable": false,
+          "writable": false,
           "description": "Time spent in Non Rapid Eye Movement stage 1 (in seconds)"
         },
         "nrem2": {
           "name": "nrem2",
           "type": "integer",
           "minimum": 0,
-          "writeable": false,
+          "writable": false,
           "description": "Time spent in Non Rapid Eye Movement stage 2 (in seconds)"
         },
         "nrem3": {
           "name": "nrem3",
           "type": "integer",
           "minimum": 0,
-          "writeable": false,
+          "writable": false,
           "description": "Time spent in Non Rapid Eye Movement stage 3 (in seconds)"
         },
         "nrem4": {
           "name": "nrem4",
           "type": "integer",
           "minimum": 0,
-          "writeable": false,
+          "writable": false,
           "description": "Time spent in Non Rapid Eye Movement stage 4 (in seconds)"
         },
         "rem": {
           "name": "rem",
           "type": "integer",
           "minimum": 0,
-          "writeable": false,
+          "writable": false,
           "description": "Time spent in Rapid Eye Movement (in seconds)"
         },
         "lightsleep": {
           "name": "lightsleep",
           "type": "integer",
           "minimum": 0,
-          "writeable": false,
+          "writable": false,
           "description": "Time spent in Light Sleep stage, consisting in NREM stages 1 and 2 (in seconds)"
         },
         "deepsleep": {
           "name": "deepsleep",
           "type": "integer",
           "minimum": 0,
-          "writeable": false,
+          "writable": false,
           "description": "Time spent in Deep Sleep stage, consisting in NREM stages 3 and 4 (in seconds)"
         },
         "sleepscore": {
           "name": "sleepscore",
           "type": "number",
           "minimum": 0,
-          "writeable": false,
+          "writable": false,
           "description": "Score computed from the time spent in each sleep stage, indicative of the quality of sleep"
         },
         "range_phases": {
           "name": "range_phases",
           "type": "array",
           "description": "The valid range for the Property in the Resource as an integer. The first value in the array is the minimum value, the second value in the array is the maximum value.",
-          "writeable": false,
+          "writable": false,
           "minItems": 2,
           "maxItems": 2,
           "items": {
@@ -87,14 +87,14 @@
         "step_phases": {
           "name": "step_phases",
           "description": "Step value across the defined range when the range is an integer.  This is the increment for valid values across the range; so if range is 0..10 and step is 2 then valid values are 0,2,4,6,8,10.",
-          "writeable": false,
+          "writable": false,
           "type": "integer"
         },
         "range_score": {
           "name": "range_score",
           "type": "array",
           "description": "The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.",
-          "writeable": false,
+          "writable": false,
           "minItems": 2,
           "maxItems": 2,
           "items": {
@@ -104,13 +104,13 @@
         "step_score": {
           "name": "step_score",
           "description": "Step value across the defined range an integer when the range is a number.  This is the increment for valid values across the range; so if range is 0.0..10.0 and step is 2.5 then valid values are 0.0,2.5,5.0,7.5,10.0.",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         },
         "precision": {
           "name": "precision",
           "type": "number",
-          "writeable": false,
+          "writable": false,
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },

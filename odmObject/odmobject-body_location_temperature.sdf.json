@@ -24,7 +24,7 @@
             "toe",
             "tympanum"
           ],
-          "writeable": false,
+          "writable": false,
           "type": "string"
         }
       },

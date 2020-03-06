@@ -25,7 +25,7 @@
             "Odor",
             "AirPollution"
           ],
-          "writeable": false,
+          "writable": false,
           "type": "string"
         },
         "valuetype": {
@@ -35,20 +35,20 @@
             "Qualitative",
             "Measured"
           ],
-          "writeable": false,
+          "writable": false,
           "type": "string"
         },
         "contaminantvalue": {
           "name": "contaminantvalue",
           "description": "The measured or qualitative value for the contaminant.",
-          "writeable": false,
+          "writable": false,
           "type": "integer"
         },
         "range": {
           "name": "range",
           "type": "array",
           "description": "The valid range for the Property in the Resource as an integer. The first value in the array is the minimum value, the second value in the array is the maximum value.",
-          "writeable": false,
+          "writable": false,
           "minItems": 2,
           "maxItems": 2,
           "items": {

@@ -27,7 +27,7 @@
             "off",
             "on"
           ],
-          "writeable": false,
+          "writable": false,
           "type": "string"
         }
       },

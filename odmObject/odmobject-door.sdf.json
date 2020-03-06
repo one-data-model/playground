@@ -23,7 +23,7 @@
             "Open",
             "Closed"
           ],
-          "writeable": false,
+          "writable": false,
           "type": "string"
         },
         "openAlarm": {
