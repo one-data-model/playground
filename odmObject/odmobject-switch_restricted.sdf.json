@@ -1,0 +1,24 @@
+{
+  "info": {
+    "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "title": "Restricted Switch",
+    "version": "20191119"
+  },
+  "odmObject": {
+    "switch.restricted": {
+      "name": "switch.restricted",
+      "description": "This Resource describes a switch(on/off) restricting UPDATE for 'on'. The Property \"state\" is a Boolean. A state of True means that the switch is turned on. A state of False means that the switch is turned off.",
+      "odmProperty": {
+        "state": {
+          "name": "state",
+          "description": "The status of the restricted switch.",
+          "type": "boolean"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/state"
+      ]
+    }
+  }
+}
