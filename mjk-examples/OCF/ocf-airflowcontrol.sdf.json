@@ -50,7 +50,7 @@
         },
         "supporteddirections" : {
           "description": "The array of possible direction settings for this instance of the Resource Type.",
-          "writeable": false,
+          "writable": false,
           "type": "array",
           "items": {
             "minItems": 1,
@@ -61,7 +61,7 @@
         "range": {
           "name": "range",
           "description" : "applies to the allowed values of speed",
-          "writeable": false,
+          "writable": false,
           "type": "array",
           "items": {
             "type": "integer"
