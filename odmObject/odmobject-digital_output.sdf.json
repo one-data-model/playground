@@ -26,7 +26,7 @@
         },
         "Application_Type": {
           "name": "Application Type",
-          "description": "The application type of the output as a string, for instance, “LED”",
+          "description": "The application type of the output as a string, for instance, \"LED\"",
           "type": "string"
         }
       },
