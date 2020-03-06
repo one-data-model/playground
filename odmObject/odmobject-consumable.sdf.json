@@ -15,20 +15,20 @@
           "description": "The percentage remaining lifespan.",
           "maximum": 100,
           "minimum": 0,
-          "writeable": false,
+          "writable": false,
           "type": "integer"
         },
         "typeofconsumable": {
           "name": "typeofconsumable",
           "description": "The thing that is being consumed.",
-          "writeable": false,
+          "writable": false,
           "type": "string"
         },
         "url": {
           "name": "url",
           "description": "The URL at which additional ordering information may be found.",
           "format": "uri",
-          "writeable": false,
+          "writable": false,
           "type": "string"
         },
         "orderpercentage": {
@@ -36,7 +36,7 @@
           "description": "The percentage at which re-ordering is recommended by the manufacturer.",
           "maximum": 100,
           "minimum": 0,
-          "writeable": false,
+          "writable": false,
           "type": "integer"
         }
       },

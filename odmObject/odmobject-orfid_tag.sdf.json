@@ -13,13 +13,13 @@
         "tagid": {
           "name": "tagid",
           "description": "The tag read by the RFID reader.",
-          "writeable": false,
+          "writable": false,
           "type": "integer"
         },
         "reading": {
           "name": "reading",
           "description": "The reading indication. true: the tagid is read e.g. being valid. false: the tagid is invalid.",
-          "writeable": false,
+          "writable": false,
           "type": "boolean"
         }
       },

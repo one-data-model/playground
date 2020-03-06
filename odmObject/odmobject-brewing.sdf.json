@@ -27,7 +27,7 @@
           },
           "maxItems": 2,
           "minItems": 2,
-          "writeable": false,
+          "writable": false,
           "type": "array"
         }
       },

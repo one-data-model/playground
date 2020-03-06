@@ -35,13 +35,13 @@
             ],
             "type": "string"
           },
-          "writeable": false,
+          "writable": false,
           "type": "array"
         },
         "adminforced": {
           "name": "adminforced",
           "description": "The indicator that the current mode of operation has been forced by admin action.",
-          "writeable": false,
+          "writable": false,
           "type": "boolean"
         }
       },

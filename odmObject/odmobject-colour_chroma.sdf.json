@@ -35,7 +35,7 @@
           "description": "The maximum supported value of \"saturation\" for this Device.",
           "maximum": 32767,
           "minimum": 0,
-          "writeable": false,
+          "writable": false,
           "type": "integer"
         },
         "csc": {

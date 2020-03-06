@@ -26,7 +26,7 @@
           "items": {
             "type": "string"
           },
-          "writeable": false,
+          "writable": false,
           "type": "array"
         },
         "runningTime": {
@@ -46,7 +46,7 @@
           "description": "The percentage completeness of the current jobState.",
           "maximum": 100,
           "minimum": 0,
-          "writeable": false,
+          "writable": false,
           "type": "integer"
         },
         "jobStates": {
@@ -55,7 +55,7 @@
           "items": {
             "type": "string"
           },
-          "writeable": false,
+          "writable": false,
           "type": "array"
         }
       }

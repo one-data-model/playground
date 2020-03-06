@@ -22,7 +22,7 @@
           "description": "The current sensed value for humidity.",
           "maximum": 100,
           "minimum": 0,
-          "writeable": false,
+          "writable": false,
           "type": "integer"
         }
       },

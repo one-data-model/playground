@@ -23,7 +23,7 @@
             "videoOnly",
             "audioPlusVideo"
           ],
-          "writeable": false,
+          "writable": false,
           "type": "string"
         },
         "sourceName": {

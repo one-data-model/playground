@@ -22,41 +22,41 @@
             "run",
             "unknown"
           ],
-          "writeable": false
+          "writable": false
         },
         "steps_day": {
           "name": "steps_day",
           "description": "This Property describes the user's step count that measures the number of steps the user has taken since the beginning of the day.",
           "type": "integer",
           "minimum": 0,
-          "writeable": false
+          "writable": false
         },
         "steps_reset": {
           "name": "steps_reset",
           "description": "This Property describes the user's step count that measures the number of steps the user has taken since the last reset.",
           "type": "integer",
           "minimum": 0,
-          "writeable": false
+          "writable": false
         },
         "ccal_day": {
           "name": "ccal_day",
           "description": "This Property describes the burned off calories of user since the beginning of the day.",
           "type": "number",
           "minimum": 0.0,
-          "writeable": false
+          "writable": false
         },
         "ccal_reset": {
           "name": "ccal_reset",
           "description": "This Property describes the burned off calories of user since the last reset.",
           "type": "number",
           "minimum": 0.0,
-          "writeable": false
+          "writable": false
         },
         "steps_day_range": {
           "name": "steps_day_range",
           "type": "array",
           "description": "The valid range for the Property in the Resource as an integer. The first value in the array is the minimum value, the second value in the array is the maximum value.",
-          "writeable": false,
+          "writable": false,
           "minItems": 2,
           "maxItems": 2,
           "items": {
@@ -66,14 +66,14 @@
         "steps_day_step": {
           "name": "steps_day_step",
           "description": "Step value across the defined range when the range is an integer.  This is the increment for valid values across the range; so if range is 0..10 and step is 2 then valid values are 0,2,4,6,8,10.",
-          "writeable": false,
+          "writable": false,
           "type": "integer"
         },
         "steps_reset_range": {
           "name": "steps_reset_range",
           "type": "array",
           "description": "The valid range for the Property in the Resource as an integer. The first value in the array is the minimum value, the second value in the array is the maximum value.",
-          "writeable": false,
+          "writable": false,
           "minItems": 2,
           "maxItems": 2,
           "items": {
@@ -83,14 +83,14 @@
         "steps_reset_step": {
           "name": "steps_reset_step",
           "description": "Step value across the defined range when the range is an integer.  This is the increment for valid values across the range; so if range is 0..10 and step is 2 then valid values are 0,2,4,6,8,10.",
-          "writeable": false,
+          "writable": false,
           "type": "integer"
         },
         "ccal_day_range": {
           "name": "ccal_day_range",
           "type": "array",
           "description": "The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.",
-          "writeable": false,
+          "writable": false,
           "minItems": 2,
           "maxItems": 2,
           "items": {
@@ -100,20 +100,20 @@
         "ccal_day_step": {
           "name": "ccal_day_step",
           "description": "Step value across the defined range an integer when the range is a number.  This is the increment for valid values across the range; so if range is 0.0..10.0 and step is 2.5 then valid values are 0.0,2.5,5.0,7.5,10.0.",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         },
         "ccal_day_precision": {
           "name": "ccal_day_precision",
           "type": "number",
-          "writeable": false,
+          "writable": false,
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         },
         "ccal_reset_range": {
           "name": "ccal_reset_range",
           "type": "array",
           "description": "The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.",
-          "writeable": false,
+          "writable": false,
           "minItems": 2,
           "maxItems": 2,
           "items": {
@@ -123,13 +123,13 @@
         "ccal_reset_step": {
           "name": "ccal_reset_step",
           "description": "Step value across the defined range an integer when the range is a number.  This is the increment for valid values across the range; so if range is 0.0..10.0 and step is 2.5 then valid values are 0.0,2.5,5.0,7.5,10.0.",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         },
         "ccal_reset_precision": {
           "name": "ccal_reset_precision",
           "type": "number",
-          "writeable": false,
+          "writable": false,
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },

@@ -19,7 +19,7 @@
             "earlobe",
             "ctrlsolution"
           ],
-          "writeable": false,
+          "writable": false,
           "type": "string"
         }
       },

@@ -13,7 +13,7 @@
         "measurement": {
           "name": "measurement",
           "description": "The measured UV Index.",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         }
       },

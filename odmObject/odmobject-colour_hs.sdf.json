@@ -29,13 +29,13 @@
           "description": "The maximum supported value of \"saturation\" for this Device.",
           "maximum": 32767,
           "minimum": 0,
-          "writeable": false,
+          "writable": false,
           "type": "integer"
         },
         "precision": {
           "name": "precision",
           "type": "number",
-          "writeable": false,
+          "writable": false,
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },

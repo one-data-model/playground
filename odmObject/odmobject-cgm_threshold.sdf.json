@@ -15,48 +15,48 @@
           "description": "This Property describes the Patient low threshold (mg/dL)",
           "type": "number",
           "minimum": 0.0,
-          "writeable": true
+          "writable": true
         },
         "phigh": {
           "name": "phigh",
           "description": "This Property describes the Patient high threshold (mg/dL)",
           "type": "number",
           "minimum": 0.0,
-          "writeable": true
+          "writable": true
         },
         "dhypo": {
           "name": "dhypo",
           "description": "This Property describes the Device hypoglycemia threshold (mg/dL)",
           "type": "number",
           "minimum": 0.0,
-          "writeable": true
+          "writable": true
         },
         "dhyper": {
           "name": "dhyper",
           "description": "This Property describes the Device hyperglycemia threshold (mg/dL)",
           "type": "number",
           "minimum": 0.0,
-          "writeable": true
+          "writable": true
         },
         "gir": {
           "name": "gir",
           "description": "This Property describes the Glucose Increase rate of change threshold (%)",
           "type": "number",
           "minimum": 0.0,
-          "writeable": true
+          "writable": true
         },
         "gdr": {
           "name": "gdr",
           "description": "This Property describes the Glucose Decrease\u00c2\u00a0rate of change threshold (%)",
           "type": "number",
           "minimum": 0.0,
-          "writeable": true
+          "writable": true
         },
         "range": {
           "name": "range",
           "type": "array",
           "description": "The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.",
-          "writeable": false,
+          "writable": false,
           "minItems": 2,
           "maxItems": 2,
           "items": {
@@ -66,13 +66,13 @@
         "step": {
           "name": "step",
           "description": "Step value across the defined range an integer when the range is a number.  This is the increment for valid values across the range; so if range is 0.0..10.0 and step is 2.5 then valid values are 0.0,2.5,5.0,7.5,10.0.",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         },
         "precision": {
           "name": "precision",
           "type": "number",
-          "writeable": false,
+          "writable": false,
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },

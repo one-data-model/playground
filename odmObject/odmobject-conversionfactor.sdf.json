@@ -13,7 +13,7 @@
         "conversion": {
           "name": "conversion",
           "description": "Conversion factor to convert a volume of a fuel to energy consumption",
-          "writeable": false,
+          "writable": false,
           "type": "number",
           "minimum": 0,
           "exclusiveMinimum": true
@@ -21,7 +21,7 @@
         "precision": {
           "name": "precision",
           "description": "Accuracy granularity of the exposed value",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         }
       },

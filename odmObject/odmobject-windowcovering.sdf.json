@@ -13,7 +13,7 @@
         "windowcoveringtype": {
           "name": "windowcoveringtype",
           "description": "Window covering type. See OCF enumeration map for set of valid values.",
-          "writeable": false,
+          "writable": false,
           "type": "string"
         },
         "liftvelocity": {
@@ -28,7 +28,7 @@
             "controllift": {
               "name": "controllift",
               "description": "Closed loop control allows for intermediate settings, open loop supports only up or down",
-              "writeable": false,
+              "writable": false,
               "type": "string",
               "enum": [
                 "closedloop",
@@ -38,7 +38,7 @@
             "controltilt": {
               "name": "controltilt",
               "description": "Closed loop control allows for intermediate settings, open loop supports only tilted or not tilted",
-              "writeable": false,
+              "writable": false,
               "type": "string",
               "enum": [
                 "closedloop",
@@ -48,7 +48,7 @@
             "closedloopliftcontrol": {
               "name": "closedloopliftcontrol",
               "description": "Encoder or timer controlled",
-              "writeable": false,
+              "writable": false,
               "type": "string",
               "enum": [
                 "encoder",
@@ -58,7 +58,7 @@
             "closedlooptiltcontrol": {
               "name": "closedlooptiltcontrol",
               "description": "Encoder or timer controlled",
-              "writeable": false,
+              "writable": false,
               "type": "string",
               "enum": [
                 "encoder",
@@ -68,19 +68,19 @@
             "online": {
               "name": "online",
               "description": "True = online, False = not online",
-              "writeable": false,
+              "writable": false,
               "type": "boolean"
             },
             "operational": {
               "name": "operational",
               "description": "True = operational, False = not operational",
-              "writeable": false,
+              "writable": false,
               "type": "boolean"
             },
             "rotationdirection": {
               "name": "rotationdirection",
               "description": "Identifies if the direction of rotation has been reversed to match physical installation.",
-              "writeable": false,
+              "writable": false,
               "type": "string",
               "enum": [
                 "normal",
@@ -88,7 +88,7 @@
               ]
             }
           },
-          "writeable": false,
+          "writable": false,
           "type": "object"
         },
         "liftaccelerationtime": {

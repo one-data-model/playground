@@ -13,7 +13,7 @@
         "zonestate": {
           "name": "zonestate",
           "description": "The IAS zone state. True = enrolled, False = not enrolled.",
-          "writeable": false,
+          "writable": false,
           "type": "boolean"
         },
         "zonestatus": {
@@ -24,7 +24,7 @@
               "name": "alarms",
               "type": "array",
               "description": "Array of alarms. The alarms exposed are dependent on the zonetype.",
-              "writeable": false,
+              "writable": false,
               "minItems": 1,
               "maxItems": 2,
               "items": {
@@ -63,48 +63,48 @@
             "tamper": {
               "name": "tamper",
               "description": "Tamper status. True = tampered, False = not tampered.",
-              "writeable": false,
+              "writable": false,
               "type": "boolean"
             },
             "test": {
               "name": "test",
               "description": "Test mode indicator. True = sensor is in test mode, False = sensor is in operational mode",
-              "writeable": false,
+              "writable": false,
               "type": "boolean"
             },
             "fault": {
               "name": "fault",
               "description": "Fault indicator. True = fault detected, False = no fault detected",
-              "writeable": false,
+              "writable": false,
               "type": "boolean"
             }
           },
-          "writeable": false,
+          "writable": false,
           "type": "object"
         },
         "numzonesensitivitylevel": {
           "name": "numzonesensitivitylevel",
           "description": "Number of supported zone sensitivity levels",
           "minimum": 2,
-          "writeable": false,
+          "writable": false,
           "type": "integer"
         },
         "zoneid": {
           "name": "zoneid",
           "description": "ID allocated by the IAS CIE",
-          "writeable": false,
+          "writable": false,
           "type": "integer"
         },
         "iascieaddress": {
           "name": "iascieaddress",
           "description": "EUI-64 Address of the enrolled IAS Control and Indicating Equipment (CIE)",
-          "writeable": false,
+          "writable": false,
           "type": "string"
         },
         "zonetype": {
           "name": "zonetype",
           "description": "IAS zone type. See OCF enumeration map for set of valid values.",
-          "writeable": false,
+          "writable": false,
           "type": "string"
         },
         "currentzonesensitivitylevel": {

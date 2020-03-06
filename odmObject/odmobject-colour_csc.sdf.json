@@ -25,7 +25,7 @@
         "precision": {
           "name": "precision",
           "type": "number",
-          "writeable": false,
+          "writable": false,
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },

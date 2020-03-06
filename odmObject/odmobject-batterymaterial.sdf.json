@@ -93,7 +93,7 @@
             "Zinc Ion",
             "Unknown"
           ],
-          "writeable": false,
+          "writable": false,
           "type": "string"
         }
       },

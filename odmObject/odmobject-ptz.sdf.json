@@ -14,7 +14,7 @@
           "name": "tilt_range",
           "type": "array",
           "description": "The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.",
-          "writeable": false,
+          "writable": false,
           "minItems": 2,
           "maxItems": 2,
           "items": {
@@ -34,14 +34,14 @@
         "precision": {
           "name": "precision",
           "type": "number",
-          "writeable": false,
+          "writable": false,
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         },
         "pan_range": {
           "name": "pan_range",
           "type": "array",
           "description": "The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.",
-          "writeable": false,
+          "writable": false,
           "minItems": 2,
           "maxItems": 2,
           "items": {
@@ -60,7 +60,7 @@
             "16x",
             "32x"
           ],
-          "writeable": false,
+          "writable": false,
           "type": "string"
         },
         "pan": {

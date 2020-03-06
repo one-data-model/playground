@@ -20,7 +20,7 @@
             "bedtime",
             "casual"
           ],
-          "writeable": false,
+          "writable": false,
           "type": "string"
         }
       },

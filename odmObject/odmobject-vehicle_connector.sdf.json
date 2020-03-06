@@ -13,19 +13,19 @@
         "connected": {
           "name": "connected",
           "description": "The connection state.",
-          "writeable": false,
+          "writable": false,
           "type": "boolean"
         },
         "ratedchargingcapacity": {
           "name": "ratedchargingcapacity",
           "description": "The rated charging capacity in Amps (A).",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         },
         "rateddischargingcapacity": {
           "name": "rateddischargingcapacity",
           "description": "The rated discharging capacity in Amps (A).",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         }
       },

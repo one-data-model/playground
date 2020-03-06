@@ -13,7 +13,7 @@
         "value": {
           "name": "value",
           "description": "The touch sensor, true = sensed, false = not sensed.",
-          "writeable": false,
+          "writable": false,
           "type": "boolean"
         }
       },

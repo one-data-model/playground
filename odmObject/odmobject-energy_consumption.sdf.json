@@ -13,13 +13,13 @@
         "power": {
           "name": "power",
           "description": "The instantaneous Power.",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         },
         "energy": {
           "name": "energy",
           "description": "The energy consumed.",
-          "writeable": false,
+          "writable": false,
           "type": "number"
         }
       },

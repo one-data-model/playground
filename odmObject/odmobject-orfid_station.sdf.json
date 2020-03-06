@@ -13,7 +13,7 @@
         "process": {
           "name": "process",
           "description": "The process step that is being performed at this station.",
-          "writeable": false,
+          "writable": false,
           "type": "integer"
         },
         "actionrequest": {

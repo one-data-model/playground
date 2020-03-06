@@ -16,7 +16,7 @@
           "items": {
             "type": "string"
           },
-          "writeable": false,
+          "writable": false,
           "type": "array"
         },
         "movementModifier": {

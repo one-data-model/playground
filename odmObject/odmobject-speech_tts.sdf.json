@@ -16,13 +16,13 @@
           "items": {
             "type": "string"
           },
-          "writeable": false,
+          "writable": false,
           "type": "array"
         },
         "supportedVoices": {
           "name": "supported voices",
           "description": "The SSML document fragment indicating supported voices.",
-          "writeable": false,
+          "writable": false,
           "maxLength": 1024,
           "type": "string"
         },

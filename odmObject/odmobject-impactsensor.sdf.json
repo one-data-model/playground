@@ -13,19 +13,19 @@
         "impactstatus": {
           "name": "impactstatus",
           "type": "boolean",
-          "writeable": false,
+          "writable": false,
           "description": "The \"impactstatus\" Property indicates the impact as: \"true\" A physical impact is detected, \"false\" Normal status, an impact is not detected."
         },
         "impactlevel": {
           "name": "impactlevel",
           "type": "number",
-          "writeable": false,
+          "writable": false,
           "description": "The \"impactlevel\" Property provides the level of impact. The unit is in \"G\" (G-force)."
         },
         "impactdirectionhorizontal": {
           "name": "impactdirectionhorizontal",
           "type": "number",
-          "writeable": false,
+          "writable": false,
           "description": "The \"impactdirectionhorizontal\" Property shows a horizontal direction where the impact comes from. The value is 0 to 360 degrees. 0 is the front of the sensor and clockwise increment.",
           "minimum": 0,
           "maximum": 360
@@ -33,7 +33,7 @@
         "impactdirectionvertical": {
           "name": "impactdirectionvertical",
           "type": "number",
-          "writeable": false,
+          "writable": false,
           "description": "The \"impactdirectionvertical\" Property shows a vertical direction where the impact comes from. The value is 0 to 360 degrees. 0 is the front of the sensor and upward increment.",
           "minimum": 0,
           "maximum": 360

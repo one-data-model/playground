@@ -20,7 +20,7 @@
             "stress",
             "none"
           ],
-          "writeable": false,
+          "writable": false,
           "type": "string"
         }
       },

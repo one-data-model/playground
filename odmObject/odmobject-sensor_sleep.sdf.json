@@ -13,7 +13,7 @@
         "value": {
           "name": "value",
           "description": "The sleep sensor, true = sleep sensed, false = sleep not sensed.",
-          "writeable": false,
+          "writable": false,
           "type": "boolean"
         }
       },

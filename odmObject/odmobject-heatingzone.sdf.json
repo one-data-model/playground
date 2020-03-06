@@ -13,13 +13,13 @@
         "heatinglevel": {
           "name": "heatinglevel",
           "description": "The current heating level for the zone.",
-          "writeable": false,
+          "writable": false,
           "type": "integer"
         },
         "maxheatinglevel": {
           "name": "maxheatinglevel",
           "description": "The maximum heating level for the zone.",
-          "writeable": false,
+          "writable": false,
           "type": "integer"
         }
       },
