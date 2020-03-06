@@ -33,7 +33,7 @@
           "name": "supporteddirections",
           "description": "The array of possible direction settings for this instance of the Resource Type.",
           "items": {
-            "minItems": true,
+            "minItems": 1,
             "type": "string",
             "uniqueItems": true
           },

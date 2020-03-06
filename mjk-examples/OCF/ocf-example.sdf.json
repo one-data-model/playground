@@ -8,7 +8,7 @@
   "namespace": {
     "ocf": "http://example.com/"
   }, 
-  "defaultnamespace": "ocf", 
+  "defaultNamespace": "ocf", 
   "odmObject": {
     "oic.r.temperature": {
       "name": "oic.r.temperature", 

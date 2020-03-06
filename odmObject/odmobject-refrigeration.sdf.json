@@ -33,8 +33,7 @@
           "name": "rapid freeze",
           "type": "boolean"
         }
-      },
-      "x-problem": "Uses one of odmRequired, i.e. one of defrost, filter, rapidCool, or rapidFreeze"
+      }
     }
   }
 }

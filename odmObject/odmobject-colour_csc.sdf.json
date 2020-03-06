@@ -14,8 +14,8 @@
           "name": "csc",
           "description": "The X and Y coordinates of the colour in CIE colour space.",
           "items": {
-            "maximum": true,
-            "minimum": false,
+            "maximum": 1,
+            "minimum": 0,
             "type": "number"
           },
           "maxItems": 2,
