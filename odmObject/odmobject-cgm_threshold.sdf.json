@@ -47,7 +47,7 @@
         },
         "gdr": {
           "name": "gdr",
-          "description": "This Property describes the Glucose Decrease\u00c2\u00a0rate of change threshold (%)",
+          "description": "This Property describes the Glucose Decrease rate of change threshold (%)",
           "type": "number",
           "minimum": 0.0,
           "writable": true
