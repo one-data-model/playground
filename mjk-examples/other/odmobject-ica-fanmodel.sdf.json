@@ -13,13 +13,9 @@
     "Fan": {
       "id": 152, 
       "name": "Fan", 
-      "required": [
-        {
-          "$ref": "0/odmEvent/faultReporting"
-        }, 
-        {
-          "$ref": "0/odmProperty/PowerSwitch"
-        }
+      "odmRequired": [
+        "#/odmObject/Fan/odmEvent/faultReporting",
+        "#/odmObject/Fan/odmProperty/PowerSwitch"
       ], 
       "odmEvent": {
         "faultReporting": {
@@ -29,16 +25,9 @@
               "id": 743, 
               "name": "faultCode"
             }
-          }, 
-          "outputData": [
-            {
-              "$ref": "0/odmData/faultCode"
-            }
-          ], 
-          "required": [
-            {
-              "$ref": "0/odmData/faultCode"
-            }
+          },
+          "odmRequired": [
+            "#/odmObject/Fan/odmEvent/faultReporting/odmData/faultCode"
           ]
         }
       }, 
@@ -220,10 +209,10 @@
           "id": 122, 
           "name": "StopCountdown"
         }, 
-        "SetPowerSwitchTImer": {
+        "SetPowerSwitchTimer": {
           "name": "SetPowerSwitchTimer", 
           "id": 123, 
-          "odmData": {
+          "odmInputData": {
             "Timer": {
               "id": 759, 
               "name": "Timer", 
@@ -245,22 +234,10 @@
                 }
               ]
             }
-          }, 
-          "inputData": [
-            {
-              "$ref": "0/odmData/Timer"
-            }, 
-            {
-              "$ref": "0/odmData/PowerSwitch"
-            }
-          ], 
-          "required": [
-            {
-              "$ref": "0/odmData/Timer"
-            }, 
-            {
-              "$ref": "0/odmData/PowerSwitch"
-            }
+          },
+          "odmRequired": [
+            "#/odmObject/Fan/odmAction/SetPowerSwitchTimer/odmData/Timer",
+            "#/odmObject/Fan/odmAction/SetPowerSwitchTimer/odmData/PowerSwitch"
           ]
         }
       }

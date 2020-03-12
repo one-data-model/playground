@@ -10,13 +10,13 @@
   }, 
   "defaultNamespace": "zcl", 
   "odmData": {
-    "transitiontimedata": {
+    "transitionTimeData": {
       "type": "number", 
       "widthInBits": 16, 
       "minimum": 0, 
       "maximum": 65535, 
       "multipleOf": 1, 
-      "unit": "seconds", 
+      "scaleUnit": "seconds", 
       "scaleMinimum": 0, 
       "scaleMaximum": 6553.5
     }
