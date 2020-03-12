@@ -1,7 +1,7 @@
 #!/bin/bash
 # CI for http://github.com/one-data-model/playground
 #
-# 3-clause BSD license (although this is trivial):
+# SPDX-License-Identifier: BSD-3-Clause
 #
 # Copyright 2019, 2020 Carsten Bormann
 #
