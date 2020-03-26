@@ -16,7 +16,7 @@
       "minimum": 0, 
       "maximum": 65535, 
       "multipleOf": 1, 
-      "scaleUnit": "seconds", 
+      "unit": "s", 
       "scaleMinimum": 0, 
       "scaleMaximum": 6553.5
     }
