@@ -24,9 +24,9 @@
     "oic.r.airflow": {
       "name": "oic.r.airflow",
       "description" : "",
-      "required": [
-        "0/odmProperty/speed",
-        "0/odmProperty/range"
+      "odmRequired": [
+        "#/odmObject/oic.r.airflow/odmProperty/speed",
+        "#/odmObject/oic.r.airflow/odmProperty/range"
       ],
       "odmProperty": {
         "speed" : {
