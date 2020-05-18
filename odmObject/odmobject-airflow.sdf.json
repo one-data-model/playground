@@ -7,60 +7,16 @@
   },
   "odmObject": {
     "airflow": {
-      "name": "airflow",
-      "description": "This Resource describes Properties associated with air flow. The Property \"supporteddirections\" is the set of valid values for the direction property for a particular instance of this Resource Type. The Property \"direction\" is the directionality of the air flow if applicable, if Property \"supporteddirections\" is also present it must be a value from that set. The values of Property \"direction\" are dependent on the capabilities of the unit. The Property \"speed\" is an integer representing the current speed level for the unit. The Property \"range\" is an array of the min,max values for the speed level. If not present the \"range\" defaults to [0,100]. Property \"automode\" is the status of the automode feature; Off means automode is not enabled, On means automode is active and the speed is automatically controlled by the Device.",
+    "name": "airflow",
+    "description": "This Resource describes Properties associated with air flow. The Property \"supporteddirections\" is the set of valid values for the direction property for a particular instance of this Resource Type. The Property \"direction\" is the directionality of the air flow if applicable, if Property \"supporteddirections\" is also present it must be a value from that set. The values of Property \"direction\" are dependent on the capabilities of the unit. The Property \"speed\" is an integer representing the current speed level for the unit. The Property \"range\" is an array of the min,max values for the speed level. If not present the \"range\" defaults to [0,100]. Property \"automode\" is the status of the automode feature; Off means automode is not enabled, On means automode is active and the speed is automatically controlled by the Device.",
       "odmProperty": {
-        "speed": {
-          "name": "speed",
-          "description": "The current speed level.",
-          "type": "integer"
-        },
-        "direction": {
-          "name": "direction",
-          "description": "The directionality of the air flow, a value indicated by \"supporteddirections\".",
-          "type": "string"
-        },
-        "automode": {
-          "name": "automode",
-          "description": "The status of the automode feature, if on speed is set by the Device.",
-          "enum": [
-            "On",
-            "Off"
-          ],
-          "type": "string"
-        },
-        "supporteddirections": {
-          "name": "supporteddirections",
-          "description": "The array of possible direction settings for this instance of the Resource Type.",
-          "items": {
-            "minItems": 1,
-            "type": "string",
-            "uniqueItems": true
-          },
-          "writable": false,
-          "type": "array"
-        },
-        "range": {
-          "name": "range",
-          "type": "array",
-          "description": "The valid range for the Property in the Resource as an integer. The first value in the array is the minimum value, the second value in the array is the maximum value.",
-          "writable": false,
-          "minItems": 2,
-          "maxItems": 2,
-          "items": {
-            "type": "integer"
-          }
-        },
-        "step": {
-          "name": "step",
-          "description": "Step value across the defined range when the range is an integer.  This is the increment for valid values across the range; so if range is 0..10 and step is 2 then valid values are 0,2,4,6,8,10.",
-          "writable": false,
-          "type": "integer"
-        }
-      },
-      "odmRequired": [
-        "0/odmProperty/speed"
-      ]
+        "speed": {"name": "speed","description": "The current speed level.","type": "integer"},"direction": {"name": "direction","description": "The directionality of the air flow, a value indicated by \"supporteddirections\".","type": "string"},"automode": {"name": "automode","description": "The status of the automode feature, if on speed is set by the Device.","enum": ["On","Off"],"type": "string"},"supporteddirections": {"name": "supporteddirections","description": "The array of possible direction settings for this instance of the Resource Type.","items": {"type": "string"},"minItems": 1,"uniqueItems":  true,"writable": false,"type": "array"},"range": {"name": "range","type": "array","description": "The valid range for the Property in the Resource as an integer. The first value in the array is the minimum value, the second value in the array is the maximum value.","writable": false,"minItems": 2,"maxItems": 2,"items": {"type": "integer"}},"step": {"name": "step","description": "Step value across the defined range when the range is an integer.  This is the increment for valid values across the range; so if range is 0..10 and step is 2 then valid values are 0,2,4,6,8,10.","writable": false,"type": "integer"}
+      } 
+      
+      ,
+      "odmRequired": 
+        ["0/odmProperty/speed"]
+       
     }
   }
 }
