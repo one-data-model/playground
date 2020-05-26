@@ -13,7 +13,7 @@
     "SKU_19934774": {
       "productTypeListing": "Compound Vacuum Gauge", 
       "required": [
-        "#/odmObject/3300~10"
+        "#/odmProduct/SKU_19934774/odmObject/3300~10"
       ],
       "odmObject": {
         "3300/0": {
@@ -63,7 +63,7 @@
     "genericSensor": {
       "id": 3300, 
       "required": [
-        "#/odmProperty/sensorValue"
+        "#/odmObject/genericSensor/odmProperty/sensorValue"
       ],
       "odmProperty": {
         "sensorValue": {
