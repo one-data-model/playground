@@ -42,6 +42,7 @@
         "StartUpOnOff": {
           "odmRef": "#/odmData/StartUpOnOffMode", 
           "label": "StartUpOnOff"
+        }
       }, 
       "odmAction": {
         "Off": {
@@ -84,7 +85,7 @@
           }
         },
         "OnWithRecallGlobalScene": {
-          "label": "OnWithRecallGlobalScene", 
+          "label": "OnWithRecallGlobalScene"
         }, 
         "OnWithTimedOff": {
           "label": "OnWithTimedOff", 

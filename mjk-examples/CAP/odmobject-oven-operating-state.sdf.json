@@ -26,6 +26,7 @@
           "type": "array",
           "items": {
             "enum": [ "ready", "running", "paused" ]
+          }
         },
         "ovenJobState": {
           "type": "string",
