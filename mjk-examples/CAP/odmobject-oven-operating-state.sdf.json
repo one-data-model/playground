@@ -1,0 +1,78 @@
+{
+  "info": {
+    "title": "Example file for ODM Simple JSON Definition Format", 
+    "version": "20190424", 
+    "copyright": "Copyright 2019 Example Corp.\n        All rights reserved.", 
+    "license": "http://example.com/license"
+  }, 
+  "namespace": {
+    "cap": "http://example.com/capability/"
+  }, 
+  "defaultnamespace": "cap", 
+  "odmObject": {
+    "ovenOperatingState": {
+      "label": "Oven Operating State",
+      "odmRequired": [
+        "#/odmObject/ovenOperatingState/odmProperty/machineState",
+        "#/odmObject/ovenOperatingState/odmProperty/supportedMachineStates",
+        "#/odmObject/ovenOperatingState/odmAction/setMachineState"
+      ],
+      "odmProperty": {
+        "machineState": {
+          "type": "string", 
+          "enum": [ "ready", "running", "paused" ]
+        },
+        "supportedMachineStates": {
+          "type": "array",
+          "items": {
+            "enum": [ "ready", "running", "paused" ]
+        },
+        "ovenJobState": {
+          "type": "string",
+          "enum": [
+            "cleaning",
+            "cooking",
+            "cooling",
+            "draining",
+            "preheat",
+            "ready",
+            "rinsing"
+          ]
+        },
+        "completionTime": {
+          "odmRef": "cap:#/odmData/iso8601date"
+        },
+        "operationTime": {
+          "odmRef": "cap:#/odmData/PositiveInteger"
+        },
+        "progress": {
+          "odmRef": "cap:#/odmData/IntegerPercent"
+        }
+      }, 
+      "odmAction": {
+        "setMachineState": { 
+          "odmInputData": [
+            "#/odmObject/ovenOperatingState/odmAction/setMachineState/odmData/ovenMode"
+          ],
+          "odmRequiredInputData": [
+            "#/odmObject/ovenOperatingState/odmAction/setMachineState/odmData/ovenMode"
+          ],          
+          "odmData": {
+            "ovenMode": {
+              "odmRef": "cap:#/odmData/OvenMode"
+            }
+          }
+        },
+        "stop": {},
+        "start": {
+          "odmInputData": [
+            "cap:#/odmObject/ovenMode/odmAction/start/odmData/ovenMode"
+          ],
+          "odmData": {
+            "odmRef": "cap:#/odmData/OvenMode"
+          }
+        }
+      }
+    }
+  }
+}

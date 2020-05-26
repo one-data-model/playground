@@ -1,0 +1,48 @@
+{
+  "info": {
+    "title": "Example file for ODM Simple JSON Definition Format", 
+    "version": "20190424", 
+    "copyright": "Copyright 2019 Example Corp.\n        All rights reserved.", 
+    "license": "http://example.com/license"
+  }, 
+  "namespace": {
+    "cap": "http://example.com/capability/"
+  }, 
+  "defaultnamespace": "cap", 
+  "odmObject": {
+    "ovenMode": {
+      "label": "Oven Mode",
+      "odmRequired": [
+        "#/odmObject/ovenMode/odmProperty/ovenMode",
+        "#/odmObject/ovenMode/odmProperty/supportedOvenModes",
+        "#/odmObject/ovenMode/odmAction/setOvenMode"
+      ],
+      "odmProperty": {
+        "ovenMode": {
+            "odmRef": "cap:#/odmData/OvenMode"
+        },
+        "supportedOvenModes": {
+          "type": "array",
+          "items": {
+            "odmRef": "cap:#/odmData/OvenMode"
+          }
+        }
+      }, 
+      "odmAction": {
+        "setOvenMode": { 
+          "odmInputData": [
+            "#/odmObject/ovenMode/odmAction/setOvenMode/odmData/ovenMode"
+          ],
+          "odmRequired": [
+            "#/odmObject/ovenMode/odmAction/setOvenMode/odmData/ovenMode"
+          ],          
+          "odmData": {
+            "ovenMode": {
+              "odmRef": "cap:#/odmData/OvenMode"
+            }
+          }
+        }
+      }
+    }
+  }
+}
