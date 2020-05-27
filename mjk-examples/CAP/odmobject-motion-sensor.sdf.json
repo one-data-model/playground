@@ -22,9 +22,7 @@
       }, 
       "odmEvent": {
         "stateChange": { 
-          "odmOutputData" : { 
-            "odmRef": "#/odmData/activityState"
-          }
+          "odmOutputData" : [ "#/odmData/activityState"]
         }
       }
     }
