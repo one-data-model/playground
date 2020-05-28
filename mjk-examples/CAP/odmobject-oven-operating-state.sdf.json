@@ -6,9 +6,9 @@
     "license": "http://example.com/license"
   }, 
   "namespace": {
-    "cap": "http://example.com/capability/"
+    "pg": "https://onedm.org/playground/#"
   }, 
-  "defaultnamespace": "cap", 
+  "defaultnamespace": "pg", 
   "odmObject": {
     "ovenOperatingState": {
       "label": "Oven Operating State",
@@ -41,13 +41,13 @@
           ]
         },
         "completionTime": {
-          "odmRef": "cap:#/odmData/iso8601date"
+          "odmRef": "pg:odmData/iso8601date"
         },
         "operationTime": {
-          "odmRef": "cap:#/odmData/PositiveInteger"
+          "odmRef": "pg:odmData/PositiveInteger"
         },
         "progress": {
-          "odmRef": "cap:#/odmData/IntegerPercent"
+          "odmRef": "pg:odmData/IntegerPercent"
         }
       }, 
       "odmAction": {
@@ -60,17 +60,17 @@
           ],          
           "odmData": {
             "ovenMode": {
-              "odmRef": "cap:#/odmData/OvenMode"
+              "odmRef": "pg:odmData/OvenMode"
             }
           }
         },
         "stop": {},
         "start": {
           "odmInputData": [
-            "cap:#/odmObject/ovenMode/odmAction/start/odmData/ovenMode"
+            "pg:odmObject/ovenMode/odmAction/start/odmData/ovenMode"
           ],
           "odmData": {
-            "odmRef": "cap:#/odmData/OvenMode"
+            "odmRef": "pg:odmData/OvenMode"
           }
         }
       }

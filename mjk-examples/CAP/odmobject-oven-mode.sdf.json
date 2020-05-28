@@ -6,9 +6,9 @@
     "license": "http://example.com/license"
   }, 
   "namespace": {
-    "cap": "http://example.com/capability/"
+    "pg": "https://onedm.org/playground/#"
   }, 
-  "defaultnamespace": "cap", 
+  "defaultnamespace": "pg", 
   "odmObject": {
     "ovenMode": {
       "label": "Oven Mode",
@@ -19,12 +19,12 @@
       ],
       "odmProperty": {
         "ovenMode": {
-            "odmRef": "cap:#/odmData/OvenMode"
+            "odmRef": "pg:odmData/OvenMode"
         },
         "supportedOvenModes": {
           "type": "array",
           "items": {
-            "odmRef": "cap:#/odmData/OvenMode"
+            "odmRef": "pg:odmData/OvenMode"
           }
         }
       }, 
@@ -38,7 +38,7 @@
           ],          
           "odmData": {
             "ovenMode": {
-              "odmRef": "cap:#/odmData/OvenMode"
+              "odmRef": "pg:odmData/OvenMode"
             }
           }
         }

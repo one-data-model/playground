@@ -6,9 +6,9 @@
     "license": "not licensed"
   }, 
   "namespace": {
-    "zcl": "http://example.com/zcl/"
+    "pg": "https://onedm.org/playground/#"
   }, 
-  "defaultnamespace": "zcl", 
+  "defaultnamespace": "pg", 
   "odmObject": {
     "OnOff": {
       "label": "OnOff", 

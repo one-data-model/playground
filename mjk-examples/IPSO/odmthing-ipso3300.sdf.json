@@ -6,9 +6,9 @@
     "license": "not licensed"
   }, 
   "namespace": {
-    "ex": "http://example.com/examples"
+    "pg": "https://onedm.org/playground/#"
   }, 
-  "defaultnamespace": "ex", 
+  "defaultnamespace": "pg", 
   "odmProduct": {
     "SKU_19934774": {
       "productTypeListing": "Compound Vacuum Gauge", 

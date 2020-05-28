@@ -6,9 +6,9 @@
     "license": "http://example.com/license"
   }, 
   "namespace": {
-    "cap": "http://example.com/capability/"
+    "pg": "https://onedm.org/playground/#"
   }, 
-  "defaultnamespace": "cap", 
+  "defaultnamespace": "pg", 
   "odmData": {
     "OvenMode": {
       "label": "Oven Mode",
