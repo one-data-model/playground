@@ -1,13 +1,13 @@
 {
   "info": {
     "title": "OMA LwM2M Digital Input (Object ID 3200)",
-    "version": "20200306",
+    "version": "20200528",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "odmObject": {
     "Digital_Input": {
-      "name": "Digital Input",
+      "label": "Digital Input",
       "description": "Generic digital input for non-specific sensors",
       "odmProperty": {
         "Digital_Input_State": {
@@ -44,42 +44,42 @@
   },
   "odmProperty": {
     "Digital_Input_State": {
-      "name": "Digital Input State",
+      "label": "Digital Input State",
       "description": "The current state of a digital input.",
       "writable": false,
       "type": "boolean"
     },
     "Digital_Input_Counter": {
-      "name": "Digital Input Counter",
+      "label": "Digital Input Counter",
       "description": "The cumulative value of active state detected.",
       "writable": false,
       "type": "integer"
     },
     "Digital_Input_Polarity": {
-      "name": "Digital Input Polarity",
+      "label": "Digital Input Polarity",
       "description": "The polarity of the digital input as a Boolean (False = Normal, True = Reversed).",
       "type": "boolean"
     },
     "Digital_Input_Debounce": {
-      "name": "Digital Input Debounce",
+      "label": "Digital Input Debounce",
       "description": "The debounce period in ms.",
       "type": "integer",
       "units": "ms"
     },
     "Digital_Input_Edge_Selection": {
-      "name": "Digital Input Edge Selection",
+      "label": "Digital Input Edge Selection",
       "description": "The edge selection as an integer (1 = Falling edge, 2 = Rising edge, 3 = Both Rising and Falling edge).",
       "type": "integer",
       "minimum": 1,
       "maximum": 3
     },
     "Application_Type": {
-      "name": "Application Type",
+      "label": "Application Type",
       "description": "The application type of the sensor or actuator as a string depending on the use case.",
       "type": "string"
     },
     "Sensor_Type": {
-      "name": "Sensor Type",
+      "label": "Sensor Type",
       "description": "The type of the sensor (for instance PIR type)",
       "writable": false,
       "type": "string"
@@ -87,7 +87,7 @@
   },
   "odmAction": {
     "Digital_Input_Counter_Reset": {
-      "name": "Digital Input Counter Reset",
+      "label": "Digital Input Counter Reset",
       "description": "Reset the Counter value."
     }
   }

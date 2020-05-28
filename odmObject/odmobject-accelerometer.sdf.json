@@ -1,13 +1,13 @@
 {
   "info": {
     "title": "OMA LwM2M Accelerometer (Object ID 3313)",
-    "version": "20200306",
+    "version": "20200528",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "odmObject": {
     "Accelerometer": {
-      "name": "Accelerometer",
+      "label": "Accelerometer",
       "description": "This IPSO object can be used to represent a 1-3 axis accelerometer.",
       "odmProperty": {
         "X_Value": {
@@ -37,37 +37,37 @@
   },
   "odmProperty": {
     "X_Value": {
-      "name": "X Value",
+      "label": "X Value",
       "description": "The measured value along the X axis.",
       "writable": false,
       "type": "number"
     },
     "Y_Value": {
-      "name": "Y Value",
+      "label": "Y Value",
       "description": "The measured value along the Y axis.",
       "writable": false,
       "type": "number"
     },
     "Z_Value": {
-      "name": "Z Value",
+      "label": "Z Value",
       "description": "The measured value along the Z axis.",
       "writable": false,
       "type": "number"
     },
     "Sensor_Units": {
-      "name": "Sensor Units",
+      "label": "Sensor Units",
       "description": "Measurement Units Definition.",
       "writable": false,
       "type": "string"
     },
     "Min_Range_Value": {
-      "name": "Min Range Value",
+      "label": "Min Range Value",
       "description": "The minimum value that can be measured by the sensor",
       "writable": false,
       "type": "number"
     },
     "Max_Range_Value": {
-      "name": "Max Range Value",
+      "label": "Max Range Value",
       "description": "The maximum value that can be measured by the sensor",
       "writable": false,
       "type": "number"

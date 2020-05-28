@@ -1,13 +1,13 @@
 {
   "info": {
     "title": "OMA LwM2M Gyrometer (Object ID 3334)",
-    "version": "20200306",
+    "version": "20200528",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "odmObject": {
     "Gyrometer": {
-      "name": "Gyrometer",
+      "label": "Gyrometer",
       "description": "This IPSO Object is used to report the current reading of a gyrometer sensor in 3 axes. It provides tracking of the minimum and maximum angular rate in all 3 axes. An example unit of measure is radians per second.",
       "odmProperty": {
         "X_Value": {
@@ -62,86 +62,86 @@
   },
   "odmProperty": {
     "X_Value": {
-      "name": "X Value",
+      "label": "X Value",
       "description": "The measured value along the X axis.",
       "writable": false,
       "type": "number"
     },
     "Y_Value": {
-      "name": "Y Value",
+      "label": "Y Value",
       "description": "The measured value along the Y axis.",
       "writable": false,
       "type": "number"
     },
     "Z_Value": {
-      "name": "Z Value",
+      "label": "Z Value",
       "description": "The measured value along the Z axis.",
       "writable": false,
       "type": "number"
     },
     "Sensor_Units": {
-      "name": "Sensor Units",
+      "label": "Sensor Units",
       "description": "Measurement Units Definition.",
       "writable": false,
       "type": "string"
     },
     "Min_X_Value": {
-      "name": "Min X Value",
+      "label": "Min X Value",
       "description": "The minimum measured value along the X axis",
       "writable": false,
       "type": "number"
     },
     "Max_X_Value": {
-      "name": "Max X Value",
+      "label": "Max X Value",
       "description": "The maximum measured value along the X axis",
       "writable": false,
       "type": "number"
     },
     "Min_Y_Value": {
-      "name": "Min Y Value",
+      "label": "Min Y Value",
       "description": "The minimum measured value along the Y axis",
       "writable": false,
       "type": "number"
     },
     "Max_Y_Value": {
-      "name": "Max Y Value",
+      "label": "Max Y Value",
       "description": "The maximum measured value along the Y axis",
       "writable": false,
       "type": "number"
     },
     "Min_Z_Value": {
-      "name": "Min Z Value",
+      "label": "Min Z Value",
       "description": "The minimum measured value along the Z axis",
       "writable": false,
       "type": "number"
     },
     "Max_Z_Value": {
-      "name": "Max Z Value",
+      "label": "Max Z Value",
       "description": "The maximum measured value along the Z axis",
       "writable": false,
       "type": "number"
     },
     "Min_Range_Value": {
-      "name": "Min Range Value",
+      "label": "Min Range Value",
       "description": "The minimum value that can be measured by the sensor",
       "writable": false,
       "type": "number"
     },
     "Max_Range_Value": {
-      "name": "Max Range Value",
+      "label": "Max Range Value",
       "description": "The maximum value that can be measured by the sensor",
       "writable": false,
       "type": "number"
     },
     "Application_Type": {
-      "name": "Application Type",
+      "label": "Application Type",
       "description": "The application type of the sensor or actuator as a string depending on the use case.",
       "type": "string"
     }
   },
   "odmAction": {
     "Reset_Min_and_Max_Measured_Values": {
-      "name": "Reset Min and Max Measured Values",
+      "label": "Reset Min and Max Measured Values",
       "description": "Reset the Min and Max Measured Values to Current Value."
     }
   }

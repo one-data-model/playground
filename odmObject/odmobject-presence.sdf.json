@@ -1,13 +1,13 @@
 {
   "info": {
     "title": "OMA LwM2M Presence (Object ID 3302)",
-    "version": "20200306",
+    "version": "20200528",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "odmObject": {
     "Presence": {
-      "name": "Presence",
+      "label": "Presence",
       "description": "Presence sensor with digital sensing, optional delay parameters",
       "odmProperty": {
         "Digital_Input_State": {
@@ -38,31 +38,31 @@
   },
   "odmProperty": {
     "Digital_Input_State": {
-      "name": "Digital Input State",
+      "label": "Digital Input State",
       "description": "The current state of the presence sensor",
       "writable": false,
       "type": "boolean"
     },
     "Digital_Input_Counter": {
-      "name": "Digital Input Counter",
+      "label": "Digital Input Counter",
       "description": "The cumulative value of active state detected.",
       "writable": false,
       "type": "integer"
     },
     "Sensor_Type": {
-      "name": "Sensor Type",
+      "label": "Sensor Type",
       "description": "The type of the sensor (for instance PIR type)",
       "writable": false,
       "type": "string"
     },
     "Busy_to_Clear_delay": {
-      "name": "Busy to Clear delay",
+      "label": "Busy to Clear delay",
       "description": "Delay from the detection state to the clear state in ms",
       "type": "integer",
       "units": "ms"
     },
     "Clear_to_Busy_delay": {
-      "name": "Clear to Busy delay",
+      "label": "Clear to Busy delay",
       "description": "Delay from the clear state to the busy state in ms",
       "type": "integer",
       "units": "ms"
@@ -70,7 +70,7 @@
   },
   "odmAction": {
     "Digital_Input_Counter_Reset": {
-      "name": "Digital Input Counter Reset",
+      "label": "Digital Input Counter Reset",
       "description": "Reset the Counter value"
     }
   }
