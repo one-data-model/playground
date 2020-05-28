@@ -1,13 +1,13 @@
 {
   "info": {
     "title": "OMA LwM2M Load Control (Object ID 3310)",
-    "version": "20200306",
+    "version": "20200528",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "odmObject": {
     "Load_Control": {
-      "name": "Load Control",
+      "label": "Load Control",
       "description": "This Object is used for demand-response load control and other load control in automation application (not limited to power).",
       "odmProperty": {
         "Event_Identifier": {
@@ -39,30 +39,30 @@
   },
   "odmProperty": {
     "Event_Identifier": {
-      "name": "Event Identifier",
+      "label": "Event Identifier",
       "description": "The event identifier as a string.",
       "type": "string"
     },
     "Start_Time": {
-      "name": "Start Time",
+      "label": "Start Time",
       "description": "Time when the event started.",
       "subtype": "unixtime"
     },
     "Duration_In_Min": {
-      "name": "Duration In Min",
+      "label": "Duration In Min",
       "description": "The duration of the event in minutes.",
       "type": "integer",
       "units": "min"
     },
     "Criticality_Level": {
-      "name": "Criticality Level",
+      "label": "Criticality Level",
       "description": "The criticality of the event. The device receiving the event will react in an appropriate fashion for the device.",
       "type": "integer",
       "minimum": 0,
       "maximum": 3
     },
     "Avg_Load_AdjPct": {
-      "name": "Avg Load AdjPct",
+      "label": "Avg Load AdjPct",
       "description": "Defines the maximum energy usage of the receiving device, as a percentage of the device's normal maximum energy usage.",
       "type": "integer",
       "units": "/100",
@@ -70,7 +70,7 @@
       "maximum": 100
     },
     "Duty_Cycle": {
-      "name": "Duty Cycle",
+      "label": "Duty Cycle",
       "description": "Defines the duty cycle for the load control event, i.e, what percentage of time the receiving device is allowed to be on.",
       "type": "integer",
       "units": "/100",

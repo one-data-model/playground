@@ -1,13 +1,13 @@
 {
   "info": {
     "title": "OMA LwM2M Magnetometer (Object ID 3314)",
-    "version": "20200306",
+    "version": "20200528",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "odmObject": {
     "Magnetometer": {
-      "name": "Magnetometer",
+      "label": "Magnetometer",
       "description": "This IPSO object can be used to represent a 1-3 axis magnetometer with optional compass direction.",
       "odmProperty": {
         "X_Value": {
@@ -34,25 +34,25 @@
   },
   "odmProperty": {
     "X_Value": {
-      "name": "X Value",
+      "label": "X Value",
       "description": "The measured value along the X axis.",
       "writable": false,
       "type": "number"
     },
     "Y_Value": {
-      "name": "Y Value",
+      "label": "Y Value",
       "description": "The measured value along the Y axis.",
       "writable": false,
       "type": "number"
     },
     "Z_Value": {
-      "name": "Z Value",
+      "label": "Z Value",
       "description": "The measured value along the Z axis.",
       "writable": false,
       "type": "number"
     },
     "Compass_Direction": {
-      "name": "Compass Direction",
+      "label": "Compass Direction",
       "description": "The measured compass direction.",
       "writable": false,
       "type": "number",
@@ -61,7 +61,7 @@
       "maximum": 360
     },
     "Sensor_Units": {
-      "name": "Sensor Units",
+      "label": "Sensor Units",
       "description": "Measurement Units Definition.",
       "writable": false,
       "type": "string"
