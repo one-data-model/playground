@@ -11,19 +11,16 @@
       "description": "This Resource describes the attributes associated with 3D Printer. The type of 3D printing technology is specified by an enumerated string value. The maximum sizes in mm are included for the x, y, and z dimensions. A designation of whether the device is capable of WAN connectivity is represented in a boolean. The memory capacity is captured in MB.",
       "odmProperty": {
         "printsizey": {
-          "name": "printsizey",
           "description": "This Property represents the maximum size of printing object in the direction of Y-axis. The unit is mm.",
           "writable": false,
           "type": "number"
         },
         "memorysize": {
-          "name": "memorysize",
           "description": "This Property represents the total memory size of the printer. The unit is MB(Mega Bytes)",
           "writable": false,
           "type": "number"
         },
         "3dprinttype": {
-          "name": "3dprinttype",
           "description": "The type of 3D printing technology.",
           "enum": [
             "Fused Filament Fabrication",
@@ -40,19 +37,16 @@
           "type": "string"
         },
         "wanconnected": {
-          "name": "wanconnected",
           "description": "This Property indicates the connectivity capability of the 3D printer. If the value is false, the printer does not have network facility to Wide Area Network such as internet and GSM. If the value is true, the printer has network connectivity",
           "writable": false,
           "type": "boolean"
         },
         "printsizex": {
-          "name": "printsizex",
           "description": "This Property represents the maximum size of printing object in the direction of X-axis. The unit is mm.",
           "writable": false,
           "type": "number"
         },
         "printsizez": {
-          "name": "printsizez",
           "description": "This Property represents the maximum size of printing object in the direction of Z-axis. The unit is mm.",
           "writable": false,
           "type": "number"

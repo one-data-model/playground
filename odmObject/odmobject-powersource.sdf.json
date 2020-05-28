@@ -7,16 +7,36 @@
   },
   "odmObject": {
     "powersource": {
-    "name": "powersource",
-    "description": "This Resource list the available power sources for the Device. The Property \"powersources\" is a list that is read only and is informative only. If there is more than 1 power source active, use multiple Resources to indicate the active power sources. If the power source is unknown use the value \"unknown\".",
+      "name": "powersource",
+      "description": "This Resource list the available power sources for the Device. The Property \"powersources\" is a list that is read only and is informative only. If there is more than 1 power source active, use multiple Resources to indicate the active power sources. If the power source is unknown use the value \"unknown\".",
       "odmProperty": {
-        "powersources": {"name": "powersources","items": {"enum": ["unknown","DC power","Internal Battery","External Battery","Power over Ethernet","USB","AC (Mains) Power","Solar"],"type": "string"},"minItems": 1,"uniqueItems":  true,"type": "array"},"sourcefault": {"name": "sourcefault","description": "Fault detected in currently active power source. True = fault detected","writable": false,"type": "boolean"}
-      } 
-      
-      ,
-      "odmRequired": 
-        ["0/odmProperty/powersources"]
-       
+        "powersources": {
+          "items": {
+            "enum": [
+              "unknown",
+              "DC power",
+              "Internal Battery",
+              "External Battery",
+              "Power over Ethernet",
+              "USB",
+              "AC (Mains) Power",
+              "Solar"
+            ],
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "type": "array"
+        },
+        "sourcefault": {
+          "description": "Fault detected in currently active power source. True = fault detected",
+          "writable": false,
+          "type": "boolean"
+        }
+      },
+      "odmRequired": [
+        "0/odmProperty/powersources"
+      ]
     }
   }
 }

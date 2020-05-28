@@ -11,12 +11,10 @@
       "description": "This Resource specifies an activity count. The Resource can be readonly (oic. if. s interface) in which instance it represents a count. The Resource can be readwrite (oic. if. a interface) in which instance it represents a goal or target for a count. The Property \"count\" is an integer representing either the current count or goal value.",
       "odmProperty": {
         "count": {
-          "name": "count",
           "description": "The current or Target count.",
           "type": "integer"
         },
         "range": {
-          "name": "range",
           "type": "array",
           "description": "The valid range for the Property in the Resource as an integer. The first value in the array is the minimum value, the second value in the array is the maximum value.",
           "writable": false,
@@ -27,7 +25,6 @@
           }
         },
         "step": {
-          "name": "step",
           "description": "Step value across the defined range when the range is an integer.  This is the increment for valid values across the range; so if range is 0..10 and step is 2 then valid values are 0,2,4,6,8,10.",
           "writable": false,
           "type": "integer"

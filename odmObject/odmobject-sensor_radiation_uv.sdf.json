@@ -11,7 +11,6 @@
       "description": "This Resource specifies UV radiation measurement. The Property \"measurement\" is the current measured UV Index",
       "odmProperty": {
         "measurement": {
-          "name": "measurement",
           "description": "The measured UV Index.",
           "writable": false,
           "type": "number"

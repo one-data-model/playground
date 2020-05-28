@@ -11,7 +11,6 @@
       "description": "This Resource describes a night mode on/off feature. A nightMode value of 'true' means that the feature is on. A nightMode value of 'false' means that the feature is off.",
       "odmProperty": {
         "nightMode": {
-          "name": "night mode",
           "description": "The status of the Night Mode.",
           "type": "boolean"
         }

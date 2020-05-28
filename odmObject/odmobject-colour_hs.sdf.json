@@ -11,21 +11,18 @@
       "description": "This Resource describes the colour using hue-saturation conventions. The Property \"hue\" is the hue angle, it is a number value as defined by the CIECAM02 model definition (see reference [CIE CIE159:2004]). A Device that does not support fractional hue angles can provide integer values. If Property \"precision\" is provided it applies to the hue angle. The Property \"saturation\" is an integer value as defined by the CIECAM02 model definition (see reference [CIE CIE159:2004]). The Property \"saturation\" can be converted to a percentage by saturation/maximumsaturation X 100; where maximumsaturation is 32767 if the Property itself is not present. The Property \"maximumsaturation\" is the upper bound on the saturation supported by the Device. If not present the maximum value for saturation is 32767. The Resource provides the colour using hue and saturation conventions.",
       "odmProperty": {
         "hue": {
-          "name": "hue",
           "description": "The hue angle as defined by the CIECAM02 model definition.",
           "maximum": 360.0,
           "minimum": 0.0,
           "type": "number"
         },
         "saturation": {
-          "name": "saturation",
           "description": "The saturation as defined by the CIECAM02 model definition.",
           "maximum": 32767,
           "minimum": 0,
           "type": "integer"
         },
         "maximumsaturation": {
-          "name": "maximumsaturation",
           "description": "The maximum supported value of \"saturation\" for this Device.",
           "maximum": 32767,
           "minimum": 0,
@@ -33,7 +30,6 @@
           "type": "integer"
         },
         "precision": {
-          "name": "precision",
           "type": "number",
           "writable": false,
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"

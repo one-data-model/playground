@@ -11,7 +11,6 @@
       "description": "This Resource describes the attributes associated with liquid level. The Property \"currentlevel\" and \"desiredlevel\" are defined in terms of a percentage. The behaviour of when the currentlevel and desiredlevel are not equal is determined by the device manufacturer.",
       "odmProperty": {
         "currentlevel": {
-          "name": "currentlevel",
           "description": "The current level of the liquid in percentage.",
           "maximum": 100,
           "minimum": 0,
@@ -19,14 +18,12 @@
           "type": "integer"
         },
         "desiredlevel": {
-          "name": "desiredlevel",
           "description": "The desired level of the liquid in percentage.",
           "maximum": 100,
           "minimum": 0,
           "type": "integer"
         },
         "step": {
-          "name": "step",
           "description": "Step value across the defined range when the range is an integer.  This is the increment for valid values across the range; so if range is 0..10 and step is 2 then valid values are 0,2,4,6,8,10.",
           "writable": false,
           "type": "integer"

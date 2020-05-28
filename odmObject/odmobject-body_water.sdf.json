@@ -11,14 +11,12 @@
       "description": "This Resource describes the Properties associated with a person's body water. The unit is a single value that is one of kg or lb. If the unit Property is missing the default is kilograms [kg]. The bwater and unit Properties are read-only values that are provided by the Server. When range is omitted the default is 0 to +MAXFLOAT.",
       "odmProperty": {
         "bwater": {
-          "name": "bwater",
           "description": "Body water.",
           "minimum": 0.0,
           "writable": false,
           "type": "number"
         },
         "units": {
-          "name": "units",
           "description": "Body water unit",
           "enum": [
             "kg",
@@ -29,7 +27,6 @@
           "default": "kg"
         },
         "range": {
-          "name": "range",
           "type": "array",
           "description": "The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.",
           "writable": false,
@@ -40,13 +37,11 @@
           }
         },
         "step": {
-          "name": "step",
           "description": "Step value across the defined range an integer when the range is a number.  This is the increment for valid values across the range; so if range is 0.0..10.0 and step is 2.5 then valid values are 0.0,2.5,5.0,7.5,10.0.",
           "writable": false,
           "type": "number"
         },
         "precision": {
-          "name": "precision",
           "type": "number",
           "writable": false,
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"

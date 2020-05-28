@@ -11,32 +11,26 @@
       "description": "This Resource defines opaque data that can be transfered between endpoints where the data itself is not interpretable by the OCF endpoints. The stringdata is a string of ASCII characters.",
       "odmProperty": {
         "payload": {
-          "name": "payload",
           "type": "string",
           "description": "This Property contains the opaque data."
         },
         "encoding": {
-          "name": "encoding",
           "type": "string",
           "description": "This Property describes the encoding of the payload, e.g. binary as base64, json, xml, utf-8."
         },
         "payloadtype": {
-          "name": "payloadtype",
           "type": "string",
           "description": "This Property describes the identification of the payload, e.g. what the payload is representing ."
         },
         "size": {
-          "name": "size",
           "type": "integer",
           "description": "The size in bytes of the decoded binary object."
         },
         "hash": {
-          "name": "hash",
           "type": "string",
           "description": "The hash code of the blob. If present, it is used to check the decoded content of the object data point for integrity. The algorithm used for generating the hash value is SHA-2 [15]. The data point contains the hash as a hex encoded value."
         },
         "system": {
-          "name": "system",
           "type": "string",
           "description": "The eco system that is using the payload."
         }

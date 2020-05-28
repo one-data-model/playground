@@ -11,7 +11,6 @@
       "description": "This Resource describes whether presence has been sensed or not. The Property \"value\" is a boolean. A value of 'true' means that presence has been sensed. A value of 'false' means that presence not been sensed.",
       "odmProperty": {
         "value": {
-          "name": "value",
           "description": "The presences sensor, true = precense sensed, false = precensenot sensed.",
           "writable": false,
           "type": "boolean"

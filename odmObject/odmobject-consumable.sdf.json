@@ -11,7 +11,6 @@
       "description": "This Resource specifies a thing that can be consumed such as filter material, printer toner etc The Propert \"typeofconsumable\" is an enumeration defining the thing being consumed as defined by the Smart Home Device Specification The Property \"remaining\" is an integer capturing the percentatge remaining life The Property \"orderpercentage\" is an integer capturing the percentage life at which replacement or replenishment is recommended by the manufacturer The Property \"url\" is a string containing a URL at which further information may be obtained with respect to the consumable.",
       "odmProperty": {
         "remaining": {
-          "name": "remaining",
           "description": "The percentage remaining lifespan.",
           "maximum": 100,
           "minimum": 0,
@@ -19,20 +18,17 @@
           "type": "integer"
         },
         "typeofconsumable": {
-          "name": "typeofconsumable",
           "description": "The thing that is being consumed.",
           "writable": false,
           "type": "string"
         },
         "url": {
-          "name": "url",
           "description": "The URL at which additional ordering information may be found.",
           "format": "uri",
           "writable": false,
           "type": "string"
         },
         "orderpercentage": {
-          "name": "orderpercentage",
           "description": "The percentage at which re-ordering is recommended by the manufacturer.",
           "maximum": 100,
           "minimum": 0,

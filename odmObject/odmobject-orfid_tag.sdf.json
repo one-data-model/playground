@@ -11,13 +11,11 @@
       "description": "The Property \"tagid\" is an integer showing the currently read optical augmented RFID tag's identity information.",
       "odmProperty": {
         "tagid": {
-          "name": "tagid",
           "description": "The tag read by the RFID reader.",
           "writable": false,
           "type": "integer"
         },
         "reading": {
-          "name": "reading",
           "description": "The reading indication. true: the tagid is read e.g. being valid. false: the tagid is invalid.",
           "writable": false,
           "type": "boolean"

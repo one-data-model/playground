@@ -11,7 +11,6 @@
       "description": "This Resource specifies linear movement. The Property \"movementSettings\" is an array of strings containing possible movement values (e. g. spin, stop, left, right). The Property \"movement\" is the currently selected movement value. The Property \"movementModifier\" is a modifier to the movement value (e. g. \"spin\", \"90\")",
       "odmProperty": {
         "movementSettings": {
-          "name": "movement settings",
           "description": "The array of possible movement values.",
           "items": {
             "type": "string"
@@ -20,12 +19,10 @@
           "type": "array"
         },
         "movementModifier": {
-          "name": "movement modifier",
           "description": "The modifier to the movement value (e.g. spin-90, left-20), units are device dependent.",
           "type": "string"
         },
         "movement": {
-          "name": "movement",
           "description": "The current movement value.",
           "type": "string"
         }

@@ -11,7 +11,6 @@
       "description": "This Resource specifies the supported and currently active Eco Mode of a Device The Resource is a deriviative of the Mode Resource (oic. r. mode) with a restriction that the population of supportedmodes and modes Properties is restricted to the set of values: \"disabled\",\"enabled\",\"notsupported\". The adminforced Property indicates that the value has been set by another party (e. g. via some offboard Smart Energy interaction)",
       "odmProperty": {
         "modes": {
-          "name": "modes",
           "description": "The array of the currently active mode(s).",
           "items": {
             "enum": [
@@ -25,7 +24,6 @@
           "type": "array"
         },
         "supportedModes": {
-          "name": "supported modes",
           "description": "The array of possible modes the device supports.",
           "items": {
             "enum": [
@@ -39,7 +37,6 @@
           "type": "array"
         },
         "adminforced": {
-          "name": "adminforced",
           "description": "The indicator that the current mode of operation has been forced by admin action.",
           "writable": false,
           "type": "boolean"

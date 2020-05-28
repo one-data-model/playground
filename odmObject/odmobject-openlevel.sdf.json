@@ -11,12 +11,10 @@
       "description": "This Resource describes how open or ajar an entity such as a window, door, blind or shutter is. The Property \"openLevel\" can be read (acting as a sensor). The \"openLevel\" can also be set (acting as an actuator). The \"openLevel\" is device dependent across the range provided. When the Property \"range\" is omitted then 0 to 100 is assumed where 0 means closed, 100 means fully open. If a \"range\" is provided then the lower bound=closed, upper bound=open. If Property \"step\" is present then it represents the increment between possible values; if not provided 1 is assumed.",
       "odmProperty": {
         "openLevel": {
-          "name": "open level",
           "description": "How open or ajar the entity is.",
           "type": "integer"
         },
         "range": {
-          "name": "range",
           "type": "array",
           "description": "The valid range for the Property in the Resource as an integer. The first value in the array is the minimum value, the second value in the array is the maximum value.",
           "writable": false,
@@ -27,7 +25,6 @@
           }
         },
         "step": {
-          "name": "step",
           "description": "Step value across the defined range when the range is an integer.  This is the increment for valid values across the range; so if range is 0..10 and step is 2 then valid values are 0,2,4,6,8,10.",
           "writable": false,
           "type": "integer"

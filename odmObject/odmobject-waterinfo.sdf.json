@@ -11,7 +11,6 @@
       "description": "This Resource describes the water information to indicate type of water currently provided by the device. The water type can be read or set. The Property \"supportedwatertypes\" is an array of the possible water types are defined by the enumeration [\"cold\", \"hot\", \"ambient\", \"ice\"]. The Property \"supportedadditivetypes\" is an array of the possible additive types for water. The additive types mean optional types that can be added to the specific water type according to Client's preference and are defined by the enumeration [\"none\", \"soda\", \"mineral\"]. If absent, the default value is \"none\". The Property \"currentwatertype\" is the currently desired water type. The Property \"currentadditivetypes\" is the currently desired additive type(s). For example, if \"cold\" is selected with the \"currentwatertype\", \"soda\" and \"mineral\" or both can be selected as \"currentadditivetypes\". Note that if \"hot\" is selected with the \"currentwatertype\", \"soda\" and \"mineral\" may be restricted for the \"currentadditivetypes\".",
       "odmProperty": {
         "supportedwatertypes": {
-          "name": "supportedwatertypes",
           "description": "The array of the possible water types.",
           "items": {
             "type": "string"
@@ -20,7 +19,6 @@
           "type": "array"
         },
         "supportedadditivetypes": {
-          "name": "supportedadditivetypes",
           "description": "The array of the possible additive types.",
           "items": {
             "type": "string"
@@ -29,12 +27,10 @@
           "type": "array"
         },
         "currentwatertype": {
-          "name": "currentwatertype",
           "description": " The currently desired water type.",
           "type": "string"
         },
         "currentadditivetypes": {
-          "name": "currentadditivetypes",
           "description": "The currently desired additive type(s) according to Client's preference.",
           "items": {
             "type": "string"

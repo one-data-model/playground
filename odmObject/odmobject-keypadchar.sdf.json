@@ -11,7 +11,6 @@
       "description": "This Resource describes a char (0-9,*,#) which is selected on a number keypad.",
       "odmProperty": {
         "keyvalue": {
-          "name": "keyvalue",
           "type": "string",
           "enum": [
             "0",

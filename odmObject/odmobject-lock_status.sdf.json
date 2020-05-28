@@ -11,7 +11,6 @@
       "description": "The Resource describing a lock. The Property \"lockState\" is a string. The value 'Locked' indicates that the door is Locked. The value 'Unlocked' indicates that the door is Unlocked.",
       "odmProperty": {
         "lockState": {
-          "name": "lock state",
           "description": "The state of the lock.",
           "enum": [
             "Locked",

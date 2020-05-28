@@ -11,7 +11,6 @@
       "description": "This Resource describes an auto balance on/off feature. The Property \"autoWhiteBalance\" is a boolean. An AutoWhiteBalance value of 'true' means that the auto white balance feature is on. An AutoWhiteBalance value of 'false' means that the auto white balance feature is off.",
       "odmProperty": {
         "autoWhiteBalance": {
-          "name": "auto white balance",
           "description": "The status of the Auto White balance feature.",
           "type": "boolean"
         }

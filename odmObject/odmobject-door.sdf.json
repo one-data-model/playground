@@ -11,13 +11,11 @@
       "description": "This Resource describes the open state of the door. A door is modelled by means of openState (Open/Closed), openDuration (ISO 8601 Time), and openAlarm (boolean). For Property \"openState\", the value 'Open' indicates the door is open. The value 'Closed' indicates the door is closed. The type of Property \"openDuration\" is an RFC Time encoded string. The Property \"openAlarm\" value 'true' indicates that the open alarm is active. The openAlarm value 'false' indicates that open alarm is not active. retrieves the state of the Door.",
       "odmProperty": {
         "openDuration": {
-          "name": "open duration",
           "description": "A string representing duration formatted as defined in ISO 8601. Allowable formats are: P[n]Y[n]M[n]DT[n]H[n]M[n]S, P[n]W, P[n]Y[n]-M[n]-DT[0-23]H[0-59]:M[0-59]:S, and P[n]W, P[n]Y[n]M[n]DT[0-23]H[0-59]M[0-59]S. P is mandatory, all other elements are optional, time elements must follow a T.",
           "type": "string",
           "pattern": "^(P(?!$)([0-9]+Y)?([0-9]+M)?([0-9]+W)?([0-9]+D)?((T(?=[0-9]+[HMS])([0-9]+H)?([0-9]+M)?([0-9]+S)?)?))$|^(P[0-9]+W)$|^(P[0-9]{4})-(1[0-2]|0[1-9])-(3[0-1]|2[0-9]|1[0-9]|0[1-9])T(2[0-3]|1[0-9]|0[1-9]):([0-5][0-9]):([0-5][0-9])$|^(P[0-9]{4})(1[0-2]|0[1-9])(3[0-1]|2[0-9]|1[0-9]|0[1-9])T(2[0-3]|1[0-9]|0[1-9])([0-5][0-9])([0-5][0-9])$"
         },
         "openState": {
-          "name": "open state",
           "description": "The state of the door (open or closed).",
           "enum": [
             "Open",
@@ -27,7 +25,6 @@
           "type": "string"
         },
         "openAlarm": {
-          "name": "open alarm",
           "description": "The state of the door open alarm.",
           "type": "boolean"
         }

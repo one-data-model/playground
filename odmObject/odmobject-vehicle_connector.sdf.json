@@ -11,19 +11,16 @@
       "description": "This Resource describes the attributes associated with an electric vehicle charging connector. The Property \"connected\" is a boolean indicating the status of the connector (False = disconnected, True = connected). The Property \"ratedchargingcapacity\" and \"rateddischargingcapacity\" are in Amps (A).",
       "odmProperty": {
         "connected": {
-          "name": "connected",
           "description": "The connection state.",
           "writable": false,
           "type": "boolean"
         },
         "ratedchargingcapacity": {
-          "name": "ratedchargingcapacity",
           "description": "The rated charging capacity in Amps (A).",
           "writable": false,
           "type": "number"
         },
         "rateddischargingcapacity": {
-          "name": "rateddischargingcapacity",
           "description": "The rated discharging capacity in Amps (A).",
           "writable": false,
           "type": "number"

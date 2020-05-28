@@ -11,14 +11,12 @@
       "description": "This Resource describes a sensed or desired humidity. The Property \"humidity\" is an integer describing the percentage measured relative humidity. The Property \"desiredHumidity\" is an integer showing the desired target relative humidity.",
       "odmProperty": {
         "desiredHumidity": {
-          "name": "desired humidity",
           "description": "The desired value for humidity.",
           "maximum": 100,
           "minimum": 0,
           "type": "integer"
         },
         "humidity": {
-          "name": "humidity",
           "description": "The current sensed value for humidity.",
           "maximum": 100,
           "minimum": 0,

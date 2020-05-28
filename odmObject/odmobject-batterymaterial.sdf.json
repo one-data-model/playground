@@ -11,7 +11,6 @@
       "description": "This Resource describes the battery material represented as an enumerated set of strings.",
       "odmProperty": {
         "material": {
-          "name": "material",
           "description": "The battery construction material (type).",
           "enum": [
             "Alkaline",

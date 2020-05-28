@@ -11,13 +11,11 @@
       "description": "This Resource describes the properties associated with the current geolocation coordinate. Geolocation is a geolocation coordinate data. The Property \"latitude\" is a device's current Latitude coordinate (degrees). The Property \"longitude\" is a device's current Longitude coordinate (degrees). The Property \"alt\" is a device's current distance (metres) above or below 'local' sea-level. The Property \"accuracy\" is the accuracy level of the latitude and longitude coordinates (metres). The Property \"altitudeAccuracy\" is the accuracy level of the altitude coordinates (metres). The Property \"heading\" is a direction of travel of device (degree). The Property \"speed\" is a device's current velocity (metres per second).",
       "odmProperty": {
         "longitude": {
-          "name": "longitude",
           "description": "The Device's Current Longitude coordinate (degrees).",
           "writable": false,
           "type": "number"
         },
         "heading": {
-          "name": "heading",
           "description": "The direction of travel of the Device (degree).",
           "maximum": 360,
           "minimum": 0,
@@ -25,33 +23,28 @@
           "type": "number"
         },
         "latitude": {
-          "name": "latitude",
           "description": "The Device's Current Latitude coordinate (degrees).",
           "writable": false,
           "type": "number"
         },
         "altitudeAccuracy": {
-          "name": "altitude accuracy",
           "description": "The accuracy level of the altitude coordinates (metres).",
           "minimum": 0,
           "writable": false,
           "type": "number"
         },
         "alt": {
-          "name": "alt",
           "description": "The current distance (metres) above or below 'local' sea-level.",
           "writable": false,
           "type": "number"
         },
         "accuracy": {
-          "name": "accuracy",
           "description": "The accuracy level of the latitude and longitude coordinates (metres).",
           "minimum": 0,
           "writable": false,
           "type": "number"
         },
         "speed": {
-          "name": "speed",
           "description": "The Device's current velocity (metres per second).",
           "minimum": 0,
           "writable": false,

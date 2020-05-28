@@ -11,13 +11,11 @@
       "description": "This Resource describes an illuminance sensor. The Property \"illuminance\" is a float and represents the sensed luminous flux per unit area in lux.",
       "odmProperty": {
         "illuminance": {
-          "name": "illuminance",
           "description": "The sensed luminous flux per unit area in lux.",
           "writable": false,
           "type": "number"
         },
         "range": {
-          "name": "range",
           "type": "array",
           "description": "The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.",
           "writable": false,

@@ -11,7 +11,6 @@
       "description": "This Resource provides a representation of the measurement from a three-axis sensor. The Property \"orientation\" is an array of numbers representing x-plane, y-plane and z-plane values. The unit of measurement for each pane is 'g'.",
       "odmProperty": {
         "orientation": {
-          "name": "orientation",
           "description": "The array containing x-plane, y-plane and z-plane orientation in 'g'.",
           "items": {
             "type": "number"

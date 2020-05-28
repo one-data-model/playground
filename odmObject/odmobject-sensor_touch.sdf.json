@@ -11,7 +11,6 @@
       "description": "This Resource describes whether a touch has been sensed or not. The Property \"value\" is a boolean. A value of 'true' means that touch has been sensed. A value of 'false' means that touch not been sensed.",
       "odmProperty": {
         "value": {
-          "name": "value",
           "description": "The touch sensor, true = sensed, false = not sensed.",
           "writable": false,
           "type": "boolean"
