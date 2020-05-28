@@ -1,13 +1,13 @@
 {
   "info": {
     "title": "OMA LwM2M Direction (Object ID 3332)",
-    "version": "20200306",
+    "version": "20200528",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "odmObject": {
     "Direction": {
-      "name": "Direction",
+      "label": "Direction",
       "description": "This IPSO object is used to report the direction indicated by a compass, wind vane, or other directional indicator. The units of measure is plane angle degrees.",
       "odmProperty": {
         "Compass_Direction": {
@@ -35,7 +35,7 @@
   },
   "odmProperty": {
     "Compass_Direction": {
-      "name": "Compass Direction",
+      "label": "Compass Direction",
       "description": "The measured compass direction.",
       "writable": false,
       "type": "number",
@@ -44,26 +44,26 @@
       "maximum": 360
     },
     "Min_Measured_Value": {
-      "name": "Min Measured Value",
+      "label": "Min Measured Value",
       "description": "The minimum value measured by the sensor since power ON or reset.",
       "writable": false,
       "type": "number"
     },
     "Max_Measured_Value": {
-      "name": "Max Measured Value",
+      "label": "Max Measured Value",
       "description": "The maximum value measured by the sensor since power ON or reset.",
       "writable": false,
       "type": "number"
     },
     "Application_Type": {
-      "name": "Application Type",
+      "label": "Application Type",
       "description": "The application type of the sensor or actuator as a string depending on the use case.",
       "type": "string"
     }
   },
   "odmAction": {
     "Reset_Min_and_Max_Measured_Values": {
-      "name": "Reset Min and Max Measured Values",
+      "label": "Reset Min and Max Measured Values",
       "description": "Reset the Min and Max Measured Values to Current Value."
     }
   }

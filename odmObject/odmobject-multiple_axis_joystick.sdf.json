@@ -1,13 +1,13 @@
 {
   "info": {
     "title": "OMA LwM2M Multiple Axis Joystick (Object ID 3345)",
-    "version": "20200306",
+    "version": "20200528",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "odmObject": {
     "Multiple_Axis_Joystick": {
-      "name": "Multiple Axis Joystick",
+      "label": "Multiple Axis Joystick",
       "description": "This IPSO object can be used to report the position of a shuttle or joystick control. A digital input is provided to report the state of an associated push button.",
       "odmProperty": {
         "Digital_Input_State": {
@@ -35,37 +35,37 @@
   },
   "odmProperty": {
     "Digital_Input_State": {
-      "name": "Digital Input State",
+      "label": "Digital Input State",
       "description": "The current state of a digital input.",
       "writable": false,
       "type": "boolean"
     },
     "Digital_Input_Counter": {
-      "name": "Digital Input Counter",
+      "label": "Digital Input Counter",
       "description": "The number of times the input transitions from 0 to 1.",
       "writable": false,
       "type": "integer"
     },
     "X_Value": {
-      "name": "X Value",
+      "label": "X Value",
       "description": "The measured value along the X axis.",
       "writable": false,
       "type": "number"
     },
     "Y_Value": {
-      "name": "Y Value",
+      "label": "Y Value",
       "description": "The measured value along the Y axis.",
       "writable": false,
       "type": "number"
     },
     "Z_Value": {
-      "name": "Z Value",
+      "label": "Z Value",
       "description": "The measured value along the Z axis.",
       "writable": false,
       "type": "number"
     },
     "Application_Type": {
-      "name": "Application Type",
+      "label": "Application Type",
       "description": "The application type of the sensor or actuator as a string depending on the use case.",
       "type": "string"
     }

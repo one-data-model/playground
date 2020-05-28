@@ -1,13 +1,13 @@
 {
   "info": {
     "title": "OMA LwM2M Multi-state Selector (Object ID 3348)",
-    "version": "20200306",
+    "version": "20200528",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "odmObject": {
     "Multi-state_Selector": {
-      "name": "Multi-state Selector",
+      "label": "Multi-state Selector",
       "description": "This IPSO object is used to represent the state of a Multi-state selector switch with a number of fixed positions.",
       "odmProperty": {
         "Multi-state_Input": {
@@ -25,13 +25,13 @@
   },
   "odmProperty": {
     "Multi-state_Input": {
-      "name": "Multi-state Input",
+      "label": "Multi-state Input",
       "description": "The current state of a Multi-state input or selector.",
       "writable": false,
       "type": "integer"
     },
     "Application_Type": {
-      "name": "Application Type",
+      "label": "Application Type",
       "description": "The application type of the sensor or actuator as a string depending on the use case.",
       "type": "string"
     }

@@ -1,13 +1,13 @@
 {
   "info": {
     "title": "OMA LwM2M Audio Clip (Object ID 3339)",
-    "version": "20200306",
+    "version": "20200528",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "odmObject": {
     "Audio_Clip": {
-      "name": "Audio Clip",
+      "label": "Audio Clip",
       "description": "This IPSO object should be used for a speaker that plays a pre-recorded audio clip or an audio output that is sent elsewhere. For example, an elevator which announces the floor of the building. A resource is provided to store the clip, a dimmer resource controls the relative sound level of the playback, and a duration resource limits the maximum playback time. After the duration time is reached, any remaining samples in the clip are ignored, and the clip player will be ready to play another clip.",
       "odmProperty": {
         "Clip": {
@@ -35,12 +35,12 @@
   },
   "odmProperty": {
     "Clip": {
-      "name": "Clip",
+      "label": "Clip",
       "description": "Audio clip that is playable (e.g., a short audio recording indicating the floor in an elevator).",
       "subtype": "bytestring"
     },
     "Level": {
-      "name": "Level",
+      "label": "Level",
       "description": "Audio volume control, float value between 0 and 100 as a percentage.",
       "type": "number",
       "units": "/100",
@@ -48,20 +48,20 @@
       "maximum": 100
     },
     "Duration": {
-      "name": "Duration",
+      "label": "Duration",
       "description": "The duration of the sound once trigger.",
       "type": "number",
       "units": "s"
     },
     "Application_Type": {
-      "name": "Application Type",
+      "label": "Application Type",
       "description": "The application type of the sensor or actuator as a string depending on the use case.",
       "type": "string"
     }
   },
   "odmAction": {
     "Trigger": {
-      "name": "Trigger",
+      "label": "Trigger",
       "description": "Trigger initiating actuation."
     }
   }

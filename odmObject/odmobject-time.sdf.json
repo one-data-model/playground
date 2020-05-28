@@ -1,13 +1,13 @@
 {
   "info": {
     "title": "OMA LwM2M Time (Object ID 3333)",
-    "version": "20200306",
+    "version": "20200528",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "odmObject": {
     "Time": {
-      "name": "Time",
+      "label": "Time",
       "description": "This IPSO object is used to report the current time in seconds since January 1, 1970 UTC. There is also a fractional time counter that has a range of less than one second.",
       "odmProperty": {
         "Current_Time": {
@@ -28,12 +28,12 @@
   },
   "odmProperty": {
     "Current_Time": {
-      "name": "Current Time",
+      "label": "Current Time",
       "description": "Unix Time. A signed integer representing the number of seconds since Jan 1st, 1970 in the UTC time zone.",
       "subtype": "unixtime"
     },
     "Fractional_Time": {
-      "name": "Fractional Time",
+      "label": "Fractional Time",
       "description": "Fractional part of the time when sub-second precision is used (e.g., 0.23 for 230 ms).",
       "type": "number",
       "units": "s",
@@ -41,7 +41,7 @@
       "maximum": 1
     },
     "Application_Type": {
-      "name": "Application Type",
+      "label": "Application Type",
       "description": "The application type of the sensor or actuator as a string depending on the use case.",
       "type": "string"
     }

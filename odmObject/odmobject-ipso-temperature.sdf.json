@@ -1,13 +1,13 @@
 {
   "info": {
     "title": "OMA LwM2M Temperature (Object ID 3303)",
-    "version": "20200306",
+    "version": "20200528",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "odmObject": {
     "Temperature": {
-      "name": "Temperature",
+      "label": "Temperature",
       "description": "This IPSO object should be used with a temperature sensor to report a temperature measurement.  It also provides resources for minimum/maximum measured values and the minimum/maximum range that can be measured by the temperature sensor. An example measurement unit is degrees Celsius.",
       "odmProperty": {
         "Sensor_Value": {
@@ -41,37 +41,37 @@
   },
   "odmProperty": {
     "Sensor_Value": {
-      "name": "Sensor Value",
+      "label": "Sensor Value",
       "description": "Last or Current Measured Value from the Sensor",
       "writable": false,
       "type": "number"
     },
     "Min_Measured_Value": {
-      "name": "Min Measured Value",
+      "label": "Min Measured Value",
       "description": "The minimum value measured by the sensor since power ON or reset",
       "writable": false,
       "type": "number"
     },
     "Max_Measured_Value": {
-      "name": "Max Measured Value",
+      "label": "Max Measured Value",
       "description": "The maximum value measured by the sensor since power ON or reset",
       "writable": false,
       "type": "number"
     },
     "Min_Range_Value": {
-      "name": "Min Range Value",
+      "label": "Min Range Value",
       "description": "The minimum value that can be measured by the sensor",
       "writable": false,
       "type": "number"
     },
     "Max_Range_Value": {
-      "name": "Max Range Value",
+      "label": "Max Range Value",
       "description": "The maximum value that can be measured by the sensor",
       "writable": false,
       "type": "number"
     },
     "Sensor_Units": {
-      "name": "Sensor Units",
+      "label": "Sensor Units",
       "description": "Measurement Units Definition.",
       "writable": false,
       "type": "string"
@@ -79,7 +79,7 @@
   },
   "odmAction": {
     "Reset_Min_and_Max_Measured_Values": {
-      "name": "Reset Min and Max Measured Values",
+      "label": "Reset Min and Max Measured Values",
       "description": "Reset the Min and Max Measured Values to Current Value"
     }
   }

@@ -1,13 +1,13 @@
 {
   "info": {
     "title": "OMA LwM2M Set Point (Object ID 3308)",
-    "version": "20200306",
+    "version": "20200528",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "odmObject": {
     "Set_Point": {
-      "name": "Set Point",
+      "label": "Set Point",
       "description": "This IPSO object should be used to set a desired value to a controller, such as a thermostat. A special resource is added to set the colour of an object.",
       "odmProperty": {
         "Set_Point_Value": {
@@ -31,23 +31,23 @@
   },
   "odmProperty": {
     "Set_Point_Value": {
-      "name": "Set Point Value",
+      "label": "Set Point Value",
       "description": "The setpoint value.",
       "type": "number"
     },
     "Sensor_Units": {
-      "name": "Sensor Units",
+      "label": "Sensor Units",
       "description": "Measurement Units Definition.",
       "writable": false,
       "type": "string"
     },
     "Colour": {
-      "name": "Colour",
+      "label": "Colour",
       "description": "A string representing a value in some color space",
       "type": "string"
     },
     "Application_Type": {
-      "name": "Application Type",
+      "label": "Application Type",
       "description": "The application type of the sensor or actuator as a string depending on the use case.",
       "type": "string"
     }
