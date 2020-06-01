@@ -41,13 +41,13 @@
           ]
         },
         "completionTime": {
-          "odmRef": "pg:odmData/iso8601date"
+          "odmRef": "pg:/odmData/iso8601date"
         },
         "operationTime": {
-          "odmRef": "pg:odmData/PositiveInteger"
+          "odmRef": "pg:/odmData/PositiveInteger"
         },
         "progress": {
-          "odmRef": "pg:odmData/IntegerPercent"
+          "odmRef": "pg:/odmData/IntegerPercent"
         }
       }, 
       "odmAction": {
@@ -60,17 +60,17 @@
           ],          
           "odmData": {
             "ovenMode": {
-              "odmRef": "pg:odmData/OvenMode"
+              "odmRef": "pg:/odmData/OvenMode"
             }
           }
         },
         "stop": {},
         "start": {
           "odmInputData": [
-            "pg:odmObject/ovenMode/odmAction/start/odmData/ovenMode"
+            "pg:/odmObject/ovenMode/odmAction/start/odmData/ovenMode"
           ],
           "odmData": {
-            "odmRef": "pg:odmData/OvenMode"
+            "odmRef": "pg:/odmData/OvenMode"
           }
         }
       }
