@@ -6,14 +6,14 @@
     "license": "not licensed"
   }, 
   "namespace": {
-    "ex": "http://example.com/"
+    "pg": "https://onedm.org/playground/#"
   }, 
-  "defaultNamespace": "ex", 
-  "odmThing": {
+  "defaultnamespace": "pg", 
+  "odmProduct": {
     "SKU_19934774": {
       "productTypeListing": "Compound Vacuum Gauge", 
       "odmRequired": [
-        "#/odmThing/SKU_19934774/odmObject/3300~10"
+        "#/odmProduct/SKU_19934774/odmObject/3300~10"
       ],
       "odmObject": {
         "3300/0": {
@@ -101,23 +101,28 @@
   "odmProperty": {
     "sensorValue": {
       "id": 5700, 
-      "type": "number"
+      "type": "number", 
+      "subtype": "float"
     }, 
     "minimumMeasuredValue": {
       "id": 5601, 
-      "type": "number"
+      "type": "number", 
+      "subtype": "float"
     }, 
     "maximumMeasuredValue": {
       "id": 5602, 
-      "type": "number"
+      "type": "number", 
+      "subtype": "float"
     }, 
     "minimumRangeValue": {
       "id": 5603, 
-      "type": "number"
+      "type": "number", 
+      "subtype": "float"
     }, 
     "maximumRangeValue": {
       "id": 5604, 
-      "type": "number"
+      "type": "number", 
+      "subtype": "float"
     }, 
     "applicationType": {
       "id": 5750, 

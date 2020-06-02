@@ -1,0 +1,48 @@
+{
+  "info": {
+    "title": "Example file for ODM Simple JSON Definition Format", 
+    "version": "20190424", 
+    "copyright": "Copyright 2019 Example Corp.\n        All rights reserved.", 
+    "license": "http://example.com/license"
+  }, 
+  "namespace": {
+    "pg": "https://onedm.org/playground/#"
+  }, 
+  "defaultnamespace": "pg", 
+  "odmObject": {
+    "motionSensor": {
+      "label": "Motion Sensor",
+      "odmRequired": [
+        "#/odmObject/motionSensor/odmProperty/value"
+      ],
+      "odmProperty": {
+        "value": {
+          "odmRef": "#/odmData/activityState"
+        }
+      }, 
+      "odmEvent": {
+        "stateChange": { 
+          "odmOutputData" : [ "#/odmData/activityState"]
+        }
+      }
+    }
+  },
+  "odmData": {
+    "activityState": {
+      "type": "string",
+      "enum": [ "active", "inactive"],
+      "odmEnum": {
+        "active": {
+          "description": "The active state",
+          "type": "string",
+          "default": "active"
+        },
+        "inactive": {
+            "description": "The inctive state",
+            "type": "string",
+            "default": "inactive"  
+        }
+      }
+    }
+  }
+}

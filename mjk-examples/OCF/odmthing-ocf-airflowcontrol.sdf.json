@@ -10,19 +10,19 @@
     "oic.r.switch.binary": {
       "name": "oic.r.switch.binary",
       "description" : "This odmObject describes a binary switch (on/off).\nThe Property \"value\" is a boolean.\nA value of 'true' means that the switch is on.\nA value of 'false' means that the switch is off.\n",
-      "required": [
-        "0/odmProperty/value"
+      "odmRequired": [
+        "#/odmObject/oic.r.switch.binary/odmProperty/value"
       ],
       "odmProperty": {
         "value": {
-          "name": "value",
+          "label": "value",
           "type": "boolean"
         }
       }
     },
 
     "oic.r.airflow": {
-      "name": "oic.r.airflow",
+      "label": "oic.r.airflow",
       "description" : "",
       "odmRequired": [
         "#/odmObject/oic.r.airflow/odmProperty/speed",
@@ -30,17 +30,17 @@
       ],
       "odmProperty": {
         "speed" : {
-          "name": "speed",
+          "label": "speed",
           "description": "The current speed level.",
           "type": "integer"
         },
         "direction" : {
-          "name": "direction",
+          "label": "direction",
           "description": "The directionality of the air flow, a value indicated by \"supporteddirections\".",
           "type": "string"
         },
         "automode" : {
-          "name": "automode",
+          "label": "automode",
           "description": "The status of the automode feature, if on speed is set by the Device.",
           "type": "string",
           "enum": [

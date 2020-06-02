@@ -1,0 +1,78 @@
+{
+  "info": {
+    "title": "Example file for ODM Simple JSON Definition Format", 
+    "version": "20190424", 
+    "copyright": "Copyright 2019 Example Corp.\n        All rights reserved.", 
+    "license": "http://example.com/license"
+  }, 
+  "namespace": {
+    "pg": "https://onedm.org/playground/#"
+  }, 
+  "defaultnamespace": "pg", 
+  "odmData": {
+    "OvenMode": {
+      "label": "Oven Mode",
+      "type": "string",
+      "enum": [
+        "heating",
+        "grill",
+        "warming",
+        "defrosting",
+        "Conventional",
+        "Bake",
+        "BottomHeat",
+        "ConvectionBake",
+        "ConvectionRoast",
+        "Broil",
+        "ConvectionBroil",
+        "SteamCook",
+        "SteamBake",
+        "SteamRoast",
+        "SteamBottomHeatplusConvection",
+        "Microwave",
+        "MWplusGrill",
+        "MWplusConvection",
+        "MWplusHotBlast",
+        "MWplusHotBlast2",
+        "SlimMiddle",
+        "SlimStrong",
+        "SlowCook",
+        "Proof",
+        "Dehydrate",
+        "Others"
+      ],
+      "odmEnum": {
+        "heating": {
+          "default": "heating"
+        },
+        "grill": {
+          "default": "grill"
+        },
+        "warming": {},
+        "defrosting": {},
+        "Conventional": {},
+        "Bake": {},
+        "BottomHeat": {},
+        "ConvectionBake": {},
+        "ConvectionRoast": {},
+        "Broil": {},
+        "ConvectionBroil": {},
+        "SteamCook": {},
+        "SteamBake": {},
+        "SteamRoast": {},
+        "SteamBottomHeatplusConvection": {},
+        "Microwave": {},
+        "MWplusGrill": {},
+        "MWplusConvection": {},
+        "MWplusHotBlast": {},
+        "MWplusHotBlast2": {},
+        "SlimMiddle": {},
+        "SlimStrong": {},
+        "SlowCook": {},
+        "Proof": {},
+        "Dehydrate": {},
+        "Others": {}          
+      }
+    }
+  }
+}

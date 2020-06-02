@@ -1,0 +1,139 @@
+{
+  "info": {
+    "title": "Example ODM model for the ZCL OnOff cluster", 
+    "version": "20200326", 
+    "copyright": "no copyright", 
+    "license": "not licensed"
+  }, 
+  "namespace": {
+    "pg": "https://onedm.org/playground/#"
+  }, 
+  "defaultnamespace": "pg", 
+  "odmObject": {
+    "OnOff": {
+      "label": "OnOff", 
+      "odmRequired": [
+        "#/odmObject/OnOff/odmProperty/OnOff", 
+        "#/odmObject/OnOff/odmAction/On",
+        "#/odmObject/OnOff/odmAction/Off",
+        "#/odmObject/OnOff/odmAction/Toggle"
+      ],
+      "odmProperty": {
+        "OnOff": {
+          "label": "OnOff", 
+          "type": "boolean",
+          "default": false
+        }, 
+        "GlobalSceneControl": {
+          "label": "GlobalSceneControl", 
+          "type": "boolean",
+          "default": true
+        }, 
+        "OnTime": {
+          "odmRef": "#/odmData/TransitionTimeData", 
+          "label": "OnTime", 
+          "default": 0
+        }, 
+        "OffWaitTime": {
+          "odmRef": "#/odmData/TransitionTimeData", 
+          "label": "OffWaitTime", 
+          "default": 0
+        }, 
+        "StartUpOnOff": {
+          "odmRef": "#/odmData/StartUpOnOffMode", 
+          "label": "StartUpOnOff"
+        }
+      }, 
+      "odmAction": {
+        "Off": {
+          "label": "Off" 
+        }, 
+        "On": {
+          "label": "On"
+        }, 
+        "Toggle": {
+          "label": "Toggle"
+        }, 
+        "OffWithEffect": {
+          "label": "OffWithEffect",
+          "odmRequired": [
+          ],
+          "odmInputData": [
+            "#/odmObject/OnOff/odmAction/OffWithEffect/odmData/EffectIdentifier", 
+            "#/odmObject/OnOff/odmAction/OffWithEffect/odmData/EffectVariant"
+          ],
+          "odmData": {
+            "EffectIdentifier": {
+              "label": "EffectIdentifier", 
+              "type": "number",
+              "enum": [0,1],
+              "odmEnum": {
+                "DelayedAllOff": {
+                  "type": "number",
+                  "default": 0
+                },
+                "DyingLight": {
+                  "type": "number",
+                  "default": 1
+                }
+              } 
+            }, 
+            "EffectVariant": {
+              "label": "EffectVariant", 
+              "type": "number" 
+            }
+          }
+        },
+        "OnWithRecallGlobalScene": {
+          "label": "OnWithRecallGlobalScene"
+        }, 
+        "OnWithTimedOff": {
+          "label": "OnWithTimedOff", 
+          "odmData": {
+            "OnOffControl": {
+              "type": "object",
+              "properties" : {
+                "AcceptOnlyWhenOn": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }, 
+      "odmData": {
+        "TransitionTimeData": {
+          "type": "number", 
+          "minimum": 0, 
+          "maximum": 65535, 
+          "multipleOf": 1, 
+          "scaleUnit": "seconds", 
+          "scaleMinimum": 0, 
+          "scaleMaximum": 6553.5
+        },
+        "StartUpOnOffMode": {
+          "type": "number",
+          "enum": [0,1,2,255],
+          "odmEnum": {
+            "SetOnOffTo0": {
+              "type": "number",
+              "default": "0"
+            },
+            "SetOnOffTo1": {
+              "type": "number",
+              "default": "1"
+            },
+            "TogglePreviousOnOff": {
+              "type": "number",
+              "default": "2"
+            },
+            "SetPreviousOnOff": {
+              "type": "number",
+              "default": "FF"
+            }
+          }
+        }
+      }
+    }
+  }
+}
