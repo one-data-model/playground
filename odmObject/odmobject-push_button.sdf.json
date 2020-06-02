@@ -1,32 +1,32 @@
 {
   "info": {
     "title": "OMA LwM2M Push button (Object ID 3347)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Push_button": {
       "label": "Push button",
       "description": "This IPSO object is used to report the state of a momentary action push button control and to count the number of times the control has been operated since the last observation.",
-      "odmProperty": {
+      "sdfProperty": {
         "Digital_Input_State": {
-          "odmRef": "#/odmProperty/Digital_Input_State"
+          "sdfRef": "#/sdfProperty/Digital_Input_State"
         },
         "Digital_Input_Counter": {
-          "odmRef": "#/odmProperty/Digital_Input_Counter"
+          "sdfRef": "#/sdfProperty/Digital_Input_Counter"
         },
         "Application_Type": {
-          "odmRef": "#/odmProperty/Application_Type"
+          "sdfRef": "#/sdfProperty/Application_Type"
         }
       },
-      "odmAction": {},
-      "odmRequired": [
-        "#/odmProperty/Digital_Input_State"
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfProperty/Digital_Input_State"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "Digital_Input_State": {
       "label": "Digital Input State",
       "description": "The current state of a digital input.",
@@ -45,5 +45,5 @@
       "type": "string"
     }
   },
-  "odmAction": {}
+  "sdfAction": {}
 }

@@ -1,35 +1,35 @@
 {
   "info": {
     "title": "OMA LwM2M Analog Output (Object ID 3203)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Analog_Output": {
       "label": "Analog Output",
       "description": "This IPSO object is a generic object that can be used with any kind of analog output interface.",
-      "odmProperty": {
+      "sdfProperty": {
         "Analog_Output_Current_Value": {
-          "odmRef": "#/odmProperty/Analog_Output_Current_Value"
+          "sdfRef": "#/sdfProperty/Analog_Output_Current_Value"
         },
         "Application_Type": {
-          "odmRef": "#/odmProperty/Application_Type"
+          "sdfRef": "#/sdfProperty/Application_Type"
         },
         "Min_Range_Value": {
-          "odmRef": "#/odmProperty/Min_Range_Value"
+          "sdfRef": "#/sdfProperty/Min_Range_Value"
         },
         "Max_Range_Value": {
-          "odmRef": "#/odmProperty/Max_Range_Value"
+          "sdfRef": "#/sdfProperty/Max_Range_Value"
         }
       },
-      "odmAction": {},
-      "odmRequired": [
-        "#/odmProperty/Analog_Output_Current_Value"
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfProperty/Analog_Output_Current_Value"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "Analog_Output_Current_Value": {
       "label": "Analog Output Current Value",
       "description": "The current state of the analogue output.",
@@ -55,5 +55,5 @@
       "type": "number"
     }
   },
-  "odmAction": {}
+  "sdfAction": {}
 }

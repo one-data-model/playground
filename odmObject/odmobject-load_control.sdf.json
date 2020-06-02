@@ -1,43 +1,43 @@
 {
   "info": {
     "title": "OMA LwM2M Load Control (Object ID 3310)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Load_Control": {
       "label": "Load Control",
       "description": "This Object is used for demand-response load control and other load control in automation application (not limited to power).",
-      "odmProperty": {
+      "sdfProperty": {
         "Event_Identifier": {
-          "odmRef": "#/odmProperty/Event_Identifier"
+          "sdfRef": "#/sdfProperty/Event_Identifier"
         },
         "Start_Time": {
-          "odmRef": "#/odmProperty/Start_Time"
+          "sdfRef": "#/sdfProperty/Start_Time"
         },
         "Duration_In_Min": {
-          "odmRef": "#/odmProperty/Duration_In_Min"
+          "sdfRef": "#/sdfProperty/Duration_In_Min"
         },
         "Criticality_Level": {
-          "odmRef": "#/odmProperty/Criticality_Level"
+          "sdfRef": "#/sdfProperty/Criticality_Level"
         },
         "Avg_Load_AdjPct": {
-          "odmRef": "#/odmProperty/Avg_Load_AdjPct"
+          "sdfRef": "#/sdfProperty/Avg_Load_AdjPct"
         },
         "Duty_Cycle": {
-          "odmRef": "#/odmProperty/Duty_Cycle"
+          "sdfRef": "#/sdfProperty/Duty_Cycle"
         }
       },
-      "odmAction": {},
-      "odmRequired": [
-        "#/odmProperty/Event_Identifier",
-        "#/odmProperty/Start_Time",
-        "#/odmProperty/Duration_In_Min"
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfProperty/Event_Identifier",
+        "#/sdfProperty/Start_Time",
+        "#/sdfProperty/Duration_In_Min"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "Event_Identifier": {
       "label": "Event Identifier",
       "description": "The event identifier as a string.",
@@ -78,5 +78,5 @@
       "maximum": 100
     }
   },
-  "odmAction": {}
+  "sdfAction": {}
 }

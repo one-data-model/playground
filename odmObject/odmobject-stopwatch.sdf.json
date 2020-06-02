@@ -1,35 +1,35 @@
 {
   "info": {
     "title": "OMA LwM2M Stopwatch (Object ID 3350)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Stopwatch": {
       "label": "Stopwatch",
       "description": "An ascending timer that counts how long time has passed since the timer was started after reset.",
-      "odmProperty": {
+      "sdfProperty": {
         "Cumulative_Time": {
-          "odmRef": "#/odmProperty/Cumulative_Time"
+          "sdfRef": "#/sdfProperty/Cumulative_Time"
         },
         "On_Off": {
-          "odmRef": "#/odmProperty/On_Off"
+          "sdfRef": "#/sdfProperty/On_Off"
         },
         "Digital_Input_Counter": {
-          "odmRef": "#/odmProperty/Digital_Input_Counter"
+          "sdfRef": "#/sdfProperty/Digital_Input_Counter"
         },
         "Application_Type": {
-          "odmRef": "#/odmProperty/Application_Type"
+          "sdfRef": "#/sdfProperty/Application_Type"
         }
       },
-      "odmAction": {},
-      "odmRequired": [
-        "#/odmProperty/Cumulative_Time"
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfProperty/Cumulative_Time"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "Cumulative_Time": {
       "label": "Cumulative Time",
       "description": "The total time in seconds that the stopwatch has been on. Writing a 0 resets the time.",
@@ -53,5 +53,5 @@
       "type": "string"
     }
   },
-  "odmAction": {}
+  "sdfAction": {}
 }

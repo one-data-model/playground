@@ -1,38 +1,38 @@
 {
   "info": {
     "title": "OMA LwM2M Magnetometer (Object ID 3314)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Magnetometer": {
       "label": "Magnetometer",
       "description": "This IPSO object can be used to represent a 1-3 axis magnetometer with optional compass direction.",
-      "odmProperty": {
+      "sdfProperty": {
         "X_Value": {
-          "odmRef": "#/odmProperty/X_Value"
+          "sdfRef": "#/sdfProperty/X_Value"
         },
         "Y_Value": {
-          "odmRef": "#/odmProperty/Y_Value"
+          "sdfRef": "#/sdfProperty/Y_Value"
         },
         "Z_Value": {
-          "odmRef": "#/odmProperty/Z_Value"
+          "sdfRef": "#/sdfProperty/Z_Value"
         },
         "Compass_Direction": {
-          "odmRef": "#/odmProperty/Compass_Direction"
+          "sdfRef": "#/sdfProperty/Compass_Direction"
         },
         "Sensor_Units": {
-          "odmRef": "#/odmProperty/Sensor_Units"
+          "sdfRef": "#/sdfProperty/Sensor_Units"
         }
       },
-      "odmAction": {},
-      "odmRequired": [
-        "#/odmProperty/X_Value"
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfProperty/X_Value"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "X_Value": {
       "label": "X Value",
       "description": "The measured value along the X axis.",
@@ -67,5 +67,5 @@
       "type": "string"
     }
   },
-  "odmAction": {}
+  "sdfAction": {}
 }

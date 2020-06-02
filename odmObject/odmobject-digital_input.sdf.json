@@ -1,48 +1,48 @@
 {
   "info": {
     "title": "OMA LwM2M Digital Input (Object ID 3200)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Digital_Input": {
       "label": "Digital Input",
       "description": "Generic digital input for non-specific sensors",
-      "odmProperty": {
+      "sdfProperty": {
         "Digital_Input_State": {
-          "odmRef": "#/odmProperty/Digital_Input_State"
+          "sdfRef": "#/sdfProperty/Digital_Input_State"
         },
         "Digital_Input_Counter": {
-          "odmRef": "#/odmProperty/Digital_Input_Counter"
+          "sdfRef": "#/sdfProperty/Digital_Input_Counter"
         },
         "Digital_Input_Polarity": {
-          "odmRef": "#/odmProperty/Digital_Input_Polarity"
+          "sdfRef": "#/sdfProperty/Digital_Input_Polarity"
         },
         "Digital_Input_Debounce": {
-          "odmRef": "#/odmProperty/Digital_Input_Debounce"
+          "sdfRef": "#/sdfProperty/Digital_Input_Debounce"
         },
         "Digital_Input_Edge_Selection": {
-          "odmRef": "#/odmProperty/Digital_Input_Edge_Selection"
+          "sdfRef": "#/sdfProperty/Digital_Input_Edge_Selection"
         },
         "Application_Type": {
-          "odmRef": "#/odmProperty/Application_Type"
+          "sdfRef": "#/sdfProperty/Application_Type"
         },
         "Sensor_Type": {
-          "odmRef": "#/odmProperty/Sensor_Type"
+          "sdfRef": "#/sdfProperty/Sensor_Type"
         }
       },
-      "odmAction": {
+      "sdfAction": {
         "Digital_Input_Counter_Reset": {
-          "odmRef": "#/odmAction/Digital_Input_Counter_Reset"
+          "sdfRef": "#/sdfAction/Digital_Input_Counter_Reset"
         }
       },
-      "odmRequired": [
-        "#/odmProperty/Digital_Input_State"
+      "sdfRequired": [
+        "#/sdfProperty/Digital_Input_State"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "Digital_Input_State": {
       "label": "Digital Input State",
       "description": "The current state of a digital input.",
@@ -85,7 +85,7 @@
       "type": "string"
     }
   },
-  "odmAction": {
+  "sdfAction": {
     "Digital_Input_Counter_Reset": {
       "label": "Digital Input Counter Reset",
       "description": "Reset the Counter value."

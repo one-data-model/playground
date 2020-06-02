@@ -1,32 +1,32 @@
 {
   "info": {
     "title": "OMA LwM2M Digital Output (Object ID 3201)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Digital_Output": {
       "label": "Digital Output",
       "description": "Generic digital output for non-specific actuators",
-      "odmProperty": {
+      "sdfProperty": {
         "Digital_Output_State": {
-          "odmRef": "#/odmProperty/Digital_Output_State"
+          "sdfRef": "#/sdfProperty/Digital_Output_State"
         },
         "Digital_Output_Polarity": {
-          "odmRef": "#/odmProperty/Digital_Output_Polarity"
+          "sdfRef": "#/sdfProperty/Digital_Output_Polarity"
         },
         "Application_Type": {
-          "odmRef": "#/odmProperty/Application_Type"
+          "sdfRef": "#/sdfProperty/Application_Type"
         }
       },
-      "odmAction": {},
-      "odmRequired": [
-        "#/odmProperty/Digital_Output_State"
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfProperty/Digital_Output_State"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "Digital_Output_State": {
       "label": "Digital Output State",
       "description": "The current state of a digital output.",
@@ -43,5 +43,5 @@
       "type": "string"
     }
   },
-  "odmAction": {}
+  "sdfAction": {}
 }

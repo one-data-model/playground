@@ -1,36 +1,36 @@
 {
   "info": {
     "title": "OMA LwM2M Energy (Object ID 3331)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Energy": {
       "label": "Energy",
       "description": "This IPSO object should be used to report energy consumption (Cumulative Power) of an electrical load. An example measurement unit is Watt Hours.",
-      "odmProperty": {
+      "sdfProperty": {
         "Sensor_Value": {
-          "odmRef": "#/odmProperty/Sensor_Value"
+          "sdfRef": "#/sdfProperty/Sensor_Value"
         },
         "Sensor_Units": {
-          "odmRef": "#/odmProperty/Sensor_Units"
+          "sdfRef": "#/sdfProperty/Sensor_Units"
         },
         "Application_Type": {
-          "odmRef": "#/odmProperty/Application_Type"
+          "sdfRef": "#/sdfProperty/Application_Type"
         }
       },
-      "odmAction": {
+      "sdfAction": {
         "Reset_Cumulative_energy": {
-          "odmRef": "#/odmAction/Reset_Cumulative_energy"
+          "sdfRef": "#/sdfAction/Reset_Cumulative_energy"
         }
       },
-      "odmRequired": [
-        "#/odmProperty/Sensor_Value"
+      "sdfRequired": [
+        "#/sdfProperty/Sensor_Value"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "Sensor_Value": {
       "label": "Sensor Value",
       "description": "Last or Current Measured Value from the Sensor.",
@@ -49,7 +49,7 @@
       "type": "string"
     }
   },
-  "odmAction": {
+  "sdfAction": {
     "Reset_Cumulative_energy": {
       "label": "Reset Cumulative energy",
       "description": "Reset both cumulative active/reactive power."

@@ -1,51 +1,51 @@
 {
   "info": {
     "title": "OMA LwM2M Loudness (Object ID 3324)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Loudness": {
       "label": "Loudness",
       "description": "This IPSO object should be used to report loudness or noise level measurements. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is decibels.",
-      "odmProperty": {
+      "sdfProperty": {
         "Sensor_Value": {
-          "odmRef": "#/odmProperty/Sensor_Value"
+          "sdfRef": "#/sdfProperty/Sensor_Value"
         },
         "Sensor_Units": {
-          "odmRef": "#/odmProperty/Sensor_Units"
+          "sdfRef": "#/sdfProperty/Sensor_Units"
         },
         "Min_Measured_Value": {
-          "odmRef": "#/odmProperty/Min_Measured_Value"
+          "sdfRef": "#/sdfProperty/Min_Measured_Value"
         },
         "Max_Measured_Value": {
-          "odmRef": "#/odmProperty/Max_Measured_Value"
+          "sdfRef": "#/sdfProperty/Max_Measured_Value"
         },
         "Min_Range_Value": {
-          "odmRef": "#/odmProperty/Min_Range_Value"
+          "sdfRef": "#/sdfProperty/Min_Range_Value"
         },
         "Max_Range_Value": {
-          "odmRef": "#/odmProperty/Max_Range_Value"
+          "sdfRef": "#/sdfProperty/Max_Range_Value"
         },
         "Current_Calibration": {
-          "odmRef": "#/odmProperty/Current_Calibration"
+          "sdfRef": "#/sdfProperty/Current_Calibration"
         },
         "Application_Type": {
-          "odmRef": "#/odmProperty/Application_Type"
+          "sdfRef": "#/sdfProperty/Application_Type"
         }
       },
-      "odmAction": {
+      "sdfAction": {
         "Reset_Min_and_Max_Measured_Values": {
-          "odmRef": "#/odmAction/Reset_Min_and_Max_Measured_Values"
+          "sdfRef": "#/sdfAction/Reset_Min_and_Max_Measured_Values"
         }
       },
-      "odmRequired": [
-        "#/odmProperty/Sensor_Value"
+      "sdfRequired": [
+        "#/sdfProperty/Sensor_Value"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "Sensor_Value": {
       "label": "Sensor Value",
       "description": "Last or Current Measured Value from the Sensor",
@@ -93,7 +93,7 @@
       "type": "string"
     }
   },
-  "odmAction": {
+  "sdfAction": {
     "Reset_Min_and_Max_Measured_Values": {
       "label": "Reset Min and Max Measured Values",
       "description": "Reset the Min and Max Measured Values to Current Value"

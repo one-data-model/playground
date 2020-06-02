@@ -1,51 +1,51 @@
 {
   "info": {
     "title": "OMA LwM2M Addressable Text Display (Object ID 3341)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Addressable_Text_Display": {
       "label": "Addressable Text Display",
       "description": "This IPSO object is used to send text to a text-only or text mode graphics display. Writing a string of text to the text resource causes it to be displayed at the selected X and Y locations on the display. If X or Y are set to a value greater than the size of the display, the position \"wraps around\" to the modulus of the setting and the display size. Likewise, if the text string overflows the display size, the text \"wraps around\" and displays on the next line down or, if the last line has been written, wraps around to the top of the display. Brightness and Contrast controls are provided to allow control of various display types including STN and DSTN type LCD character displays. Writing an empty payload to the Clear Display resource causes the display to be erased.",
-      "odmProperty": {
+      "sdfProperty": {
         "Text": {
-          "odmRef": "#/odmProperty/Text"
+          "sdfRef": "#/sdfProperty/Text"
         },
         "X_Coordinate": {
-          "odmRef": "#/odmProperty/X_Coordinate"
+          "sdfRef": "#/sdfProperty/X_Coordinate"
         },
         "Y_Coordinate": {
-          "odmRef": "#/odmProperty/Y_Coordinate"
+          "sdfRef": "#/sdfProperty/Y_Coordinate"
         },
         "Max_X_Coordinate": {
-          "odmRef": "#/odmProperty/Max_X_Coordinate"
+          "sdfRef": "#/sdfProperty/Max_X_Coordinate"
         },
         "Max_Y_Coordinate": {
-          "odmRef": "#/odmProperty/Max_Y_Coordinate"
+          "sdfRef": "#/sdfProperty/Max_Y_Coordinate"
         },
         "Level": {
-          "odmRef": "#/odmProperty/Level"
+          "sdfRef": "#/sdfProperty/Level"
         },
         "Contrast": {
-          "odmRef": "#/odmProperty/Contrast"
+          "sdfRef": "#/sdfProperty/Contrast"
         },
         "Application_Type": {
-          "odmRef": "#/odmProperty/Application_Type"
+          "sdfRef": "#/sdfProperty/Application_Type"
         }
       },
-      "odmAction": {
+      "sdfAction": {
         "Clear_Display": {
-          "odmRef": "#/odmAction/Clear_Display"
+          "sdfRef": "#/sdfAction/Clear_Display"
         }
       },
-      "odmRequired": [
-        "#/odmProperty/Text"
+      "sdfRequired": [
+        "#/sdfProperty/Text"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "Text": {
       "label": "Text",
       "description": "A string of text.",
@@ -95,7 +95,7 @@
       "type": "string"
     }
   },
-  "odmAction": {
+  "sdfAction": {
     "Clear_Display": {
       "label": "Clear Display",
       "description": "Command to clear the display."

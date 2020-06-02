@@ -1,38 +1,38 @@
 {
   "info": {
     "title": "OMA LwM2M On/Off switch (Object ID 3342)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "On_Off_switch": {
       "label": "On/Off switch",
       "description": "This IPSO object should be used with an On/Off switch to report the state of the switch.",
-      "odmProperty": {
+      "sdfProperty": {
         "Digital_Input_State": {
-          "odmRef": "#/odmProperty/Digital_Input_State"
+          "sdfRef": "#/sdfProperty/Digital_Input_State"
         },
         "Digital_Input_Counter": {
-          "odmRef": "#/odmProperty/Digital_Input_Counter"
+          "sdfRef": "#/sdfProperty/Digital_Input_Counter"
         },
         "On_time": {
-          "odmRef": "#/odmProperty/On_time"
+          "sdfRef": "#/sdfProperty/On_time"
         },
         "Off_Time": {
-          "odmRef": "#/odmProperty/Off_Time"
+          "sdfRef": "#/sdfProperty/Off_Time"
         },
         "Application_Type": {
-          "odmRef": "#/odmProperty/Application_Type"
+          "sdfRef": "#/sdfProperty/Application_Type"
         }
       },
-      "odmAction": {},
-      "odmRequired": [
-        "#/odmProperty/Digital_Input_State"
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfProperty/Digital_Input_State"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "Digital_Input_State": {
       "label": "Digital Input State",
       "description": "The current state of a digital input.",
@@ -63,5 +63,5 @@
       "type": "string"
     }
   },
-  "odmAction": {}
+  "sdfAction": {}
 }

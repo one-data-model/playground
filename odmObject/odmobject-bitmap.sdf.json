@@ -1,36 +1,36 @@
 {
   "info": {
     "title": "OMA LwM2M Bitmap (Object ID 3349)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Bitmap": {
       "label": "Bitmap",
       "description": "Summarize several digital inputs to one value by mapping each bit to a digital input.",
-      "odmProperty": {
+      "sdfProperty": {
         "Bitmap_Input": {
-          "odmRef": "#/odmProperty/Bitmap_Input"
+          "sdfRef": "#/sdfProperty/Bitmap_Input"
         },
         "Element_Description": {
-          "odmRef": "#/odmProperty/Element_Description"
+          "sdfRef": "#/sdfProperty/Element_Description"
         },
         "Application_Type": {
-          "odmRef": "#/odmProperty/Application_Type"
+          "sdfRef": "#/sdfProperty/Application_Type"
         }
       },
-      "odmAction": {
+      "sdfAction": {
         "Bitmap_Input_Reset": {
-          "odmRef": "#/odmAction/Bitmap_Input_Reset"
+          "sdfRef": "#/sdfAction/Bitmap_Input_Reset"
         }
       },
-      "odmRequired": [
-        "#/odmProperty/Bitmap_Input"
+      "sdfRequired": [
+        "#/sdfProperty/Bitmap_Input"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "Bitmap_Input": {
       "label": "Bitmap Input",
       "description": "Integer in which each of the bits are associated with specific digital input value. Represented as a binary signed integer in network byte order, and in two's complement representation. Using values in range 0-127 is recommended to avoid ambiguities with byte order and negative values.",
@@ -51,7 +51,7 @@
       "type": "string"
     }
   },
-  "odmAction": {
+  "sdfAction": {
     "Bitmap_Input_Reset": {
       "label": "Bitmap Input Reset",
       "description": "Reset the Bitmap Input value."

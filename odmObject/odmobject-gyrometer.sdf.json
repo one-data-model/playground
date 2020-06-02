@@ -1,66 +1,66 @@
 {
   "info": {
     "title": "OMA LwM2M Gyrometer (Object ID 3334)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Gyrometer": {
       "label": "Gyrometer",
       "description": "This IPSO Object is used to report the current reading of a gyrometer sensor in 3 axes. It provides tracking of the minimum and maximum angular rate in all 3 axes. An example unit of measure is radians per second.",
-      "odmProperty": {
+      "sdfProperty": {
         "X_Value": {
-          "odmRef": "#/odmProperty/X_Value"
+          "sdfRef": "#/sdfProperty/X_Value"
         },
         "Y_Value": {
-          "odmRef": "#/odmProperty/Y_Value"
+          "sdfRef": "#/sdfProperty/Y_Value"
         },
         "Z_Value": {
-          "odmRef": "#/odmProperty/Z_Value"
+          "sdfRef": "#/sdfProperty/Z_Value"
         },
         "Sensor_Units": {
-          "odmRef": "#/odmProperty/Sensor_Units"
+          "sdfRef": "#/sdfProperty/Sensor_Units"
         },
         "Min_X_Value": {
-          "odmRef": "#/odmProperty/Min_X_Value"
+          "sdfRef": "#/sdfProperty/Min_X_Value"
         },
         "Max_X_Value": {
-          "odmRef": "#/odmProperty/Max_X_Value"
+          "sdfRef": "#/sdfProperty/Max_X_Value"
         },
         "Min_Y_Value": {
-          "odmRef": "#/odmProperty/Min_Y_Value"
+          "sdfRef": "#/sdfProperty/Min_Y_Value"
         },
         "Max_Y_Value": {
-          "odmRef": "#/odmProperty/Max_Y_Value"
+          "sdfRef": "#/sdfProperty/Max_Y_Value"
         },
         "Min_Z_Value": {
-          "odmRef": "#/odmProperty/Min_Z_Value"
+          "sdfRef": "#/sdfProperty/Min_Z_Value"
         },
         "Max_Z_Value": {
-          "odmRef": "#/odmProperty/Max_Z_Value"
+          "sdfRef": "#/sdfProperty/Max_Z_Value"
         },
         "Min_Range_Value": {
-          "odmRef": "#/odmProperty/Min_Range_Value"
+          "sdfRef": "#/sdfProperty/Min_Range_Value"
         },
         "Max_Range_Value": {
-          "odmRef": "#/odmProperty/Max_Range_Value"
+          "sdfRef": "#/sdfProperty/Max_Range_Value"
         },
         "Application_Type": {
-          "odmRef": "#/odmProperty/Application_Type"
+          "sdfRef": "#/sdfProperty/Application_Type"
         }
       },
-      "odmAction": {
+      "sdfAction": {
         "Reset_Min_and_Max_Measured_Values": {
-          "odmRef": "#/odmAction/Reset_Min_and_Max_Measured_Values"
+          "sdfRef": "#/sdfAction/Reset_Min_and_Max_Measured_Values"
         }
       },
-      "odmRequired": [
-        "#/odmProperty/X_Value"
+      "sdfRequired": [
+        "#/sdfProperty/X_Value"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "X_Value": {
       "label": "X Value",
       "description": "The measured value along the X axis.",
@@ -139,7 +139,7 @@
       "type": "string"
     }
   },
-  "odmAction": {
+  "sdfAction": {
     "Reset_Min_and_Max_Measured_Values": {
       "label": "Reset Min and Max Measured Values",
       "description": "Reset the Min and Max Measured Values to Current Value."

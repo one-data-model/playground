@@ -1,32 +1,32 @@
 {
   "info": {
     "title": "OMA LwM2M Colour (Object ID 3335)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Colour": {
       "label": "Colour",
       "description": "This IPSO object should be used to report the measured value of a colour sensor in some colour space described by the units resource.",
-      "odmProperty": {
+      "sdfProperty": {
         "Colour": {
-          "odmRef": "#/odmProperty/Colour"
+          "sdfRef": "#/sdfProperty/Colour"
         },
         "Sensor_Units": {
-          "odmRef": "#/odmProperty/Sensor_Units"
+          "sdfRef": "#/sdfProperty/Sensor_Units"
         },
         "Application_Type": {
-          "odmRef": "#/odmProperty/Application_Type"
+          "sdfRef": "#/sdfProperty/Application_Type"
         }
       },
-      "odmAction": {},
-      "odmRequired": [
-        "#/odmProperty/Colour"
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfProperty/Colour"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "Colour": {
       "label": "Colour",
       "description": "A string representing a value in some colour space.",
@@ -44,5 +44,5 @@
       "type": "string"
     }
   },
-  "odmAction": {}
+  "sdfAction": {}
 }

@@ -1,39 +1,39 @@
 {
   "info": {
     "title": "OMA LwM2M Up/Down Control (Object ID 3344)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Up_Down_Control": {
       "label": "Up/Down Control",
       "description": "This IPSO object is used to report the state of an up/down control element like a pair of push buttons or a rotary encoder. Counters for increase and decrease operations are provided for counting pulses from a quadrature encoder.",
-      "odmProperty": {
+      "sdfProperty": {
         "Increase_Input_State": {
-          "odmRef": "#/odmProperty/Increase_Input_State"
+          "sdfRef": "#/sdfProperty/Increase_Input_State"
         },
         "Decrease_Input_State": {
-          "odmRef": "#/odmProperty/Decrease_Input_State"
+          "sdfRef": "#/sdfProperty/Decrease_Input_State"
         },
         "Up_Counter": {
-          "odmRef": "#/odmProperty/Up_Counter"
+          "sdfRef": "#/sdfProperty/Up_Counter"
         },
         "Down_Counter": {
-          "odmRef": "#/odmProperty/Down_Counter"
+          "sdfRef": "#/sdfProperty/Down_Counter"
         },
         "Application_Type": {
-          "odmRef": "#/odmProperty/Application_Type"
+          "sdfRef": "#/sdfProperty/Application_Type"
         }
       },
-      "odmAction": {},
-      "odmRequired": [
-        "#/odmProperty/Increase_Input_State",
-        "#/odmProperty/Decrease_Input_State"
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfProperty/Increase_Input_State",
+        "#/sdfProperty/Decrease_Input_State"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "Increase_Input_State": {
       "label": "Increase Input State",
       "description": "Indicates an increase control action.",
@@ -62,5 +62,5 @@
       "type": "string"
     }
   },
-  "odmAction": {}
+  "sdfAction": {}
 }

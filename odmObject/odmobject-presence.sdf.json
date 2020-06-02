@@ -1,42 +1,42 @@
 {
   "info": {
     "title": "OMA LwM2M Presence (Object ID 3302)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Presence": {
       "label": "Presence",
       "description": "Presence sensor with digital sensing, optional delay parameters",
-      "odmProperty": {
+      "sdfProperty": {
         "Digital_Input_State": {
-          "odmRef": "#/odmProperty/Digital_Input_State"
+          "sdfRef": "#/sdfProperty/Digital_Input_State"
         },
         "Digital_Input_Counter": {
-          "odmRef": "#/odmProperty/Digital_Input_Counter"
+          "sdfRef": "#/sdfProperty/Digital_Input_Counter"
         },
         "Sensor_Type": {
-          "odmRef": "#/odmProperty/Sensor_Type"
+          "sdfRef": "#/sdfProperty/Sensor_Type"
         },
         "Busy_to_Clear_delay": {
-          "odmRef": "#/odmProperty/Busy_to_Clear_delay"
+          "sdfRef": "#/sdfProperty/Busy_to_Clear_delay"
         },
         "Clear_to_Busy_delay": {
-          "odmRef": "#/odmProperty/Clear_to_Busy_delay"
+          "sdfRef": "#/sdfProperty/Clear_to_Busy_delay"
         }
       },
-      "odmAction": {
+      "sdfAction": {
         "Digital_Input_Counter_Reset": {
-          "odmRef": "#/odmAction/Digital_Input_Counter_Reset"
+          "sdfRef": "#/sdfAction/Digital_Input_Counter_Reset"
         }
       },
-      "odmRequired": [
-        "#/odmProperty/Digital_Input_State"
+      "sdfRequired": [
+        "#/sdfProperty/Digital_Input_State"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "Digital_Input_State": {
       "label": "Digital Input State",
       "description": "The current state of the presence sensor",
@@ -68,7 +68,7 @@
       "units": "ms"
     }
   },
-  "odmAction": {
+  "sdfAction": {
     "Digital_Input_Counter_Reset": {
       "label": "Digital Input Counter Reset",
       "description": "Reset the Counter value"

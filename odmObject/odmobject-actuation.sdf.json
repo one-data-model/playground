@@ -1,38 +1,38 @@
 {
   "info": {
     "title": "OMA LwM2M Actuation (Object ID 3306)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Actuation": {
       "label": "Actuation",
       "description": "This IPSO object is dedicated to remote actuation such as ON/OFF action or dimming. A multi-state output can also be described as a string. This is useful to send pilot wire orders for instance. It also provides a resource to reflect the time that the device has been switched on.",
-      "odmProperty": {
+      "sdfProperty": {
         "On_Off": {
-          "odmRef": "#/odmProperty/On_Off"
+          "sdfRef": "#/sdfProperty/On_Off"
         },
         "Dimmer": {
-          "odmRef": "#/odmProperty/Dimmer"
+          "sdfRef": "#/sdfProperty/Dimmer"
         },
         "On_time": {
-          "odmRef": "#/odmProperty/On_time"
+          "sdfRef": "#/sdfProperty/On_time"
         },
         "Muti-state_Output": {
-          "odmRef": "#/odmProperty/Muti-state_Output"
+          "sdfRef": "#/sdfProperty/Muti-state_Output"
         },
         "Application_Type": {
-          "odmRef": "#/odmProperty/Application_Type"
+          "sdfRef": "#/sdfProperty/Application_Type"
         }
       },
-      "odmAction": {},
-      "odmRequired": [
-        "#/odmProperty/On_Off"
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfProperty/On_Off"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "On_Off": {
       "label": "On/Off",
       "description": "On/off control. Boolean value where True is On and False is Off.",
@@ -63,5 +63,5 @@
       "type": "string"
     }
   },
-  "odmAction": {}
+  "sdfAction": {}
 }

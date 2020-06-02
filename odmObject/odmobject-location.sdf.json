@@ -1,45 +1,45 @@
 {
   "info": {
     "title": "OMA LwM2M Location (Object ID 3336)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Location": {
       "label": "Location",
       "description": "This IPSO object represents GPS coordinates. This object is compatible with the LWM2M management object for location, but uses reusable resources.",
-      "odmProperty": {
+      "sdfProperty": {
         "Latitude": {
-          "odmRef": "#/odmProperty/Latitude"
+          "sdfRef": "#/sdfProperty/Latitude"
         },
         "Longitude": {
-          "odmRef": "#/odmProperty/Longitude"
+          "sdfRef": "#/sdfProperty/Longitude"
         },
         "Uncertainty": {
-          "odmRef": "#/odmProperty/Uncertainty"
+          "sdfRef": "#/sdfProperty/Uncertainty"
         },
         "Compass_Direction": {
-          "odmRef": "#/odmProperty/Compass_Direction"
+          "sdfRef": "#/sdfProperty/Compass_Direction"
         },
         "Velocity": {
-          "odmRef": "#/odmProperty/Velocity"
+          "sdfRef": "#/sdfProperty/Velocity"
         },
         "Timestamp": {
-          "odmRef": "#/odmProperty/Timestamp"
+          "sdfRef": "#/sdfProperty/Timestamp"
         },
         "Application_Type": {
-          "odmRef": "#/odmProperty/Application_Type"
+          "sdfRef": "#/sdfProperty/Application_Type"
         }
       },
-      "odmAction": {},
-      "odmRequired": [
-        "#/odmProperty/Latitude",
-        "#/odmProperty/Longitude"
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfProperty/Latitude",
+        "#/sdfProperty/Longitude"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "Latitude": {
       "label": "Latitude",
       "description": "The decimal notation of latitude, e.g. -43.5723 (World Geodetic System 1984).",
@@ -85,5 +85,5 @@
       "type": "string"
     }
   },
-  "odmAction": {}
+  "sdfAction": {}
 }

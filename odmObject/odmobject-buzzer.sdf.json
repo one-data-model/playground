@@ -1,39 +1,39 @@
 {
   "info": {
     "title": "OMA LwM2M Buzzer (Object ID 3338)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Buzzer": {
       "label": "Buzzer",
       "description": "This IPSO object should be used to actuate an audible alarm such as a buzzer, beeper, or vibration alarm. There is a dimmer control for setting the relative loudness of the alarm, and an optional duration control to limit the length of time the alarm sounds when turned on. Each time \"true\" is written to the On/Off resource, the alarm will sound again for the configured duration. If no duration is programmed or the setting is \"false\", writing a \"true\" to the On/Off resource will result in the alarm sounding continuously until a \"false\" is written to the On/Off resource.",
-      "odmProperty": {
+      "sdfProperty": {
         "On_Off": {
-          "odmRef": "#/odmProperty/On_Off"
+          "sdfRef": "#/sdfProperty/On_Off"
         },
         "Level": {
-          "odmRef": "#/odmProperty/Level"
+          "sdfRef": "#/sdfProperty/Level"
         },
         "Delay_Duration": {
-          "odmRef": "#/odmProperty/Delay_Duration"
+          "sdfRef": "#/sdfProperty/Delay_Duration"
         },
         "Minimum_Off-time": {
-          "odmRef": "#/odmProperty/Minimum_Off-time"
+          "sdfRef": "#/sdfProperty/Minimum_Off-time"
         },
         "Application_Type": {
-          "odmRef": "#/odmProperty/Application_Type"
+          "sdfRef": "#/sdfProperty/Application_Type"
         }
       },
-      "odmAction": {},
-      "odmRequired": [
-        "#/odmProperty/On_Off",
-        "#/odmProperty/Minimum_Off-time"
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfProperty/On_Off",
+        "#/sdfProperty/Minimum_Off-time"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "On_Off": {
       "label": "On/Off",
       "description": "On/off control. Boolean value where True is On and False is Off.",
@@ -65,5 +65,5 @@
       "type": "string"
     }
   },
-  "odmAction": {}
+  "sdfAction": {}
 }

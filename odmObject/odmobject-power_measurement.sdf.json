@@ -1,78 +1,78 @@
 {
   "info": {
     "title": "OMA LwM2M Power Measurement (Object ID 3305)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Power_Measurement": {
       "label": "Power Measurement",
       "description": "This IPSO object should be used over a power measurement sensor to report a remote power measurement. It also provides resources for minimum/maximum measured values and the minimum/maximum range for both active and reactive power. It also provides resources for cumulative energy, calibration, and the power factor.",
-      "odmProperty": {
+      "sdfProperty": {
         "Instantaneous_active_power": {
-          "odmRef": "#/odmProperty/Instantaneous_active_power"
+          "sdfRef": "#/sdfProperty/Instantaneous_active_power"
         },
         "Min_Measured_active_power": {
-          "odmRef": "#/odmProperty/Min_Measured_active_power"
+          "sdfRef": "#/sdfProperty/Min_Measured_active_power"
         },
         "Max_Measured_active_power": {
-          "odmRef": "#/odmProperty/Max_Measured_active_power"
+          "sdfRef": "#/sdfProperty/Max_Measured_active_power"
         },
         "Min_Range_active_power": {
-          "odmRef": "#/odmProperty/Min_Range_active_power"
+          "sdfRef": "#/sdfProperty/Min_Range_active_power"
         },
         "Max_Range_active_power": {
-          "odmRef": "#/odmProperty/Max_Range_active_power"
+          "sdfRef": "#/sdfProperty/Max_Range_active_power"
         },
         "Cumulative_active_power": {
-          "odmRef": "#/odmProperty/Cumulative_active_power"
+          "sdfRef": "#/sdfProperty/Cumulative_active_power"
         },
         "Active_Power_Calibration": {
-          "odmRef": "#/odmProperty/Active_Power_Calibration"
+          "sdfRef": "#/sdfProperty/Active_Power_Calibration"
         },
         "Instantaneous_reactive_power": {
-          "odmRef": "#/odmProperty/Instantaneous_reactive_power"
+          "sdfRef": "#/sdfProperty/Instantaneous_reactive_power"
         },
         "Min_Measured_reactive_power": {
-          "odmRef": "#/odmProperty/Min_Measured_reactive_power"
+          "sdfRef": "#/sdfProperty/Min_Measured_reactive_power"
         },
         "Max_Measured_reactive_power": {
-          "odmRef": "#/odmProperty/Max_Measured_reactive_power"
+          "sdfRef": "#/sdfProperty/Max_Measured_reactive_power"
         },
         "Min_Range_reactive_power": {
-          "odmRef": "#/odmProperty/Min_Range_reactive_power"
+          "sdfRef": "#/sdfProperty/Min_Range_reactive_power"
         },
         "Max_Range_reactive_power": {
-          "odmRef": "#/odmProperty/Max_Range_reactive_power"
+          "sdfRef": "#/sdfProperty/Max_Range_reactive_power"
         },
         "Cumulative_reactive_power": {
-          "odmRef": "#/odmProperty/Cumulative_reactive_power"
+          "sdfRef": "#/sdfProperty/Cumulative_reactive_power"
         },
         "Reactive_Power_Calibration": {
-          "odmRef": "#/odmProperty/Reactive_Power_Calibration"
+          "sdfRef": "#/sdfProperty/Reactive_Power_Calibration"
         },
         "Power_factor": {
-          "odmRef": "#/odmProperty/Power_factor"
+          "sdfRef": "#/sdfProperty/Power_factor"
         },
         "Current_Calibration": {
-          "odmRef": "#/odmProperty/Current_Calibration"
+          "sdfRef": "#/sdfProperty/Current_Calibration"
         }
       },
-      "odmAction": {
+      "sdfAction": {
         "Reset_Cumulative_energy": {
-          "odmRef": "#/odmAction/Reset_Cumulative_energy"
+          "sdfRef": "#/sdfAction/Reset_Cumulative_energy"
         },
         "Reset_Min_and_Max_Measured_Values": {
-          "odmRef": "#/odmAction/Reset_Min_and_Max_Measured_Values"
+          "sdfRef": "#/sdfAction/Reset_Min_and_Max_Measured_Values"
         }
       },
-      "odmRequired": [
-        "#/odmProperty/Instantaneous_active_power"
+      "sdfRequired": [
+        "#/sdfProperty/Instantaneous_active_power"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "Instantaneous_active_power": {
       "label": "Instantaneous active power",
       "description": "The current active power",
@@ -183,7 +183,7 @@
       "type": "number"
     }
   },
-  "odmAction": {
+  "sdfAction": {
     "Reset_Cumulative_energy": {
       "label": "Reset Cumulative energy",
       "description": "Reset both cumulative active/reactive power"

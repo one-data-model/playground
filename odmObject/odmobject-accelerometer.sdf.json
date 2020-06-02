@@ -1,41 +1,41 @@
 {
   "info": {
     "title": "OMA LwM2M Accelerometer (Object ID 3313)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Accelerometer": {
       "label": "Accelerometer",
       "description": "This IPSO object can be used to represent a 1-3 axis accelerometer.",
-      "odmProperty": {
+      "sdfProperty": {
         "X_Value": {
-          "odmRef": "#/odmProperty/X_Value"
+          "sdfRef": "#/sdfProperty/X_Value"
         },
         "Y_Value": {
-          "odmRef": "#/odmProperty/Y_Value"
+          "sdfRef": "#/sdfProperty/Y_Value"
         },
         "Z_Value": {
-          "odmRef": "#/odmProperty/Z_Value"
+          "sdfRef": "#/sdfProperty/Z_Value"
         },
         "Sensor_Units": {
-          "odmRef": "#/odmProperty/Sensor_Units"
+          "sdfRef": "#/sdfProperty/Sensor_Units"
         },
         "Min_Range_Value": {
-          "odmRef": "#/odmProperty/Min_Range_Value"
+          "sdfRef": "#/sdfProperty/Min_Range_Value"
         },
         "Max_Range_Value": {
-          "odmRef": "#/odmProperty/Max_Range_Value"
+          "sdfRef": "#/sdfProperty/Max_Range_Value"
         }
       },
-      "odmAction": {},
-      "odmRequired": [
-        "#/odmProperty/X_Value"
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfProperty/X_Value"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "X_Value": {
       "label": "X Value",
       "description": "The measured value along the X axis.",
@@ -73,5 +73,5 @@
       "type": "number"
     }
   },
-  "odmAction": {}
+  "sdfAction": {}
 }

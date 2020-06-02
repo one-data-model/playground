@@ -1,57 +1,57 @@
 {
   "info": {
     "title": "OMA LwM2M Timer (Object ID 3340)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Timer": {
       "label": "Timer",
       "description": "This IPSO object is used to time events and actions, using patterns common to industrial timers. A write to the trigger resource or On/Off input state change starts the timing operation, and the timer remaining time shows zero when the operation is complete. The patterns supported are One-Shot (mode 1), On-Time or Interval (mode 2), Time delay on pick-up or TDPU (mode 3), and Time Delay on Drop-Out or TDDO (mode 4). Mode 0 disables the timer, so the output follows the input with no delay. A counter is provided to count occurrences of the timer output changing from 0 to 1. Writing a value of zero resets the counter. The Digital Input State resource reports the state of the timer output.",
-      "odmProperty": {
+      "sdfProperty": {
         "Delay_Duration": {
-          "odmRef": "#/odmProperty/Delay_Duration"
+          "sdfRef": "#/sdfProperty/Delay_Duration"
         },
         "Remaining_Time": {
-          "odmRef": "#/odmProperty/Remaining_Time"
+          "sdfRef": "#/sdfProperty/Remaining_Time"
         },
         "Minimum_Off-time": {
-          "odmRef": "#/odmProperty/Minimum_Off-time"
+          "sdfRef": "#/sdfProperty/Minimum_Off-time"
         },
         "On_Off": {
-          "odmRef": "#/odmProperty/On_Off"
+          "sdfRef": "#/sdfProperty/On_Off"
         },
         "Digital_Input_Counter": {
-          "odmRef": "#/odmProperty/Digital_Input_Counter"
+          "sdfRef": "#/sdfProperty/Digital_Input_Counter"
         },
         "Cumulative_Time": {
-          "odmRef": "#/odmProperty/Cumulative_Time"
+          "sdfRef": "#/sdfProperty/Cumulative_Time"
         },
         "Digital_State": {
-          "odmRef": "#/odmProperty/Digital_State"
+          "sdfRef": "#/sdfProperty/Digital_State"
         },
         "Counter": {
-          "odmRef": "#/odmProperty/Counter"
+          "sdfRef": "#/sdfProperty/Counter"
         },
         "Timer_Mode": {
-          "odmRef": "#/odmProperty/Timer_Mode"
+          "sdfRef": "#/sdfProperty/Timer_Mode"
         },
         "Application_Type": {
-          "odmRef": "#/odmProperty/Application_Type"
+          "sdfRef": "#/sdfProperty/Application_Type"
         }
       },
-      "odmAction": {
+      "sdfAction": {
         "Trigger": {
-          "odmRef": "#/odmAction/Trigger"
+          "sdfRef": "#/sdfAction/Trigger"
         }
       },
-      "odmRequired": [
-        "#/odmProperty/Delay_Duration"
+      "sdfRequired": [
+        "#/sdfProperty/Delay_Duration"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "Delay_Duration": {
       "label": "Delay Duration",
       "description": "The duration of the time delay.",
@@ -112,7 +112,7 @@
       "type": "string"
     }
   },
-  "odmAction": {
+  "sdfAction": {
     "Trigger": {
       "label": "Trigger",
       "description": "Trigger initiating actuation."

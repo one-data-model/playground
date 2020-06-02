@@ -1,35 +1,35 @@
 {
   "info": {
     "title": "OMA LwM2M Set Point (Object ID 3308)",
-    "version": "20200528",
+    "version": "20200602",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
-  "odmObject": {
+  "sdfObject": {
     "Set_Point": {
       "label": "Set Point",
       "description": "This IPSO object should be used to set a desired value to a controller, such as a thermostat. A special resource is added to set the colour of an object.",
-      "odmProperty": {
+      "sdfProperty": {
         "Set_Point_Value": {
-          "odmRef": "#/odmProperty/Set_Point_Value"
+          "sdfRef": "#/sdfProperty/Set_Point_Value"
         },
         "Sensor_Units": {
-          "odmRef": "#/odmProperty/Sensor_Units"
+          "sdfRef": "#/sdfProperty/Sensor_Units"
         },
         "Colour": {
-          "odmRef": "#/odmProperty/Colour"
+          "sdfRef": "#/sdfProperty/Colour"
         },
         "Application_Type": {
-          "odmRef": "#/odmProperty/Application_Type"
+          "sdfRef": "#/sdfProperty/Application_Type"
         }
       },
-      "odmAction": {},
-      "odmRequired": [
-        "#/odmProperty/Set_Point_Value"
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfProperty/Set_Point_Value"
       ]
     }
   },
-  "odmProperty": {
+  "sdfProperty": {
     "Set_Point_Value": {
       "label": "Set Point Value",
       "description": "The setpoint value.",
@@ -52,5 +52,5 @@
       "type": "string"
     }
   },
-  "odmAction": {}
+  "sdfAction": {}
 }
