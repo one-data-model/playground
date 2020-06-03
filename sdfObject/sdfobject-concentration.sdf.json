@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Concentration (Object ID 3325)",
-    "version": "20200602",
+    "version": "2020-06-03",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
