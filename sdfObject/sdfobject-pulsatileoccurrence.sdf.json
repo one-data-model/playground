@@ -5,11 +5,11 @@
     "title": "Pulsatile Occurrence for Pulse Oximeter",
     "version": "2019-03-04"
   },
-  "odmObject": {
+  "sdfObject": {
     "pulsatileoccurrence": {
       "name": "pulsatileoccurrence",
       "description": "This Resource describes the Properties associated with a Pulsatile Occurrence detected by a Pulse Oximeter. The occurrence Property is a read-only value that is provided by the server. When range (from \"oic. r. baseresource\") is omitted the default is 0 to +MAXFLOAT.",
-      "odmProperty": {
+      "sdfProperty": {
         "occurrence": {
           "type": "string",
           "writable": false,
@@ -22,8 +22,8 @@
           "default": "NOS"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/occurrence"
+      "sdfRequired": [
+        "0/sdfProperty/occurrence"
       ]
     }
   }

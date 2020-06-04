@@ -5,11 +5,11 @@
     "title": "Impact Sensor",
     "version": "2019-03-21"
   },
-  "odmObject": {
+  "sdfObject": {
     "impactsensor": {
       "name": "impactsensor",
       "description": "This Resource provides a status and properties of an impact sensor. Included is the current status (boolean), horizontal and vertical direction (in degrees) and impact level (g force).",
-      "odmProperty": {
+      "sdfProperty": {
         "impactstatus": {
           "type": "boolean",
           "writable": false,
@@ -35,8 +35,8 @@
           "maximum": 360
         }
       },
-      "odmRequired": [
-        "0/odmProperty/impactstatus"
+      "sdfRequired": [
+        "0/sdfProperty/impactstatus"
       ]
     }
   }

@@ -3,13 +3,13 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Atmospheric Pressure Sensor",
-    "version": "20190225"
+    "version": "2019-02-25"
   },
-  "odmObject": {
+  "sdfObject": {
     "sensor.atmosphericpressure": {
       "name": "sensor.atmosphericpressure",
       "description": "This Resource provides a measurement of Mean Sea Level Pressure experienced at the measuring point expressed in millibars. The Property \"atmosphericPressure\" is a float which describes the atmospheric pressure in hPa (hectoPascals). Note that hPa and the also commonly used unit of millibars (mbar) are numerically equivalent.",
-      "odmProperty": {
+      "sdfProperty": {
         "atmosphericPressure": {
           "description": "The current atmospheric pressure in hPa.",
           "writable": false,
@@ -36,8 +36,8 @@
           "type": "number"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/atmosphericPressure"
+      "sdfRequired": [
+        "0/sdfProperty/atmosphericPressure"
       ]
     }
   }

@@ -5,11 +5,11 @@
     "title": "Calibrate for Continuous Glucose Meter (CGM)",
     "version": "2019-03-04"
   },
-  "odmObject": {
+  "sdfObject": {
     "cgm.calibrate": {
       "name": "cgm.calibrate",
       "description": "This Resource describes the Properties associated with Calibrate for Continuous Glucose Meter (CGM).",
-      "odmProperty": {
+      "sdfProperty": {
         "Cvalue": {
           "description": "This Property describes the Sensor Calibration Value in mg/dL units. This blood glucose measurement using other external glucose meter.",
           "type": "number",
@@ -42,9 +42,9 @@
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/Cvalue",
-        "0/odmProperty/Cstatus"
+      "sdfRequired": [
+        "0/sdfProperty/Cvalue",
+        "0/sdfProperty/Cstatus"
       ]
     }
   }

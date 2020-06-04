@@ -5,11 +5,11 @@
     "title": "Pulsatile Characteristic for Pulse Oximeter",
     "version": "2019-03-04"
   },
-  "odmObject": {
+  "sdfObject": {
     "pulsatilecharacteristic": {
       "name": "pulsatilecharacteristic",
       "description": "This Resource describes the Properties associated with a pulsatile characteristic of the pulsative wave of a Pulse Oximeter. The characteristic Property is a read-only value that is provided by the server. When range (from \"oic. r. baseresource\") is omitted the default is 0 to +MAXFLOAT.",
-      "odmProperty": {
+      "sdfProperty": {
         "characteristic": {
           "description": "This Property describes the current pulsatile characteristic measurement. The value is an integer bit mapped value. The following describes what each integer means. 0 - Quality of the detected pulse is nominal, in that there are no recognized abnormalities in the detected pulse. 1 - Perfusion or quality of the detected pulse is marginal. 2 - Perfusion or quality of the detected pulse is minimal. 3 - Perfusion or quality of the detected pulse is unacceptable.",
           "type": "integer",
@@ -33,8 +33,8 @@
           "type": "integer"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/characteristic"
+      "sdfRequired": [
+        "0/sdfProperty/characteristic"
       ]
     }
   }

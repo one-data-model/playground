@@ -3,7 +3,7 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Operational State",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
   "odmObject": {
     "operational.state": {

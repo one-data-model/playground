@@ -3,13 +3,13 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Open Level",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "openlevel": {
       "name": "openlevel",
       "description": "This Resource describes how open or ajar an entity such as a window, door, blind or shutter is. The Property \"openLevel\" can be read (acting as a sensor). The \"openLevel\" can also be set (acting as an actuator). The \"openLevel\" is device dependent across the range provided. When the Property \"range\" is omitted then 0 to 100 is assumed where 0 means closed, 100 means fully open. If a \"range\" is provided then the lower bound=closed, upper bound=open. If Property \"step\" is present then it represents the increment between possible values; if not provided 1 is assumed.",
-      "odmProperty": {
+      "sdfProperty": {
         "openLevel": {
           "description": "How open or ajar the entity is.",
           "type": "integer"
@@ -30,8 +30,8 @@
           "type": "integer"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/openLevel"
+      "sdfRequired": [
+        "0/sdfProperty/openLevel"
       ]
     }
   }

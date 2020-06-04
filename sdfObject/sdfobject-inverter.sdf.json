@@ -3,13 +3,13 @@
     "copyright": "copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Inverter (IEC 61850)",
-    "version": "20190613"
+    "version": "2019-06-13"
   },
-  "odmObject": {
+  "sdfObject": {
     "inverter": {
       "name": "inverter",
       "description": "This Resource describes functions for the control and monitoring of IEC 61850 based circuit breaker.",
-      "odmProperty": {
+      "sdfProperty": {
         "status": {
           "description": "The inverter status. The status can only be reset out of bounds.",
           "writable": false,
@@ -57,15 +57,15 @@
           "type": "string"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/status",
-        "0/odmProperty/ratedpower",
-        "0/odmProperty/minvoltmppt",
-        "0/odmProperty/maxvoltmppt",
-        "0/odmProperty/inputvoltage",
-        "0/odmProperty/inputcurrent",
-        "0/odmProperty/outputpower",
-        "0/odmProperty/timestamp"
+      "sdfRequired": [
+        "0/sdfProperty/status",
+        "0/sdfProperty/ratedpower",
+        "0/sdfProperty/minvoltmppt",
+        "0/sdfProperty/maxvoltmppt",
+        "0/sdfProperty/inputvoltage",
+        "0/sdfProperty/inputcurrent",
+        "0/sdfProperty/outputpower",
+        "0/sdfProperty/timestamp"
       ]
     }
   }

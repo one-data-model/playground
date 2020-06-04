@@ -5,11 +5,11 @@
     "title": "Heart Rate",
     "version": "2019-03-04"
   },
-  "odmObject": {
+  "sdfObject": {
     "heartrate": {
       "name": "heartrate",
       "description": "This Resource describes the Properties associated with a person's heart rate. The unit, which is the default unit, is bpm. The heartrate Property is a read-only value that is provided by the server. When range (from \"oic. r. baseresource\") is omitted the default is 0 to +MAXFLOAT.",
-      "odmProperty": {
+      "sdfProperty": {
         "heartrate": {
           "description": "This Property describes the heart rate in bpm.",
           "type": "integer",
@@ -32,8 +32,8 @@
           "type": "integer"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/heartrate"
+      "sdfRequired": [
+        "0/sdfProperty/heartrate"
       ]
     }
   }

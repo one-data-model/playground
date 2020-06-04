@@ -3,13 +3,13 @@
     "copyright": "copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Opaque Data",
-    "version": "12122018"
+    "version": "2018-12-12"
   },
-  "odmObject": {
+  "sdfObject": {
     "opaquedata": {
       "name": "opaquedata",
       "description": "This Resource defines opaque data that can be transfered between endpoints where the data itself is not interpretable by the OCF endpoints. The stringdata is a string of ASCII characters.",
-      "odmProperty": {
+      "sdfProperty": {
         "payload": {
           "type": "string",
           "description": "This Property contains the opaque data."
@@ -35,10 +35,10 @@
           "description": "The eco system that is using the payload."
         }
       },
-      "odmRequired": [
-        "0/odmProperty/payload",
-        "0/odmProperty/encoding",
-        "0/odmProperty/system"
+      "sdfRequired": [
+        "0/sdfProperty/payload",
+        "0/sdfProperty/encoding",
+        "0/sdfProperty/system"
       ]
     }
   }

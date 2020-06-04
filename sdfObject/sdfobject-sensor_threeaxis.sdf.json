@@ -3,13 +3,13 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Three Axis Sensor",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "sensor.threeaxis": {
       "name": "sensor.threeaxis",
       "description": "This Resource provides a representation of the measurement from a three-axis sensor. The Property \"orientation\" is an array of numbers representing x-plane, y-plane and z-plane values. The unit of measurement for each pane is 'g'.",
-      "odmProperty": {
+      "sdfProperty": {
         "orientation": {
           "description": "The array containing x-plane, y-plane and z-plane orientation in 'g'.",
           "items": {
@@ -21,8 +21,8 @@
           "type": "array"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/orientation"
+      "sdfRequired": [
+        "0/sdfProperty/orientation"
       ]
     }
   }

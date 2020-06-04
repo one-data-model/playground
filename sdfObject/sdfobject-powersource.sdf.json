@@ -3,13 +3,13 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "PowerSource",
-    "version": "20190513"
+    "version": "2019-05-13"
   },
-  "odmObject": {
+  "sdfObject": {
     "powersource": {
       "name": "powersource",
       "description": "This Resource list the available power sources for the Device. The Property \"powersources\" is a list that is read only and is informative only. If there is more than 1 power source active, use multiple Resources to indicate the active power sources. If the power source is unknown use the value \"unknown\".",
-      "odmProperty": {
+      "sdfProperty": {
         "powersources": {
           "items": {
             "enum": [
@@ -34,8 +34,8 @@
           "type": "boolean"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/powersources"
+      "sdfRequired": [
+        "0/sdfProperty/powersources"
       ]
     }
   }

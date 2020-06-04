@@ -5,11 +5,11 @@
     "title": "Body Mass Index(BMI)",
     "version": "2019-03-22"
   },
-  "odmObject": {
+  "sdfObject": {
     "bmi": {
       "name": "bmi",
       "description": "This Resource describes the Properties associated with a person's Body Mass Index (BMI). The unit, which is the default unit, is kg/m^2. The bmi and unit Properties are read-only values that are provided by the server. When range is omitted the default is 0 to +MAXFLOAT.",
-      "odmProperty": {
+      "sdfProperty": {
         "bmi": {
           "description": "Body Mass Index (BMI) in kg/m^2",
           "minimum": 0.0,
@@ -37,8 +37,8 @@
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/bmi"
+      "sdfRequired": [
+        "0/sdfProperty/bmi"
       ]
     }
   }

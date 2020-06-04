@@ -3,13 +3,13 @@
     "copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "3D Printer",
-    "version": "20190222"
+    "version": "2019-02-22"
   },
-  "odmObject": {
+  "sdfObject": {
     "printer.3d": {
       "name": "printer.3d",
       "description": "This Resource describes the attributes associated with 3D Printer. The type of 3D printing technology is specified by an enumerated string value. The maximum sizes in mm are included for the x, y, and z dimensions. A designation of whether the device is capable of WAN connectivity is represented in a boolean. The memory capacity is captured in MB.",
-      "odmProperty": {
+      "sdfProperty": {
         "printsizey": {
           "description": "This Property represents the maximum size of printing object in the direction of Y-axis. The unit is mm.",
           "writable": false,
@@ -52,13 +52,13 @@
           "type": "number"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/3dprinttype",
-        "0/odmProperty/printsizex",
-        "0/odmProperty/printsizey",
-        "0/odmProperty/printsizez",
-        "0/odmProperty/wanconnected",
-        "0/odmProperty/memorysize"
+      "sdfRequired": [
+        "0/sdfProperty/3dprinttype",
+        "0/sdfProperty/printsizex",
+        "0/sdfProperty/printsizey",
+        "0/sdfProperty/printsizez",
+        "0/sdfProperty/wanconnected",
+        "0/sdfProperty/memorysize"
       ]
     }
   }

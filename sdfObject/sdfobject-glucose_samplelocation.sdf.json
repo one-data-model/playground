@@ -5,11 +5,11 @@
     "title": "Context Sample Location for Glucose Meter",
     "version": "2019-03-22"
   },
-  "odmObject": {
+  "sdfObject": {
     "glucose.samplelocation": {
       "name": "glucose.samplelocation",
       "description": "This Resource describes the Properties associated with context sample Location. AST means Alternative Site Test specifying that the location of test performed was from an alternative site on the body. The samplelocation Property is a read-only value that is provided by the Server.",
-      "odmProperty": {
+      "sdfProperty": {
         "samplelocation": {
           "description": "The possible blood locations where the blood sample may be taken.",
           "enum": [
@@ -22,8 +22,8 @@
           "type": "string"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/samplelocation"
+      "sdfRequired": [
+        "0/sdfProperty/samplelocation"
       ]
     }
   }

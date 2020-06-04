@@ -3,13 +3,13 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Energy Consumption",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "energy.consumption": {
       "name": "energy.consumption",
       "description": "This Resource describes the energy consumed by the Device since power up (the energy value is in Watt Hours [Wh]) and the instantaneous power draw of the device (the power value is in Watts [W]) at the time the resource was queried. The Property \"power\" value is in Watts [W]. The Property \"energy\" value is in Watt Hours [Wh]. The Resource provides the current power draw and cumulative energy usage.",
-      "odmProperty": {
+      "sdfProperty": {
         "power": {
           "description": "The instantaneous Power.",
           "writable": false,
@@ -21,9 +21,9 @@
           "type": "number"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/power",
-        "0/odmProperty/energy"
+      "sdfRequired": [
+        "0/sdfProperty/power",
+        "0/sdfProperty/energy"
       ]
     }
   }

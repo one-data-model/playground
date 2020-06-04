@@ -3,13 +3,13 @@
     "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Carbon Dioxide Sensor",
-    "version": "20191118"
+    "version": "2019-11-18"
   },
-  "odmObject": {
+  "sdfObject": {
     "sensor.carbondioxide": {
       "name": "sensor.carbondioxide",
       "description": "This Resource describes whether carbon dioxide has been sensed or not. The Property \"value\" is a boolean. A value of 'true' means that carbon dioxide has been detected. A value of 'false' means that carbon dioxide has not been detected.",
-      "odmProperty": {
+      "sdfProperty": {
         "value": {
           "description": "The carbon dioxide indicator, true = sensed, false = not sensed.",
           "writable": false,
@@ -41,8 +41,8 @@
           "type": "number"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/value"
+      "sdfRequired": [
+        "0/sdfProperty/value"
       ]
     }
   }

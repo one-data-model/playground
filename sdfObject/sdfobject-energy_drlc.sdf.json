@@ -3,13 +3,13 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Demand Response Load Control (DRLC).",
-    "version": "20190709"
+    "version": "2019-07-09"
   },
-  "odmObject": {
+  "sdfObject": {
     "energy.drlc": {
       "name": "energy.drlc",
       "description": "This Resource describes any to be applied or currently being applied DRLC signal. The Property \"DRType\" is the ApplianceLoadReductionType defined in Zigbee/HA Smart Energy Profile 2. 0. The Property \"start\" is a string containing an RFC3339 encoded start time. The Property \"duration\" value is in minutes. The Property \"Override\" indicates whether the consumer has overridden the request (true) or not (false). The Resource provides the current DRLC action that is being applied. A duration of 0 (zero) means that no DRLC is currently active.",
-      "odmProperty": {
+      "sdfProperty": {
         "start": {
           "description": "The start time for the application of DR.",
           "type": "string",
@@ -39,8 +39,8 @@
           "description": "Whether overriding the DR request by the consumer is allowed"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/DRType"
+      "sdfRequired": [
+        "0/sdfProperty/DRType"
       ]
     }
   }

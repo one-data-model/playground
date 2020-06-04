@@ -3,13 +3,13 @@
     "copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Brewing",
-    "version": "20190222"
+    "version": "2019-02-22"
   },
-  "odmObject": {
+  "sdfObject": {
     "brewing": {
       "name": "brewing",
       "description": "This Resource describes the attributes associated with brewing. This resource is used for configuration only. The Operation of the Device is handled independently of this Resource. The amount requested is in ml. The strength of a brewed drink is an integer, the range of which may be enforced by the presence of a strengthrange Property.",
-      "odmProperty": {
+      "sdfProperty": {
         "strength": {
           "description": "The strength of a brewed drink.",
           "type": "integer"
@@ -28,8 +28,8 @@
           "type": "array"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/amountrequested"
+      "sdfRequired": [
+        "0/sdfProperty/amountrequested"
       ]
     }
   }

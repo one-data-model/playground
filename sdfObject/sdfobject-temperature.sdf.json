@@ -3,13 +3,13 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Temperature",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "temperature": {
       "name": "temperature",
       "description": "This Resource describes a sensed or actuated Temperature value. The Property \"temperature\" describes the current value measured. The Property \"units\" is a single value that is one of \"C\", \"F\" or \"K\". It provides the unit of measurement for the \"temperature\" value. It is a read-only value that is provided by the server. If the \"units\" Property is missing the default is Celsius [C]. When the Property \"range\" is omitted the default is +/- MAXINT. A client can specify the units for the requested temperature by use of a query parameter. If no query parameter is provided the server provides its default measure or set value. It is recommended to return always the units Property in the result.",
-      "odmProperty": {
+      "sdfProperty": {
         "temperature": {
           "description": "The current temperature setting or measurement.",
           "type": "number"
@@ -44,8 +44,8 @@
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/temperature"
+      "sdfRequired": [
+        "0/sdfProperty/temperature"
       ]
     }
   }

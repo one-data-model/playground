@@ -5,11 +5,11 @@
     "title": "Cycling Power",
     "version": "2019-06-11"
   },
-  "odmObject": {
+  "sdfObject": {
     "cyclingpower": {
       "name": "cyclingpower",
       "description": "This Resource describes the cycling power, which is the amount of energy transferred or converted per unit time. The unit, which is the default SI unit, is W (which is equal to one joule per second). The power Property is a read-only value that is provided by the server. When range (from \"oic. r. baseresource\") is omitted the default is 0 to +MAXFLOAT.",
-      "odmProperty": {
+      "sdfProperty": {
         "power": {
           "description": "This Resource describes the power, which is the amount of energy transferred or converted per unit time, in W (which is equal to one joule per second).",
           "type": "number",
@@ -44,8 +44,8 @@
           "type": "number"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/power"
+      "sdfRequired": [
+        "0/sdfProperty/power"
       ]
     }
   }

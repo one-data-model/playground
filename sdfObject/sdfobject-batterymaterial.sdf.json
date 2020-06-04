@@ -3,13 +3,13 @@
     "copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Battery Material",
-    "version": "20190222"
+    "version": "2019-02-22"
   },
-  "odmObject": {
+  "sdfObject": {
     "batterymaterial": {
       "name": "batterymaterial",
       "description": "This Resource describes the battery material represented as an enumerated set of strings.",
-      "odmProperty": {
+      "sdfProperty": {
         "material": {
           "description": "The battery construction material (type).",
           "enum": [
@@ -96,8 +96,8 @@
           "type": "string"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/material"
+      "sdfRequired": [
+        "0/sdfProperty/material"
       ]
     }
   }

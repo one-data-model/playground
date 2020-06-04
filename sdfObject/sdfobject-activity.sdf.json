@@ -5,11 +5,11 @@
     "title": "Activity",
     "version": "2019-03-04"
   },
-  "odmObject": {
+  "sdfObject": {
     "activity": {
       "name": "activity",
       "description": "This Resource describes the Properties associated with a person's physical activity. All Properties are read-only values that are provided by the server. When range (from \"oic. r. baseresource\") is omitted the default is 0 to +MAXFLOAT.",
-      "odmProperty": {
+      "sdfProperty": {
         "activity": {
           "description": "This Property describes the recognized current activity type of user",
           "type": "string",
@@ -118,8 +118,8 @@
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/activity"
+      "sdfRequired": [
+        "0/sdfProperty/activity"
       ]
     }
   }

@@ -3,13 +3,13 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Grinder",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "grinder": {
       "name": "grinder",
       "description": "This Resource describes the attributes associated with a grinder. The Property \"coarseness\" of the grounds is an integer. The higher the value, the less coarse. The Property \"remaining\" is a percentage that represents the unground material left.",
-      "odmProperty": {
+      "sdfProperty": {
         "coarseness": {
           "description": "The desired coarseness when grinding.",
           "type": "integer"
@@ -37,8 +37,8 @@
           "type": "integer"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/coarseness"
+      "sdfRequired": [
+        "0/sdfProperty/coarseness"
       ]
     }
   }

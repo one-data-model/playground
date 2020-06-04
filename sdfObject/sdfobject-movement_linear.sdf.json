@@ -3,13 +3,13 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Movement",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "movement.linear": {
       "name": "movement.linear",
       "description": "This Resource specifies linear movement. The Property \"movementSettings\" is an array of strings containing possible movement values (e. g. spin, stop, left, right). The Property \"movement\" is the currently selected movement value. The Property \"movementModifier\" is a modifier to the movement value (e. g. \"spin\", \"90\")",
-      "odmProperty": {
+      "sdfProperty": {
         "movementSettings": {
           "description": "The array of possible movement values.",
           "items": {
@@ -27,9 +27,9 @@
           "type": "string"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/movementSettings",
-        "0/odmProperty/movement"
+      "sdfRequired": [
+        "0/sdfProperty/movementSettings",
+        "0/sdfProperty/movement"
       ]
     }
   }

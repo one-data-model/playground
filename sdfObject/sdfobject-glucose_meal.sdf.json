@@ -5,11 +5,11 @@
     "title": "Context Meal for Glucose Meter",
     "version": "2019-03-22"
   },
-  "odmObject": {
+  "sdfObject": {
     "glucose.meal": {
       "name": "glucose.meal",
       "description": "This Resource describes the Properties associated with context meal. Preprandial means pre-meal. Postprandial means post-meal. Fasting means the effect of long-term absence of food intake (overnight). The meal Property is a read-only value that is provided by the Server.",
-      "odmProperty": {
+      "sdfProperty": {
         "meal": {
           "description": "Time of day when the measurement is taken.",
           "enum": [
@@ -23,8 +23,8 @@
           "type": "string"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/meal"
+      "sdfRequired": [
+        "0/sdfProperty/meal"
       ]
     }
   }

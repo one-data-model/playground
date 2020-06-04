@@ -3,7 +3,7 @@
     "copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "odmObject refrigeration",
-    "version": "20190530"
+    "version": "2019-05-30"
   },
   "odmObject": {
     "refrigeration": {

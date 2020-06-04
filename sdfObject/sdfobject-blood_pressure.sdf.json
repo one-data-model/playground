@@ -5,11 +5,11 @@
     "title": "Blood Pressure",
     "version": "2019-03-22"
   },
-  "odmObject": {
+  "sdfObject": {
     "blood.pressure": {
       "name": "blood.pressure",
       "description": "This Resource describes the Properties associated with a person's blood pressure. The unit is a single value that is one of mmHg or kPa. If the unit Property is missing the default is a millimeter of mercury [mmHg]. The bloodpressure and unit Properties are read-only values that are provided by the Server. When range is omitted the default is 0 to +MAXFLOAT.",
-      "odmProperty": {
+      "sdfProperty": {
         "map": {
           "description": "Mean arterial pressure (MAP)",
           "minimum": 0.0,
@@ -59,9 +59,9 @@
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/systolic",
-        "0/odmProperty/diastolic"
+      "sdfRequired": [
+        "0/sdfProperty/systolic",
+        "0/sdfProperty/diastolic"
       ]
     }
   }

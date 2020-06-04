@@ -3,21 +3,21 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Touch Sensor",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "sensor.touch": {
       "name": "sensor.touch",
       "description": "This Resource describes whether a touch has been sensed or not. The Property \"value\" is a boolean. A value of 'true' means that touch has been sensed. A value of 'false' means that touch not been sensed.",
-      "odmProperty": {
+      "sdfProperty": {
         "value": {
           "description": "The touch sensor, true = sensed, false = not sensed.",
           "writable": false,
           "type": "boolean"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/value"
+      "sdfRequired": [
+        "0/sdfProperty/value"
       ]
     }
   }

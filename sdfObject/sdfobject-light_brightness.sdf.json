@@ -3,13 +3,13 @@
     "copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Brightness",
-    "version": "20190222"
+    "version": "2019-02-22"
   },
-  "odmObject": {
+  "sdfObject": {
     "light.brightness": {
       "name": "light.brightness",
       "description": "This Resource describes the brightness of a light or lamp. The Property \"brightness\" is an integer showing the current brightness level as a quantized representation in the range 0-100. A brightness of 0 is the minimum for the resource. A brightness of 100 is the maximum for the resource.",
-      "odmProperty": {
+      "sdfProperty": {
         "brightness": {
           "description": "The Quantized representation in the range 0-100 of the current sensed or set value for Brightness.",
           "maximum": 100,
@@ -17,8 +17,8 @@
           "type": "integer"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/brightness"
+      "sdfRequired": [
+        "0/sdfProperty/brightness"
       ]
     }
   }

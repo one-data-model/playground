@@ -5,11 +5,11 @@
     "title": "Pulse Rate",
     "version": "2019-03-22"
   },
-  "odmObject": {
+  "sdfObject": {
     "pulserate": {
       "name": "pulserate",
       "description": "This Resource describes the Properties associated with a person's pulse rate. The unit, which is the default unit, is bpm. The pulserate and unit Properties are read-only values that are provided by the Server. When range is omitted the default is 0 to +MAXFLOAT.",
-      "odmProperty": {
+      "sdfProperty": {
         "pulserate": {
           "description": "Pulse rate in bpm.",
           "minimum": 0,
@@ -32,8 +32,8 @@
           "type": "integer"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/pulserate"
+      "sdfRequired": [
+        "0/sdfProperty/pulserate"
       ]
     }
   }

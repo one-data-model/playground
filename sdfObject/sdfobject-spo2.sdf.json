@@ -5,11 +5,11 @@
     "title": "SpO2 for Pulse Oximeter",
     "version": "2019-03-04"
   },
-  "odmObject": {
+  "sdfObject": {
     "spo2": {
       "name": "spo2",
       "description": "This Resource describes the Properties associated with a person's blood oxygen saturation level. The spo2 and perfusion Properties are read-only value that is provided by the server. When range (from \"oic. r. baseresource\") is omitted the default is 0 to +MAXFLOAT.",
-      "odmProperty": {
+      "sdfProperty": {
         "spo2": {
           "description": "This Property describes the estimation of the oxygen saturation level in percentage.",
           "type": "number",
@@ -64,8 +64,8 @@
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/spo2"
+      "sdfRequired": [
+        "0/sdfProperty/spo2"
       ]
     }
   }
