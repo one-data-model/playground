@@ -5,11 +5,10 @@
     "title": "Context Health for Glucose Meter",
     "version": "2019-03-22"
   },
-  "odmObject": {
+  "sdfObject": {
     "glucose.health": {
-      "name": "glucose.health",
       "description": "This Resource describes the Properties associated with context health. The health Property is a read-only value that is provided by the Server where minor and major are related to the general health or the level of illness of the person; menses refers to the female menstrual cycle; stress refers to physiological or psychological stress.",
-      "odmProperty": {
+      "sdfProperty": {
         "health": {
           "description": "The various levels of health a person feels when taking a glucose.",
           "enum": [
@@ -23,8 +22,8 @@
           "type": "string"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/health"
+      "sdfRequired": [
+        "0/sdfProperty/health"
       ]
     }
   }

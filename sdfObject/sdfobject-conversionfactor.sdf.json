@@ -5,11 +5,10 @@
     "title": "Conversion Factor",
     "version": "2019-03-18"
   },
-  "odmObject": {
+  "sdfObject": {
     "conversionfactor": {
-      "name": "conversionfactor",
       "description": "This Resource describes Properties associated with the energy associated with the consumption of different fuels (including natural gas) The conversion factor is a number used as part of the calculation to convert gas volume to gas energy. The value used for this calculation is generally defined by local regulations and the conversion factor resource is therefore configurable. Provides the conversion factor used/required as part of the calculation to convert from fuel volume (m3) to fuel energy (kWh).",
-      "odmProperty": {
+      "sdfProperty": {
         "conversion": {
           "description": "Conversion factor to convert a volume of a fuel to energy consumption",
           "writable": false,
@@ -23,8 +22,8 @@
           "type": "number"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/conversion"
+      "sdfRequired": [
+        "0/sdfProperty/conversion"
       ]
     }
   }

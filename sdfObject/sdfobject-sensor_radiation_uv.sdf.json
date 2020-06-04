@@ -3,21 +3,20 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "UV Radiation",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "sensor.radiation.uv": {
-      "name": "sensor.radiation.uv",
       "description": "This Resource specifies UV radiation measurement. The Property \"measurement\" is the current measured UV Index",
-      "odmProperty": {
+      "sdfProperty": {
         "measurement": {
           "description": "The measured UV Index.",
           "writable": false,
           "type": "number"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/measurement"
+      "sdfRequired": [
+        "0/sdfProperty/measurement"
       ]
     }
   }

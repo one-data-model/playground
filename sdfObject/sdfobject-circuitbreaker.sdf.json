@@ -3,13 +3,12 @@
     "copyright": "copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Circuit Breaker (IEC 61850)",
-    "version": "20190613"
+    "version": "2019-06-13"
   },
-  "odmObject": {
+  "sdfObject": {
     "circuitbreaker": {
-      "name": "circuitbreaker",
       "description": "This Resource describes functions for the control and monitoring of IEC 61850 based circuit breaker.",
-      "odmProperty": {
+      "sdfProperty": {
         "status": {
           "description": "The circuit breaker status. The status can only be reset out of bounds.",
           "writable": false,
@@ -52,12 +51,12 @@
           "type": "string"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/status",
-        "0/odmProperty/ratedcurrent",
-        "0/odmProperty/ratedbreakingcurrent",
-        "0/odmProperty/ratedvoltage",
-        "0/odmProperty/timestamp"
+      "sdfRequired": [
+        "0/sdfProperty/status",
+        "0/sdfProperty/ratedcurrent",
+        "0/sdfProperty/ratedbreakingcurrent",
+        "0/sdfProperty/ratedvoltage",
+        "0/sdfProperty/timestamp"
       ]
     }
   }

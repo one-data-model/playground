@@ -3,21 +3,20 @@
     "copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Button Switch",
-    "version": "20190222"
+    "version": "2019-02-22"
   },
-  "odmObject": {
+  "sdfObject": {
     "button": {
-      "name": "button",
       "description": "This Resource describes the operation of a button style switch. The Property \"value\" is a boolean. A value of 'true' means that the button is being pushed/pressed. A value of 'false' means that the button is not being pushed/pressed.",
-      "odmProperty": {
+      "sdfProperty": {
         "value": {
           "description": "The status of the button",
           "writable": false,
           "type": "boolean"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/value"
+      "sdfRequired": [
+        "0/sdfProperty/value"
       ]
     }
   }

@@ -3,13 +3,12 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Air Quality",
-    "version": "20190613"
+    "version": "2019-06-13"
   },
-  "odmObject": {
+  "sdfObject": {
     "airquality": {
-      "name": "airquality",
       "description": "This Resource describes a qualitative or measured contaminant that can be used to infer Air Quality. The Property \"valueType\" indicates a qualitative or measured reading within the contaminantvalue Property. The Property \"contaminantvalue\" can contain the actual sensed value with units per contaminant type. Qualitative is a representative value within the range provided where the minimum value is minimum contamination and maximum value is maximum contamination for the specific contaminant. The Property \"contaminantvalue\" contains the actual measured or qualitative level. The Property \"range\" contains the allowed range for the value that is being reported. If valueType is 'Measured' then the units for the contaminant types are as follows: Methanol (also known as Formaldehyde): CH2O (ug/m^3), Carbon Dioxide: CO2 (ppm), Carbon Monoxide: CO (ppm), Particulate Matter (less than 1 micron in diameter): PM1 (ug/m^3), Particulate Matter (less than 2. 5 microns in diameter): PM2. 5 (ug/m^3), Particulate Matter (less than 10 microns in diameter): PM10 (ug/m^3), Volatile Organic Compounds: VOC (ug/m^3).",
-      "odmProperty": {
+      "sdfProperty": {
         "contaminanttype": {
           "description": "The contaminant being measured.",
           "enum": [
@@ -52,10 +51,10 @@
           }
         }
       },
-      "odmRequired": [
-        "0/odmProperty/contaminantvalue",
-        "0/odmProperty/contaminanttype",
-        "0/odmProperty/valuetype"
+      "sdfRequired": [
+        "0/sdfProperty/contaminantvalue",
+        "0/sdfProperty/contaminanttype",
+        "0/sdfProperty/valuetype"
       ]
     }
   }

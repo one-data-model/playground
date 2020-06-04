@@ -5,11 +5,10 @@
     "title": "Context Medication for Glucose Meter",
     "version": "2019-03-22"
   },
-  "odmObject": {
+  "sdfObject": {
     "glucose.medication": {
-      "name": "glucose.medication",
       "description": "This Resource describes the Properties associated with context medication. The unit is a single value that is one of mg and mL. The medication Property has a default unit of milligrams[mg]. The medication, unit and regimen Properties are read-only values that are provided by the Server. When range is omitted the default is 0 to +MAXFLOAT.",
-      "odmProperty": {
+      "sdfProperty": {
         "regimen": {
           "description": "Medication regimen",
           "enum": [
@@ -59,8 +58,8 @@
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/medication"
+      "sdfRequired": [
+        "0/sdfProperty/medication"
       ]
     }
   }

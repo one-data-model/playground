@@ -5,11 +5,10 @@
     "title": "Body Location Temperature",
     "version": "2019-03-22"
   },
-  "odmObject": {
+  "sdfObject": {
     "body.location.temperature": {
-      "name": "body.location.temperature",
       "description": "This Resource describes the Properties associated with body location for temperature measurement of a person. The bloc Property is a read-only value that is provided by the Server.",
-      "odmProperty": {
+      "sdfProperty": {
         "bloc": {
           "description": "A list specific to temperature site",
           "enum": [
@@ -27,8 +26,8 @@
           "type": "string"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/bloc"
+      "sdfRequired": [
+        "0/sdfProperty/bloc"
       ]
     }
   }

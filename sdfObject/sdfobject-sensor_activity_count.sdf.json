@@ -3,13 +3,12 @@
     "copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Activity Count",
-    "version": "20190222"
+    "version": "2019-02-22"
   },
-  "odmObject": {
+  "sdfObject": {
     "sensor.activity.count": {
-      "name": "sensor.activity.count",
       "description": "This Resource specifies an activity count. The Resource can be readonly (oic. if. s interface) in which instance it represents a count. The Resource can be readwrite (oic. if. a interface) in which instance it represents a goal or target for a count. The Property \"count\" is an integer representing either the current count or goal value.",
-      "odmProperty": {
+      "sdfProperty": {
         "count": {
           "description": "The current or Target count.",
           "type": "integer"
@@ -30,8 +29,8 @@
           "type": "integer"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/count"
+      "sdfRequired": [
+        "0/sdfProperty/count"
       ]
     }
   }

@@ -3,13 +3,12 @@
     "copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "KeyCard Switch",
-    "version": "20190807"
+    "version": "2019-08-07"
   },
-  "odmObject": {
+  "sdfObject": {
     "keycardswitch": {
-      "name": "keycardswitch",
       "description": "This Resource describes the operation of a KeyCard style switch. It has one mandatory Property,\"stateofcard\", which is a string enum type. It has two enum values: \"validCardInserted\", \"validCardNotInserted\". \"validCardInserted\" means that a keycard was inserted and passed validation check. \"validCardNotInserted\" means that a keycard is not inserted or it was inserted but failed to pass validation check.",
-      "odmProperty": {
+      "sdfProperty": {
         "stateofcard": {
           "description": "The status of the keycardswitch. \"validCardInserted\" means that a keycard was inserted and passed validation check. \"validCardNotInserted\" means that a keycard is not inserted or it was inserted but failed to pass validation check.",
           "writable": false,
@@ -20,8 +19,8 @@
           ]
         }
       },
-      "odmRequired": [
-        "0/odmProperty/stateofcard"
+      "sdfRequired": [
+        "0/sdfProperty/stateofcard"
       ]
     }
   }

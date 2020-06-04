@@ -3,13 +3,12 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Consumable",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "consumable": {
-      "name": "consumable",
       "description": "This Resource specifies a thing that can be consumed such as filter material, printer toner etc The Propert \"typeofconsumable\" is an enumeration defining the thing being consumed as defined by the Smart Home Device Specification The Property \"remaining\" is an integer capturing the percentatge remaining life The Property \"orderpercentage\" is an integer capturing the percentage life at which replacement or replenishment is recommended by the manufacturer The Property \"url\" is a string containing a URL at which further information may be obtained with respect to the consumable.",
-      "odmProperty": {
+      "sdfProperty": {
         "remaining": {
           "description": "The percentage remaining lifespan.",
           "maximum": 100,
@@ -36,9 +35,9 @@
           "type": "integer"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/typeofconsumable",
-        "0/odmProperty/remaining"
+      "sdfRequired": [
+        "0/sdfProperty/typeofconsumable",
+        "0/sdfProperty/remaining"
       ]
     }
   }

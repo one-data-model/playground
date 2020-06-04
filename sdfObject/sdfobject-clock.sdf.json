@@ -3,13 +3,12 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Clock",
-    "version": "20190327"
+    "version": "2019-03-27"
   },
-  "odmObject": {
+  "sdfObject": {
     "clock": {
-      "name": "clock",
       "description": "This Resource describes the properties associated with clock and time. Clock is a time information. The Property \"datetime\" is using RFC3339 datetime format (e. g: \"2007-04-05T14:30Z\") (Time+Date+Timezone) The Property \"countdown\" is the desired total seconds for countdown.",
-      "odmProperty": {
+      "sdfProperty": {
         "countdown": {
           "description": "The desired total seconds for countdown.",
           "minimum": 0,
@@ -21,8 +20,8 @@
           "format": "date-time"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/datetime"
+      "sdfRequired": [
+        "0/sdfProperty/datetime"
       ]
     }
   }

@@ -3,21 +3,20 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Energy Generation",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "energy.generation": {
-      "name": "energy.generation",
       "description": "This Resource describes the attributes associated with energy generation The Property \"energygenerated\" is a number that provides the energy generated in Watt-hour(Wh).",
-      "odmProperty": {
+      "sdfProperty": {
         "energygenerated": {
           "description": "The energy generated in Watt-hour(Wh).",
           "writable": false,
           "type": "number"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/energygenerated"
+      "sdfRequired": [
+        "0/sdfProperty/energygenerated"
       ]
     }
   }

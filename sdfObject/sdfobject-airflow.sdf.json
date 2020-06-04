@@ -3,13 +3,12 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Air Flow",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "airflow": {
-      "name": "airflow",
       "description": "This Resource describes Properties associated with air flow. The Property \"supporteddirections\" is the set of valid values for the direction property for a particular instance of this Resource Type. The Property \"direction\" is the directionality of the air flow if applicable, if Property \"supporteddirections\" is also present it must be a value from that set. The values of Property \"direction\" are dependent on the capabilities of the unit. The Property \"speed\" is an integer representing the current speed level for the unit. The Property \"range\" is an array of the min,max values for the speed level. If not present the \"range\" defaults to [0,100]. Property \"automode\" is the status of the automode feature; Off means automode is not enabled, On means automode is active and the speed is automatically controlled by the Device.",
-      "odmProperty": {
+      "sdfProperty": {
         "speed": {
           "description": "The current speed level.",
           "type": "integer"
@@ -52,8 +51,8 @@
           "type": "integer"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/speed"
+      "sdfRequired": [
+        "0/sdfProperty/speed"
       ]
     }
   }

@@ -3,13 +3,12 @@
     "copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Battery",
-    "version": "20190618"
+    "version": "2019-06-18"
   },
-  "odmObject": {
+  "sdfObject": {
     "energy.battery": {
-      "name": "energy.battery",
       "description": "This Resource describes the attributes associated with a battery. The Property \"charge\" is an integer showing the current battery charge level as a percentage in the range 0 (fully discharged) to 100 (fully charged). The Property \"capacity\" represents the total capacity of battery in Amp Hours (Ah). The \"charging\" status and \"discharging\" status are represented by boolean values set to \"true\" indicating enabled and \"false\" indicating disabled. Low battery status is represented by a boolean value set to \"true\" indicating low charge level and \"false\" indicating otherwise, based upon the battery threshold represented as a percentage.",
-      "odmProperty": {
+      "sdfProperty": {
         "discharging": {
           "description": "The status of discharging.",
           "writable": false,
@@ -55,8 +54,8 @@
           "type": "string"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/batterythreshold"
+      "sdfRequired": [
+        "0/sdfProperty/batterythreshold"
       ]
     }
   }

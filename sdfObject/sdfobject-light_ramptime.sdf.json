@@ -3,13 +3,12 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Ramp Time",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "light.ramptime": {
-      "name": "light.ramptime",
       "description": "This Resource that describes the ramp time of a dimming function. It specifies the actual speed of changing between 2 dimming values. The Property \"ramptime\" is specified in milliseconds [ms]. When range is omitted the maximum value is 100 ms. The ramp time of 0ms indicates the minimal delay possible by the implementation.",
-      "odmProperty": {
+      "sdfProperty": {
         "rampTime": {
           "description": "The actual speed of changing between 2 dimming values.",
           "type": "integer"
@@ -35,8 +34,8 @@
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/rampTime"
+      "sdfRequired": [
+        "0/sdfProperty/rampTime"
       ]
     }
   }

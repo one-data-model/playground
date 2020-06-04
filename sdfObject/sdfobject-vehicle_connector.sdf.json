@@ -3,13 +3,12 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Vehicle Connector",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "vehicle.connector": {
-      "name": "vehicle.connector",
       "description": "This Resource describes the attributes associated with an electric vehicle charging connector. The Property \"connected\" is a boolean indicating the status of the connector (False = disconnected, True = connected). The Property \"ratedchargingcapacity\" and \"rateddischargingcapacity\" are in Amps (A).",
-      "odmProperty": {
+      "sdfProperty": {
         "connected": {
           "description": "The connection state.",
           "writable": false,
@@ -26,8 +25,8 @@
           "type": "number"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/connected"
+      "sdfRequired": [
+        "0/sdfProperty/connected"
       ]
     }
   }

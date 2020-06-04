@@ -3,21 +3,20 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Contact Sensor",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "sensor.contact": {
-      "name": "sensor.contact",
       "description": "This Resource describes whether a contact sensor has been tripped or not. Typical use case is in Security Systems detecting window or door open. The Property \"value\" is a boolean. A value of 'true' means that contact has been broken (open). A value of 'false' means that contact is in place (closed).",
-      "odmProperty": {
+      "sdfProperty": {
         "value": {
           "description": "The contact indication, true = broken (open), false = in place (closed).",
           "writable": false,
           "type": "boolean"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/value"
+      "sdfRequired": [
+        "0/sdfProperty/value"
       ]
     }
   }

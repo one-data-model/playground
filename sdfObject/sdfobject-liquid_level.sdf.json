@@ -3,13 +3,12 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Liquid Level",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "liquid.level": {
-      "name": "liquid.level",
       "description": "This Resource describes the attributes associated with liquid level. The Property \"currentlevel\" and \"desiredlevel\" are defined in terms of a percentage. The behaviour of when the currentlevel and desiredlevel are not equal is determined by the device manufacturer.",
-      "odmProperty": {
+      "sdfProperty": {
         "currentlevel": {
           "description": "The current level of the liquid in percentage.",
           "maximum": 100,
@@ -29,8 +28,8 @@
           "type": "integer"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/desiredlevel"
+      "sdfRequired": [
+        "0/sdfProperty/desiredlevel"
       ]
     }
   }

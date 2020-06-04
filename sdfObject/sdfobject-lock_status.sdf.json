@@ -3,13 +3,12 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Lock",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "lock.status": {
-      "name": "lock.status",
       "description": "The Resource describing a lock. The Property \"lockState\" is a string. The value 'Locked' indicates that the door is Locked. The value 'Unlocked' indicates that the door is Unlocked.",
-      "odmProperty": {
+      "sdfProperty": {
         "lockState": {
           "description": "The state of the lock.",
           "enum": [
@@ -19,8 +18,8 @@
           "type": "string"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/lockState"
+      "sdfRequired": [
+        "0/sdfProperty/lockState"
       ]
     }
   }

@@ -5,11 +5,10 @@
     "title": "Status for Continuous Glucose Meter (CGM)",
     "version": "2019-03-04"
   },
-  "odmObject": {
+  "sdfObject": {
     "cgm.status": {
-      "name": "cgm.status",
       "description": "This Resource describes the Properties associated with Status for Continuous Glucose Meter (CGM).",
-      "odmProperty": {
+      "sdfProperty": {
         "cgmtype": {
           "description": "This Property describes the CGM measurement type.",
           "type": "string",
@@ -62,11 +61,11 @@
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/cgmtype",
-        "0/odmProperty/cgmstatus",
-        "0/odmProperty/gtrend",
-        "0/odmProperty/malfunction"
+      "sdfRequired": [
+        "0/sdfProperty/cgmtype",
+        "0/sdfProperty/cgmstatus",
+        "0/sdfProperty/gtrend",
+        "0/sdfProperty/malfunction"
       ]
     }
   }

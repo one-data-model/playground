@@ -3,13 +3,12 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Door",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "door": {
-      "name": "door",
       "description": "This Resource describes the open state of the door. A door is modelled by means of openState (Open/Closed), openDuration (ISO 8601 Time), and openAlarm (boolean). For Property \"openState\", the value 'Open' indicates the door is open. The value 'Closed' indicates the door is closed. The type of Property \"openDuration\" is an RFC Time encoded string. The Property \"openAlarm\" value 'true' indicates that the open alarm is active. The openAlarm value 'false' indicates that open alarm is not active. retrieves the state of the Door.",
-      "odmProperty": {
+      "sdfProperty": {
         "openDuration": {
           "description": "A string representing duration formatted as defined in ISO 8601. Allowable formats are: P[n]Y[n]M[n]DT[n]H[n]M[n]S, P[n]W, P[n]Y[n]-M[n]-DT[0-23]H[0-59]:M[0-59]:S, and P[n]W, P[n]Y[n]M[n]DT[0-23]H[0-59]M[0-59]S. P is mandatory, all other elements are optional, time elements must follow a T.",
           "type": "string",
@@ -29,8 +28,8 @@
           "type": "boolean"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/openAlarm"
+      "sdfRequired": [
+        "0/sdfProperty/openAlarm"
       ]
     }
   }

@@ -3,13 +3,12 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Mode",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "mode": {
-      "name": "mode",
       "description": "This Resource describes the modes of operation that a Device can provide. The mode can be read or set. The Property \"supportedModes\" is an array of possible modes the device supports. The Property \"modes\" is an array of the currently active mode(s).",
-      "odmProperty": {
+      "sdfProperty": {
         "modes": {
           "description": "The array of the currently active mode(s).",
           "items": {
@@ -26,8 +25,8 @@
           "type": "array"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/modes"
+      "sdfRequired": [
+        "0/sdfProperty/modes"
       ]
     }
   }

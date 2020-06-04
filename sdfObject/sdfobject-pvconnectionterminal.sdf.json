@@ -3,13 +3,12 @@
     "copyright": "copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "PV array system connection terminal (IEC 61850)",
-    "version": "20190613"
+    "version": "2019-06-13"
   },
-  "odmObject": {
+  "sdfObject": {
     "pvconnectionterminal": {
-      "name": "pvconnectionterminal",
       "description": "This Resource describes functions for the control and monitoring of IEC 61850 based PV Array system connection terminal.",
-      "odmProperty": {
+      "sdfProperty": {
         "ratedarrayvoltage": {
           "description": "Rated voltage of array (Nominal values of maximum power voltage * number of modules) (V)",
           "writable": false,
@@ -47,12 +46,12 @@
           "type": "string"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/ratedarrayvoltage",
-        "0/odmProperty/ratedarraycurrent",
-        "0/odmProperty/arrayvoltage",
-        "0/odmProperty/arraycurrent",
-        "0/odmProperty/timestamp"
+      "sdfRequired": [
+        "0/sdfProperty/ratedarrayvoltage",
+        "0/sdfProperty/ratedarraycurrent",
+        "0/sdfProperty/arrayvoltage",
+        "0/sdfProperty/arraycurrent",
+        "0/sdfProperty/timestamp"
       ]
     }
   }

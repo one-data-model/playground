@@ -5,11 +5,10 @@
     "title": "Alarm",
     "version": "2019-03-04"
   },
-  "odmObject": {
+  "sdfObject": {
     "alarm": {
-      "name": "alarm",
       "description": "This Resource describes the Properties associated with alarm status.",
-      "odmProperty": {
+      "sdfProperty": {
         "status": {
           "description": "This Property describes the status of the alarm: true - on, false - off.",
           "type": "boolean",
@@ -59,8 +58,8 @@
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/status"
+      "sdfRequired": [
+        "0/sdfProperty/status"
       ]
     }
   }

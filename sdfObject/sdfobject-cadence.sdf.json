@@ -5,11 +5,10 @@
     "title": "Cadence",
     "version": "2019-06-11"
   },
-  "odmObject": {
+  "sdfObject": {
     "cadence": {
-      "name": "cadence",
       "description": "This Resource describes the cadence, which is the number of revolutions of crank per minute when cyclists pedal the pedals. The unit, which is the default unit, is rpm. The cadence Property is a read-only value that is provided by the server. When range (from \"oic. r. baseresource\") is omitted the default is 0 to +MAXFLOAT.",
-      "odmProperty": {
+      "sdfProperty": {
         "cadence": {
           "description": "This Property describes the rate at which a cyclist is pedalling/turning the pedals.",
           "type": "integer",
@@ -32,8 +31,8 @@
           "type": "integer"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/cadence"
+      "sdfRequired": [
+        "0/sdfProperty/cadence"
       ]
     }
   }

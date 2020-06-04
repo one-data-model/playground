@@ -5,11 +5,10 @@
     "title": "Exercise for Glucose Meter",
     "version": "2019-03-22"
   },
-  "odmObject": {
+  "sdfObject": {
     "glucose.exercise": {
-      "name": "glucose.exercise",
       "description": "This Resource describes the Properties associated with glucose exercise. The exercise Property has a default unit of percentage. The exercise Property is a read-only value that is provided by the Server.",
-      "odmProperty": {
+      "sdfProperty": {
         "exercise": {
           "description": "The level of exercise undertaken in percentage",
           "maximum": 100.0,
@@ -38,8 +37,8 @@
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/exercise"
+      "sdfRequired": [
+        "0/sdfProperty/exercise"
       ]
     }
   }

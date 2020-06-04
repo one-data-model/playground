@@ -3,13 +3,12 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Media Source",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "mediasource": {
-      "name": "mediasource",
       "description": "This Resource defines a single media source that exists on a device. The source can be an input source or output source, this resource is agnostic of that. The Property \"sourceName\" specifies a pre-defined media input or output (e. g. \"HDMI\", \"DVI\"). The Property \"sourceNumber\" is a label to specify the instance (e. g. \"PC\", \"1\"). The Property \"sourceType\" is an enumeration defining whether the source is audio, video or both. The Property \"status\" is a boolean that determines if the specific source instance is selected or not. A status of true means that the source instance is selected. A status of false means that the source instance is not selected.",
-      "odmProperty": {
+      "sdfProperty": {
         "status": {
           "description": "Specifies if the specific source instance is selected or not.",
           "type": "boolean"
@@ -33,9 +32,9 @@
           "type": "string"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/sourceName",
-        "0/odmProperty/status"
+      "sdfRequired": [
+        "0/sdfProperty/sourceName",
+        "0/sdfProperty/status"
       ]
     }
   }

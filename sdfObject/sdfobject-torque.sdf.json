@@ -5,11 +5,10 @@
     "title": "Torque",
     "version": "2019-09-25"
   },
-  "odmObject": {
+  "sdfObject": {
     "torque": {
-      "name": "torque",
       "description": "This Resource describes the torque, which is the rotational equivalent of linear force. The unit, which is the default SI unit, is N*m (Newton metre). The torque Property is a read-only value that is provided by the server. When range (from \"oic. r. baseresource\") is omitted the default is 0 to +MAXFLOAT.",
-      "odmProperty": {
+      "sdfProperty": {
         "torque": {
           "description": "This Resource describes the torque, which is the rotational equivalent of linear force, in N*m (Newton metre).",
           "type": "number",
@@ -32,8 +31,8 @@
           "type": "number"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/torque"
+      "sdfRequired": [
+        "0/sdfProperty/torque"
       ]
     }
   }

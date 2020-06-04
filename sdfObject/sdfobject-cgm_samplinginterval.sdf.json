@@ -5,11 +5,10 @@
     "title": "Sampling Interval for Continuous Glucose Meter (CGM)",
     "version": "2019-03-04"
   },
-  "odmObject": {
+  "sdfObject": {
     "cgm.samplinginterval": {
-      "name": "cgm.samplinginterval",
       "description": "This Resource describes the Properties associated with Sampling Interval for Continuous Glucose Meter (CGM).",
-      "odmProperty": {
+      "sdfProperty": {
         "interval": {
           "description": "This Property describes the Sampling interval in seconds.",
           "type": "number",
@@ -37,8 +36,8 @@
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/interval"
+      "sdfRequired": [
+        "0/sdfProperty/interval"
       ]
     }
   }

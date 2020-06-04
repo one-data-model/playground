@@ -3,13 +3,12 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Lock Code",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "lock.code": {
-      "name": "lock.code",
       "description": "The Resource describing a lock code. The Property \"lockCodeList\" is an array of possible codes that may be associated with a lock. The codes are all presented as strings.",
-      "odmProperty": {
+      "sdfProperty": {
         "lockCodeList": {
           "items": {
             "description": "The value for the lock code.",
@@ -18,8 +17,8 @@
           "type": "array"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/lockCodeList"
+      "sdfRequired": [
+        "0/sdfProperty/lockCodeList"
       ]
     }
   }

@@ -5,11 +5,10 @@
     "title": "Sleep",
     "version": "2018-07-12"
   },
-  "odmObject": {
+  "sdfObject": {
     "sleep": {
-      "name": "sleep",
       "description": "This Resource describes the Properties associated with Sleep. Sleep shows the time spent in each of the sleep stages (awake, nrem1, nrem2, nrem3, nrem4, rem, light sleep, deep sleep), along with a sleep score indicating the quality of sleep.",
-      "odmProperty": {
+      "sdfProperty": {
         "awake": {
           "type": "integer",
           "minimum": 0,
@@ -100,12 +99,12 @@
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/awake",
-        "0/odmProperty/nrem1",
-        "0/odmProperty/nrem2",
-        "0/odmProperty/nrem3",
-        "0/odmProperty/rem"
+      "sdfRequired": [
+        "0/sdfProperty/awake",
+        "0/sdfProperty/nrem1",
+        "0/sdfProperty/nrem2",
+        "0/sdfProperty/nrem3",
+        "0/sdfProperty/rem"
       ]
     }
   }

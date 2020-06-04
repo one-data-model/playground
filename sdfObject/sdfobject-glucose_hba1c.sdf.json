@@ -5,11 +5,10 @@
     "title": "Hemoglobin Bound to Glucose A1c Form (HbA1c) for Glucose Meter",
     "version": "2019-03-22"
   },
-  "odmObject": {
+  "sdfObject": {
     "glucose.hba1c": {
-      "name": "glucose.hba1c",
       "description": "This Resource describes the Properties associated with a person's hba1c level. The unit is a single value that is percentage. The hba1c Property is a read-only value that is provided by the Server.",
-      "odmProperty": {
+      "sdfProperty": {
         "hba1c": {
           "description": "Current HbA1c measurement in percentage",
           "maximum": 100.0,
@@ -38,8 +37,8 @@
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/hba1c"
+      "sdfRequired": [
+        "0/sdfProperty/hba1c"
       ]
     }
   }

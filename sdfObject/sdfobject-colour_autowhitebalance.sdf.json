@@ -3,20 +3,19 @@
     "copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Auto White Balance",
-    "version": "20190222"
+    "version": "2019-02-22"
   },
-  "odmObject": {
+  "sdfObject": {
     "colour.autowhitebalance": {
-      "name": "colour.autowhitebalance",
       "description": "This Resource describes an auto balance on/off feature. The Property \"autoWhiteBalance\" is a boolean. An AutoWhiteBalance value of 'true' means that the auto white balance feature is on. An AutoWhiteBalance value of 'false' means that the auto white balance feature is off.",
-      "odmProperty": {
+      "sdfProperty": {
         "autoWhiteBalance": {
           "description": "The status of the Auto White balance feature.",
           "type": "boolean"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/autoWhiteBalance"
+      "sdfRequired": [
+        "0/sdfProperty/autoWhiteBalance"
       ]
     }
   }

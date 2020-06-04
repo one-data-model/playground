@@ -3,13 +3,12 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Humidity",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "humidity": {
-      "name": "humidity",
       "description": "This Resource describes a sensed or desired humidity. The Property \"humidity\" is an integer describing the percentage measured relative humidity. The Property \"desiredHumidity\" is an integer showing the desired target relative humidity.",
-      "odmProperty": {
+      "sdfProperty": {
         "desiredHumidity": {
           "description": "The desired value for humidity.",
           "maximum": 100,
@@ -24,8 +23,8 @@
           "type": "integer"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/desiredHumidity"
+      "sdfRequired": [
+        "0/sdfProperty/desiredHumidity"
       ]
     }
   }

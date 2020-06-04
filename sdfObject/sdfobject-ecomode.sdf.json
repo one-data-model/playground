@@ -3,13 +3,12 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Eco Mode",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "ecomode": {
-      "name": "ecomode",
       "description": "This Resource specifies the supported and currently active Eco Mode of a Device The Resource is a deriviative of the Mode Resource (oic. r. mode) with a restriction that the population of supportedmodes and modes Properties is restricted to the set of values: \"disabled\",\"enabled\",\"notsupported\". The adminforced Property indicates that the value has been set by another party (e. g. via some offboard Smart Energy interaction)",
-      "odmProperty": {
+      "sdfProperty": {
         "modes": {
           "description": "The array of the currently active mode(s).",
           "items": {
@@ -42,8 +41,8 @@
           "type": "boolean"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/modes"
+      "sdfRequired": [
+        "0/sdfProperty/modes"
       ]
     }
   }

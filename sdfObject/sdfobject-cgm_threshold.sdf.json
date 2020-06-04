@@ -5,11 +5,10 @@
     "title": "Threshold for Continuous Glucose Meter (CGM)",
     "version": "2019-03-04"
   },
-  "odmObject": {
+  "sdfObject": {
     "cgm.threshold": {
-      "name": "cgm.threshold",
       "description": "This Resource describes the Properties associated with Threshold for Continuous Glucose Meter (CGM).",
-      "odmProperty": {
+      "sdfProperty": {
         "plow": {
           "description": "This Property describes the Patient low threshold (mg/dL)",
           "type": "number",
@@ -67,13 +66,13 @@
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/plow",
-        "0/odmProperty/phigh",
-        "0/odmProperty/dhypo",
-        "0/odmProperty/dhyper",
-        "0/odmProperty/gir",
-        "0/odmProperty/gdr"
+      "sdfRequired": [
+        "0/sdfProperty/plow",
+        "0/sdfProperty/phigh",
+        "0/sdfProperty/dhypo",
+        "0/sdfProperty/dhyper",
+        "0/sdfProperty/gir",
+        "0/sdfProperty/gdr"
       ]
     }
   }

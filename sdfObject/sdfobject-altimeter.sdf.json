@@ -3,13 +3,12 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Altimeter",
-    "version": "20190225"
+    "version": "2019-02-25"
   },
-  "odmObject": {
+  "sdfObject": {
     "altimeter": {
-      "name": "altimeter",
       "description": "This Resource describes the properties associated with altimeter. The Property \"alt\" is the distance (metres) above or below 'local' sea-level.",
-      "odmProperty": {
+      "sdfProperty": {
         "alt": {
           "description": "The current distance (metres) above or below 'local' sea-level.",
           "writable": false,
@@ -36,8 +35,8 @@
           "type": "number"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/alt"
+      "sdfRequired": [
+        "0/sdfProperty/alt"
       ]
     }
   }

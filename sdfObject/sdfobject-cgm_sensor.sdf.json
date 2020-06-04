@@ -5,11 +5,10 @@
     "title": "Sensor for Continuous Glucose Meter (CGM)",
     "version": "2019-03-04"
   },
-  "odmObject": {
+  "sdfObject": {
     "cgm.sensor": {
-      "name": "cgm.sensor",
       "description": "This Resource describes the Properties associated with Sensor for Continuous Glucose Meter (CGM).",
-      "odmProperty": {
+      "sdfProperty": {
         "starttime": {
           "description": "This Property describes the Sensor start time using ISO 8601 datetime format (e.g: 2007-04-05T14:30Z, 2007-04-05T14:30+09:00)",
           "type": "string",
@@ -42,9 +41,9 @@
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/starttime",
-        "0/odmProperty/runtime"
+      "sdfRequired": [
+        "0/sdfProperty/starttime",
+        "0/sdfProperty/runtime"
       ]
     }
   }

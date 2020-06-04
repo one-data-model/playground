@@ -3,13 +3,12 @@
     "copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Acceleration Sensor",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "sensor.acceleration": {
-      "name": "sensor.acceleration",
       "description": "This Resource provides a measure of proper acceleration (g force) as opposed to co-ordinate acceleration (which is dependent on the co-ordinate system and the observer). The Property \"value\" is a float which describes the acceleration experienced by the object in \"g\".",
-      "odmProperty": {
+      "sdfProperty": {
         "acceleration": {
           "description": "The sensed acceleration experienced in 'g'.",
           "writable": false,
@@ -36,8 +35,8 @@
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/acceleration"
+      "sdfRequired": [
+        "0/sdfProperty/acceleration"
       ]
     }
   }

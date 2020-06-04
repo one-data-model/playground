@@ -5,11 +5,10 @@
     "title": "Context Carbohydrates for Glucose Meter",
     "version": "2019-03-22"
   },
-  "odmObject": {
+  "sdfObject": {
     "glucose.carb": {
-      "name": "glucose.carb",
       "description": "This Resource describes the Properties associated with a context carbohydrates. The carb Property has a default unit of grams[g]. The carb and meal Properties are read-only values that are provided by the Server. When range is omitted the default is 0 to +MAXFLOAT.",
-      "odmProperty": {
+      "sdfProperty": {
         "carb": {
           "description": "The amount of carbohydrates undertaken in grams",
           "writable": false,
@@ -55,9 +54,9 @@
           "writable": false
         }
       },
-      "odmRequired": [
-        "0/odmProperty/carb",
-        "0/odmProperty/meal"
+      "sdfRequired": [
+        "0/sdfProperty/carb",
+        "0/sdfProperty/meal"
       ]
     }
   }

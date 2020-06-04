@@ -3,13 +3,12 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Illuminance Sensor",
-    "version": "20190808"
+    "version": "2019-08-08"
   },
-  "odmObject": {
+  "sdfObject": {
     "sensor.illuminance": {
-      "name": "sensor.illuminance",
       "description": "This Resource describes an illuminance sensor. The Property \"illuminance\" is a float and represents the sensed luminous flux per unit area in lux.",
-      "odmProperty": {
+      "sdfProperty": {
         "illuminance": {
           "description": "The sensed luminous flux per unit area in lux.",
           "writable": false,
@@ -26,8 +25,8 @@
           }
         }
       },
-      "odmRequired": [
-        "0/odmProperty/illuminance"
+      "sdfRequired": [
+        "0/sdfProperty/illuminance"
       ]
     }
   }

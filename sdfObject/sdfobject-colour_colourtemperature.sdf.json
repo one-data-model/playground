@@ -3,13 +3,12 @@
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
     "title": "Colour Temperature",
-    "version": "20190215"
+    "version": "2019-02-15"
   },
-  "odmObject": {
+  "sdfObject": {
     "colour.colourtemperature": {
-      "name": "colour.colourtemperature",
       "description": "This Resource describes the colour using colour temperature conventions. The Property \"ct\" is the Mired colour temperature. The equivalent value in Kelvin is obtained by Colour Temp(K) = 1,000,000/Colour Temp(Mired) THe Resource provides the colour using colour temperature conventions.",
-      "odmProperty": {
+      "sdfProperty": {
         "ct": {
           "description": "The Mired colour temperature.",
           "minimum": 0,
@@ -31,8 +30,8 @@
           "type": "integer"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/ct"
+      "sdfRequired": [
+        "0/sdfProperty/ct"
       ]
     }
   }

@@ -5,11 +5,10 @@
     "title": "Glucose",
     "version": "2019-03-22"
   },
-  "odmObject": {
+  "sdfObject": {
     "glucose": {
-      "name": "glucose",
       "description": "This Resource describes the Properties associated with a person's glucose level. The unit is a single value that is one of mg/dL, mmol/L. If the unit Property is missing the default is milligrams per decilitre [mg/dL]. The glucose and unit Properties are read-only values that are provided by the Server. When range is omitted the default is 0 to +MAXFLOAT.",
-      "odmProperty": {
+      "sdfProperty": {
         "glucose": {
           "description": "A measurement of glucose concentration in the blood",
           "minimum": 0.0,
@@ -47,8 +46,8 @@
           "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision"
         }
       },
-      "odmRequired": [
-        "0/odmProperty/glucose"
+      "sdfRequired": [
+        "0/sdfProperty/glucose"
       ]
     }
   }
