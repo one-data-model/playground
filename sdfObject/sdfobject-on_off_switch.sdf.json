@@ -1,0 +1,67 @@
+{
+  "info": {
+    "title": "OMA LwM2M On/Off switch (Object ID 3342)",
+    "version": "2020-06-03",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+  },
+  "sdfObject": {
+    "On_Off_switch": {
+      "label": "On/Off switch",
+      "description": "This IPSO object should be used with an On/Off switch to report the state of the switch.",
+      "sdfProperty": {
+        "Digital_Input_State": {
+          "sdfRef": "#/sdfProperty/Digital_Input_State"
+        },
+        "Digital_Input_Counter": {
+          "sdfRef": "#/sdfProperty/Digital_Input_Counter"
+        },
+        "On_time": {
+          "sdfRef": "#/sdfProperty/On_time"
+        },
+        "Off_Time": {
+          "sdfRef": "#/sdfProperty/Off_Time"
+        },
+        "Application_Type": {
+          "sdfRef": "#/sdfProperty/Application_Type"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfProperty/Digital_Input_State"
+      ]
+    }
+  },
+  "sdfProperty": {
+    "Digital_Input_State": {
+      "label": "Digital Input State",
+      "description": "The current state of a digital input.",
+      "writable": false,
+      "type": "boolean"
+    },
+    "Digital_Input_Counter": {
+      "label": "Digital Input Counter",
+      "description": "The number of times the input transitions from 0 to 1.",
+      "writable": false,
+      "type": "integer"
+    },
+    "On_time": {
+      "label": "On time",
+      "description": "The time in seconds since the On command was sent. Writing a value of 0 resets the counter.",
+      "type": "integer",
+      "units": "s"
+    },
+    "Off_Time": {
+      "label": "Off Time",
+      "description": "The time in seconds since the Off command was sent. Writing a value of 0 resets the counter.",
+      "type": "integer",
+      "units": "s"
+    },
+    "Application_Type": {
+      "label": "Application Type",
+      "description": "The application type of the sensor or actuator as a string depending on the use case.",
+      "type": "string"
+    }
+  },
+  "sdfAction": {}
+}

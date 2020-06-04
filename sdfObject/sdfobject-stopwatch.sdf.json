@@ -1,0 +1,57 @@
+{
+  "info": {
+    "title": "OMA LwM2M Stopwatch (Object ID 3350)",
+    "version": "2020-06-03",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+  },
+  "sdfObject": {
+    "Stopwatch": {
+      "label": "Stopwatch",
+      "description": "An ascending timer that counts how long time has passed since the timer was started after reset.",
+      "sdfProperty": {
+        "Cumulative_Time": {
+          "sdfRef": "#/sdfProperty/Cumulative_Time"
+        },
+        "On_Off": {
+          "sdfRef": "#/sdfProperty/On_Off"
+        },
+        "Digital_Input_Counter": {
+          "sdfRef": "#/sdfProperty/Digital_Input_Counter"
+        },
+        "Application_Type": {
+          "sdfRef": "#/sdfProperty/Application_Type"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfProperty/Cumulative_Time"
+      ]
+    }
+  },
+  "sdfProperty": {
+    "Cumulative_Time": {
+      "label": "Cumulative Time",
+      "description": "The total time in seconds that the stopwatch has been on. Writing a 0 resets the time.",
+      "type": "number",
+      "units": "s"
+    },
+    "On_Off": {
+      "label": "On/Off",
+      "description": "On/off control. Boolean value where True is On and False is Off.",
+      "type": "boolean"
+    },
+    "Digital_Input_Counter": {
+      "label": "Digital Input Counter",
+      "description": "The number of times the input transitions from off to on.",
+      "writable": false,
+      "type": "integer"
+    },
+    "Application_Type": {
+      "label": "Application Type",
+      "description": "The application type of the sensor or actuator as a string depending on the use case.",
+      "type": "string"
+    }
+  },
+  "sdfAction": {}
+}

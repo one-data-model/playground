@@ -1,0 +1,106 @@
+{
+  "info": {
+    "title": "OMA LwM2M Positioner (Object ID 3337)",
+    "version": "2020-06-03",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+  },
+  "sdfObject": {
+    "Positioner": {
+      "label": "Positioner",
+      "description": "This IPSO object should be used with a generic position actuator with range from 0 to 100%. This object optionally allows setting the transition time for an operation that changes the position of the actuator, and for reading the remaining time of the currently active transition.",
+      "sdfProperty": {
+        "Current_Position": {
+          "sdfRef": "#/sdfProperty/Current_Position"
+        },
+        "Transition_Time": {
+          "sdfRef": "#/sdfProperty/Transition_Time"
+        },
+        "Remaining_Time": {
+          "sdfRef": "#/sdfProperty/Remaining_Time"
+        },
+        "Min_Measured_Value": {
+          "sdfRef": "#/sdfProperty/Min_Measured_Value"
+        },
+        "Max_Measured_Value": {
+          "sdfRef": "#/sdfProperty/Max_Measured_Value"
+        },
+        "Min_Limit": {
+          "sdfRef": "#/sdfProperty/Min_Limit"
+        },
+        "Max_Limit": {
+          "sdfRef": "#/sdfProperty/Max_Limit"
+        },
+        "Application_Type": {
+          "sdfRef": "#/sdfProperty/Application_Type"
+        }
+      },
+      "sdfAction": {
+        "Reset_Min_and_Max_Measured_Values": {
+          "sdfRef": "#/sdfAction/Reset_Min_and_Max_Measured_Values"
+        }
+      },
+      "sdfRequired": [
+        "#/sdfProperty/Current_Position"
+      ]
+    }
+  },
+  "sdfProperty": {
+    "Current_Position": {
+      "label": "Current Position",
+      "description": "Current position or desired position of a positioner actuator.",
+      "type": "number",
+      "units": "/100",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "Transition_Time": {
+      "label": "Transition Time",
+      "description": "The time expected to move the actuator to the new position.",
+      "type": "number",
+      "units": "s"
+    },
+    "Remaining_Time": {
+      "label": "Remaining Time",
+      "description": "The time remaining in an operation.",
+      "writable": false,
+      "type": "number",
+      "units": "s"
+    },
+    "Min_Measured_Value": {
+      "label": "Min Measured Value",
+      "description": "The minimum value set on the actuator since power ON or reset.",
+      "writable": false,
+      "type": "number"
+    },
+    "Max_Measured_Value": {
+      "label": "Max Measured Value",
+      "description": "The maximum value set on the actuator since power ON or reset.",
+      "writable": false,
+      "type": "number"
+    },
+    "Min_Limit": {
+      "label": "Min Limit",
+      "description": "The minimum value that can be measured by the sensor.",
+      "writable": false,
+      "type": "number"
+    },
+    "Max_Limit": {
+      "label": "Max Limit",
+      "description": "The maximum value that can be measured by the sensor.",
+      "writable": false,
+      "type": "number"
+    },
+    "Application_Type": {
+      "label": "Application Type",
+      "description": "The application type of the sensor or actuator as a string depending on the use case.",
+      "type": "string"
+    }
+  },
+  "sdfAction": {
+    "Reset_Min_and_Max_Measured_Values": {
+      "label": "Reset Min and Max Measured Values",
+      "description": "Reset the Min and Max Measured Values to Current Value."
+    }
+  }
+}

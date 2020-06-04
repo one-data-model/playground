@@ -1,0 +1,121 @@
+{
+  "info": {
+    "title": "OMA LwM2M Timer (Object ID 3340)",
+    "version": "2020-06-03",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+  },
+  "sdfObject": {
+    "Timer": {
+      "label": "Timer",
+      "description": "This IPSO object is used to time events and actions, using patterns common to industrial timers. A write to the trigger resource or On/Off input state change starts the timing operation, and the timer remaining time shows zero when the operation is complete. The patterns supported are One-Shot (mode 1), On-Time or Interval (mode 2), Time delay on pick-up or TDPU (mode 3), and Time Delay on Drop-Out or TDDO (mode 4). Mode 0 disables the timer, so the output follows the input with no delay. A counter is provided to count occurrences of the timer output changing from 0 to 1. Writing a value of zero resets the counter. The Digital Input State resource reports the state of the timer output.",
+      "sdfProperty": {
+        "Delay_Duration": {
+          "sdfRef": "#/sdfProperty/Delay_Duration"
+        },
+        "Remaining_Time": {
+          "sdfRef": "#/sdfProperty/Remaining_Time"
+        },
+        "Minimum_Off-time": {
+          "sdfRef": "#/sdfProperty/Minimum_Off-time"
+        },
+        "On_Off": {
+          "sdfRef": "#/sdfProperty/On_Off"
+        },
+        "Digital_Input_Counter": {
+          "sdfRef": "#/sdfProperty/Digital_Input_Counter"
+        },
+        "Cumulative_Time": {
+          "sdfRef": "#/sdfProperty/Cumulative_Time"
+        },
+        "Digital_State": {
+          "sdfRef": "#/sdfProperty/Digital_State"
+        },
+        "Counter": {
+          "sdfRef": "#/sdfProperty/Counter"
+        },
+        "Timer_Mode": {
+          "sdfRef": "#/sdfProperty/Timer_Mode"
+        },
+        "Application_Type": {
+          "sdfRef": "#/sdfProperty/Application_Type"
+        }
+      },
+      "sdfAction": {
+        "Trigger": {
+          "sdfRef": "#/sdfAction/Trigger"
+        }
+      },
+      "sdfRequired": [
+        "#/sdfProperty/Delay_Duration"
+      ]
+    }
+  },
+  "sdfProperty": {
+    "Delay_Duration": {
+      "label": "Delay Duration",
+      "description": "The duration of the time delay.",
+      "type": "number",
+      "units": "s"
+    },
+    "Remaining_Time": {
+      "label": "Remaining Time",
+      "description": "The time remaining in an operation.",
+      "writable": false,
+      "type": "number",
+      "units": "s"
+    },
+    "Minimum_Off-time": {
+      "label": "Minimum Off-time",
+      "description": "The duration of the rearm delay (i.e. the delay from the end of one cycle until the beginning of the next, the inhibit time).",
+      "type": "number",
+      "units": "s"
+    },
+    "On_Off": {
+      "label": "On/Off",
+      "description": "On/off control. Boolean value where True is On and False is Off.",
+      "type": "boolean"
+    },
+    "Digital_Input_Counter": {
+      "label": "Digital Input Counter",
+      "description": "The number of times the input.",
+      "writable": false,
+      "type": "integer"
+    },
+    "Cumulative_Time": {
+      "label": "Cumulative Time",
+      "description": "The total time in seconds that the timer input is true. Writing a 0 resets the time.",
+      "type": "number",
+      "units": "s"
+    },
+    "Digital_State": {
+      "label": "Digital State",
+      "description": "The current state of the timer output.",
+      "writable": false,
+      "type": "boolean"
+    },
+    "Counter": {
+      "label": "Counter",
+      "description": "Counts the number of times the timer output transitions from 0 to 1.",
+      "type": "integer"
+    },
+    "Timer_Mode": {
+      "label": "Timer Mode",
+      "description": "Type of timer pattern used by the patterns.",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4
+    },
+    "Application_Type": {
+      "label": "Application Type",
+      "description": "The application type of the sensor or actuator as a string depending on the use case.",
+      "type": "string"
+    }
+  },
+  "sdfAction": {
+    "Trigger": {
+      "label": "Trigger",
+      "description": "Trigger initiating actuation."
+    }
+  }
+}

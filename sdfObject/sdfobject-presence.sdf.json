@@ -1,0 +1,77 @@
+{
+  "info": {
+    "title": "OMA LwM2M Presence (Object ID 3302)",
+    "version": "2020-06-03",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+  },
+  "sdfObject": {
+    "Presence": {
+      "label": "Presence",
+      "description": "Presence sensor with digital sensing, optional delay parameters",
+      "sdfProperty": {
+        "Digital_Input_State": {
+          "sdfRef": "#/sdfProperty/Digital_Input_State"
+        },
+        "Digital_Input_Counter": {
+          "sdfRef": "#/sdfProperty/Digital_Input_Counter"
+        },
+        "Sensor_Type": {
+          "sdfRef": "#/sdfProperty/Sensor_Type"
+        },
+        "Busy_to_Clear_delay": {
+          "sdfRef": "#/sdfProperty/Busy_to_Clear_delay"
+        },
+        "Clear_to_Busy_delay": {
+          "sdfRef": "#/sdfProperty/Clear_to_Busy_delay"
+        }
+      },
+      "sdfAction": {
+        "Digital_Input_Counter_Reset": {
+          "sdfRef": "#/sdfAction/Digital_Input_Counter_Reset"
+        }
+      },
+      "sdfRequired": [
+        "#/sdfProperty/Digital_Input_State"
+      ]
+    }
+  },
+  "sdfProperty": {
+    "Digital_Input_State": {
+      "label": "Digital Input State",
+      "description": "The current state of the presence sensor",
+      "writable": false,
+      "type": "boolean"
+    },
+    "Digital_Input_Counter": {
+      "label": "Digital Input Counter",
+      "description": "The cumulative value of active state detected.",
+      "writable": false,
+      "type": "integer"
+    },
+    "Sensor_Type": {
+      "label": "Sensor Type",
+      "description": "The type of the sensor (for instance PIR type)",
+      "writable": false,
+      "type": "string"
+    },
+    "Busy_to_Clear_delay": {
+      "label": "Busy to Clear delay",
+      "description": "Delay from the detection state to the clear state in ms",
+      "type": "integer",
+      "units": "ms"
+    },
+    "Clear_to_Busy_delay": {
+      "label": "Clear to Busy delay",
+      "description": "Delay from the clear state to the busy state in ms",
+      "type": "integer",
+      "units": "ms"
+    }
+  },
+  "sdfAction": {
+    "Digital_Input_Counter_Reset": {
+      "label": "Digital Input Counter Reset",
+      "description": "Reset the Counter value"
+    }
+  }
+}

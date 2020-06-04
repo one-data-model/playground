@@ -1,0 +1,59 @@
+{
+  "info": {
+    "title": "OMA LwM2M Analog Output (Object ID 3203)",
+    "version": "2020-06-03",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+  },
+  "sdfObject": {
+    "Analog_Output": {
+      "label": "Analog Output",
+      "description": "This IPSO object is a generic object that can be used with any kind of analog output interface.",
+      "sdfProperty": {
+        "Analog_Output_Current_Value": {
+          "sdfRef": "#/sdfProperty/Analog_Output_Current_Value"
+        },
+        "Application_Type": {
+          "sdfRef": "#/sdfProperty/Application_Type"
+        },
+        "Min_Range_Value": {
+          "sdfRef": "#/sdfProperty/Min_Range_Value"
+        },
+        "Max_Range_Value": {
+          "sdfRef": "#/sdfProperty/Max_Range_Value"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfProperty/Analog_Output_Current_Value"
+      ]
+    }
+  },
+  "sdfProperty": {
+    "Analog_Output_Current_Value": {
+      "label": "Analog Output Current Value",
+      "description": "The current state of the analogue output.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "Application_Type": {
+      "label": "Application Type",
+      "description": "The application type of the sensor or actuator as a string depending on the use case.",
+      "type": "string"
+    },
+    "Min_Range_Value": {
+      "label": "Min Range Value",
+      "description": "The minimum value that can be set for the output",
+      "writable": false,
+      "type": "number"
+    },
+    "Max_Range_Value": {
+      "label": "Max Range Value",
+      "description": "The maximum value that can be set for the output",
+      "writable": false,
+      "type": "number"
+    }
+  },
+  "sdfAction": {}
+}

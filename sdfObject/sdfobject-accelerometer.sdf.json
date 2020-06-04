@@ -1,0 +1,77 @@
+{
+  "info": {
+    "title": "OMA LwM2M Accelerometer (Object ID 3313)",
+    "version": "2020-06-03",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+  },
+  "sdfObject": {
+    "Accelerometer": {
+      "label": "Accelerometer",
+      "description": "This IPSO object can be used to represent a 1-3 axis accelerometer.",
+      "sdfProperty": {
+        "X_Value": {
+          "sdfRef": "#/sdfProperty/X_Value"
+        },
+        "Y_Value": {
+          "sdfRef": "#/sdfProperty/Y_Value"
+        },
+        "Z_Value": {
+          "sdfRef": "#/sdfProperty/Z_Value"
+        },
+        "Sensor_Units": {
+          "sdfRef": "#/sdfProperty/Sensor_Units"
+        },
+        "Min_Range_Value": {
+          "sdfRef": "#/sdfProperty/Min_Range_Value"
+        },
+        "Max_Range_Value": {
+          "sdfRef": "#/sdfProperty/Max_Range_Value"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": [
+        "#/sdfProperty/X_Value"
+      ]
+    }
+  },
+  "sdfProperty": {
+    "X_Value": {
+      "label": "X Value",
+      "description": "The measured value along the X axis.",
+      "writable": false,
+      "type": "number"
+    },
+    "Y_Value": {
+      "label": "Y Value",
+      "description": "The measured value along the Y axis.",
+      "writable": false,
+      "type": "number"
+    },
+    "Z_Value": {
+      "label": "Z Value",
+      "description": "The measured value along the Z axis.",
+      "writable": false,
+      "type": "number"
+    },
+    "Sensor_Units": {
+      "label": "Sensor Units",
+      "description": "Measurement Units Definition.",
+      "writable": false,
+      "type": "string"
+    },
+    "Min_Range_Value": {
+      "label": "Min Range Value",
+      "description": "The minimum value that can be measured by the sensor",
+      "writable": false,
+      "type": "number"
+    },
+    "Max_Range_Value": {
+      "label": "Max Range Value",
+      "description": "The maximum value that can be measured by the sensor",
+      "writable": false,
+      "type": "number"
+    }
+  },
+  "sdfAction": {}
+}

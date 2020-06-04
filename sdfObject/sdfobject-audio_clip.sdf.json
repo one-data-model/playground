@@ -1,0 +1,68 @@
+{
+  "info": {
+    "title": "OMA LwM2M Audio Clip (Object ID 3339)",
+    "version": "2020-06-03",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+  },
+  "sdfObject": {
+    "Audio_Clip": {
+      "label": "Audio Clip",
+      "description": "This IPSO object should be used for a speaker that plays a pre-recorded audio clip or an audio output that is sent elsewhere. For example, an elevator which announces the floor of the building. A resource is provided to store the clip, a dimmer resource controls the relative sound level of the playback, and a duration resource limits the maximum playback time. After the duration time is reached, any remaining samples in the clip are ignored, and the clip player will be ready to play another clip.",
+      "sdfProperty": {
+        "Clip": {
+          "sdfRef": "#/sdfProperty/Clip"
+        },
+        "Level": {
+          "sdfRef": "#/sdfProperty/Level"
+        },
+        "Duration": {
+          "sdfRef": "#/sdfProperty/Duration"
+        },
+        "Application_Type": {
+          "sdfRef": "#/sdfProperty/Application_Type"
+        }
+      },
+      "sdfAction": {
+        "Trigger": {
+          "sdfRef": "#/sdfAction/Trigger"
+        }
+      },
+      "sdfRequired": [
+        "#/sdfProperty/Clip"
+      ]
+    }
+  },
+  "sdfProperty": {
+    "Clip": {
+      "label": "Clip",
+      "description": "Audio clip that is playable (e.g., a short audio recording indicating the floor in an elevator).",
+      "subtype": "bytestring"
+    },
+    "Level": {
+      "label": "Level",
+      "description": "Audio volume control, float value between 0 and 100 as a percentage.",
+      "type": "number",
+      "units": "/100",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "Duration": {
+      "label": "Duration",
+      "description": "The duration of the sound once trigger.",
+      "type": "number",
+      "units": "s"
+    },
+    "Application_Type": {
+      "label": "Application Type",
+      "description": "The application type of the sensor or actuator as a string depending on the use case.",
+      "type": "string"
+    }
+  },
+  "sdfAction": {
+    "Trigger": {
+      "label": "Trigger",
+      "description": "Trigger initiating actuation."
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "info": {
+    "title": "OMA LwM2M Multiple Axis Joystick (Object ID 3345)",
+    "version": "2020-06-03",
+    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+  },
+  "sdfObject": {
+    "Multiple_Axis_Joystick": {
+      "label": "Multiple Axis Joystick",
+      "description": "This IPSO object can be used to report the position of a shuttle or joystick control. A digital input is provided to report the state of an associated push button.",
+      "sdfProperty": {
+        "Digital_Input_State": {
+          "sdfRef": "#/sdfProperty/Digital_Input_State"
+        },
+        "Digital_Input_Counter": {
+          "sdfRef": "#/sdfProperty/Digital_Input_Counter"
+        },
+        "X_Value": {
+          "sdfRef": "#/sdfProperty/X_Value"
+        },
+        "Y_Value": {
+          "sdfRef": "#/sdfProperty/Y_Value"
+        },
+        "Z_Value": {
+          "sdfRef": "#/sdfProperty/Z_Value"
+        },
+        "Application_Type": {
+          "sdfRef": "#/sdfProperty/Application_Type"
+        }
+      },
+      "sdfAction": {},
+      "sdfRequired": []
+    }
+  },
+  "sdfProperty": {
+    "Digital_Input_State": {
+      "label": "Digital Input State",
+      "description": "The current state of a digital input.",
+      "writable": false,
+      "type": "boolean"
+    },
+    "Digital_Input_Counter": {
+      "label": "Digital Input Counter",
+      "description": "The number of times the input transitions from 0 to 1.",
+      "writable": false,
+      "type": "integer"
+    },
+    "X_Value": {
+      "label": "X Value",
+      "description": "The measured value along the X axis.",
+      "writable": false,
+      "type": "number"
+    },
+    "Y_Value": {
+      "label": "Y Value",
+      "description": "The measured value along the Y axis.",
+      "writable": false,
+      "type": "number"
+    },
+    "Z_Value": {
+      "label": "Z Value",
+      "description": "The measured value along the Z axis.",
+      "writable": false,
+      "type": "number"
+    },
+    "Application_Type": {
+      "label": "Application Type",
+      "description": "The application type of the sensor or actuator as a string depending on the use case.",
+      "type": "string"
+    }
+  },
+  "sdfAction": {}
+}
