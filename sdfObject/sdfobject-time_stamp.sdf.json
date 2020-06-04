@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "time.stamp": {
-      "name": "time.stamp",
       "description": "This Resource describes Properties associated with a timestamp. The \"timestamp\" Property is a string that captures a timestamp using the RFC3339 datetime format (e. g: 2007-04-05T14:30Z) (Time+Date+Timezone).",
       "sdfProperty": {
         "timestamp": {

@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "clock": {
-      "name": "clock",
       "description": "This Resource describes the properties associated with clock and time. Clock is a time information. The Property \"datetime\" is using RFC3339 datetime format (e. g: \"2007-04-05T14:30Z\") (Time+Date+Timezone) The Property \"countdown\" is the desired total seconds for countdown.",
       "sdfProperty": {
         "countdown": {

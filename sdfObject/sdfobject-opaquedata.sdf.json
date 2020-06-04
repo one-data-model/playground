@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "opaquedata": {
-      "name": "opaquedata",
       "description": "This Resource defines opaque data that can be transfered between endpoints where the data itself is not interpretable by the OCF endpoints. The stringdata is a string of ASCII characters.",
       "sdfProperty": {
         "payload": {

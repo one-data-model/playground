@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "circuitbreaker": {
-      "name": "circuitbreaker",
       "description": "This Resource describes functions for the control and monitoring of IEC 61850 based circuit breaker.",
       "sdfProperty": {
         "status": {

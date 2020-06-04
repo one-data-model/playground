@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "body.location.temperature": {
-      "name": "body.location.temperature",
       "description": "This Resource describes the Properties associated with body location for temperature measurement of a person. The bloc Property is a read-only value that is provided by the Server.",
       "sdfProperty": {
         "bloc": {

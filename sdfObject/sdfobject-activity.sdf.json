@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "activity": {
-      "name": "activity",
       "description": "This Resource describes the Properties associated with a person's physical activity. All Properties are read-only values that are provided by the server. When range (from \"oic. r. baseresource\") is omitted the default is 0 to +MAXFLOAT.",
       "sdfProperty": {
         "activity": {

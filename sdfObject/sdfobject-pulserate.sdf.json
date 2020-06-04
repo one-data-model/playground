@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "pulserate": {
-      "name": "pulserate",
       "description": "This Resource describes the Properties associated with a person's pulse rate. The unit, which is the default unit, is bpm. The pulserate and unit Properties are read-only values that are provided by the Server. When range is omitted the default is 0 to +MAXFLOAT.",
       "sdfProperty": {
         "pulserate": {

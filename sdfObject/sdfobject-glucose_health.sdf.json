@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "glucose.health": {
-      "name": "glucose.health",
       "description": "This Resource describes the Properties associated with context health. The health Property is a read-only value that is provided by the Server where minor and major are related to the general health or the level of illness of the person; menses refers to the female menstrual cycle; stress refers to physiological or psychological stress.",
       "sdfProperty": {
         "health": {

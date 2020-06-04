@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "automaticdocumentfeeder": {
-      "name": "automaticdocumentfeeder",
       "description": "This Resource describes the state of an automatic document feeder, typically used with a scanner. The Property \"adfstates\" and \"currentAdfState\" are read only. The Property \"adfStates\" is an array of the possible operational states. The Property \"adfProcessing\" is the OK state, other states are errors or require 'user attention'. The currentAdfState is the current value of the ADF state on the device.",
       "sdfProperty": {
         "adfStates": {

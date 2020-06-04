@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "glucose.hba1c": {
-      "name": "glucose.hba1c",
       "description": "This Resource describes the Properties associated with a person's hba1c level. The unit is a single value that is percentage. The hba1c Property is a read-only value that is provided by the Server.",
       "sdfProperty": {
         "hba1c": {

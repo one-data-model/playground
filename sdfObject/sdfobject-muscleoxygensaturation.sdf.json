@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "muscleoxygensaturation": {
-      "name": "muscleoxygensaturation",
       "description": "This Resource describes the muscle oxygen saturation (SmO2), which is the percentage of hemoglobin that is saturated with oxygen in the capillaries of a muscle. The unit is percentage. The smo2 Property is a read-only value that is provided by the server.",
       "sdfProperty": {
         "muscleoxygensaturation": {

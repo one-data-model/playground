@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "colour.colourtemperature": {
-      "name": "colour.colourtemperature",
       "description": "This Resource describes the colour using colour temperature conventions. The Property \"ct\" is the Mired colour temperature. The equivalent value in Kelvin is obtained by Colour Temp(K) = 1,000,000/Colour Temp(Mired) THe Resource provides the colour using colour temperature conventions.",
       "sdfProperty": {
         "ct": {

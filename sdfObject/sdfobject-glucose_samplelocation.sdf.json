@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "glucose.samplelocation": {
-      "name": "glucose.samplelocation",
       "description": "This Resource describes the Properties associated with context sample Location. AST means Alternative Site Test specifying that the location of test performed was from an alternative site on the body. The samplelocation Property is a read-only value that is provided by the Server.",
       "sdfProperty": {
         "samplelocation": {

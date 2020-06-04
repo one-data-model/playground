@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "colour.csc": {
-      "name": "colour.csc",
       "description": "This Resource describes the colour using colour space co-ordinates. The Property \"csc\" is the colour space coordinates in CIE colour space. The first item in the array is the X coordinate. The second item in the array is the Y coordinate. If the Property \"precision\" is provided it applies to both the X and Y coordinates. The Resource provides the colour using colour space coordinates.",
       "sdfProperty": {
         "csc": {

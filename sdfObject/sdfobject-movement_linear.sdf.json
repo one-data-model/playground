@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "movement.linear": {
-      "name": "movement.linear",
       "description": "This Resource specifies linear movement. The Property \"movementSettings\" is an array of strings containing possible movement values (e. g. spin, stop, left, right). The Property \"movement\" is the currently selected movement value. The Property \"movementModifier\" is a modifier to the movement value (e. g. \"spin\", \"90\")",
       "sdfProperty": {
         "movementSettings": {

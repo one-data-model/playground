@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "glucose.tester": {
-      "name": "glucose.tester",
       "description": "This Resource describes the Properties associated with context tester. The tester Property is a read-only value that is provided by the Server where especially hcp stands for HealthCare Professional.",
       "sdfProperty": {
         "tester": {

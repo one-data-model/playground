@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "energy.overload": {
-      "name": "energy.overload",
       "description": "This Resource describes whether an energy overload detector/circuit breaker is currently tripped. The Property \"value\" is a boolean. A value of 'true' means that energy overload has been tripped. A value of 'false' means that energy overload has not been tripped.",
       "sdfProperty": {
         "value": {

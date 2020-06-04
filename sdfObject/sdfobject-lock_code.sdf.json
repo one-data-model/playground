@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "lock.code": {
-      "name": "lock.code",
       "description": "The Resource describing a lock code. The Property \"lockCodeList\" is an array of possible codes that may be associated with a lock. The codes are all presented as strings.",
       "sdfProperty": {
         "lockCodeList": {

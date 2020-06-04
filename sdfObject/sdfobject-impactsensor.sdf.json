@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "impactsensor": {
-      "name": "impactsensor",
       "description": "This Resource provides a status and properties of an impact sensor. Included is the current status (boolean), horizontal and vertical direction (in degrees) and impact level (g force).",
       "sdfProperty": {
         "impactstatus": {

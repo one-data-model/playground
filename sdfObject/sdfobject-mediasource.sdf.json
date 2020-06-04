@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "mediasource": {
-      "name": "mediasource",
       "description": "This Resource defines a single media source that exists on a device. The source can be an input source or output source, this resource is agnostic of that. The Property \"sourceName\" specifies a pre-defined media input or output (e. g. \"HDMI\", \"DVI\"). The Property \"sourceNumber\" is a label to specify the instance (e. g. \"PC\", \"1\"). The Property \"sourceType\" is an enumeration defining whether the source is audio, video or both. The Property \"status\" is a boolean that determines if the specific source instance is selected or not. A status of true means that the source instance is selected. A status of false means that the source instance is not selected.",
       "sdfProperty": {
         "status": {

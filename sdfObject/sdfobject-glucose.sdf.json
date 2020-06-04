@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "glucose": {
-      "name": "glucose",
       "description": "This Resource describes the Properties associated with a person's glucose level. The unit is a single value that is one of mg/dL, mmol/L. If the unit Property is missing the default is milligrams per decilitre [mg/dL]. The glucose and unit Properties are read-only values that are provided by the Server. When range is omitted the default is 0 to +MAXFLOAT.",
       "sdfProperty": {
         "glucose": {

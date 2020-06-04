@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "sensor.touch": {
-      "name": "sensor.touch",
       "description": "This Resource describes whether a touch has been sensed or not. The Property \"value\" is a boolean. A value of 'true' means that touch has been sensed. A value of 'false' means that touch not been sensed.",
       "sdfProperty": {
         "value": {

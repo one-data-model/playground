@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "switch.binary": {
-      "name": "switch.binary",
       "description": "This Resource describes a binary switch (on/off). The Property \"value\" is a boolean. A value of 'true' means that the switch is on. A value of 'false' means that the switch is off.",
       "sdfProperty": {
         "value": {

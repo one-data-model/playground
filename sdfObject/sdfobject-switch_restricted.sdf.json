@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "switch.restricted": {
-      "name": "switch.restricted",
       "description": "This Resource describes a switch(on/off) restricting UPDATE for 'on'. The Property \"state\" is a Boolean. A state of True means that the switch is turned on. A state of False means that the switch is turned off.",
       "sdfProperty": {
         "state": {

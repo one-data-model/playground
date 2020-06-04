@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "blood.pressure": {
-      "name": "blood.pressure",
       "description": "This Resource describes the Properties associated with a person's blood pressure. The unit is a single value that is one of mmHg or kPa. If the unit Property is missing the default is a millimeter of mercury [mmHg]. The bloodpressure and unit Properties are read-only values that are provided by the Server. When range is omitted the default is 0 to +MAXFLOAT.",
       "sdfProperty": {
         "map": {

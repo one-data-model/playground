@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "sensor.motion": {
-      "name": "sensor.motion",
       "description": "This Resource describes whether motion has been sensed or not. The Property \"value\" is a boolean. A value of 'true' means that motion has been sensed. A value of 'false' means that motion not been sensed.",
       "sdfProperty": {
         "value": {

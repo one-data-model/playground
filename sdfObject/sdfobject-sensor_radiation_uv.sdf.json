@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "sensor.radiation.uv": {
-      "name": "sensor.radiation.uv",
       "description": "This Resource specifies UV radiation measurement. The Property \"measurement\" is the current measured UV Index",
       "sdfProperty": {
         "measurement": {

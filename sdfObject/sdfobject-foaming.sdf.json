@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "foaming": {
-      "name": "foaming",
       "description": "This Resource describes the attributes associated with foaming. The Property \"foamstrength\" of the liquid is represented as an integer. The foam strength is an integer, the range of which may be enforced by the presence of the Property \"range\".",
       "sdfProperty": {
         "foamstrength": {

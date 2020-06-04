@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "colour.hs": {
-      "name": "colour.hs",
       "description": "This Resource describes the colour using hue-saturation conventions. The Property \"hue\" is the hue angle, it is a number value as defined by the CIECAM02 model definition (see reference [CIE CIE159:2004]). A Device that does not support fractional hue angles can provide integer values. If Property \"precision\" is provided it applies to the hue angle. The Property \"saturation\" is an integer value as defined by the CIECAM02 model definition (see reference [CIE CIE159:2004]). The Property \"saturation\" can be converted to a percentage by saturation/maximumsaturation X 100; where maximumsaturation is 32767 if the Property itself is not present. The Property \"maximumsaturation\" is the upper bound on the saturation supported by the Device. If not present the maximum value for saturation is 32767. The Resource provides the colour using hue and saturation conventions.",
       "sdfProperty": {
         "hue": {

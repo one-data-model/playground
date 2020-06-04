@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "liquid.level": {
-      "name": "liquid.level",
       "description": "This Resource describes the attributes associated with liquid level. The Property \"currentlevel\" and \"desiredlevel\" are defined in terms of a percentage. The behaviour of when the currentlevel and desiredlevel are not equal is determined by the device manufacturer.",
       "sdfProperty": {
         "currentlevel": {

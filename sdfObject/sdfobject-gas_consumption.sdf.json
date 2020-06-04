@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "gas.consumption": {
-      "name": "gas.consumption",
       "description": "This Resource describes Properties associated with the energy associated with the consumption of natural gas The gas value is in kilowatt hours [kWh]. The volume value is in metres cubed [m3]. Provides the cumulative gas energy, the cumulative gas volume and the calorific value and conversion factor used/required to convert from gas volume (m3[TB1]) to gas energy (KWh).",
       "sdfProperty": {
         "gas": {

@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "energy.drlc": {
-      "name": "energy.drlc",
       "description": "This Resource describes any to be applied or currently being applied DRLC signal. The Property \"DRType\" is the ApplianceLoadReductionType defined in Zigbee/HA Smart Energy Profile 2. 0. The Property \"start\" is a string containing an RFC3339 encoded start time. The Property \"duration\" value is in minutes. The Property \"Override\" indicates whether the consumer has overridden the request (true) or not (false). The Resource provides the current DRLC action that is being applied. A duration of 0 (zero) means that no DRLC is currently active.",
       "sdfProperty": {
         "start": {

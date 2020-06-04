@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "powersource": {
-      "name": "powersource",
       "description": "This Resource list the available power sources for the Device. The Property \"powersources\" is a list that is read only and is informative only. If there is more than 1 power source active, use multiple Resources to indicate the active power sources. If the power source is unknown use the value \"unknown\".",
       "sdfProperty": {
         "powersources": {

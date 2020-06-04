@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "light.brightness": {
-      "name": "light.brightness",
       "description": "This Resource describes the brightness of a light or lamp. The Property \"brightness\" is an integer showing the current brightness level as a quantized representation in the range 0-100. A brightness of 0 is the minimum for the resource. A brightness of 100 is the maximum for the resource.",
       "sdfProperty": {
         "brightness": {

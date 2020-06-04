@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "sensor.presence": {
-      "name": "sensor.presence",
       "description": "This Resource describes whether presence has been sensed or not. The Property \"value\" is a boolean. A value of 'true' means that presence has been sensed. A value of 'false' means that presence not been sensed.",
       "sdfProperty": {
         "value": {

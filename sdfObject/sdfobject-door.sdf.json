@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "door": {
-      "name": "door",
       "description": "This Resource describes the open state of the door. A door is modelled by means of openState (Open/Closed), openDuration (ISO 8601 Time), and openAlarm (boolean). For Property \"openState\", the value 'Open' indicates the door is open. The value 'Closed' indicates the door is closed. The type of Property \"openDuration\" is an RFC Time encoded string. The Property \"openAlarm\" value 'true' indicates that the open alarm is active. The openAlarm value 'false' indicates that open alarm is not active. retrieves the state of the Door.",
       "sdfProperty": {
         "openDuration": {

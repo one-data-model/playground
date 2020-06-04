@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "cgm.samplinginterval": {
-      "name": "cgm.samplinginterval",
       "description": "This Resource describes the Properties associated with Sampling Interval for Continuous Glucose Meter (CGM).",
       "sdfProperty": {
         "interval": {

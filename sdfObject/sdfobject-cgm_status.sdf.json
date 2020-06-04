@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "cgm.status": {
-      "name": "cgm.status",
       "description": "This Resource describes the Properties associated with Status for Continuous Glucose Meter (CGM).",
       "sdfProperty": {
         "cgmtype": {

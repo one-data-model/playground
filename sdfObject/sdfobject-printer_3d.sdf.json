@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "printer.3d": {
-      "name": "printer.3d",
       "description": "This Resource describes the attributes associated with 3D Printer. The type of 3D printing technology is specified by an enumerated string value. The maximum sizes in mm are included for the x, y, and z dimensions. A designation of whether the device is capable of WAN connectivity is represented in a boolean. The memory capacity is captured in MB.",
       "sdfProperty": {
         "printsizey": {

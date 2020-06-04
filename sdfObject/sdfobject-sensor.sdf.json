@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "sensor": {
-      "name": "sensor",
       "description": "This Resource describes whether some value or property or entity has been sensed or not. The Property \"value\" is a boolean. A value of 'true' means that the target has been sensed. A value of 'false' means that the target has not been sensed.",
       "sdfProperty": {
         "value": {

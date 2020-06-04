@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "airquality": {
-      "name": "airquality",
       "description": "This Resource describes a qualitative or measured contaminant that can be used to infer Air Quality. The Property \"valueType\" indicates a qualitative or measured reading within the contaminantvalue Property. The Property \"contaminantvalue\" can contain the actual sensed value with units per contaminant type. Qualitative is a representative value within the range provided where the minimum value is minimum contamination and maximum value is maximum contamination for the specific contaminant. The Property \"contaminantvalue\" contains the actual measured or qualitative level. The Property \"range\" contains the allowed range for the value that is being reported. If valueType is 'Measured' then the units for the contaminant types are as follows: Methanol (also known as Formaldehyde): CH2O (ug/m^3), Carbon Dioxide: CO2 (ppm), Carbon Monoxide: CO (ppm), Particulate Matter (less than 1 micron in diameter): PM1 (ug/m^3), Particulate Matter (less than 2. 5 microns in diameter): PM2. 5 (ug/m^3), Particulate Matter (less than 10 microns in diameter): PM10 (ug/m^3), Volatile Organic Compounds: VOC (ug/m^3).",
       "sdfProperty": {
         "contaminanttype": {

@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "sensor.carbondioxide": {
-      "name": "sensor.carbondioxide",
       "description": "This Resource describes whether carbon dioxide has been sensed or not. The Property \"value\" is a boolean. A value of 'true' means that carbon dioxide has been detected. A value of 'false' means that carbon dioxide has not been detected.",
       "sdfProperty": {
         "value": {

@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "energy.generation": {
-      "name": "energy.generation",
       "description": "This Resource describes the attributes associated with energy generation The Property \"energygenerated\" is a number that provides the energy generated in Watt-hour(Wh).",
       "sdfProperty": {
         "energygenerated": {

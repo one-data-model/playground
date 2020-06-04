@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "batterymaterial": {
-      "name": "batterymaterial",
       "description": "This Resource describes the battery material represented as an enumerated set of strings.",
       "sdfProperty": {
         "material": {

@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "grinder": {
-      "name": "grinder",
       "description": "This Resource describes the attributes associated with a grinder. The Property \"coarseness\" of the grounds is an integer. The higher the value, the less coarse. The Property \"remaining\" is a percentage that represents the unground material left.",
       "sdfProperty": {
         "coarseness": {

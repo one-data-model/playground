@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "sensor.magneticfielddirection": {
-      "name": "sensor.magneticfielddirection",
       "description": "This Resource describes the direction of the Earth's magnetic field at the observer's current point in space. Typical use case includes measurement of compass readings on a personal device. The Property \"value\" is an array containing Hx, Hy, Hz (in that order) each of which are floats. Each of Hx, Hy and Hz are expressed in A/m (Amperes per metre).",
       "sdfProperty": {
         "value": {

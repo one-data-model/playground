@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "glucose.medication": {
-      "name": "glucose.medication",
       "description": "This Resource describes the Properties associated with context medication. The unit is a single value that is one of mg and mL. The medication Property has a default unit of milligrams[mg]. The medication, unit and regimen Properties are read-only values that are provided by the Server. When range is omitted the default is 0 to +MAXFLOAT.",
       "sdfProperty": {
         "regimen": {

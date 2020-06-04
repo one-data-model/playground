@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "ecomode": {
-      "name": "ecomode",
       "description": "This Resource specifies the supported and currently active Eco Mode of a Device The Resource is a deriviative of the Mode Resource (oic. r. mode) with a restriction that the population of supportedmodes and modes Properties is restricted to the set of values: \"disabled\",\"enabled\",\"notsupported\". The adminforced Property indicates that the value has been set by another party (e. g. via some offboard Smart Energy interaction)",
       "sdfProperty": {
         "modes": {

@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "pvconnectionterminal": {
-      "name": "pvconnectionterminal",
       "description": "This Resource describes functions for the control and monitoring of IEC 61850 based PV Array system connection terminal.",
       "sdfProperty": {
         "ratedarrayvoltage": {

@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "glucose.meal": {
-      "name": "glucose.meal",
       "description": "This Resource describes the Properties associated with context meal. Preprandial means pre-meal. Postprandial means post-meal. Fasting means the effect of long-term absence of food intake (overnight). The meal Property is a read-only value that is provided by the Server.",
       "sdfProperty": {
         "meal": {

@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "altimeter": {
-      "name": "altimeter",
       "description": "This Resource describes the properties associated with altimeter. The Property \"alt\" is the distance (metres) above or below 'local' sea-level.",
       "sdfProperty": {
         "alt": {

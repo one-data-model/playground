@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "glucose.exercise": {
-      "name": "glucose.exercise",
       "description": "This Resource describes the Properties associated with glucose exercise. The exercise Property has a default unit of percentage. The exercise Property is a read-only value that is provided by the Server.",
       "sdfProperty": {
         "exercise": {

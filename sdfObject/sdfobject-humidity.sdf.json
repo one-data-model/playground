@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "humidity": {
-      "name": "humidity",
       "description": "This Resource describes a sensed or desired humidity. The Property \"humidity\" is an integer describing the percentage measured relative humidity. The Property \"desiredHumidity\" is an integer showing the desired target relative humidity.",
       "sdfProperty": {
         "desiredHumidity": {

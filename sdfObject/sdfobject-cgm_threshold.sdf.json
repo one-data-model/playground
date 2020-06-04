@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "cgm.threshold": {
-      "name": "cgm.threshold",
       "description": "This Resource describes the Properties associated with Threshold for Continuous Glucose Meter (CGM).",
       "sdfProperty": {
         "plow": {

@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "sensor.acceleration": {
-      "name": "sensor.acceleration",
       "description": "This Resource provides a measure of proper acceleration (g force) as opposed to co-ordinate acceleration (which is dependent on the co-ordinate system and the observer). The Property \"value\" is a float which describes the acceleration experienced by the object in \"g\".",
       "sdfProperty": {
         "acceleration": {

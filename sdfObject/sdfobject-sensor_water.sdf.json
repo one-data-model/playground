@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "sensor.water": {
-      "name": "sensor.water",
       "description": "This Resource describes whether water has been sensed or not. The Property \"value\" is a boolean. A value of 'true' means that water has been sensed. A value of 'false' means that water not been sensed.",
       "sdfProperty": {
         "value": {

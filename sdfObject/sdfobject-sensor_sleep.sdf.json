@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "sensor.sleep": {
-      "name": "sensor.sleep",
       "description": "This Resource describes whether human sleep has been sensed or not. The Property \"value\" is a boolean. A value of 'true' means that sleep has been sensed. A value of 'false' means that sleep not been sensed.",
       "sdfProperty": {
         "value": {

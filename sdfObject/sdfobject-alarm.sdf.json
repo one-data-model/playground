@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "alarm": {
-      "name": "alarm",
       "description": "This Resource describes the Properties associated with alarm status.",
       "sdfProperty": {
         "status": {

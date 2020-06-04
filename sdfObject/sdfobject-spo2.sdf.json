@@ -7,7 +7,6 @@
   },
   "sdfObject": {
     "spo2": {
-      "name": "spo2",
       "description": "This Resource describes the Properties associated with a person's blood oxygen saturation level. The spo2 and perfusion Properties are read-only value that is provided by the server. When range (from \"oic. r. baseresource\") is omitted the default is 0 to +MAXFLOAT.",
       "sdfProperty": {
         "spo2": {
