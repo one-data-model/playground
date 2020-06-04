@@ -37,7 +37,7 @@
     "Clip": {
       "label": "Clip",
       "description": "Audio clip that is playable (e.g., a short audio recording indicating the floor in an elevator).",
-      "subtype": "bytestring"
+      "subtype": "byte-string"
     },
     "Level": {
       "label": "Level",

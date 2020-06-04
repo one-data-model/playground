@@ -46,7 +46,7 @@
     "Start_Time": {
       "label": "Start Time",
       "description": "Time when the event started.",
-      "subtype": "unixtime"
+      "subtype": "unix-time"
     },
     "Duration_In_Min": {
       "label": "Duration In Min",

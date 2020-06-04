@@ -30,7 +30,7 @@
     "Current_Time": {
       "label": "Current Time",
       "description": "Unix Time. A signed integer representing the number of seconds since Jan 1st, 1970 in the UTC time zone.",
-      "subtype": "unixtime"
+      "subtype": "unix-time"
     },
     "Fractional_Time": {
       "label": "Fractional Time",
