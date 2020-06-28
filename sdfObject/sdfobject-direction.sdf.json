@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Direction (Object ID 3332)",
-    "version": "2020-06-03",
+    "version": "2020-06-28",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -11,60 +11,41 @@
       "description": "This IPSO object is used to report the direction indicated by a compass, wind vane, or other directional indicator. The units of measure is plane angle degrees.",
       "sdfProperty": {
         "Compass_Direction": {
-          "sdfRef": "#/sdfProperty/Compass_Direction"
+          "label": "Compass Direction",
+          "description": "The measured compass direction.",
+          "writable": false,
+          "type": "number",
+          "units": "deg",
+          "minimum": 0,
+          "maximum": 360
         },
         "Min_Measured_Value": {
-          "sdfRef": "#/sdfProperty/Min_Measured_Value"
+          "label": "Min Measured Value",
+          "description": "The minimum value measured by the sensor since power ON or reset.",
+          "writable": false,
+          "type": "number"
         },
         "Max_Measured_Value": {
-          "sdfRef": "#/sdfProperty/Max_Measured_Value"
+          "label": "Max Measured Value",
+          "description": "The maximum value measured by the sensor since power ON or reset.",
+          "writable": false,
+          "type": "number"
         },
         "Application_Type": {
-          "sdfRef": "#/sdfProperty/Application_Type"
+          "label": "Application Type",
+          "description": "The application type of the sensor or actuator as a string depending on the use case.",
+          "type": "string"
         }
       },
       "sdfAction": {
         "Reset_Min_and_Max_Measured_Values": {
-          "sdfRef": "#/sdfAction/Reset_Min_and_Max_Measured_Values"
+          "label": "Reset Min and Max Measured Values",
+          "description": "Reset the Min and Max Measured Values to Current Value."
         }
       },
       "sdfRequired": [
         "#/sdfProperty/Compass_Direction"
       ]
-    }
-  },
-  "sdfProperty": {
-    "Compass_Direction": {
-      "label": "Compass Direction",
-      "description": "The measured compass direction.",
-      "writable": false,
-      "type": "number",
-      "units": "deg",
-      "minimum": 0,
-      "maximum": 360
-    },
-    "Min_Measured_Value": {
-      "label": "Min Measured Value",
-      "description": "The minimum value measured by the sensor since power ON or reset.",
-      "writable": false,
-      "type": "number"
-    },
-    "Max_Measured_Value": {
-      "label": "Max Measured Value",
-      "description": "The maximum value measured by the sensor since power ON or reset.",
-      "writable": false,
-      "type": "number"
-    },
-    "Application_Type": {
-      "label": "Application Type",
-      "description": "The application type of the sensor or actuator as a string depending on the use case.",
-      "type": "string"
-    }
-  },
-  "sdfAction": {
-    "Reset_Min_and_Max_Measured_Values": {
-      "label": "Reset Min and Max Measured Values",
-      "description": "Reset the Min and Max Measured Values to Current Value."
     }
   }
 }
