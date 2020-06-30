@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Illuminance (Object ID 3301)",
-    "version": "2020-06-03",
+    "version": "2020-06-28",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -11,76 +11,51 @@
       "description": "Illuminance sensor, example units = lx",
       "sdfProperty": {
         "Sensor_Value": {
-          "sdfRef": "#/sdfProperty/Sensor_Value"
+          "label": "Sensor Value",
+          "description": "Last or Current Measured Value from the Sensor.",
+          "writable": false,
+          "type": "number"
         },
         "Min_Measured_Value": {
-          "sdfRef": "#/sdfProperty/Min_Measured_Value"
+          "label": "Min Measured Value",
+          "description": "The minimum value measured by the sensor since power ON or reset.",
+          "writable": false,
+          "type": "number"
         },
         "Max_Measured_Value": {
-          "sdfRef": "#/sdfProperty/Max_Measured_Value"
+          "label": "Max Measured Value",
+          "description": "The maximum value measured by the sensor since power ON or reset.",
+          "writable": false,
+          "type": "number"
         },
         "Min_Range_Value": {
-          "sdfRef": "#/sdfProperty/Min_Range_Value"
+          "label": "Min Range Value",
+          "description": "The minimum value that can be measured by the sensor.",
+          "writable": false,
+          "type": "number"
         },
         "Max_Range_Value": {
-          "sdfRef": "#/sdfProperty/Max_Range_Value"
+          "label": "Max Range Value",
+          "description": "The maximum value that can be measured by the sensor.",
+          "writable": false,
+          "type": "number"
         },
         "Sensor_Units": {
-          "sdfRef": "#/sdfProperty/Sensor_Units"
+          "label": "Sensor Units",
+          "description": "Measurement Units Definition.",
+          "writable": false,
+          "type": "string"
         }
       },
       "sdfAction": {
         "Reset_Min_and_Max_Measured_Values": {
-          "sdfRef": "#/sdfAction/Reset_Min_and_Max_Measured_Values"
+          "label": "Reset Min and Max Measured Values",
+          "description": "Reset the Min and Max Measured Values to Current Value."
         }
       },
       "sdfRequired": [
         "#/sdfProperty/Sensor_Value"
       ]
-    }
-  },
-  "sdfProperty": {
-    "Sensor_Value": {
-      "label": "Sensor Value",
-      "description": "The current value of the luminosity sensor.",
-      "writable": false,
-      "type": "number"
-    },
-    "Min_Measured_Value": {
-      "label": "Min Measured Value",
-      "description": "The minimum value measured by the sensor since power ON or reset",
-      "writable": false,
-      "type": "number"
-    },
-    "Max_Measured_Value": {
-      "label": "Max Measured Value",
-      "description": "The maximum value measured by the sensor since power ON or reset",
-      "writable": false,
-      "type": "number"
-    },
-    "Min_Range_Value": {
-      "label": "Min Range Value",
-      "description": "The minimum value that can be measured by the sensor",
-      "writable": false,
-      "type": "number"
-    },
-    "Max_Range_Value": {
-      "label": "Max Range Value",
-      "description": "The maximum value that can be measured by the sensor",
-      "writable": false,
-      "type": "number"
-    },
-    "Sensor_Units": {
-      "label": "Sensor Units",
-      "description": "Measurement Units Definition.",
-      "writable": false,
-      "type": "string"
-    }
-  },
-  "sdfAction": {
-    "Reset_Min_and_Max_Measured_Values": {
-      "label": "Reset Min and Max Measured Values",
-      "description": "Reset the Min and Max Measured Values to Current Value"
     }
   }
 }

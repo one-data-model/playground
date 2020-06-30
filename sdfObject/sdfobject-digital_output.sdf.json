@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Digital Output (Object ID 3201)",
-    "version": "2020-06-03",
+    "version": "2020-06-28",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -11,13 +11,19 @@
       "description": "Generic digital output for non-specific actuators",
       "sdfProperty": {
         "Digital_Output_State": {
-          "sdfRef": "#/sdfProperty/Digital_Output_State"
+          "label": "Digital Output State",
+          "description": "The current state of a digital output.",
+          "type": "boolean"
         },
         "Digital_Output_Polarity": {
-          "sdfRef": "#/sdfProperty/Digital_Output_Polarity"
+          "label": "Digital Output Polarity",
+          "description": "The polarity of the digital output as a Boolean (False = Normal, True = Reversed).",
+          "type": "boolean"
         },
         "Application_Type": {
-          "sdfRef": "#/sdfProperty/Application_Type"
+          "label": "Application Type",
+          "description": "The application type of the sensor or actuator as a string depending on the use case.",
+          "type": "string"
         }
       },
       "sdfAction": {},
@@ -25,23 +31,5 @@
         "#/sdfProperty/Digital_Output_State"
       ]
     }
-  },
-  "sdfProperty": {
-    "Digital_Output_State": {
-      "label": "Digital Output State",
-      "description": "The current state of a digital output.",
-      "type": "boolean"
-    },
-    "Digital_Output_Polarity": {
-      "label": "Digital Output Polarity",
-      "description": "The polarity of the digital output as a Boolean (False = Normal, True = Reversed).",
-      "type": "boolean"
-    },
-    "Application_Type": {
-      "label": "Application Type",
-      "description": "The application type of the sensor or actuator as a string depending on the use case.",
-      "type": "string"
-    }
-  },
-  "sdfAction": {}
+  }
 }
