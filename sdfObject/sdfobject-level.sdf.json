@@ -270,7 +270,7 @@
         },
         "StartUpLevelData": {
           "description": "Options for setting the level value on startup",
-          "oneOf": [
+          "anyOf": [
             {
               "type": "number",
               "const": 0,
