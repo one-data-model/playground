@@ -79,10 +79,13 @@
         }, 
         "OnWithTimedOff": {
           "label": "OnWithTimedOff", 
+          "sdfInputData": "#/sdfObject/OnOff/sdfAction/OnWithTimedOff/sdfData/OnOffControl",
           "sdfData": {
             "OnOffControl": {
-              "type": "object",
-              "properties" : {
+              "description": "implemented as a bitmap, modeled as an array with unique items",
+              "type": "array",
+              "uniqueItems": true,
+              "items" : {
                 "AcceptOnlyWhenOn": {
                   "type": "boolean"
                 }

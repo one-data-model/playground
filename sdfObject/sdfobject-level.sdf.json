@@ -26,7 +26,7 @@
       "sdfProperty": {
         "CurrentLevel": {
           "label": "CurrentLevel", 
-          "$ref": "#/sdfObject/Level/sdfData/LevelData"
+          "sdfRef": "#/sdfObject/Level/sdfData/LevelData"
         }, 
         "RemainingTime": {
           "sdfRef": "#/sdfObject/Level/sdfData/TransitionTimeData", 
@@ -35,23 +35,23 @@
         },
         "MinLevel": {
           "label": "MinLevel", 
-          "$ref": "#/sdfObject/Level/sdfData/LevelData"
+          "sdfRef": "#/sdfObject/Level/sdfData/LevelData"
         },
         "MaxLevel": {
           "label": "MaxLevel", 
-          "$ref": "#/sdfObject/Level/sdfData/LevelData"
+          "sdfRef": "#/sdfObject/Level/sdfData/LevelData"
         },
         "CurrentFrequency": {
           "label": "CurrentFrequency", 
-          "$ref": "#/sdfObject/Level/sdfData/FrequencyData"
+          "sdfRef": "#/sdfObject/Level/sdfData/FrequencyData"
         },
         "MinFrequency": {
           "label": "CurrentFrequency", 
-          "$ref": "#/sdfObject/Level/sdfData/FrequencyData"
+          "sdfRef": "#/sdfObject/Level/sdfData/FrequencyData"
         },
         "MaxFrequency": {
           "label": "CurrentFrequency", 
-          "$ref": "#/sdfObject/Level/sdfData/FrequencyData"
+          "sdfRef": "#/sdfObject/Level/sdfData/FrequencyData"
         },
         "OnOffTransitionTime": {
           "sdfRef": "#/sdfObject/Level/sdfData/TransitionTimeData", 
@@ -135,7 +135,7 @@
           "sdfData": {
             "MoveMode": {
               "label": "MoveMode", 
-              "$ref": "#/sdfObject/Level/sdfData/MoveStepMode"
+              "sdfRef": "#/sdfObject/Level/sdfData/MoveStepMode"
             }, 
             "Rate": {
               "label": "Rate", 
@@ -168,7 +168,7 @@
           "sdfData": {
             "StepMode": {
               "label": "Step mode", 
-              "$ref": "#/sdfObject/Level/sdfData/MoveStepMode"
+              "sdfRef": "#/sdfObject/Level/sdfData/MoveStepMode"
             }, 
             "StepSize": {
               "label": "Step size", 
@@ -257,7 +257,7 @@
         "LevelOptions": {
           "description": "implemented as a bitmap, modeled as an array with unique items",
           "type": "array",
-          "uniqueitems": true,
+          "uniqueItems": true,
           "items": {
             "type": "string",
             "enum": ["ExecuteIfOff", "CoupleColorTempToLevel"]
