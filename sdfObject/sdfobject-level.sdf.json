@@ -82,10 +82,7 @@
         "Options": {
           "label": "Options",
           "sdfRef": "#/sdfObject/Level/sdfData/LevelOptions",
-          "default": {
-            "ExecuteIfOff": false,
-            "CoupleColorTempToLevel": false
-          }
+          "default": []
         },
         "StartUpCurrentLevel": {
           "label": "StartUpCurrentLevel", 
