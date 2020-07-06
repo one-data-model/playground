@@ -8,7 +8,7 @@
   "namespace": {
     "pg": "https://onedm.org/playground/#"
   }, 
-  "defaultnamespace": "pg", 
+  "defaultNamespace": "pg", 
   "sdfObject": {
     "OnOff": {
       "label": "OnOff", 
@@ -79,16 +79,17 @@
         }, 
         "OnWithTimedOff": {
           "label": "OnWithTimedOff", 
-          "sdfInputData": "#/sdfObject/OnOff/sdfAction/OnWithTimedOff/sdfData/OnOffControl",
+          "sdfInputData": [
+            "#/sdfObject/OnOff/sdfAction/OnWithTimedOff/sdfData/OnOffControl"
+          ],
           "sdfData": {
             "OnOffControl": {
               "description": "implemented as a bitmap, modeled as an array with unique items",
               "type": "array",
               "uniqueItems": true,
               "items" : {
-                "AcceptOnlyWhenOn": {
-                  "type": "boolean"
-                }
+                "type": "boolean",
+                "description": "Accept Only When On"
               }
             }
           }
