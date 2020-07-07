@@ -86,7 +86,15 @@
         },
         "StartUpCurrentLevel": {
           "label": "StartUpCurrentLevel", 
-          "sdfRef": "#/sdfObject/Level/sdfData/StartUpLevelData"
+          "type": "number",
+          "minimum": 1,
+          "maximum": 254
+        },
+        "StartUpCurrentLevelSpecialValues": {
+          "label": "StartUpCurrentLevelSpecialValues",
+          "description": "0==MinimumDeviceValuePermitted, 255==SetToPreviousValue",
+          "type": "number",
+          "enum": [0,255]
         }
       },
       "sdfAction": {
@@ -264,30 +272,6 @@
           "type": "number",
           "minimum": 0,
           "maximum": 65535
-        },
-        "StartUpLevelData": {
-          "description": "Options for setting the level value on startup",
-          "anyOf": [
-            {
-              "type": "number",
-              "const": 0,
-              "label": "MinimumDeviceValuePermitted",
-              "description": "Set to Minimum Device Value Permitted"
-            },
-            {
-              "type": "number", 
-              "minimum": 1, 
-              "maximum": 254,
-              "label": "PresetValue",
-              "description": "Preset Value to set on StartUp"
-            },
-            {
-              "type": "number",
-              "const": 255,
-              "label": "SetToPreviousValue",
-              "description": "Set To Previous Value On Startup"
-            }
-          ]
         }
       }
     }
