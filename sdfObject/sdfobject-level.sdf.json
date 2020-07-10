@@ -1,8 +1,8 @@
 {
   "info": {
     "title": "Example SDF model for the ZCL Level cluster", 
-    "version": "20200706", 
-    "copyright": "Copyright 2020 Michael J. Koster", 
+    "version": "2020-07-06", 
+    "copyright": "Copyright (c) 2019, Zigbee Alliance All rights reserved.", 
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   }, 
   "namespace": {
@@ -92,9 +92,11 @@
         },
         "StartUpCurrentLevelSpecialValues": {
           "label": "StartUpCurrentLevelSpecialValues",
-          "description": "0==MinimumDeviceValuePermitted, 255==SetToPreviousValue",
           "type": "number",
-          "enum": [0,255]
+          "enum": [
+            { "MinimumDeviceValuePermitted": 0 },
+            { "SetToPreviousValue": 255 }
+          ]
         }
       },
       "sdfAction": {
@@ -252,7 +254,10 @@
         },
         "MoveStepMode": {
           "type": "number",
-          "enum": [0,1]
+          "enum": [
+            { "Up": 0 },
+            { "Down": 1 }
+          ]
         },
         "LevelData": {
           "type": "number", 

@@ -1,8 +1,8 @@
 {
   "info": {
     "title": "Example SDF model for the ZCL OnOff cluster", 
-    "version": "20200706", 
-    "copyright": "Copyright 2020 Michael J. Koster", 
+    "version": "2020-07-06", 
+    "copyright": "Copyright (c) 2019, Zigbee Alliance All rights reserved.", 
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   }, 
   "namespace": {
@@ -66,7 +66,10 @@
             "EffectIdentifier": {
               "label": "EffectIdentifier", 
               "type": "number",
-              "enum": [0,1]
+              "enum": [
+                { "DelayedAllOff": 0 },
+                { "DyingLight": 1 }
+              ]
             }, 
             "EffectVariant": {
               "label": "EffectVariant", 
@@ -104,7 +107,12 @@
         },
         "StartUpOnOffMode": {
           "type": "number",
-          "enum": [0,1,2,255]
+          "enum": [
+            { "SetOnOffTo0": 0 },
+            { "SetOnOffTo1": 1 },
+            { "TogglePreviousOnOff": 2 },
+            { "SetPreviousOnOff": 255 }
+          ]
         }
       }
     }
