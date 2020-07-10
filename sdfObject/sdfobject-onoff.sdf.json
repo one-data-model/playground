@@ -67,8 +67,8 @@
               "label": "EffectIdentifier", 
               "type": "number",
               "enum": [
-                { "DelayedAllOff": 0 },
-                { "DyingLight": 1 }
+                "DelayedAllOff",
+                "DyingLight"
               ]
             }, 
             "EffectVariant": {
@@ -108,10 +108,10 @@
         "StartUpOnOffMode": {
           "type": "number",
           "enum": [
-            { "SetOnOffTo0": 0 },
-            { "SetOnOffTo1": 1 },
-            { "TogglePreviousOnOff": 2 },
-            { "SetPreviousOnOff": 255 }
+            "SetOnOffTo0",
+            "SetOnOffTo1",
+            "TogglePreviousOnOff",
+            "SetPreviousOnOff"
           ]
         }
       }

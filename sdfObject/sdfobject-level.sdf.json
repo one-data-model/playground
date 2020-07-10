@@ -94,8 +94,8 @@
           "label": "StartUpCurrentLevelSpecialValues",
           "type": "number",
           "enum": [
-            { "MinimumDeviceValuePermitted": 0 },
-            { "SetToPreviousValue": 255 }
+            "MinimumDeviceValuePermitted",
+            "SetToPreviousValue"
           ]
         }
       },
