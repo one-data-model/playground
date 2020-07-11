@@ -1,14 +1,14 @@
 {
   "info": {
     "title": "Example SDF model for the ZCL Level cluster", 
-    "version": "20200706", 
-    "copyright": "Copyright 2020 Michael J. Koster", 
+    "version": "2020-07-06", 
+    "copyright": "Copyright (c) 2019, Zigbee Alliance All rights reserved.", 
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   }, 
   "namespace": {
     "pg": "https://onedm.org/playground/#"
   }, 
-  "defaultnamespace": "pg",  
+  "defaultNamespace": "pg",  
   "sdfObject": {
     "Level": {
       "label": "Level", 
@@ -26,7 +26,7 @@
       "sdfProperty": {
         "CurrentLevel": {
           "label": "CurrentLevel", 
-          "$ref": "#/sdfObject/Level/sdfData/LevelData"
+          "sdfRef": "#/sdfObject/Level/sdfData/LevelData"
         }, 
         "RemainingTime": {
           "sdfRef": "#/sdfObject/Level/sdfData/TransitionTimeData", 
@@ -35,23 +35,23 @@
         },
         "MinLevel": {
           "label": "MinLevel", 
-          "$ref": "#/sdfObject/Level/sdfData/LevelData"
+          "sdfRef": "#/sdfObject/Level/sdfData/LevelData"
         },
         "MaxLevel": {
           "label": "MaxLevel", 
-          "$ref": "#/sdfObject/Level/sdfData/LevelData"
+          "sdfRef": "#/sdfObject/Level/sdfData/LevelData"
         },
         "CurrentFrequency": {
           "label": "CurrentFrequency", 
-          "$ref": "#/sdfObject/Level/sdfData/FrequencyData"
+          "sdfRef": "#/sdfObject/Level/sdfData/FrequencyData"
         },
         "MinFrequency": {
           "label": "CurrentFrequency", 
-          "$ref": "#/sdfObject/Level/sdfData/FrequencyData"
+          "sdfRef": "#/sdfObject/Level/sdfData/FrequencyData"
         },
         "MaxFrequency": {
           "label": "CurrentFrequency", 
-          "$ref": "#/sdfObject/Level/sdfData/FrequencyData"
+          "sdfRef": "#/sdfObject/Level/sdfData/FrequencyData"
         },
         "OnOffTransitionTime": {
           "sdfRef": "#/sdfObject/Level/sdfData/TransitionTimeData", 
@@ -82,14 +82,21 @@
         "Options": {
           "label": "Options",
           "sdfRef": "#/sdfObject/Level/sdfData/LevelOptions",
-          "default": {
-            "ExecuteIfOff": false,
-            "CoupleColorTempToLevel": false
-          }
+          "default": []
         },
         "StartUpCurrentLevel": {
           "label": "StartUpCurrentLevel", 
-          "sdfRef": "#/sdfObject/Level/sdfData/StartUpLevelData"
+          "type": "number",
+          "minimum": 1,
+          "maximum": 254
+        },
+        "StartUpCurrentLevelSpecialValues": {
+          "label": "StartUpCurrentLevelSpecialValues",
+          "type": "number",
+          "enum": [
+            "MinimumDeviceValuePermitted",
+            "SetToPreviousValue"
+          ]
         }
       },
       "sdfAction": {
@@ -135,7 +142,7 @@
           "sdfData": {
             "MoveMode": {
               "label": "MoveMode", 
-              "$ref": "#/sdfObject/Level/sdfData/MoveStepMode"
+              "sdfRef": "#/sdfObject/Level/sdfData/MoveStepMode"
             }, 
             "Rate": {
               "label": "Rate", 
@@ -168,7 +175,7 @@
           "sdfData": {
             "StepMode": {
               "label": "Step mode", 
-              "$ref": "#/sdfObject/Level/sdfData/MoveStepMode"
+              "sdfRef": "#/sdfObject/Level/sdfData/MoveStepMode"
             }, 
             "StepSize": {
               "label": "Step size", 
@@ -247,7 +254,10 @@
         },
         "MoveStepMode": {
           "type": "number",
-          "enum": [0,1]
+          "enum": [
+            "Up",
+            "Down"
+          ]
         },
         "LevelData": {
           "type": "number", 
@@ -257,7 +267,7 @@
         "LevelOptions": {
           "description": "implemented as a bitmap, modeled as an array with unique items",
           "type": "array",
-          "uniqueitems": true,
+          "uniqueItems": true,
           "items": {
             "type": "string",
             "enum": ["ExecuteIfOff", "CoupleColorTempToLevel"]
@@ -267,30 +277,6 @@
           "type": "number",
           "minimum": 0,
           "maximum": 65535
-        },
-        "StartUpLevelData": {
-          "description": "Options for setting the level value on startup",
-          "oneOf": [
-            {
-              "type": "number",
-              "const": 0,
-              "label": "MinimumDeviceValuePermitted",
-              "description": "Set to Minimum Device Value Permitted"
-            },
-            {
-              "type": "number", 
-              "minimum": 1, 
-              "maximum": 254,
-              "label": "PresetValue",
-              "description": "Preset Value to set on StartUp"
-            },
-            {
-              "type": "number",
-              "const": 255,
-              "label": "SetToPreviousValue",
-              "description": "Set To Previous Value On Startup"
-            }
-          ]
         }
       }
     }

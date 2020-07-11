@@ -1,14 +1,14 @@
 {
   "info": {
     "title": "Example SDF model for the ZCL OnOff cluster", 
-    "version": "20200706", 
-    "copyright": "Copyright 2020 Michael J. Koster", 
+    "version": "2020-07-06", 
+    "copyright": "Copyright (c) 2019, Zigbee Alliance All rights reserved.", 
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   }, 
   "namespace": {
     "pg": "https://onedm.org/playground/#"
   }, 
-  "defaultnamespace": "pg", 
+  "defaultNamespace": "pg", 
   "sdfObject": {
     "OnOff": {
       "label": "OnOff", 
@@ -66,7 +66,10 @@
             "EffectIdentifier": {
               "label": "EffectIdentifier", 
               "type": "number",
-              "enum": [0,1]
+              "enum": [
+                "DelayedAllOff",
+                "DyingLight"
+              ]
             }, 
             "EffectVariant": {
               "label": "EffectVariant", 
@@ -79,14 +82,26 @@
         }, 
         "OnWithTimedOff": {
           "label": "OnWithTimedOff", 
+          "sdfInputData": [
+            "#/sdfObject/OnOff/sdfAction/OnWithTimedOff/sdfData/OnOffControl",
+            "#/sdfObject/OnOff/sdfAction/OnWithTimedOff/sdfData/OnTime",
+            "#/sdfObject/OnOff/sdfAction/OnWithTimedOff/sdfData/OffWaitTIme"
+          ],
           "sdfData": {
             "OnOffControl": {
-              "type": "object",
-              "properties" : {
-                "AcceptOnlyWhenOn": {
-                  "type": "boolean"
-                }
+              "description": "implemented as a bitmap, modeled as an array of unique string items",
+              "type": "array",
+              "uniqueItems": true,
+              "items" : {
+                "type": "string",
+                "enum": [ "AcceptOnlyWhenOn" ]
               }
+            },
+            "OnTime": {
+              "sdfRef": "#/sdfData/TransitionTimeData"
+            }, 
+            "OffWaitTime": {
+              "sdfRef": "#/sdfData/TransitionTimeData"
             }
           }
         }
@@ -100,7 +115,12 @@
         },
         "StartUpOnOffMode": {
           "type": "number",
-          "enum": [0,1,2,255]
+          "enum": [
+            "SetOnOffTo0",
+            "SetOnOffTo1",
+            "TogglePreviousOnOff",
+            "SetPreviousOnOff"
+          ]
         }
       }
     }
