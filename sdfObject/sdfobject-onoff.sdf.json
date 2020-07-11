@@ -83,17 +83,27 @@
         "OnWithTimedOff": {
           "label": "OnWithTimedOff", 
           "sdfInputData": [
-            "#/sdfObject/OnOff/sdfAction/OnWithTimedOff/sdfData/OnOffControl"
+            "#/sdfObject/OnOff/sdfAction/OnWithTimedOff/sdfData/OnOffControl",
+            "#/sdfObject/OnOff/sdfAction/OnWithTimedOff/sdfData/OnTime",
+            "#/sdfObject/OnOff/sdfAction/OnWithTimedOff/sdfData/OffWaitTIme"
           ],
           "sdfData": {
             "OnOffControl": {
-              "description": "implemented as a bitmap, modeled as an array with unique items",
+              "description": "implemented as a bitmap, modeled as an array of boolean",
               "type": "array",
-              "uniqueItems": true,
-              "items" : {
-                "type": "boolean",
-                "description": "Accept Only When On"
-              }
+              "maxItems": 1,
+              "items" : [
+                {
+                  "type": "boolean",
+                  "description": "Accept Only When On"
+                }
+              ]
+            },
+            "OnTime": {
+              "sdfRef": "#/sdfData/TransitionTimeData"
+            }, 
+            "OffWaitTime": {
+              "sdfRef": "#/sdfData/TransitionTimeData"
             }
           }
         }
