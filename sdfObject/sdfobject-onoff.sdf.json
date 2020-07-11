@@ -89,15 +89,13 @@
           ],
           "sdfData": {
             "OnOffControl": {
-              "description": "implemented as a bitmap, modeled as an array of boolean",
+              "description": "implemented as a bitmap, modeled as an array of unique string items",
               "type": "array",
-              "maxItems": 1,
-              "items" : [
-                {
-                  "type": "boolean",
-                  "description": "Accept Only When On"
-                }
-              ]
+              "uniqueItems": true,
+              "items" : {
+                "type": "string",
+                "enum": [ "AcceptOnlyWhenOn" ]
+              }
             },
             "OnTime": {
               "sdfRef": "#/sdfData/TransitionTimeData"
