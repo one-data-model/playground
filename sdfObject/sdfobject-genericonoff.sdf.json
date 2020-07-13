@@ -38,7 +38,7 @@
           "description": "Set the On/Off server state with time and delay parameters",
           "sdfInputData": [
             "#/sdfObject/GenericOnOff/sdfAction/OnOffSet/sdfData/OnOff",
-            "#/sdfObject/GenericOnOff/sdfAction/OnOffSet/sdfData/TransitionTimesteps",
+            "#/sdfObject/GenericOnOff/sdfAction/OnOffSet/sdfData/TransitionTimeSteps",
             "#/sdfObject/GenericOnOff/sdfAction/OnOffSet/sdfData/StepResolution",
             "#/sdfObject/GenericOnOff/sdfAction/OnOffSet/sdfData/Delay"
           ],
