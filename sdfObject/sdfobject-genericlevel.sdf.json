@@ -38,7 +38,8 @@
           "description": "Set the level server state with time and delay parameters",
           "sdfInputData": [
             "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/Level",
-            "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/TransitionTime",
+            "#/sdfObject/GenericOnOff/sdfAction/LevelSet/sdfData/TransitionTimesteps",
+            "#/sdfObject/GenericOnOff/sdfAction/LevelSet/sdfData/StepResolution",
             "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/Delay"
           ],
           "sdfData": {
@@ -60,7 +61,8 @@
           "description": "Set the level server state with time and delay parameters",
           "sdfInputData": [
             "#/sdfObject/GenericLevel/sdfAction/DeltaSet/sdfData/DeltaLevel",
-            "#/sdfObject/GenericLevel/sdfAction/DeltaSet/sdfData/TransitionTime",
+            "#/sdfObject/GenericOnOff/sdfAction/LevelSet/sdfData/TransitionTimesteps",
+            "#/sdfObject/GenericOnOff/sdfAction/LevelSet/sdfData/StepResolution",
             "#/sdfObject/GenericLevel/sdfAction/DeltaSet/sdfData/Delay"
           ],
           "sdfData": {
@@ -85,8 +87,9 @@
           "description": "Set the level server state with time and delay parameters",
             "sdfInputData": [
               "#/sdfObject/GenericLevel/sdfAction/MoveSet/sdfData/DeltaLevel",
-              "#/sdfObject/GenericLevel/sdfAction/MoveSet/sdfData/TransitionTime",
-              "#/sdfObject/GenericLevel/sdfAction/MoveSet/sdfData/Delay"
+              "#/sdfObject/GenericOnOff/sdfAction/LevelSet/sdfData/TransitionTimesteps",
+              "#/sdfObject/GenericOnOff/sdfAction/LevelSet/sdfData/StepResolution",
+                "#/sdfObject/GenericLevel/sdfAction/MoveSet/sdfData/Delay"
             ],
             "sdfData": {
             "Level": {
