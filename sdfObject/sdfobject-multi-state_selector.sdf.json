@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Multi-state Selector (Object ID 3348)",
-    "version": "2020-06-28",
+    "version": "2020-07-13",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -24,7 +24,7 @@
       },
       "sdfAction": {},
       "sdfRequired": [
-        "#/sdfProperty/Multi-state_Input"
+        "#/sdfObject/Multi-state_Selector/sdfProperty/Multi-state_Input"
       ]
     }
   }

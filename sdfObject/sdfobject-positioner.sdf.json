@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Positioner (Object ID 3337)",
-    "version": "2020-06-28",
+    "version": "2020-07-13",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -68,7 +68,7 @@
         }
       },
       "sdfRequired": [
-        "#/sdfProperty/Current_Position"
+        "#/sdfObject/Positioner/sdfProperty/Current_Position"
       ]
     }
   }

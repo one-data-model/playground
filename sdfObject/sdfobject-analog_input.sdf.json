@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Analog Input (Object ID 3202)",
-    "version": "2020-06-28",
+    "version": "2020-07-13",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -59,7 +59,7 @@
         }
       },
       "sdfRequired": [
-        "#/sdfProperty/Analog_Input_Current_Value"
+        "#/sdfObject/Analog_Input/sdfProperty/Analog_Input_Current_Value"
       ]
     }
   }

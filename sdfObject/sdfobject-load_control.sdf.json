@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Load Control (Object ID 3310)",
-    "version": "2020-06-28",
+    "version": "2020-07-13",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -52,9 +52,9 @@
       },
       "sdfAction": {},
       "sdfRequired": [
-        "#/sdfProperty/Event_Identifier",
-        "#/sdfProperty/Start_Time",
-        "#/sdfProperty/Duration_In_Min"
+        "#/sdfObject/Load_Control/sdfProperty/Event_Identifier",
+        "#/sdfObject/Load_Control/sdfProperty/Start_Time",
+        "#/sdfObject/Load_Control/sdfProperty/Duration_In_Min"
       ]
     }
   }

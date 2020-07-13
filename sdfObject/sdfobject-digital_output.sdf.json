@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Digital Output (Object ID 3201)",
-    "version": "2020-06-28",
+    "version": "2020-07-13",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -28,7 +28,7 @@
       },
       "sdfAction": {},
       "sdfRequired": [
-        "#/sdfProperty/Digital_Output_State"
+        "#/sdfObject/Digital_Output/sdfProperty/Digital_Output_State"
       ]
     }
   }

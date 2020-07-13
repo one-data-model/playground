@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Dimmer (Object ID 3343)",
-    "version": "2020-06-28",
+    "version": "2020-07-13",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -38,7 +38,7 @@
       },
       "sdfAction": {},
       "sdfRequired": [
-        "#/sdfProperty/Level"
+        "#/sdfObject/Dimmer/sdfProperty/Level"
       ]
     }
   }
