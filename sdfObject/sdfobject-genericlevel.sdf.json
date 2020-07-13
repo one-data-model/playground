@@ -8,7 +8,7 @@
   "namespace": {
     "pg": "https://onedm.org/playground/"
   }, 
-  "defaultnamespace": "pg", 
+  "defaultNamespace": "pg", 
   "sdfObject": {
     "GenericLevel": {
       "sdfProperty": {
@@ -71,8 +71,6 @@
         },
         "MoveSet": {
           "description": "Set the level server state with time and delay parameters",
-          "DeltaSet": {
-            "description": "Set the level server state with time and delay parameters",
             "sdfInputData": [
               "#/sdfObject/GenericLevel/sdfAction/MoveSet/sdfData/DeltaLevel",
               "#/sdfObject/GenericLevel/sdfAction/MoveSet/sdfData/TransitionTime",

@@ -8,7 +8,7 @@
   "namespace": {
     "pg": "https://onedm.org/playground/"
   }, 
-  "defaultnamespace": "pg", 
+  "defaultNamespace": "pg", 
   "sdfObject": {
     "GenericDefaultTransitionTime": {
       "sdfProperty": {
