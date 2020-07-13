@@ -56,7 +56,7 @@
         "StepResolution": {
           "description": "Step Resolution, time per step",
           "enum": [
-            "100 mS", 
+            "100 Milliseconds", 
             "1 Second", 
             "10 Seconds", 
             "10 Minutes"
