@@ -1,8 +1,8 @@
 {
   "info": {
-    "title": "Example BT Mesh Generic Default Transition Time Model", 
+    "title": "Example Bluetooth mesh Generic Default Transition Time Model", 
     "version": "20200710", 
-    "copyright": "Copyright 2020 Michael J. Koster. All rights reserved.", 
+    "copyright": "Copyright Bluetooth SIG, Inc. All rights reserved.", 
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   }, 
   "namespace": {
@@ -16,27 +16,50 @@
           "sdfRef": "#/sdfObject/GenericDefaultTransitionTime/sdfData/TransitionTimeData"
         }
       },
-      "sdfData": {
-        "TransitionTimeData": {
-          "description": "Generic Transition Time Format",
-          "type": "array",
-          "items": [
-            {
-              "description": "Number of steps",
-              "type": "number",
-              "minimum": 0,
-              "maximum": 62,
-              "multipleOf": 1
+      "sdfAction": {
+        "DefaultTransitionTimeGet" : {
+          "description": "Get the default transition time",
+          "sdfInputData": [
+            "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/Level",
+            "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/TransitionTime",
+            "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/Delay"
+          ],
+          "sdfData": {
+            "TransitionTimeSteps": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeSteps"
             },
-            {
-              "description": "Step Resolution, use a mapping file for encoded values",
-              "enum": [
-                "100 mS", 
-                "1 Second", 
-                "10 Seconds", 
-                "10 Minutes"
-              ]
+            "StepResolution": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/StepResolution"
             }
+          }
+        },
+        "DefaultTransitionTimeSet" : {
+          "description": "Set the default transition time",
+          "sdfData": {
+            "TransitionTimeSteps": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeSteps"
+            },
+            "StepResolution": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/StepResolution"
+            }
+          }
+        }
+      },
+      "sdfData": {
+        "TransitionTimeSteps": {
+          "description": "Number of steps in the transition",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 63,
+          "multipleOf": 1
+        },
+        "StepResolution": {
+          "description": "Step Resolution, time per step",
+          "enum": [
+            "100 mS", 
+            "1 Second", 
+            "10 Seconds", 
+            "10 Minutes"
           ]
         }
       }

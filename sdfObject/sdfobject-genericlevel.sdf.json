@@ -1,8 +1,8 @@
 {
   "info": {
-    "title": "Example BT Mesh Generic Level Model", 
+    "title": "Example Bluetooth mesh Generic Level Model", 
     "version": "20200710", 
-    "copyright": "Copyright 2020 Michael J. Koster. All rights reserved.", 
+    "copyright": "Copyright 2020 Bluetooth SIG, Inc. All rights reserved.", 
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   }, 
   "namespace": {
@@ -26,8 +26,11 @@
             "TargetLevel": {
               "sdfRef": "#/sdfObject/GenericLevel/sdfData/GenericLevelData"
             },
-            "RemainingTime": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeData"
+            "RemainingTimeSteps": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeSteps"
+            },
+            "StepResolution": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/StepResolution"
             }
           }
         },
@@ -42,8 +45,11 @@
             "Level": {
                 "sdfRef": "#/sdfObject/GenericLevel/sdfData/GenericLevelData"
             },
-            "TransitionTime": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeData"
+            "TransitionTimeSteps": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeSteps"
+            },
+            "StepResolution": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/StepResolution"
             },
             "Delay": {
               "sdfRef": "#/sdfObject/GenericLevel/sdfData/DelayData"
@@ -59,10 +65,16 @@
           ],
           "sdfData": {
             "DeltaLevel": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/GenericLevelData"
+              "type": "number",
+              "minimum": -65535,
+              "maximum": 65535,
+              "multipleOf": 1
             },
-            "TransitionTime": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeData"
+            "TransitionTimeSteps": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeSteps"
+            },
+            "StepResolution": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/StepResolution"
             },
             "Delay": {
               "sdfRef": "#/sdfObject/GenericLevel/sdfData/DelayData"
@@ -80,8 +92,11 @@
             "Level": {
               "sdfRef": "#/sdfObject/GenericLevel/sdfData/GenericLevelData"
             },
-            "TransitionTime": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeData"
+            "TransitionTimeSteps": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeSteps"
+            },
+            "StepResolution": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/StepResolution"
             },
             "Delay": {
               "sdfRef": "#/sdfObject/GenericLevel/sdfData/DelayData"
@@ -97,26 +112,20 @@
           "maximum": 32767,
           "multipleOf": 1
         },
-        "TransitionTimeData": {
-          "description": "Generic Transition Time Format",
-          "type": "array",
-          "items": [
-            {
-              "description": "Number of steps",
-              "type": "number",
-              "minimum": 0,
-              "maximum": 62,
-              "multipleOf": 1
-            },
-            {
-              "description": "Step Resolution, use a mapping file for encoded values",
-              "enum": [
-                "100 mS", 
-                "1 Second", 
-                "10 Seconds", 
-                "10 Minutes"
-              ]
-            }
+        "TransitionTimeSteps": {
+          "description": "Number of steps in the transition",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 63,
+          "multipleOf": 1
+        },
+        "StepResolution": {
+          "description": "Step Resolution, time per step",
+          "enum": [
+            "100 mS", 
+            "1 Second", 
+            "10 Seconds", 
+            "10 Minutes"
           ]
         },
         "DelayData": {

@@ -1,8 +1,8 @@
 {
   "info": {
-    "title": "Example BT Mesh Generic OnOff Model", 
+    "title": "Example Bluetooth mesh Generic OnOff Model", 
     "version": "20200710", 
-    "copyright": "Copyright 2020 Michael J. Koster. All rights reserved.", 
+    "copyright": "Copyright 2020 Bluetooth SIG, Inc. All rights reserved.", 
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   }, 
   "namespace": {
@@ -26,8 +26,11 @@
             "TargetOnOff": {
               "sdfRef": "#/sdfObject/GenericOnOff/sdfData/GenericOnOffData"
             },
-            "RemainingTime": {
-              "sdfRef": "#/sdfObject/GenericOnOff/sdfData/TransitionTimeData"
+            "RemainingTimeSteps": {
+              "sdfRef": "#/sdfObject/GenericOnOff/sdfData/TransitionTimeSteps"
+            },
+            "StepResolution": {
+              "sdfRef": "#/sdfObject/GenericOnOff/sdfData/StepResolution"
             }
           }
         },
@@ -42,8 +45,11 @@
             "OnOff": {
               "sdfRef": "#/sdfObject/GenericOnOff/sdfData/GenericOnOffData"
             },
-            "TransitionTime": {
-              "sdfRef": "#/sdfObject/GenericOnOff/sdfData/TransitionTimeData"
+            "TransitionTimeSteps": {
+              "sdfRef": "#/sdfObject/GenericOnOff/sdfData/TransitionTimeSteps"
+            },
+            "StepResolution": {
+              "sdfRef": "#/sdfObject/GenericOnOff/sdfData/StepResolution"
             },
             "Delay": {
               "sdfRef": "#/sdfObject/GenericOnOff/sdfData/DelayData"
@@ -59,26 +65,20 @@
             "On"
           ]
         },
-        "TransitionTimeData": {
-          "description": "Generic Transition Time Format",
-          "type": "array",
-          "items": [
-            {
-              "description": "Number of steps",
-              "type": "number",
-              "minimum": 0,
-              "maximum": 62,
-              "multipleOf": 1
-            },
-            {
-              "description": "Step Resolution, use a mapping file for encoded values",
-              "enum": [
-                "100 mS", 
-                "1 Second", 
-                "10 Seconds", 
-                "10 Minutes"
-              ]
-            }
+        "TransitionTimeSteps": {
+          "description": "Number of steps in the transition",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 63,
+          "multipleOf": 1
+        },
+        "StepResolution": {
+          "description": "Step Resolution, time per step",
+          "enum": [
+            "100 mS", 
+            "1 Second", 
+            "10 Seconds", 
+            "10 Minutes"
           ]
         },
         "DelayData": {
