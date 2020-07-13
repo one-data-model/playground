@@ -1,0 +1,134 @@
+{
+  "info": {
+    "title": "Example BT Mesh Generic Level Model", 
+    "version": "20200710", 
+    "copyright": "Copyright 2020 Michael J. Koster. All rights reserved.", 
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+  }, 
+  "namespace": {
+    "pg": "https://onedm.org/playground/"
+  }, 
+  "defaultnamespace": "pg", 
+  "sdfObject": {
+    "GenericLevel": {
+      "sdfProperty": {
+        "Level": {
+          "sdfRef": "#/sdfObject/GenericLevel/sdfData/GenericLevelData"
+        }
+      },
+      "sdfAction": {
+        "LevelGet": {
+          "description": "Get the status of the Level server",
+          "sdfData": {
+            "PresentLevel": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/GenericLevelData"
+            },
+            "TargetLevel": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/GenericLevelData"
+            },
+            "RemainingTime": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeData"
+            }
+          }
+        },
+        "LevelSet": {
+          "description": "Set the level server state with time and delay parameters",
+          "sdfInputData": [
+            "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/Level",
+            "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/TransitionTime",
+            "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/Delay"
+          ],
+          "sdfData": {
+            "Level": {
+                "sdfRef": "#/sdfObject/GenericLevel/sdfData/GenericLevelData"
+            },
+            "TransitionTime": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeData"
+            },
+            "Delay": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/DelayData"
+            }
+          }
+        },
+        "DeltaSet": {
+          "description": "Set the level server state with time and delay parameters",
+          "sdfInputData": [
+            "#/sdfObject/GenericLevel/sdfAction/DeltaSet/sdfData/DeltaLevel",
+            "#/sdfObject/GenericLevel/sdfAction/DeltaSet/sdfData/TransitionTime",
+            "#/sdfObject/GenericLevel/sdfAction/DeltaSet/sdfData/Delay"
+          ],
+          "sdfData": {
+            "DeltaLevel": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/GenericLevelData"
+            },
+            "TransitionTime": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeData"
+            },
+            "Delay": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/DelayData"
+            }
+          }
+        },
+        "MoveSet": {
+          "description": "Set the level server state with time and delay parameters",
+          "DeltaSet": {
+            "description": "Set the level server state with time and delay parameters",
+            "sdfInputData": [
+              "#/sdfObject/GenericLevel/sdfAction/MoveSet/sdfData/DeltaLevel",
+              "#/sdfObject/GenericLevel/sdfAction/MoveSet/sdfData/TransitionTime",
+              "#/sdfObject/GenericLevel/sdfAction/MoveSet/sdfData/Delay"
+            ],
+            "sdfData": {
+            "Level": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/GenericLevelData"
+            },
+            "TransitionTime": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeData"
+            },
+            "Delay": {
+              "sdfRef": "#/sdfObject/GenericLevel/sdfData/DelayData"
+            }
+          }
+        }
+      },
+      "sdfData": {
+        "GenericLevelData": {
+          "description": "level state data",
+          "type": "number",
+          "minimum": -32768,
+          "maximum": 32767,
+          "multipleOf": 1
+        },
+        "TransitionTimeData": {
+          "description": "Generic Transition Time Format",
+          "type": "array",
+          "items": [
+            {
+              "description": "Number of steps",
+              "type": "number",
+              "minimum": 0,
+              "maximum": 62,
+              "multipleOf": 1
+            },
+            {
+              "description": "Step Resolution, use a mapping file for encoded values",
+              "enum": [
+                "100 mS", 
+                "1 Second", 
+                "10 Seconds", 
+                "10 Minutes"
+              ]
+            }
+          ]
+        },
+        "DelayData": {
+          "description": "delay in increments of 5mS",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 255,
+          "multipleOf": 1
+        }
+      }
+    }
+  }
+}

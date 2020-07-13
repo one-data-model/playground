@@ -1,0 +1,94 @@
+{
+  "info": {
+    "title": "Example BT Mesh Generic OnOff Model", 
+    "version": "20200710", 
+    "copyright": "Copyright 2020 Michael J. Koster. All rights reserved.", 
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+  }, 
+  "namespace": {
+    "pg": "https://onedm.org/playground/"
+  }, 
+  "defaultnamespace": "pg", 
+  "sdfObject": {
+    "GenericOnOff": {
+      "sdfProperty": {
+        "OnOff": {
+          "sdfRef": "#/sdfObject/GenericOnOff/sdfData/GenericOnOffData"
+        }
+      },
+      "sdfAction": {
+        "OnOffGet": {
+          "description": "Get the status of the On/Off server",
+          "sdfData": {
+            "PresentOnOff": {
+              "sdfRef": "#/sdfObject/GenericOnOff/sdfData/GenericOnOffData"
+            },
+            "TargetOnOff": {
+              "sdfRef": "#/sdfObject/GenericOnOff/sdfData/GenericOnOffData"
+            },
+            "RemainingTime": {
+              "sdfRef": "#/sdfObject/GenericOnOff/sdfData/TransitionTimeData"
+            }
+          }
+        },
+        "OnOffSet": {
+          "description": "Set the On/Off server state with time and delay parameters",
+          "sdfInputData": [
+            "#/sdfObject/GenericOnOff/sdfAction/OnOffSet/sdfData/OnOff",
+            "#/sdfObject/GenericOnOff/sdfAction/OnOffSet/sdfData/TransitionTime",
+            "#/sdfObject/GenericOnOff/sdfAction/OnOffSet/sdfData/Delay"
+          ],
+          "sdfData": {
+            "OnOff": {
+              "sdfRef": "#/sdfObject/GenericOnOff/sdfData/GenericOnOffData"
+            },
+            "TransitionTime": {
+              "sdfRef": "#/sdfObject/GenericOnOff/sdfData/TransitionTimeData"
+            },
+            "Delay": {
+              "sdfRef": "#/sdfObject/GenericOnOff/sdfData/DelayData"
+            }
+          }
+        }
+      },
+      "sdfData": {
+        "GenericOnOffData": {
+          "description": "the on/off state property, use a mapping file for encoded values",
+          "enum": [
+            "Off", 
+            "On"
+          ]
+        },
+        "TransitionTimeData": {
+          "description": "Generic Transition Time Format",
+          "type": "array",
+          "items": [
+            {
+              "description": "Number of steps",
+              "type": "number",
+              "minimum": 0,
+              "maximum": 62,
+              "multipleOf": 1
+            },
+            {
+              "description": "Step Resolution, use a mapping file for encoded values",
+              "enum": [
+                "100 mS", 
+                "1 Second", 
+                "10 Seconds", 
+                "10 Minutes"
+              ]
+            }
+          ]
+        },
+        "DelayData": {
+          "description": "delay in increments of 5mS",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 255,
+          "multipleOf": 1
+        }
+      }
+    }
+  }
+}
