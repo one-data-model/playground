@@ -23,9 +23,8 @@
         "DefaultTransitionTimeGet" : {
           "description": "Get the default transition time",
           "sdfInputData": [
-            "#/sdfObject/GenericDefaultTransitionTime/sdfAction/DefaultTransitionTimeGet/sdfData/Level",
-            "#/sdfObject/GenericDefaultTransitionTime/sdfAction/DefaultTransitionTimeGet/sdfData/TransitionTime",
-            "#/sdfObject/GenericDefaultTransitionTime/sdfAction/DefaultTransitionTimeGet/sdfData/Delay"
+            "#/sdfObject/GenericDefaultTransitionTime/sdfAction/DefaultTransitionTimeGet/sdfData/TransitionTimeSteps",
+            "#/sdfObject/GenericDefaultTransitionTime/sdfAction/DefaultTransitionTimeGet/sdfData/StepResolution"
           ],
           "sdfData": {
             "TransitionTimeSteps": {
