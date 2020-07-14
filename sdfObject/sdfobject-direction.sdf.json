@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Direction (Object ID 3332)",
-    "version": "2020-06-28",
+    "version": "2020-07-13",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -44,7 +44,7 @@
         }
       },
       "sdfRequired": [
-        "#/sdfProperty/Compass_Direction"
+        "#/sdfObject/Direction/sdfProperty/Compass_Direction"
       ]
     }
   }

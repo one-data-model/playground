@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Generic Sensor (Object ID 3300)",
-    "version": "2020-06-28",
+    "version": "2020-07-13",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -65,7 +65,7 @@
         }
       },
       "sdfRequired": [
-        "#/sdfProperty/Sensor_Value"
+        "#/sdfObject/Generic_Sensor/sdfProperty/Sensor_Value"
       ]
     }
   }
