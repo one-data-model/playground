@@ -38,8 +38,8 @@
           "description": "Set the level server state with time and delay parameters",
           "sdfInputData": [
             "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/Level",
-            "#/sdfObject/GenericOnOff/sdfAction/LevelSet/sdfData/TransitionTimeSteps",
-            "#/sdfObject/GenericOnOff/sdfAction/LevelSet/sdfData/StepResolution",
+            "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/TransitionTimeSteps",
+            "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/StepResolution",
             "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/Delay"
           ],
           "sdfData": {
@@ -61,8 +61,8 @@
           "description": "Set the level server state with time and delay parameters",
           "sdfInputData": [
             "#/sdfObject/GenericLevel/sdfAction/DeltaSet/sdfData/DeltaLevel",
-            "#/sdfObject/GenericOnOff/sdfAction/LevelSet/sdfData/TransitionTimeSteps",
-            "#/sdfObject/GenericOnOff/sdfAction/LevelSet/sdfData/StepResolution",
+            "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/TransitionTimeSteps",
+            "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/StepResolution",
             "#/sdfObject/GenericLevel/sdfAction/DeltaSet/sdfData/Delay"
           ],
           "sdfData": {
@@ -86,9 +86,9 @@
         "MoveSet": {
           "description": "Set the level server state with time and delay parameters",
             "sdfInputData": [
-              "#/sdfObject/GenericLevel/sdfAction/MoveSet/sdfData/DeltaLevel",
-              "#/sdfObject/GenericOnOff/sdfAction/LevelSet/sdfData/TransitionTimeSteps",
-              "#/sdfObject/GenericOnOff/sdfAction/LevelSet/sdfData/StepResolution",
+              "#/sdfObject/GenericLevel/sdfAction/MoveSet/sdfData/Level",
+              "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/TransitionTimeSteps",
+              "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/StepResolution",
                 "#/sdfObject/GenericLevel/sdfAction/MoveSet/sdfData/Delay"
             ],
             "sdfData": {

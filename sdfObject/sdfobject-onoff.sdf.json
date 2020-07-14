@@ -30,17 +30,17 @@
           "default": true
         }, 
         "OnTime": {
-          "sdfRef": "#/sdfData/TransitionTimeData", 
+          "sdfRef": "#/sdfObject/OnOff/sdfData/TransitionTimeData", 
           "label": "OnTime", 
           "default": 0
         }, 
         "OffWaitTime": {
-          "sdfRef": "#/sdfData/TransitionTimeData", 
+          "sdfRef": "#/sdfObject/OnOff/sdfData/TransitionTimeData", 
           "label": "OffWaitTime", 
           "default": 0
         }, 
         "StartUpOnOff": {
-          "sdfRef": "#/sdfData/StartUpOnOffMode", 
+          "sdfRef": "#/sdfObject/OnOff/sdfData/StartUpOnOffMode", 
           "label": "StartUpOnOff"
         }
       }, 
@@ -85,7 +85,7 @@
           "sdfInputData": [
             "#/sdfObject/OnOff/sdfAction/OnWithTimedOff/sdfData/OnOffControl",
             "#/sdfObject/OnOff/sdfAction/OnWithTimedOff/sdfData/OnTime",
-            "#/sdfObject/OnOff/sdfAction/OnWithTimedOff/sdfData/OffWaitTIme"
+            "#/sdfObject/OnOff/sdfAction/OnWithTimedOff/sdfData/OffWaitTime"
           ],
           "sdfData": {
             "OnOffControl": {
@@ -98,10 +98,10 @@
               }
             },
             "OnTime": {
-              "sdfRef": "#/sdfData/TransitionTimeData"
+              "sdfRef": "#/sdfObject/OnOff/sdfData/TransitionTimeData"
             }, 
             "OffWaitTime": {
-              "sdfRef": "#/sdfData/TransitionTimeData"
+              "sdfRef": "#/sdfObject/OnOff/sdfData/TransitionTimeData"
             }
           }
         }
