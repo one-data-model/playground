@@ -48,7 +48,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/slm"
+        "#/sdfObject/body.slm/sdfProperty/slm"
       ]
     }
   }

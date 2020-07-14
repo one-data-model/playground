@@ -52,11 +52,11 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/status",
-        "0/sdfProperty/ratedcurrent",
-        "0/sdfProperty/ratedbreakingcurrent",
-        "0/sdfProperty/ratedvoltage",
-        "0/sdfProperty/timestamp"
+        "#/sdfObject/circuitbreaker/sdfProperty/status",
+        "#/sdfObject/circuitbreaker/sdfProperty/ratedcurrent",
+        "#/sdfObject/circuitbreaker/sdfProperty/ratedbreakingcurrent",
+        "#/sdfObject/circuitbreaker/sdfProperty/ratedvoltage",
+        "#/sdfObject/circuitbreaker/sdfProperty/timestamp"
       ]
     }
   }

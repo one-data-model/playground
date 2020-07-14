@@ -21,8 +21,8 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/tagid",
-        "0/sdfProperty/reading"
+        "#/sdfObject/orfid.tag/sdfProperty/tagid",
+        "#/sdfObject/orfid.tag/sdfProperty/reading"
       ]
     }
   }

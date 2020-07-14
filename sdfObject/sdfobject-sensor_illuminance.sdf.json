@@ -26,7 +26,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/illuminance"
+        "#/sdfObject/sensor.illuminance/sdfProperty/illuminance"
       ]
     }
   }

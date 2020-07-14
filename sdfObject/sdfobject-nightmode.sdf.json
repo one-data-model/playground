@@ -15,7 +15,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/nightMode"
+        "#/sdfObject/nightmode/sdfProperty/nightMode"
       ]
     }
   }

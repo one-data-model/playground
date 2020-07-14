@@ -57,14 +57,14 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/status",
-        "0/sdfProperty/ratedpower",
-        "0/sdfProperty/minvoltmppt",
-        "0/sdfProperty/maxvoltmppt",
-        "0/sdfProperty/inputvoltage",
-        "0/sdfProperty/inputcurrent",
-        "0/sdfProperty/outputpower",
-        "0/sdfProperty/timestamp"
+        "#/sdfObject/inverter/sdfProperty/status",
+        "#/sdfObject/inverter/sdfProperty/ratedpower",
+        "#/sdfObject/inverter/sdfProperty/minvoltmppt",
+        "#/sdfObject/inverter/sdfProperty/maxvoltmppt",
+        "#/sdfObject/inverter/sdfProperty/inputvoltage",
+        "#/sdfObject/inverter/sdfProperty/inputcurrent",
+        "#/sdfObject/inverter/sdfProperty/outputpower",
+        "#/sdfObject/inverter/sdfProperty/timestamp"
       ]
     }
   }

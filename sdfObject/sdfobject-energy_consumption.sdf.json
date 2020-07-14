@@ -21,8 +21,8 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/power",
-        "0/sdfProperty/energy"
+        "#/sdfObject/energy.consumption/sdfProperty/power",
+        "#/sdfObject/energy.consumption/sdfProperty/energy"
       ]
     }
   }

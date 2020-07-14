@@ -36,7 +36,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/atmosphericPressure"
+        "#/sdfObject/sensor.atmosphericpressure/sdfProperty/atmosphericPressure"
       ]
     }
   }

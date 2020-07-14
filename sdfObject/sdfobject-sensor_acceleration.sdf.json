@@ -36,7 +36,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/acceleration"
+        "#/sdfObject/sensor.acceleration/sdfProperty/acceleration"
       ]
     }
   }

@@ -48,8 +48,8 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/weight",
-        "0/sdfProperty/units"
+        "#/sdfObject/weight/sdfProperty/weight",
+        "#/sdfObject/weight/sdfProperty/units"
       ]
     }
   }

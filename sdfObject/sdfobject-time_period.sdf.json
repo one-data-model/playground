@@ -55,7 +55,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/startTime"
+        "#/sdfObject/time.period/sdfProperty/startTime"
       ]
     }
   }

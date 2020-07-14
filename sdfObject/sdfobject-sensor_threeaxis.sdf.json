@@ -21,7 +21,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/orientation"
+        "#/sdfObject/sensor.threeaxis/sdfProperty/orientation"
       ]
     }
   }

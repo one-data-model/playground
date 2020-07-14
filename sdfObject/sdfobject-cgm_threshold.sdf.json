@@ -67,12 +67,12 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/plow",
-        "0/sdfProperty/phigh",
-        "0/sdfProperty/dhypo",
-        "0/sdfProperty/dhyper",
-        "0/sdfProperty/gir",
-        "0/sdfProperty/gdr"
+        "#/sdfObject/cgm.threshold/sdfProperty/plow",
+        "#/sdfObject/cgm.threshold/sdfProperty/phigh",
+        "#/sdfObject/cgm.threshold/sdfProperty/dhypo",
+        "#/sdfObject/cgm.threshold/sdfProperty/dhyper",
+        "#/sdfObject/cgm.threshold/sdfProperty/gir",
+        "#/sdfObject/cgm.threshold/sdfProperty/gdr"
       ]
     }
   }

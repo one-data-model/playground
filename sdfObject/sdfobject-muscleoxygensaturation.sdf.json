@@ -18,7 +18,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/muscleoxygensaturation"
+        "#/sdfObject/muscleoxygensaturation/sdfProperty/muscleoxygensaturation"
       ]
     }
   }

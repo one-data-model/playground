@@ -21,8 +21,8 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/maxheatinglevel",
-        "0/sdfProperty/heatinglevel"
+        "#/sdfObject/heatingzone/sdfProperty/maxheatinglevel",
+        "#/sdfObject/heatingzone/sdfProperty/heatinglevel"
       ]
     }
   }

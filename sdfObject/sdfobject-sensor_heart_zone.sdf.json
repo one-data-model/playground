@@ -23,7 +23,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/heartRateZone"
+        "#/sdfObject/sensor.heart.zone/sdfProperty/heartRateZone"
       ]
     }
   }

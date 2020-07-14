@@ -48,7 +48,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/ffm"
+        "#/sdfObject/body.ffm/sdfProperty/ffm"
       ]
     }
   }

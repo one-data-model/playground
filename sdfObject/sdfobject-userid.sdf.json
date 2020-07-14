@@ -16,7 +16,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/userid"
+        "#/sdfObject/userid/sdfProperty/userid"
       ]
     }
   }

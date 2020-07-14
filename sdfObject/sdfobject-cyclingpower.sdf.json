@@ -44,7 +44,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/power"
+        "#/sdfObject/cyclingpower/sdfProperty/power"
       ]
     }
   }

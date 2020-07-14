@@ -34,7 +34,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/powersources"
+        "#/sdfObject/powersource/sdfProperty/powersources"
       ]
     }
   }

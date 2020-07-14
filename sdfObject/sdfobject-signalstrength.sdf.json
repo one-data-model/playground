@@ -21,8 +21,8 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/lqi",
-        "0/sdfProperty/rssi"
+        "#/sdfObject/signalstrength/sdfProperty/lqi",
+        "#/sdfObject/signalstrength/sdfProperty/rssi"
       ]
     }
   }

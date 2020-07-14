@@ -21,7 +21,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/datetime"
+        "#/sdfObject/clock/sdfProperty/datetime"
       ]
     }
   }

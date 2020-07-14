@@ -42,8 +42,8 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/starttime",
-        "0/sdfProperty/runtime"
+        "#/sdfObject/cgm.sensor/sdfProperty/starttime",
+        "#/sdfObject/cgm.sensor/sdfProperty/runtime"
       ]
     }
   }

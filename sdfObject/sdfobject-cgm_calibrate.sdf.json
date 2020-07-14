@@ -42,8 +42,8 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/Cvalue",
-        "0/sdfProperty/Cstatus"
+        "#/sdfObject/cgm.calibrate/sdfProperty/Cvalue",
+        "#/sdfObject/cgm.calibrate/sdfProperty/Cstatus"
       ]
     }
   }

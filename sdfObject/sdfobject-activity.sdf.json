@@ -118,7 +118,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/activity"
+        "#/sdfObject/activity/sdfProperty/activity"
       ]
     }
   }

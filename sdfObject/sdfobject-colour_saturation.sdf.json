@@ -17,7 +17,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/colourSaturation"
+        "#/sdfObject/colour.saturation/sdfProperty/colourSaturation"
       ]
     }
   }

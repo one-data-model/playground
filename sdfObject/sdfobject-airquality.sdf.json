@@ -52,9 +52,9 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/contaminantvalue",
-        "0/sdfProperty/contaminanttype",
-        "0/sdfProperty/valuetype"
+        "#/sdfObject/airquality/sdfProperty/contaminantvalue",
+        "#/sdfObject/airquality/sdfProperty/contaminanttype",
+        "#/sdfObject/airquality/sdfProperty/valuetype"
       ]
     }
   }

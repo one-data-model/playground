@@ -28,7 +28,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/gas"
+        "#/sdfObject/gas.consumption/sdfProperty/gas"
       ]
     }
   }

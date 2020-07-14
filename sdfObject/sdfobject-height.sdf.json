@@ -48,7 +48,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/height"
+        "#/sdfObject/height/sdfProperty/height"
       ]
     }
   }

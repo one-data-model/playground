@@ -100,11 +100,11 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/awake",
-        "0/sdfProperty/nrem1",
-        "0/sdfProperty/nrem2",
-        "0/sdfProperty/nrem3",
-        "0/sdfProperty/rem"
+        "#/sdfObject/sleep/sdfProperty/awake",
+        "#/sdfObject/sleep/sdfProperty/nrem1",
+        "#/sdfObject/sleep/sdfProperty/nrem2",
+        "#/sdfObject/sleep/sdfProperty/nrem3",
+        "#/sdfObject/sleep/sdfProperty/rem"
       ]
     }
   }

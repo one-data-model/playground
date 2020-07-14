@@ -64,7 +64,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/spo2"
+        "#/sdfObject/spo2/sdfProperty/spo2"
       ]
     }
   }

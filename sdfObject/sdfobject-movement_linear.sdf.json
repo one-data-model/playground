@@ -27,8 +27,8 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/movementSettings",
-        "0/sdfProperty/movement"
+        "#/sdfObject/movement.linear/sdfProperty/movementSettings",
+        "#/sdfObject/movement.linear/sdfProperty/movement"
       ]
     }
   }

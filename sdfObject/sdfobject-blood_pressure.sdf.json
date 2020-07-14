@@ -59,8 +59,8 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/systolic",
-        "0/sdfProperty/diastolic"
+        "#/sdfObject/blood.pressure/sdfProperty/systolic",
+        "#/sdfObject/blood.pressure/sdfProperty/diastolic"
       ]
     }
   }

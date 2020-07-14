@@ -47,7 +47,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/bwater"
+        "#/sdfObject/body.water/sdfProperty/bwater"
       ]
     }
   }

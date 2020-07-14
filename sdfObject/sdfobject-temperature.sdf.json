@@ -44,7 +44,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/temperature"
+        "#/sdfObject/temperature/sdfProperty/temperature"
       ]
     }
   }

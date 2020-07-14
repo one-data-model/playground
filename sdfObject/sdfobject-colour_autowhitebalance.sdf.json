@@ -15,7 +15,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/autoWhiteBalance"
+        "#/sdfObject/colour.autowhitebalance/sdfProperty/autoWhiteBalance"
       ]
     }
   }

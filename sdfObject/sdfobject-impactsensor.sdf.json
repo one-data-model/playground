@@ -35,7 +35,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/impactstatus"
+        "#/sdfObject/impactsensor/sdfProperty/impactstatus"
       ]
     }
   }
