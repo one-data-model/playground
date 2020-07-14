@@ -23,7 +23,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/health"
+        "#/sdfObject/glucose.health/sdfProperty/health"
       ]
     }
   }

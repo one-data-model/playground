@@ -62,10 +62,10 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/cgmtype",
-        "0/sdfProperty/cgmstatus",
-        "0/sdfProperty/gtrend",
-        "0/sdfProperty/malfunction"
+        "#/sdfObject/cgm.status/sdfProperty/cgmtype",
+        "#/sdfObject/cgm.status/sdfProperty/cgmstatus",
+        "#/sdfObject/cgm.status/sdfProperty/gtrend",
+        "#/sdfObject/cgm.status/sdfProperty/malfunction"
       ]
     }
   }

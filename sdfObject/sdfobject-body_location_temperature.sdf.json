@@ -27,7 +27,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/bloc"
+        "#/sdfObject/body.location.temperature/sdfProperty/bloc"
       ]
     }
   }

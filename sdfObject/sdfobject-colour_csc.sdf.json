@@ -27,7 +27,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/csc"
+        "#/sdfObject/colour.csc/sdfProperty/csc"
       ]
     }
   }

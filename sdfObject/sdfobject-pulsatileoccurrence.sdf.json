@@ -22,7 +22,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/occurrence"
+        "#/sdfObject/pulsatileoccurrence/sdfProperty/occurrence"
       ]
     }
   }

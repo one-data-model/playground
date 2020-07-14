@@ -17,7 +17,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/brightness"
+        "#/sdfObject/light.brightness/sdfProperty/brightness"
       ]
     }
   }

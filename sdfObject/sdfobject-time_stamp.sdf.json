@@ -17,7 +17,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/timestamp"
+        "#/sdfObject/time.stamp/sdfProperty/timestamp"
       ]
     }
   }

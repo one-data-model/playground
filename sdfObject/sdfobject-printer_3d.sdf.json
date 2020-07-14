@@ -52,12 +52,12 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/3dprinttype",
-        "0/sdfProperty/printsizex",
-        "0/sdfProperty/printsizey",
-        "0/sdfProperty/printsizez",
-        "0/sdfProperty/wanconnected",
-        "0/sdfProperty/memorysize"
+        "#/sdfObject/printer.3d/sdfProperty/3dprinttype",
+        "#/sdfObject/printer.3d/sdfProperty/printsizex",
+        "#/sdfObject/printer.3d/sdfProperty/printsizey",
+        "#/sdfObject/printer.3d/sdfProperty/printsizez",
+        "#/sdfObject/printer.3d/sdfProperty/wanconnected",
+        "#/sdfObject/printer.3d/sdfProperty/memorysize"
       ]
     }
   }

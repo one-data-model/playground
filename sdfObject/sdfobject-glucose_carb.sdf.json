@@ -55,8 +55,8 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/carb",
-        "0/sdfProperty/meal"
+        "#/sdfObject/glucose.carb/sdfProperty/carb",
+        "#/sdfObject/glucose.carb/sdfProperty/meal"
       ]
     }
   }

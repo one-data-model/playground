@@ -19,7 +19,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/lockState"
+        "#/sdfObject/lock.status/sdfProperty/lockState"
       ]
     }
   }

@@ -55,7 +55,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/batterythreshold"
+        "#/sdfObject/energy.battery/sdfProperty/batterythreshold"
       ]
     }
   }

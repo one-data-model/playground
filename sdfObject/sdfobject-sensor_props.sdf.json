@@ -39,8 +39,8 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/silenttime",
-        "0/sdfProperty/sensitivity"
+        "#/sdfObject/sensor.props/sdfProperty/silenttime",
+        "#/sdfObject/sensor.props/sdfProperty/sensitivity"
       ]
     }
   }

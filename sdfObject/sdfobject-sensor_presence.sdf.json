@@ -16,7 +16,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/value"
+        "#/sdfObject/sensor.presence/sdfProperty/value"
       ]
     }
   }

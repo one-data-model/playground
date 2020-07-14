@@ -35,9 +35,9 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/payload",
-        "0/sdfProperty/encoding",
-        "0/sdfProperty/system"
+        "#/sdfObject/opaquedata/sdfProperty/payload",
+        "#/sdfObject/opaquedata/sdfProperty/encoding",
+        "#/sdfObject/opaquedata/sdfProperty/system"
       ]
     }
   }

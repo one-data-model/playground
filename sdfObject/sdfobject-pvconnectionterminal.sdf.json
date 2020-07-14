@@ -47,11 +47,11 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/ratedarrayvoltage",
-        "0/sdfProperty/ratedarraycurrent",
-        "0/sdfProperty/arrayvoltage",
-        "0/sdfProperty/arraycurrent",
-        "0/sdfProperty/timestamp"
+        "#/sdfObject/pvconnectionterminal/sdfProperty/ratedarrayvoltage",
+        "#/sdfObject/pvconnectionterminal/sdfProperty/ratedarraycurrent",
+        "#/sdfObject/pvconnectionterminal/sdfProperty/arrayvoltage",
+        "#/sdfObject/pvconnectionterminal/sdfProperty/arraycurrent",
+        "#/sdfObject/pvconnectionterminal/sdfProperty/timestamp"
       ]
     }
   }

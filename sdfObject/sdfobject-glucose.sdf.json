@@ -47,7 +47,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/glucose"
+        "#/sdfObject/glucose/sdfProperty/glucose"
       ]
     }
   }

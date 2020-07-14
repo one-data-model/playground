@@ -21,7 +21,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/tester"
+        "#/sdfObject/glucose.tester/sdfProperty/tester"
       ]
     }
   }

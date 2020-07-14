@@ -15,7 +15,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/autoFocus"
+        "#/sdfObject/autofocus/sdfProperty/autoFocus"
       ]
     }
   }

@@ -16,7 +16,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/energygenerated"
+        "#/sdfObject/energy.generation/sdfProperty/energygenerated"
       ]
     }
   }

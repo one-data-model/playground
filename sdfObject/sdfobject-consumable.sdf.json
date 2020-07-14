@@ -36,8 +36,8 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/typeofconsumable",
-        "0/sdfProperty/remaining"
+        "#/sdfObject/consumable/sdfProperty/typeofconsumable",
+        "#/sdfObject/consumable/sdfProperty/remaining"
       ]
     }
   }

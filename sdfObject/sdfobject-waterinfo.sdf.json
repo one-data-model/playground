@@ -39,7 +39,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/currentwatertype"
+        "#/sdfObject/waterinfo/sdfProperty/currentwatertype"
       ]
     }
   }

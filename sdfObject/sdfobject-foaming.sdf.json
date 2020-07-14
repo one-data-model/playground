@@ -30,7 +30,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/foamstrength"
+        "#/sdfObject/foaming/sdfProperty/foamstrength"
       ]
     }
   }

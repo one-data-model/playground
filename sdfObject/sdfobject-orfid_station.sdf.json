@@ -24,8 +24,8 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/event",
-        "0/sdfProperty/actionrequest"
+        "#/sdfObject/orfid.station/sdfProperty/event",
+        "#/sdfObject/orfid.station/sdfProperty/actionrequest"
       ]
     }
   }

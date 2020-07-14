@@ -18,7 +18,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/capacity"
+        "#/sdfObject/hvac.capacity/sdfProperty/capacity"
       ]
     }
   }

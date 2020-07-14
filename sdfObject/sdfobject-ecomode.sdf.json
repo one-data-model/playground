@@ -42,7 +42,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/modes"
+        "#/sdfObject/ecomode/sdfProperty/modes"
       ]
     }
   }

@@ -38,7 +38,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/hba1c"
+        "#/sdfObject/glucose.hba1c/sdfProperty/hba1c"
       ]
     }
   }

@@ -62,9 +62,9 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/pan",
-        "0/sdfProperty/tilt",
-        "0/sdfProperty/zoomFactor"
+        "#/sdfObject/ptz/sdfProperty/pan",
+        "#/sdfObject/ptz/sdfProperty/tilt",
+        "#/sdfObject/ptz/sdfProperty/zoomFactor"
       ]
     }
   }

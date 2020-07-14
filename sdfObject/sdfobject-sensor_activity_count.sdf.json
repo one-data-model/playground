@@ -30,7 +30,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/count"
+        "#/sdfObject/sensor.activity.count/sdfProperty/count"
       ]
     }
   }

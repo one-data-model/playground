@@ -16,7 +16,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/measurement"
+        "#/sdfObject/sensor.radiation.uv/sdfProperty/measurement"
       ]
     }
   }

@@ -38,7 +38,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/exercise"
+        "#/sdfObject/glucose.exercise/sdfProperty/exercise"
       ]
     }
   }

@@ -29,7 +29,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/mode"
+        "#/sdfObject/deodorization/sdfProperty/mode"
       ]
     }
   }

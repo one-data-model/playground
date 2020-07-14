@@ -37,7 +37,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/interval"
+        "#/sdfObject/cgm.samplinginterval/sdfProperty/interval"
       ]
     }
   }

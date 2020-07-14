@@ -25,8 +25,8 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/adfStates",
-        "0/sdfProperty/currentAdfState"
+        "#/sdfObject/automaticdocumentfeeder/sdfProperty/adfStates",
+        "#/sdfObject/automaticdocumentfeeder/sdfProperty/currentAdfState"
       ]
     }
   }

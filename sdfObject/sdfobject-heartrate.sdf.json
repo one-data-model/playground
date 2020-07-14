@@ -32,7 +32,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/heartrate"
+        "#/sdfObject/heartrate/sdfProperty/heartrate"
       ]
     }
   }

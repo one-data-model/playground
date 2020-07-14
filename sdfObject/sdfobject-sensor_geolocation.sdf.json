@@ -51,9 +51,9 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/latitude",
-        "0/sdfProperty/longitude",
-        "0/sdfProperty/alt"
+        "#/sdfObject/sensor.geolocation/sdfProperty/latitude",
+        "#/sdfObject/sensor.geolocation/sdfProperty/longitude",
+        "#/sdfObject/sensor.geolocation/sdfProperty/alt"
       ]
     }
   }

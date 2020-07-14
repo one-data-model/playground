@@ -31,7 +31,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/ct"
+        "#/sdfObject/colour.colourtemperature/sdfProperty/ct"
       ]
     }
   }

@@ -23,7 +23,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/calorific"
+        "#/sdfObject/calorificvalue/sdfProperty/calorific"
       ]
     }
   }

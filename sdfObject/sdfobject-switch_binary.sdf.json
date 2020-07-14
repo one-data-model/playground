@@ -15,7 +15,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/value"
+        "#/sdfObject/switch.binary/sdfProperty/value"
       ]
     }
   }

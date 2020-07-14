@@ -35,7 +35,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/rampTime"
+        "#/sdfObject/light.ramptime/sdfProperty/rampTime"
       ]
     }
   }

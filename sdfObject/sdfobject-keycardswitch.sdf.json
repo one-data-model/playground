@@ -20,7 +20,7 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/stateofcard"
+        "#/sdfObject/keycardswitch/sdfProperty/stateofcard"
       ]
     }
   }

@@ -46,9 +46,9 @@
         }
       },
       "sdfRequired": [
-        "0/sdfProperty/hue",
-        "0/sdfProperty/saturation",
-        "0/sdfProperty/csc"
+        "#/sdfObject/colour.chroma/sdfProperty/hue",
+        "#/sdfObject/colour.chroma/sdfProperty/saturation",
+        "#/sdfObject/colour.chroma/sdfProperty/csc"
       ]
     }
   }
