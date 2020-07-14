@@ -12,24 +12,27 @@
   "sdfObject": {
     "GenericDefaultTransitionTime": {
       "sdfProperty": {
-        "DefaultTransitionTime": {
-          "sdfRef": "#/sdfObject/GenericDefaultTransitionTime/sdfData/TransitionTimeData"
+        "DefaultTransitionTimeSteps": {
+          "sdfRef": "#/sdfObject/GenericDefaultTransitionTime/sdfData/TransitionTimeSteps"
+        },
+        "DefaultStepResolution": {
+          "sdfRef": "#/sdfObject/GenericDefaultTransitionTime/sdfData/StepResolution"
         }
       },
       "sdfAction": {
         "DefaultTransitionTimeGet" : {
           "description": "Get the default transition time",
           "sdfInputData": [
-            "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/Level",
-            "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/TransitionTime",
-            "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/Delay"
+            "#/sdfObject/GenericDefaultTransitionTime/sdfAction/LevelSet/sdfData/Level",
+            "#/sdfObject/GenericDefaultTransitionTime/sdfAction/LevelSet/sdfData/TransitionTime",
+            "#/sdfObject/GenericDefaultTransitionTime/sdfAction/LevelSet/sdfData/Delay"
           ],
           "sdfData": {
             "TransitionTimeSteps": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeSteps"
+              "sdfRef": "#/sdfObject/GenericDefaultTransitionTime/sdfData/TransitionTimeSteps"
             },
             "StepResolution": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/StepResolution"
+              "sdfRef": "#/sdfObject/GenericDefaultTransitionTime/sdfData/StepResolution"
             }
           }
         },
@@ -37,10 +40,10 @@
           "description": "Set the default transition time",
           "sdfData": {
             "TransitionTimeSteps": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeSteps"
+              "sdfRef": "#/sdfObject/GenericDefaultTransitionTime/sdfData/TransitionTimeSteps"
             },
             "StepResolution": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/StepResolution"
+              "sdfRef": "#/sdfObject/GenericDefaultTransitionTime/sdfData/StepResolution"
             }
           }
         }

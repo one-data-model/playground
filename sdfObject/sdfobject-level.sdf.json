@@ -103,20 +103,22 @@
         "MoveToLevel": {
           "label": "MoveToLevel", 
           "sdfRequired": [
-            "#/sdfObject/Level/sdfAction/MoveToLevel/sdfData/LevelData", 
-            "#/sdfObject/Level/sdfAction/MoveToLevel/sdfData/TransitionTimeData"
+            "#/sdfObject/Level/sdfAction/MoveToLevel/sdfData/Level", 
+            "#/sdfObject/Level/sdfAction/MoveToLevel/sdfData/TransitionTime"
           ],
           "sdfInputData": [
-            "#/sdfObject/Level/sdfAction/MoveToLevel/sdfData/LevelData", 
-            "#/sdfObject/Level/sdfAction/MoveToLevel/sdfData/TransitionTimeData"
+            "#/sdfObject/Level/sdfAction/MoveToLevel/sdfData/Level", 
+            "#/sdfObject/Level/sdfAction/MoveToLevel/sdfData/TransitionTime",
+            "#/sdfObject/Level/sdfAction/MoveToLevel/sdfData/OptionsMask",
+            "#/sdfObject/Level/sdfAction/MoveToLevel/sdfData/TransitionTime"
           ],
           "sdfData": {
             "Level": {
-              "label": "LevelData", 
+              "label": "Level", 
               "sdfRef": "#/sdfObject/Level/sdfData/LevelData"            
             }, 
-            "TransitionTimeData": {
-              "label": "TransitionTimeData", 
+            "TransitionTime": {
+              "label": "TransitionTime", 
               "sdfRef": "#/sdfObject/Level/sdfData/TransitionTimeData"
             },
             "OptionsMask": {
@@ -137,7 +139,9 @@
           ],
           "sdfInputData": [
             "#/sdfObject/Level/sdfAction/Move/sdfData/MoveMode", 
-            "#/sdfObject/Level/sdfAction/Move/sdfData/Rate"
+            "#/sdfObject/Level/sdfAction/Move/sdfData/Rate",
+            "#/sdfObject/Level/sdfAction/Move/sdfData/OptionsMask",
+            "#/sdfObject/Level/sdfAction/Move/sdfData/OptionsOverride"
           ],
           "sdfData": {
             "MoveMode": {
@@ -170,7 +174,9 @@
           "sdfInputData": [
             "#/sdfObject/Level/sdfAction/Step/sdfData/StepMode",
             "#/sdfObject/Level/sdfAction/Step/sdfData/StepSize",
-            "#/sdfObject/Level/sdfAction/Step/sdfData/TransitionTime"
+            "#/sdfObject/Level/sdfAction/Step/sdfData/TransitionTime",
+            "#/sdfObject/Level/sdfAction/Step/sdfData/OptionsMask",
+            "#/sdfObject/Level/sdfAction/Step/sdfData/OptionsOverride"
           ],
           "sdfData": {
             "StepMode": {
@@ -200,8 +206,8 @@
         "Stop": {
           "label": "Stop",
           "sdfInputData": [
-            "#/sdfObject/Level/sdfAction/Stop/ocmData/OptionsMask",
-            "#/sdfObject/Level/sdfAction/Stop/ocmData/OptionsOverride"
+            "#/sdfObject/Level/sdfAction/Stop/sdfData/OptionsMask",
+            "#/sdfObject/Level/sdfAction/Stop/sdfData/OptionsOverride"
           ],
           "sdfData": {
             "OptionsMask": {
@@ -233,10 +239,10 @@
         "MoveToClosestFrequency": {
           "label": "MoveToClosestFrequency",
           "sdfInputData": [
-            "#/sdfObject/Level/sdfAction/Stop/sdfData/Frequency"
+            "#/sdfObject/Level/sdfAction/MoveToClosestFrequency/sdfData/Frequency"
           ],
           "sdfRequired": [
-            "#/sdfObject/Level/sdfAction/Stop/sdfData/Frequency"
+            "#/sdfObject/Level/sdfAction/MoveToClosestFrequency/sdfData/Frequency"
           ],
           "sdfData": {
             "Frequency": {
