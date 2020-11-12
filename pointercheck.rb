@@ -46,7 +46,12 @@ def descend(input, position, label)
 end
 
 ARGV.each do |fn|
-  spec = JSON.load(File.read(fn))
+  begin
+    spec = JSON.load(File.read(fn))
+  rescue Exception => e
+    puts [fn, e].inspect
+    next
+  end
   copr = spec["info"]["copyright"].sub(/Copyright ?(\(c\))? ?(20..(-20..)?)?,? ?/, "")
            .sub(/ ?All rights reserved./, "")
   bad = []
