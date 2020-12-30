@@ -1,14 +1,14 @@
 {
   "info": {
     "title": "OMA LwM2M Buzzer (Object ID 3338)",
-    "version": "2020-07-13",
+    "version": "2020-12-30",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
   "sdfObject": {
     "Buzzer": {
       "label": "Buzzer",
-      "description": "This IPSO object should be used to actuate an audible alarm such as a buzzer, beeper, or vibration alarm. There is a dimmer control for setting the relative loudness of the alarm, and an optional duration control to limit the length of time the alarm sounds when turned on. Each time \"true\" is written to the On/Off resource, the alarm will sound again for the configured duration. If no duration is programmed or the setting is \"false\", writing a \"true\" to the On/Off resource will result in the alarm sounding continuously until a \"false\" is written to the On/Off resource.",
+      "description": "This IPSO object should be used to actuate an audible alarm such as a buzzer, beeper, or vibration alarm. There is a dimmer control for setting the relative level of the alarm, and an optional duration control to limit the length of time the alarm sounds when turned on. Each time \"true\" is written to the On/Off resource, the alarm will sound again for the configured duration. If no duration is programmed or the setting is \"false\", writing a \"true\" to the On/Off resource will result in the alarm sounding continuously until a \"false\" is written to the On/Off resource.",
       "sdfProperty": {
         "On_Off": {
           "label": "On/Off",
@@ -19,7 +19,7 @@
           "label": "Level",
           "description": "Used to represent a level control such as audio volume.",
           "type": "number",
-          "units": "/100",
+          "unit": "/100",
           "minimum": 0,
           "maximum": 100
         },
@@ -27,18 +27,33 @@
           "label": "Delay Duration",
           "description": "The duration of the time delay.",
           "type": "number",
-          "units": "s"
+          "unit": "s"
         },
         "Minimum_Off-time": {
           "label": "Minimum Off-time",
           "description": "The duration of the rearm delay (i.e. the delay from the end of one cycle until the beginning of the next, the inhibit time).",
           "type": "number",
-          "units": "s"
+          "unit": "s"
         },
         "Application_Type": {
           "label": "Application Type",
           "description": "The application type of the sensor or actuator as a string depending on the use case.",
           "type": "string"
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the measurement was performed.",
+          "writable": false,
+          "subtype": "unix-time"
+        },
+        "Fractional_Timestamp": {
+          "label": "Fractional Timestamp",
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "writable": false,
+          "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
         }
       },
       "sdfAction": {},

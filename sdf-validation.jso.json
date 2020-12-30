@@ -204,7 +204,7 @@
     "dataqualities": {
       "type": "object",
       "properties": {
-        "units": {
+        "unit": {
           "type": "string"
         },
         "scaleMinimum": {

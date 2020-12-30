@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Dimmer (Object ID 3343)",
-    "version": "2020-07-13",
+    "version": "2020-12-30",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -14,7 +14,7 @@
           "label": "Level",
           "description": "Used to represent a level control such as audio volume.",
           "type": "number",
-          "units": "/100",
+          "unit": "/100",
           "minimum": 0,
           "maximum": 100
         },
@@ -22,13 +22,13 @@
           "label": "On time",
           "description": "The time in seconds that the device has been on. Writing a value of 0 resets the counter.",
           "type": "integer",
-          "units": "s"
+          "unit": "s"
         },
         "Off_Time": {
           "label": "Off Time",
           "description": "The time in seconds in the off state. Writing a value of 0 resets the counter.",
           "type": "integer",
-          "units": "s"
+          "unit": "s"
         },
         "Application_Type": {
           "label": "Application Type",

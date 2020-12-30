@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Digital Input (Object ID 3200)",
-    "version": "2020-07-13",
+    "version": "2020-12-30",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -31,7 +31,7 @@
           "label": "Digital Input Debounce",
           "description": "The debounce period in ms.",
           "type": "integer",
-          "units": "ms"
+          "unit": "ms"
         },
         "Digital_Input_Edge_Selection": {
           "label": "Digital Input Edge Selection",
@@ -50,6 +50,21 @@
           "description": "The type of the sensor (for instance PIR type).",
           "writable": false,
           "type": "string"
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the measurement was performed.",
+          "writable": false,
+          "subtype": "unix-time"
+        },
+        "Fractional_Timestamp": {
+          "label": "Fractional Timestamp",
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "writable": false,
+          "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
         }
       },
       "sdfAction": {
