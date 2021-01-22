@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Audio Clip (Object ID 3339)",
-    "version": "2020-07-13",
+    "version": "2020-12-30",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -19,7 +19,7 @@
           "label": "Level",
           "description": "Used to represent a level control such as audio volume.",
           "type": "number",
-          "units": "/100",
+          "unit": "/100",
           "minimum": 0,
           "maximum": 100
         },
@@ -27,7 +27,7 @@
           "label": "Duration",
           "description": "The duration of the sound once trigger.",
           "type": "number",
-          "units": "s"
+          "unit": "s"
         },
         "Application_Type": {
           "label": "Application Type",

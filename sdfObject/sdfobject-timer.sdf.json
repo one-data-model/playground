@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Timer (Object ID 3340)",
-    "version": "2020-07-13",
+    "version": "2020-12-30",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -14,20 +14,20 @@
           "label": "Delay Duration",
           "description": "The duration of the time delay.",
           "type": "number",
-          "units": "s"
+          "unit": "s"
         },
         "Remaining_Time": {
           "label": "Remaining Time",
           "description": "The time remaining in an operation.",
           "writable": false,
           "type": "number",
-          "units": "s"
+          "unit": "s"
         },
         "Minimum_Off-time": {
           "label": "Minimum Off-time",
           "description": "The duration of the rearm delay (i.e. the delay from the end of one cycle until the beginning of the next, the inhibit time).",
           "type": "number",
-          "units": "s"
+          "unit": "s"
         },
         "On_Off": {
           "label": "On/Off",
@@ -44,7 +44,7 @@
           "label": "Cumulative Time",
           "description": "The total time in seconds that the timer input is true. Writing a 0 resets the time.",
           "type": "number",
-          "units": "s"
+          "unit": "s"
         },
         "Digital_State": {
           "label": "Digital State",

@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Load Control (Object ID 3310)",
-    "version": "2020-07-13",
+    "version": "2020-12-30",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -24,7 +24,7 @@
           "label": "Duration In Min",
           "description": "The duration of the event in minutes.",
           "type": "integer",
-          "units": "min"
+          "unit": "min"
         },
         "Criticality_Level": {
           "label": "Criticality Level",
@@ -37,7 +37,7 @@
           "label": "Avg Load AdjPct",
           "description": "Defines the maximum energy usage of the receiving device, as a percentage of the device's normal maximum energy usage.",
           "type": "integer",
-          "units": "/100",
+          "unit": "/100",
           "minimum": 0,
           "maximum": 100
         },
@@ -45,9 +45,29 @@
           "label": "Duty Cycle",
           "description": "Defines the duty cycle for the load control event, i.e, what percentage of time the receiving device is allowed to be on.",
           "type": "integer",
-          "units": "/100",
+          "unit": "/100",
           "minimum": 0,
           "maximum": 100
+        },
+        "Application_Type": {
+          "label": "Application Type",
+          "description": "The application type of the sensor or actuator as a string depending on the use case.",
+          "type": "string"
+        },
+        "Timestamp": {
+          "label": "Timestamp",
+          "description": "The timestamp of when the measurement was performed.",
+          "writable": false,
+          "subtype": "unix-time"
+        },
+        "Fractional_Timestamp": {
+          "label": "Fractional Timestamp",
+          "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+          "writable": false,
+          "type": "number",
+          "unit": "s",
+          "minimum": 0,
+          "maximum": 1
         }
       },
       "sdfAction": {},
