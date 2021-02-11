@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Location (Object ID 3336)",
-    "version": "2020-12-30",
+    "version": "2021-02-11",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -41,13 +41,15 @@
           "label": "Velocity",
           "description": "The velocity of the device as defined in 3GPP 23.032 GAD specification. This set of values may not be available if the device is static.",
           "writable": false,
-          "subtype": "byte-string"
+          "type": "string",
+          "sdfType": "byte-string"
         },
         "Timestamp": {
           "label": "Timestamp",
           "description": "The timestamp of when the measurement was performed.",
           "writable": false,
-          "subtype": "unix-time"
+          "type": "number",
+          "sdfType": "unix-time"
         },
         "Application_Type": {
           "label": "Application Type",
