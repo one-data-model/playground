@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Load Control (Object ID 3310)",
-    "version": "2020-12-30",
+    "version": "2021-02-11",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -18,7 +18,8 @@
         "Start_Time": {
           "label": "Start Time",
           "description": "Time when the event started.",
-          "subtype": "unix-time"
+          "type": "number",
+          "sdfType": "unix-time"
         },
         "Duration_In_Min": {
           "label": "Duration In Min",
@@ -58,7 +59,8 @@
           "label": "Timestamp",
           "description": "The timestamp of when the measurement was performed.",
           "writable": false,
-          "subtype": "unix-time"
+          "type": "number",
+          "sdfType": "unix-time"
         },
         "Fractional_Timestamp": {
           "label": "Fractional Timestamp",

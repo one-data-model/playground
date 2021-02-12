@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Load (Object ID 3322)",
-    "version": "2020-12-30",
+    "version": "2021-02-11",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
@@ -60,7 +60,8 @@
           "label": "Timestamp",
           "description": "The timestamp of when the measurement was performed.",
           "writable": false,
-          "subtype": "unix-time"
+          "type": "number",
+          "sdfType": "unix-time"
         },
         "Fractional_Timestamp": {
           "label": "Fractional Timestamp",

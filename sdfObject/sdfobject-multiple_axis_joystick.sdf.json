@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Multiple Axis Joystick (Object ID 3345)",
-    "version": "2020-12-30",
+    "version": "2021-02-11",
     "copyright": "Copyright (c) 2018-2020 IPSO",
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   },
