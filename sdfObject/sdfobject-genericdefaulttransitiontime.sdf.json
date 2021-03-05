@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "Example Bluetooth mesh Generic Default Transition Time Model", 
-    "version": "20200710", 
+    "version": "20210-03-05", 
     "copyright": "Copyright Bluetooth SIG, Inc. All rights reserved.", 
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   }, 
@@ -22,27 +22,29 @@
       "sdfAction": {
         "DefaultTransitionTimeGet" : {
           "description": "Get the default transition time",
-          "sdfInputData": [
-            "#/sdfObject/GenericDefaultTransitionTime/sdfAction/DefaultTransitionTimeGet/sdfData/TransitionTimeSteps",
-            "#/sdfObject/GenericDefaultTransitionTime/sdfAction/DefaultTransitionTimeGet/sdfData/StepResolution"
-          ],
-          "sdfData": {
-            "TransitionTimeSteps": {
-              "sdfRef": "#/sdfObject/GenericDefaultTransitionTime/sdfData/TransitionTimeSteps"
-            },
-            "StepResolution": {
-              "sdfRef": "#/sdfObject/GenericDefaultTransitionTime/sdfData/StepResolution"
+          "sdfOutputData": {
+            "type": "object",
+            "properties": {
+              "TransitionTimeSteps": {
+                "sdfRef": "#/sdfObject/GenericDefaultTransitionTime/sdfData/TransitionTimeSteps"
+              },
+              "StepResolution": {
+                "sdfRef": "#/sdfObject/GenericDefaultTransitionTime/sdfData/StepResolution"
+              }
             }
           }
         },
         "DefaultTransitionTimeSet" : {
           "description": "Set the default transition time",
-          "sdfData": {
-            "TransitionTimeSteps": {
-              "sdfRef": "#/sdfObject/GenericDefaultTransitionTime/sdfData/TransitionTimeSteps"
-            },
-            "StepResolution": {
-              "sdfRef": "#/sdfObject/GenericDefaultTransitionTime/sdfData/StepResolution"
+          "sdfInputData": {
+            "type": "object",
+            "properties": {
+              "TransitionTimeSteps": {
+                "sdfRef": "#/sdfObject/GenericDefaultTransitionTime/sdfData/TransitionTimeSteps"
+              },
+              "StepResolution": {
+                "sdfRef": "#/sdfObject/GenericDefaultTransitionTime/sdfData/StepResolution"
+              }
             }
           }
         }
@@ -57,12 +59,12 @@
         },
         "StepResolution": {
           "description": "Step Resolution, time per step",
-          "enum": [
-            "100 Milliseconds", 
-            "1 Second", 
-            "10 Seconds", 
-            "10 Minutes"
-          ]
+          "sdfChoice": {
+            "100 Milliseconds": {}, 
+            "1 Second": {}, 
+            "10 Seconds": {}, 
+            "10 Minutes": {}
+          }
         }
       }
     }
