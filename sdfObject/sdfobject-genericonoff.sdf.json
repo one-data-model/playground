@@ -1,8 +1,8 @@
 {
   "info": {
     "title": "Example Bluetooth mesh Generic OnOff Model", 
-    "version": "20200710", 
-    "copyright": "Copyright 2020 Bluetooth SIG, Inc. All rights reserved.", 
+    "version": "2021-03-04", 
+    "copyright": "Copyright 2020-2021 Bluetooth SIG, Inc. All rights reserved.", 
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   }, 
   "namespace": {
@@ -19,52 +19,52 @@
       "sdfAction": {
         "OnOffGet": {
           "description": "Get the status of the On/Off server",
-          "sdfData": {
-            "PresentOnOff": {
-              "sdfRef": "#/sdfObject/GenericOnOff/sdfData/GenericOnOffData"
-            },
-            "TargetOnOff": {
-              "sdfRef": "#/sdfObject/GenericOnOff/sdfData/GenericOnOffData"
-            },
-            "RemainingTimeSteps": {
-              "sdfRef": "#/sdfObject/GenericOnOff/sdfData/TransitionTimeSteps"
-            },
-            "StepResolution": {
-              "sdfRef": "#/sdfObject/GenericOnOff/sdfData/StepResolution"
+          "sdfOutputData": {
+            "type": "object",
+            "properties": {
+              "PresentOnOff": {
+                "sdfRef": "#/sdfObject/GenericOnOff/sdfData/GenericOnOffData"
+              },
+              "TargetOnOff": {
+                "sdfRef": "#/sdfObject/GenericOnOff/sdfData/GenericOnOffData"
+              },
+              "RemainingTimeSteps": {
+                "sdfRef": "#/sdfObject/GenericOnOff/sdfData/TransitionTimeSteps"
+              },
+              "StepResolution": {
+                "sdfRef": "#/sdfObject/GenericOnOff/sdfData/StepResolution"
+              }
             }
           }
         },
         "OnOffSet": {
           "description": "Set the On/Off server state with time and delay parameters",
-          "sdfInputData": [
-            "#/sdfObject/GenericOnOff/sdfAction/OnOffSet/sdfData/OnOff",
-            "#/sdfObject/GenericOnOff/sdfAction/OnOffSet/sdfData/TransitionTimeSteps",
-            "#/sdfObject/GenericOnOff/sdfAction/OnOffSet/sdfData/StepResolution",
-            "#/sdfObject/GenericOnOff/sdfAction/OnOffSet/sdfData/Delay"
-          ],
-          "sdfData": {
-            "OnOff": {
-              "sdfRef": "#/sdfObject/GenericOnOff/sdfData/GenericOnOffData"
-            },
-            "TransitionTimeSteps": {
-              "sdfRef": "#/sdfObject/GenericOnOff/sdfData/TransitionTimeSteps"
-            },
-            "StepResolution": {
-              "sdfRef": "#/sdfObject/GenericOnOff/sdfData/StepResolution"
-            },
-            "Delay": {
-              "sdfRef": "#/sdfObject/GenericOnOff/sdfData/DelayData"
+          "sdfInputData": {
+            "type": "object",
+            "properties": {
+              "OnOff": {
+                "sdfRef": "#/sdfObject/GenericOnOff/sdfData/GenericOnOffData"
+              },
+              "TransitionTimeSteps": {
+                "sdfRef": "#/sdfObject/GenericOnOff/sdfData/TransitionTimeSteps"
+              },
+              "StepResolution": {
+                "sdfRef": "#/sdfObject/GenericOnOff/sdfData/StepResolution"
+              },
+              "Delay": {
+                "sdfRef": "#/sdfObject/GenericOnOff/sdfData/DelayData"
+              }
             }
           }
         }
       },
       "sdfData": {
         "GenericOnOffData": {
-          "description": "the on/off state property, use a mapping file for encoded values",
-          "enum": [
-            "Off", 
-            "On"
-          ]
+          "description": "the on/off state property",
+          "sdfChoice": {
+            "Off": {}, 
+            "On": {}
+          }
         },
         "TransitionTimeSteps": {
           "description": "Number of steps in the transition",
@@ -75,19 +75,22 @@
         },
         "StepResolution": {
           "description": "Step Resolution, time per step",
-          "enum": [
-            "100 Milliseconds", 
-            "1 Second", 
-            "10 Seconds", 
-            "10 Minutes"
-          ]
+          "sdfChoice": {
+            "100 Milliseconds": {}, 
+            "1 Second": {}, 
+            "10 Seconds": {}, 
+            "10 Minutes": {}
+          }
         },
         "DelayData": {
           "description": "delay in increments of 5mS",
           "type": "number",
+          "unit": "s",
           "minimum": 0,
           "maximum": 255,
-          "multipleOf": 1
+          "multipleOf": 1,
+          "scaleMinimum": 0,
+          "scaleMaximum": 1.275
         }
       }
     }
