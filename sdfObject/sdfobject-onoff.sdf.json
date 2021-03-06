@@ -1,8 +1,8 @@
 {
   "info": {
     "title": "Example SDF model for the ZCL OnOff cluster", 
-    "version": "2020-07-06", 
-    "copyright": "Copyright (c) 2019, Zigbee Alliance All rights reserved.", 
+    "version": "2021-03-05", 
+    "copyright": "Copyright (c) 2019-2021, Zigbee Alliance All rights reserved.", 
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   }, 
   "namespace": {
@@ -56,24 +56,21 @@
         }, 
         "OffWithEffect": {
           "label": "OffWithEffect",
-          "sdfRequired": [
-          ],
-          "sdfInputData": [
-            "#/sdfObject/OnOff/sdfAction/OffWithEffect/sdfData/EffectIdentifier", 
-            "#/sdfObject/OnOff/sdfAction/OffWithEffect/sdfData/EffectVariant"
-          ],
-          "sdfData": {
-            "EffectIdentifier": {
-              "label": "EffectIdentifier", 
-              "type": "number",
-              "enum": [
-                "DelayedAllOff",
-                "DyingLight"
-              ]
-            }, 
-            "EffectVariant": {
-              "label": "EffectVariant", 
-              "type": "number" 
+          "sdfInputData": {
+            "type": "object",
+            "properties": {
+              "EffectIdentifier": {
+                "label": "EffectIdentifier", 
+                "type": "number",
+                "sdfChoice": {
+                  "DelayedAllOff": {},
+                  "DyingLight": {}
+                }
+             }, 
+              "EffectVariant": {
+                "label": "EffectVariant", 
+                "type": "number" 
+              }  
             }
           }
         },
@@ -82,26 +79,25 @@
         }, 
         "OnWithTimedOff": {
           "label": "OnWithTimedOff", 
-          "sdfInputData": [
-            "#/sdfObject/OnOff/sdfAction/OnWithTimedOff/sdfData/OnOffControl",
-            "#/sdfObject/OnOff/sdfAction/OnWithTimedOff/sdfData/OnTime",
-            "#/sdfObject/OnOff/sdfAction/OnWithTimedOff/sdfData/OffWaitTime"
-          ],
-          "sdfData": {
-            "OnOffControl": {
-              "description": "implemented as a bitmap, modeled as an array of unique string items",
-              "type": "array",
-              "uniqueItems": true,
-              "items" : {
-                "type": "string",
-                "enum": [ "AcceptOnlyWhenOn" ]
-              }
-            },
-            "OnTime": {
-              "sdfRef": "#/sdfObject/OnOff/sdfData/TransitionTimeData"
-            }, 
-            "OffWaitTime": {
-              "sdfRef": "#/sdfObject/OnOff/sdfData/TransitionTimeData"
+          "sdfInputData": {
+            "type": "object",
+            "properties": {
+              "OnOffControl": {
+                "description": "implemented as a bitmap, modeled as an array of unique string items",
+                "type": "array",
+                "uniqueItems": true,
+                "items" : {
+                  "sdfChoice": {
+                    "AcceptOnlyWhenOn": {}
+                  } 
+                }
+              },
+              "OnTime": {
+                "sdfRef": "#/sdfObject/OnOff/sdfData/TransitionTimeData"
+              }, 
+              "OffWaitTime": {
+                "sdfRef": "#/sdfObject/OnOff/sdfData/TransitionTimeData"
+              }  
             }
           }
         }
@@ -111,16 +107,18 @@
           "type": "number", 
           "minimum": 0, 
           "maximum": 65535, 
-          "multipleOf": 1
+          "multipleOf": 1,
+          "unit": "s",
+          "scaleMinimum": 0,
+          "scaleMaximum": 6553.5
         },
         "StartUpOnOffMode": {
-          "type": "number",
-          "enum": [
-            "SetOnOffTo0",
-            "SetOnOffTo1",
-            "TogglePreviousOnOff",
-            "SetPreviousOnOff"
-          ]
+          "sdfChoice": {
+            "SetOnOffTo0": {},
+            "SetOnOffTo1": {},
+            "TogglePreviousOnOff": {},
+            "SetPreviousOnOff": {}
+          }
         }
       }
     }
