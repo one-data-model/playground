@@ -232,16 +232,14 @@
         },
         "MoveToClosestFrequency": {
           "label": "MoveToClosestFrequency",
-          "sdfInputData": [
-            "#/sdfObject/Level/sdfAction/MoveToClosestFrequency/sdfData/Frequency"
-          ],
-          "sdfRequired": [
-            "#/sdfObject/Level/sdfAction/MoveToClosestFrequency/sdfData/Frequency"
-          ],
-          "sdfData": {
-            "Frequency": {
-              "sdfRef": "#/sdfObject/Level/sdfData/FrequencyData"
-            }
+          "sdfInputData": {
+            "type": "object",
+            "properties": {
+              "Frequency": {
+                "sdfRef": "#/sdfObject/Level/sdfData/FrequencyData"
+              }
+            },
+            "required": "Frequency"
           }
         }
       }, 
