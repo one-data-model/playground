@@ -52,10 +52,9 @@
       "sdfData": {
         "TransitionTimeSteps": {
           "description": "Number of steps in the transition",
-          "type": "number",
+          "type": "integer",
           "minimum": 0,
-          "maximum": 63,
-          "multipleOf": 1
+          "maximum": 63
         },
         "StepResolution": {
           "description": "Step Resolution, time per step",

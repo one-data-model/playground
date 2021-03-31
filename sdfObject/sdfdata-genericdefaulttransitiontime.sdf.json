@@ -1,0 +1,57 @@
+{
+  "info": {
+    "title": "Example Bluetooth mesh Generic Default Transition Time Model, data type version", 
+    "version": "2021-03-30", 
+    "copyright": "Copyright Bluetooth SIG, Inc. All rights reserved.", 
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+  }, 
+  "namespace": {
+    "pg": "https://onedm.org/playground/"
+  }, 
+  "defaultNamespace": "pg", 
+  "sdfData": {
+    "GenericDefaultTransitionTime": {
+      "description": "Composite type to represent a broad range of times that can be packed into an octet",
+      "type": "object",
+      "required": ["TransitionTimeSteps", "StepResolution"],
+      "properties": {
+        "TransitionTimeSteps": {
+          "description": "Step count, the number of steps in the transition",
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 63
+        },
+        "StepResolution": {
+          "description": "Time per step",
+          "sdfChoice": {
+            "100 Milliseconds": {
+              "default": 0
+            }, 
+            "1 Second": {
+              "default": 1
+            }, 
+            "10 Seconds": {
+              "default": 2
+            }, 
+            "10 Minutes": {
+              "default": 3
+            }
+          }
+        }
+      }
+    },
+    "GenericDefaultTransitionTimeState": {
+      "description": "data elements packed into an array to represent the Bluetooth Mesh state",
+      "type": "array",
+      "uniqueItems": true,
+      "items": [
+        { 
+          "sdfRef": "#/sdfData/GenericDefaultTransitionTime/properties/TransitionTimeSteps" 
+        },
+        { 
+          "sdfRef": "#/sdfData/GenericDefaultTransitionTime/properties/StepResolution" 
+        }
+      ]
+    }
+  }
+}

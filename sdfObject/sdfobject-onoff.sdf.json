@@ -61,7 +61,6 @@
             "properties": {
               "EffectIdentifier": {
                 "label": "EffectIdentifier", 
-                "type": "number",
                 "sdfChoice": {
                   "DelayedAllOff": {},
                   "DyingLight": {}
@@ -69,7 +68,7 @@
              }, 
               "EffectVariant": {
                 "label": "EffectVariant", 
-                "type": "number" 
+                "type": "integer"
               }  
             }
           }
@@ -106,11 +105,9 @@
         "TransitionTimeData": {
           "type": "number", 
           "minimum": 0, 
-          "maximum": 65535, 
-          "multipleOf": 1,
-          "unit": "s",
-          "scaleMinimum": 0,
-          "scaleMaximum": 6553.5
+          "maximum": 6553.5, 
+          "multipleOf": 0.1,
+          "unit": "s"
         },
         "StartUpOnOffMode": {
           "sdfChoice": {

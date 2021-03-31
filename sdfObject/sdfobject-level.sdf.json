@@ -60,7 +60,7 @@
         }, 
         "OnLevel": {
           "label": "OnLevel", 
-          "type": "number", 
+          "type": "integer", 
           "minimum": 0, 
           "maximum": 255, 
           "default": 255
@@ -75,7 +75,7 @@
         }, 
         "DefaultMoveRate": {
           "label": "DefaultMoveRate", 
-          "type": "number", 
+          "type": "integer", 
           "minimum": 0, 
           "maximum": 254
         },
@@ -86,19 +86,22 @@
         },
         "StartUpCurrentLevel": {
           "label": "StartUpCurrentLevel",
-          "type": "number",
+          "type": "integer", 
           "sdfChoice": {
             "MinimumDeviceValuePermitted": {
               "label": "MinimumDeviceValuePermitted",
+              "type": "integer", 
               "const": 0
             },
             "PresetLevelValue": {
               "label": "PresetLevelValue", 
+              "type": "integer", 
               "minimum": 1,
               "maximum": 254    
             },
             "SetToPreviousValue": {
               "label": "SetToPreviousValue",
+              "type": "integer", 
               "const": 255
             }
           }
@@ -144,7 +147,7 @@
               }, 
               "Rate": {
                 "label": "Rate", 
-                "type": "number", 
+                "type": "integer", 
                 "minimum": 0, 
                 "maximum": 255
               },
@@ -174,7 +177,7 @@
               }, 
               "StepSize": {
                 "label": "Step size", 
-                "type": "number", 
+                "type": "integer", 
                 "minimum": 0, 
                 "maximum": 255
               }, 
@@ -247,18 +250,18 @@
         "TransitionTimeData": {
           "type": "number", 
           "minimum": 0, 
-          "maximum": 65535, 
-          "multipleOf": 1
+          "maximum": 6553.5,
+          "multipleOf": 0.1,
+          "unit": "s"
         },
         "MoveStepMode": {
-          "type": "number",
-          "sdfCHoice": {
+          "sdfChoice": {
             "Up": {},
             "Down": {}
           }
        },
         "LevelData": {
-          "type": "number", 
+          "type": "integer", 
           "minimum": 0, 
           "maximum": 254
         },
@@ -274,7 +277,7 @@
           }
         },
         "FrequencyData": {
-          "type": "number",
+          "type": "integer",
           "minimum": 0,
           "maximum": 65535
         }

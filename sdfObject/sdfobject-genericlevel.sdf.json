@@ -63,10 +63,9 @@
             "type": "object",
             "properties": {
               "DeltaLevel": {
-                "type": "number",
+                "type": "integer",
                 "minimum": -65535,
-                "maximum": 65535,
-                "multipleOf": 1
+                "maximum": 65535
               },
               "TransitionTimeSteps": {
                 "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeSteps"
@@ -104,36 +103,40 @@
       "sdfData": {
         "GenericLevelData": {
           "description": "level state data",
-          "type": "number",
+          "type": "integer",
           "minimum": -32768,
-          "maximum": 32767,
-          "multipleOf": 1
+          "maximum": 32767
         },
         "TransitionTimeSteps": {
-          "description": "Number of steps in the transition",
-          "type": "number",
+          "description": "Step count, the number of steps in the transition",
+          "type": "integer",
           "minimum": 0,
-          "maximum": 63,
-          "multipleOf": 1
+          "maximum": 63
         },
         "StepResolution": {
-          "description": "Step Resolution, time per step",
+          "description": "Time per step",
           "sdfChoice": {
-            "100 Milliseconds": {}, 
-            "1 Second": {}, 
-            "10 Seconds": {}, 
-            "10 Minutes": {}
+            "100 Milliseconds": {
+              "default": 0
+            }, 
+            "1 Second": {
+              "default": 1
+            }, 
+            "10 Seconds": {
+              "default": 2
+            }, 
+            "10 Minutes": {
+              "default": 3
+            }
           }
         },
         "DelayData": {
           "description": "delay in increments of 5mS",
-          "type": "number",
+          "type": "integer",
           "unit": "s",
           "minimum": 0,
-          "maximum": 255,
-          "multipleOf": 1,
-          "scaleMinimum": 0,
-          "scaleMaximum": 1.275
+          "maximum": 1.275,
+          "multipleOf": 0.005
         }
       }
     }
