@@ -2,7 +2,7 @@
   "info": {
     "title": "OMA LwM2M Barometer (Object ID 3315)",
     "version": "2022-02-21",
-    "copyright": "Copyright (c) 2018-2020 IPSO",
+    "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
   "namespace": {
