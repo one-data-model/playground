@@ -29,8 +29,8 @@
           "type": "integer",
           "unit": "s"
         },
-        "Muti-state_Output": {
-          "label": "Muti-state Output",
+        "Multi-state_Output": {
+          "label": "Multi-state Output",
           "description": "A string describing a state for multiple level output such as Pilot Wire.",
           "type": "string"
         },

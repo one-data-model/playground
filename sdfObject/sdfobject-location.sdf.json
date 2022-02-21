@@ -8,25 +8,28 @@
   "sdfObject": {
     "Location": {
       "label": "Location",
-      "description": "This IPSO object represents GPS coordinates. This object is compatible with the LWM2M management object for location, but uses reusable resources.",
+      "description": "This IPSO object represents GPS coordinates. This object is compatible with the LwM2M management object for location, but uses reusable resources.",
       "sdfProperty": {
-        "Latitude": {
-          "label": "Latitude",
+        "Numeric_Latitude": {
+          "label": "Numeric Latitude",
           "description": "The decimal notation of latitude, e.g. -43.5723 (World Geodetic System 1984).",
           "writable": false,
-          "type": "string"
+          "type": "number",
+          "unit": "lat"
         },
-        "Longitude": {
-          "label": "Longitude",
+        "Numeric_Longitude": {
+          "label": "Numeric Longitude",
           "description": "The decimal notation of longitude, e.g. 153.21760 (World Geodetic System 1984).",
           "writable": false,
-          "type": "string"
+          "type": "number",
+          "unit": "lon"
         },
-        "Uncertainty": {
-          "label": "Uncertainty",
+        "Numeric_Uncertainty": {
+          "label": "Numeric Uncertainty",
           "description": "The accuracy of the position in meters.",
           "writable": false,
-          "type": "string"
+          "type": "number",
+          "unit": "m"
         },
         "Compass_Direction": {
           "label": "Compass Direction",
@@ -84,8 +87,8 @@
       },
       "sdfAction": {},
       "sdfRequired": [
-        "#/sdfObject/Location/sdfProperty/Latitude",
-        "#/sdfObject/Location/sdfProperty/Longitude"
+        "#/sdfObject/Location/sdfProperty/Numeric_Latitude",
+        "#/sdfObject/Location/sdfProperty/Numeric_Longitude"
       ]
     }
   }
