@@ -5,6 +5,10 @@
     "title": "User ID",
     "version": "2019-03-22"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "userid": {
       "description": "This Resource describes the Properties associated with user id of an OCF Client. The userid Property is a single value of type string. The userid Property is a read-only value that is provided by the Server.",

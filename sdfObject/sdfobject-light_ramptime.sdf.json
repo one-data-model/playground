@@ -5,6 +5,10 @@
     "title": "Ramp Time",
     "version": "2019-02-15"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "light.ramptime": {
       "description": "This Resource that describes the ramp time of a dimming function. It specifies the actual speed of changing between 2 dimming values. The Property \"ramptime\" is specified in milliseconds [ms]. When range is omitted the maximum value is 100 ms. The ramp time of 0ms indicates the minimal delay possible by the implementation.",

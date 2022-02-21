@@ -5,12 +5,16 @@
     "title": "Mode",
     "version": "2019-02-15"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "mode": {
       "description": "This Resource describes the modes of operation that a Device can provide. The mode can be read or set. The Property \"supportedModes\" is an array of possible modes the device supports. The Property \"modes\" is an array of the currently active mode(s).",
       "sdfProperty": {
         "modes": {
-          "description": "The array of the currently active mode(s).",
+          "description": "Desired mode",
           "items": {
             "type": "string"
           },

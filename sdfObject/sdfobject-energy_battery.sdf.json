@@ -5,6 +5,10 @@
     "title": "Battery",
     "version": "2019-06-18"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "energy.battery": {
       "description": "This Resource describes the attributes associated with a battery. The Property \"charge\" is an integer showing the current battery charge level as a percentage in the range 0 (fully discharged) to 100 (fully charged). The Property \"capacity\" represents the total capacity of battery in Amp Hours (Ah). The \"charging\" status and \"discharging\" status are represented by boolean values set to \"true\" indicating enabled and \"false\" indicating disabled. Low battery status is represented by a boolean value set to \"true\" indicating low charge level and \"false\" indicating otherwise, based upon the battery threshold represented as a percentage.",

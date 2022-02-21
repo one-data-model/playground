@@ -5,6 +5,10 @@
     "title": "Illuminance Sensor",
     "version": "2019-08-08"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "sensor.illuminance": {
       "description": "This Resource describes an illuminance sensor. The Property \"illuminance\" is a float and represents the sensed luminous flux per unit area in lux.",

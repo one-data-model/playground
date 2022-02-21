@@ -5,6 +5,10 @@
     "title": "Body Water",
     "version": "2019-03-22"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "body.water": {
       "description": "This Resource describes the Properties associated with a person's body water. The unit is a single value that is one of kg or lb. If the unit Property is missing the default is kilograms [kg]. The bwater and unit Properties are read-only values that are provided by the Server. When range is omitted the default is 0 to +MAXFLOAT.",

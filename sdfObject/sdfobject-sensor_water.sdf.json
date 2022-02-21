@@ -5,6 +5,10 @@
     "title": "Water Sensor",
     "version": "2019-11-18"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "sensor.water": {
       "description": "This Resource describes whether water has been sensed or not. The Property \"value\" is a boolean. A value of 'true' means that water has been sensed. A value of 'false' means that water not been sensed.",

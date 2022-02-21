@@ -5,6 +5,10 @@
     "title": "Time Stamp",
     "version": "2019-03-27"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "time.stamp": {
       "description": "This Resource describes Properties associated with a timestamp. The \"timestamp\" Property is a string that captures a timestamp using the RFC3339 datetime format (e. g: 2007-04-05T14:30Z) (Time+Date+Timezone).",

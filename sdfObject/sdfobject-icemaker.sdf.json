@@ -5,18 +5,20 @@
     "title": "Ice Maker",
     "version": "2019-02-15"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "icemaker": {
       "description": "This Resource describes an the operational state of an Ice Maker. The Property \"status\" is a string containing a value from the set of possible ice maker statuses. The possible statuses are defined by the enumeration [\"on\", \"off\", \"full\"] A status of \"on\" means that the Ice Maker is operating. A status of \"off\" means that the Ice Maker is not operating. A status of \"full\" means that the ice collection bin is full (Ice Maker is operating).",
       "sdfProperty": {
         "status": {
-          "description": "The status of the Ice Maker.",
+          "description": "Set the status of the Ice Maker.",
           "enum": [
             "on",
-            "off",
-            "full"
-          ],
-          "type": "string"
+            "off"
+          ]
         }
       },
       "sdfRequired": [

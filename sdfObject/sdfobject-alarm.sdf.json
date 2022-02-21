@@ -5,6 +5,10 @@
     "title": "Alarm",
     "version": "2019-03-04"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "alarm": {
       "description": "This Resource describes the Properties associated with alarm status.",

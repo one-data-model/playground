@@ -5,6 +5,10 @@
     "title": "Operational State",
     "version": "2019-02-15"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "operational.state": {
       "description": "This Resource describes the operational and job states on a device. The states can be read or set, setting indicates a desired state. A device may reject an attempt to set a state that would result in adverse operational characteristics. The Property \"machineStates\" is an array of the possible operational states. The Property \"currentMachineState\" is the current state of operation of the device. The Property \"jobStates\" is an array of the possible job states. The Property \"currentJobState\" is the currently active jobState. The Property \"runningTime\" is the ISO8601 encoded elapsed time in the current operational state. The Property \"remainingTime\" is the ISO8601 encoded time till completion of the current operational state. The Property \"progressPercentage\" is the percentage completeness of the current jobState.",
@@ -14,7 +18,7 @@
           "type": "string"
         },
         "currentJobState": {
-          "description": "The currently active jobState.",
+          "description": "THe currently active jobState.",
           "type": "string"
         },
         "machineStates": {

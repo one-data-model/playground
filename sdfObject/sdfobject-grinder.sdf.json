@@ -5,6 +5,10 @@
     "title": "Grinder",
     "version": "2019-02-15"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "grinder": {
       "description": "This Resource describes the attributes associated with a grinder. The Property \"coarseness\" of the grounds is an integer. The higher the value, the less coarse. The Property \"remaining\" is a percentage that represents the unground material left.",

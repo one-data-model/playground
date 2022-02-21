@@ -5,6 +5,10 @@
     "title": "Temperature",
     "version": "2019-02-15"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "temperature": {
       "description": "This Resource describes a sensed or actuated Temperature value. The Property \"temperature\" describes the current value measured. The Property \"units\" is a single value that is one of \"C\", \"F\" or \"K\". It provides the unit of measurement for the \"temperature\" value. It is a read-only value that is provided by the server. If the \"units\" Property is missing the default is Celsius [C]. When the Property \"range\" is omitted the default is +/- MAXINT. A client can specify the units for the requested temperature by use of a query parameter. If no query parameter is provided the server provides its default measure or set value. It is recommended to return always the units Property in the result.",

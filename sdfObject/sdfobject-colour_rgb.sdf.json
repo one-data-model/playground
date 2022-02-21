@@ -5,6 +5,10 @@
     "title": "Colour RGB",
     "version": "2019-02-15"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "colour.rgb": {
       "description": "This Resource specifies the actual colour in the RGB space represented as an array of integers. Each colour value is described with a Red, Green, Blue component. These colour values are encoded as an array of integer values ([R,G,B]). The minimum and maximum colour value per component may be described by the Property \"range\". When \"range\" is omitted, then the \"range\" is [0,255].",

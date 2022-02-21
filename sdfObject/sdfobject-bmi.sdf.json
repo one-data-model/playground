@@ -5,6 +5,10 @@
     "title": "Body Mass Index(BMI)",
     "version": "2019-03-22"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "bmi": {
       "description": "This Resource describes the Properties associated with a person's Body Mass Index (BMI). The unit, which is the default unit, is kg/m^2. The bmi and unit Properties are read-only values that are provided by the server. When range is omitted the default is 0 to +MAXFLOAT.",

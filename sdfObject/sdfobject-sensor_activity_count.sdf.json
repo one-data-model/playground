@@ -5,6 +5,10 @@
     "title": "Activity Count",
     "version": "2019-02-22"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "sensor.activity.count": {
       "description": "This Resource specifies an activity count. The Resource can be readonly (oic. if. s interface) in which instance it represents a count. The Resource can be readwrite (oic. if. a interface) in which instance it represents a goal or target for a count. The Property \"count\" is an integer representing either the current count or goal value.",

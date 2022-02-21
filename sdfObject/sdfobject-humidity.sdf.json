@@ -5,12 +5,16 @@
     "title": "Humidity",
     "version": "2019-02-15"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "humidity": {
       "description": "This Resource describes a sensed or desired humidity. The Property \"humidity\" is an integer describing the percentage measured relative humidity. The Property \"desiredHumidity\" is an integer showing the desired target relative humidity.",
       "sdfProperty": {
         "desiredHumidity": {
-          "description": "The desired value for humidity.",
+          "description": "Desired value for Humidity",
           "maximum": 100,
           "minimum": 0,
           "type": "integer"

@@ -5,6 +5,10 @@
     "title": "Carbon Dioxide Sensor",
     "version": "2019-11-18"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "sensor.carbondioxide": {
       "description": "This Resource describes whether carbon dioxide has been sensed or not. The Property \"value\" is a boolean. A value of 'true' means that carbon dioxide has been detected. A value of 'false' means that carbon dioxide has not been detected.",

@@ -5,6 +5,10 @@
     "title": "Altimeter",
     "version": "2019-02-25"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "altimeter": {
       "description": "This Resource describes the properties associated with altimeter. The Property \"alt\" is the distance (metres) above or below 'local' sea-level.",

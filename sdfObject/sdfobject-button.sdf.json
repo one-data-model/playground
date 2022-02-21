@@ -5,6 +5,10 @@
     "title": "Button Switch",
     "version": "2019-02-22"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "button": {
       "description": "This Resource describes the operation of a button style switch. The Property \"value\" is a boolean. A value of 'true' means that the button is being pushed/pressed. A value of 'false' means that the button is not being pushed/pressed.",

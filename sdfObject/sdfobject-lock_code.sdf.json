@@ -5,6 +5,10 @@
     "title": "Lock Code",
     "version": "2019-02-15"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "lock.code": {
       "description": "The Resource describing a lock code. The Property \"lockCodeList\" is an array of possible codes that may be associated with a lock. The codes are all presented as strings.",
