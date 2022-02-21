@@ -1,10 +1,14 @@
 {
   "info": {
     "title": "OMA LwM2M Multi-state Selector (Object ID 3348)",
-    "version": "2021-02-11",
+    "version": "2022-02-21",
     "copyright": "Copyright (c) 2018-2020 IPSO",
-    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+    "license": "BSD-3-Clause"
   },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
   "sdfObject": {
     "Multi-state_Selector": {
       "label": "Multi-state Selector",

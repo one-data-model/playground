@@ -1,10 +1,14 @@
 {
   "info": {
     "title": "OMA LwM2M Concentration (Object ID 3325)",
-    "version": "2021-02-11",
+    "version": "2022-02-21",
     "copyright": "Copyright (c) 2018-2020 IPSO",
-    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+    "license": "BSD-3-Clause"
   },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
   "sdfObject": {
     "Concentration": {
       "label": "Concentration",
