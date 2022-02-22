@@ -5,6 +5,10 @@
     "title": "Energy Generation",
     "version": "2019-02-15"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "energy.generation": {
       "description": "This Resource describes the attributes associated with energy generation The Property \"energygenerated\" is a number that provides the energy generated in Watt-hour(Wh).",

@@ -5,6 +5,10 @@
     "title": "Sensor Properties",
     "version": "2019-02-15"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "sensor.props": {
       "description": "This Resource describes the properties which guide the reporting of a state change of a Sensor. The Property \"silenttime\" represents the period after which a state change report was sent where the Sensor state change is not reported. The Property \"sensitivity\" represents the level at which the sensor detects a state change. These values are completely dependent on the type of Sensor and the manufacturer capability, so no range restrictions are used. The Properties \"range\", \"step\" and \"precision\" are only applied to the \"sensitivity\" Property.",

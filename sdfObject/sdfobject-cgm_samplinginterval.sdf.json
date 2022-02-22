@@ -5,6 +5,10 @@
     "title": "Sampling Interval for Continuous Glucose Meter (CGM)",
     "version": "2019-03-04"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "cgm.samplinginterval": {
       "description": "This Resource describes the Properties associated with Sampling Interval for Continuous Glucose Meter (CGM).",

@@ -5,6 +5,10 @@
     "title": "Deodorization",
     "version": "2019-08-20"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "deodorization": {
       "description": "This Resource describes a deodorization function, which can be supported by controlling on air filter. The Property \"mode\" is a mode of the deodorization function. The supported modes are defined by the enumeration [\"off\", \"on\", \"auto\"]. \"off\" means that the deodorization function is not enabled. \"on\" means that the deodorization function is active. \"auto\" means that the deodorization function is automatically controlled depending on sensed air condition in the device inside. The Property \"currentstate\" is the current state of the deodorization function. In the case of \"auto\" mode, if the sensed air condition is determined to be bad, the function will be \"on\". Then, \"mode\" value is \"auto\" and \"currentstate\" value is \"on\". If not, the function is remaining \"off\" state. Then, \"currentstate\" value is \"off\".",

@@ -5,6 +5,10 @@
     "title": "Auto White Balance",
     "version": "2019-02-22"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "colour.autowhitebalance": {
       "description": "This Resource describes an auto balance on/off feature. The Property \"autoWhiteBalance\" is a boolean. An AutoWhiteBalance value of 'true' means that the auto white balance feature is on. An AutoWhiteBalance value of 'false' means that the auto white balance feature is off.",

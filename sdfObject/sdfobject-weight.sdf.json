@@ -5,6 +5,10 @@
     "title": "Weight",
     "version": "2019-03-22"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "weight": {
       "description": "This Resource describes the Properties associated with weight of an object. The unit is a single value that is one of kg, g, lb or oz. If the unit Property is missing the default is kilograms [kg]. The unit Property is a read-only value that is provided by the server. When range is omitted the default is 0 to +MAXFLOAT.",

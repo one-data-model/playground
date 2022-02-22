@@ -5,6 +5,10 @@
     "title": "Touch Sensor",
     "version": "2019-02-15"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "sensor.touch": {
       "description": "This Resource describes whether a touch has been sensed or not. The Property \"value\" is a boolean. A value of 'true' means that touch has been sensed. A value of 'false' means that touch not been sensed.",

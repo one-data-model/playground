@@ -5,6 +5,10 @@
     "title": "Threshold for Continuous Glucose Meter (CGM)",
     "version": "2019-03-04"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "cgm.threshold": {
       "description": "This Resource describes the Properties associated with Threshold for Continuous Glucose Meter (CGM).",

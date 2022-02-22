@@ -5,6 +5,10 @@
     "title": "Vehicle Connector",
     "version": "2019-02-15"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "vehicle.connector": {
       "description": "This Resource describes the attributes associated with an electric vehicle charging connector. The Property \"connected\" is a boolean indicating the status of the connector (False = disconnected, True = connected). The Property \"ratedchargingcapacity\" and \"rateddischargingcapacity\" are in Amps (A).",

@@ -5,6 +5,10 @@
     "title": "Contact Sensor",
     "version": "2019-02-15"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "sensor.contact": {
       "description": "This Resource describes whether a contact sensor has been tripped or not. Typical use case is in Security Systems detecting window or door open. The Property \"value\" is a boolean. A value of 'true' means that contact has been broken (open). A value of 'false' means that contact is in place (closed).",

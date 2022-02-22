@@ -5,6 +5,10 @@
     "title": "UV Radiation",
     "version": "2019-02-15"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "sensor.radiation.uv": {
       "description": "This Resource specifies UV radiation measurement. The Property \"measurement\" is the current measured UV Index",

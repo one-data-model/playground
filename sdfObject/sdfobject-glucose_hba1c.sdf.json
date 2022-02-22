@@ -5,6 +5,10 @@
     "title": "Hemoglobin Bound to Glucose A1c Form (HbA1c) for Glucose Meter",
     "version": "2019-03-22"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "glucose.hba1c": {
       "description": "This Resource describes the Properties associated with a person's hba1c level. The unit is a single value that is percentage. The hba1c Property is a read-only value that is provided by the Server.",

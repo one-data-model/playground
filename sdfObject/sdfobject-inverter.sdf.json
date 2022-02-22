@@ -5,6 +5,10 @@
     "title": "Inverter (IEC 61850)",
     "version": "2019-06-13"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "inverter": {
       "description": "This Resource describes functions for the control and monitoring of IEC 61850 based circuit breaker.",

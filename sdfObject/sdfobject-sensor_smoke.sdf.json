@@ -5,6 +5,10 @@
     "title": "Smoke Sensor",
     "version": "2019-11-18"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "sensor.smoke": {
       "description": "This Resource describes whether smoke has been sensed or not. The Property \"value\" is a boolean. A value of 'true' means that smoke has been sensed. A value of 'false' means that smoke not been sensed.",

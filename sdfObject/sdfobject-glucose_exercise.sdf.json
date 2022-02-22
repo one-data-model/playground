@@ -5,6 +5,10 @@
     "title": "Exercise for Glucose Meter",
     "version": "2019-03-22"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "glucose.exercise": {
       "description": "This Resource describes the Properties associated with glucose exercise. The exercise Property has a default unit of percentage. The exercise Property is a read-only value that is provided by the Server.",

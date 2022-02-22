@@ -5,6 +5,10 @@
     "title": "Battery Material",
     "version": "2019-02-22"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "batterymaterial": {
       "description": "This Resource describes the battery material represented as an enumerated set of strings.",

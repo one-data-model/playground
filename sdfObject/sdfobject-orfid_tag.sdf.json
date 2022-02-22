@@ -5,6 +5,10 @@
     "title": "Optical RFID Tag",
     "version": "2019-02-15"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "orfid.tag": {
       "description": "The Property \"tagid\" is an integer showing the currently read optical augmented RFID tag's identity information.",
