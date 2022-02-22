@@ -1,7 +1,7 @@
 {
   "info": {
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
-    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "license": "BSD-3-Clause",
     "title": "Clock",
     "version": "2019-03-27"
   },
