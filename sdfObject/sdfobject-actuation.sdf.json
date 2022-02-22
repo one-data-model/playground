@@ -1,10 +1,14 @@
 {
   "info": {
     "title": "OMA LwM2M Actuation (Object ID 3306)",
-    "version": "2021-02-11",
-    "copyright": "Copyright (c) 2018-2020 IPSO",
-    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+    "version": "2022-02-21",
+    "copyright": "Copyright 2019 Open Mobile Alliance.",
+    "license": "BSD-3-Clause"
   },
+  "namespace": {
+    "oma": "https://onedm.org/ecosystem/oma"
+  },
+  "defaultNamespace": "oma",
   "sdfObject": {
     "Actuation": {
       "label": "Actuation",
@@ -29,8 +33,8 @@
           "type": "integer",
           "unit": "s"
         },
-        "Muti-state_Output": {
-          "label": "Muti-state Output",
+        "Multi-state_Output": {
+          "label": "Multi-state Output",
           "description": "A string describing a state for multiple level output such as Pilot Wire.",
           "type": "string"
         },
