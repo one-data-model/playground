@@ -59,8 +59,8 @@ case $# in
                 ./sdflint/*) ;;
                 ./package-lock.json) ;;
                 *)
-                    lint1 "$i" sdf-framework.jso.json "SDF framework syntax"
-                    lint1 "$i" sdf-validation.jso.json "SDF validation syntax"
+                    lint1 "$i" schema=sdf-framework.jso.json "SDF framework syntax"
+                    lint1 "$i" schema=sdf-validation.jso.json "SDF validation syntax"
                     echo $i
             esac
         done
