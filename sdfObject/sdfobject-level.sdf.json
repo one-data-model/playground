@@ -86,7 +86,6 @@
         },
         "StartUpCurrentLevel": {
           "label": "StartUpCurrentLevel",
-          "type": "integer", 
           "sdfChoice": {
             "MinimumDeviceValuePermitted": {
               "label": "MinimumDeviceValuePermitted",
