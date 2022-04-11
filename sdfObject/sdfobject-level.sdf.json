@@ -241,7 +241,7 @@
                 "sdfRef": "#/sdfObject/Level/sdfData/FrequencyData"
               }
             },
-            "required": "Frequency"
+            "required": ["Frequency"]
           }
         }
       }, 
