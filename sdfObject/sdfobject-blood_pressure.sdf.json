@@ -1,10 +1,14 @@
 {
   "info": {
     "copyright": "Copyright 2016-2019 Open Connectivity Foundation, Inc. All rights reserved.",
-    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "license": "BSD-3-Clause",
     "title": "Blood Pressure",
     "version": "2019-03-22"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "blood.pressure": {
       "description": "This Resource describes the Properties associated with a person's blood pressure. The unit is a single value that is one of mmHg or kPa. If the unit Property is missing the default is a millimeter of mercury [mmHg]. The bloodpressure and unit Properties are read-only values that are provided by the Server. When range is omitted the default is 0 to +MAXFLOAT.",

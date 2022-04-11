@@ -1,10 +1,14 @@
 {
   "info": {
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
-    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "license": "BSD-3-Clause",
     "title": "Colour Space Coordinates",
     "version": "2019-02-15"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "colour.csc": {
       "description": "This Resource describes the colour using colour space co-ordinates. The Property \"csc\" is the colour space coordinates in CIE colour space. The first item in the array is the X coordinate. The second item in the array is the Y coordinate. If the Property \"precision\" is provided it applies to both the X and Y coordinates. The Resource provides the colour using colour space coordinates.",

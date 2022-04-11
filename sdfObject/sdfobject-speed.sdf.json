@@ -1,10 +1,14 @@
 {
   "info": {
     "copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
-    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "license": "BSD-3-Clause",
     "title": "Speed",
     "version": "2019-05-13"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "speed": {
       "description": "This Resource describes the speed of an object, which is the magnitude of its velocity. The unit, which is the default SI unit, is metre per second. The speed Property is a read-only value that is provided by the server. When range (from \"oic. r. baseresource\") is omitted the default is 0 to +MAXFLOAT.",

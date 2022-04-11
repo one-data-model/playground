@@ -1,10 +1,14 @@
 {
   "info": {
     "copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
-    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "license": "BSD-3-Clause",
     "title": "Automatic Document Feeder",
     "version": "2019-02-22"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "automaticdocumentfeeder": {
       "description": "This Resource describes the state of an automatic document feeder, typically used with a scanner. The Property \"adfstates\" and \"currentAdfState\" are read only. The Property \"adfStates\" is an array of the possible operational states. The Property \"adfProcessing\" is the OK state, other states are errors or require 'user attention'. The currentAdfState is the current value of the ADF state on the device.",

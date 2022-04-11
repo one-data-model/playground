@@ -1,10 +1,14 @@
 {
   "info": {
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
-    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "license": "BSD-3-Clause",
     "title": "Carbon Monoxide Sensor",
     "version": "2019-11-18"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "sensor.carbonmonoxide": {
       "description": "This Resource describes whether carbon monoxide has been sensed or not. The Property \"value\" is a boolean. A value of 'true' means that carbon monoxide has been detected. A value of 'false' means that carbon monoxide has not been detected.",

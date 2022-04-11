@@ -1,10 +1,14 @@
 {
   "info": {
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
-    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "license": "BSD-3-Clause",
     "title": "Foaming",
     "version": "2019-02-15"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "foaming": {
       "description": "This Resource describes the attributes associated with foaming. The Property \"foamstrength\" of the liquid is represented as an integer. The foam strength is an integer, the range of which may be enforced by the presence of the Property \"range\".",

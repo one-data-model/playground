@@ -1,10 +1,14 @@
 {
   "info": {
     "copyright": "copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
-    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "license": "BSD-3-Clause",
     "title": "HVAC Capacity",
     "version": "2019-07-24"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "hvac.capacity": {
       "description": "This Resource describes the capacity (heating or cooling) of a HVAC system. \"capacity\" is a number in units of kW (kilowatts). To convert from kW to other units that may be commonly used in certain geographic locales the following conversions should be applied: - to convert to BTU/hr: BTU/hr = 3412. 142 * kW - to convert to ton: ton = kW/3. 5168525",

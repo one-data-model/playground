@@ -1,10 +1,14 @@
 {
   "info": {
     "copyright": "Copyright 2016-2019 Open Connectivity Foundation, Inc. All rights reserved.",
-    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "license": "BSD-3-Clause",
     "title": "Context Carbohydrates for Glucose Meter",
     "version": "2019-03-22"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "glucose.carb": {
       "description": "This Resource describes the Properties associated with a context carbohydrates. The carb Property has a default unit of grams[g]. The carb and meal Properties are read-only values that are provided by the Server. When range is omitted the default is 0 to +MAXFLOAT.",

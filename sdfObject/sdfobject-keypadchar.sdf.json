@@ -1,10 +1,14 @@
 {
   "info": {
     "copyright": "copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
-    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "license": "BSD-3-Clause",
     "title": "KeyPadChar",
     "version": "2018-12-12"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "keypadchar": {
       "description": "This Resource describes a char (0-9,*,#) which is selected on a number keypad.",

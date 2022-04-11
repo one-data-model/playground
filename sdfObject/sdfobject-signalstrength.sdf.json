@@ -1,10 +1,14 @@
 {
   "info": {
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
-    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "license": "BSD-3-Clause",
     "title": "Signal Strength",
     "version": "2019-02-15"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "signalstrength": {
       "description": "This Resource describes the strength of a signal by means of lqi and rssi. The Property \"lqi\" is a floating point number that represents Link Quality Indicator. The Property \"rssi\" is a floating point number that represents the received signal strength indicator.",

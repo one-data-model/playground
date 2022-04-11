@@ -1,10 +1,14 @@
 {
   "info": {
     "copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
-    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "license": "BSD-3-Clause",
     "title": "Dimming",
     "version": "2019-02-15"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "light.dimming": {
       "description": "This Resource describes a dimming function. The Property \"dimmingSetting\" is an integer showing the current dimming level. If Property \"step\" is present then it represents the increment between dimmer values. When the Property \"range\" is omitted, then the range is [0,100]. A value of 0 means total dimming; a value of 100 means no dimming.",

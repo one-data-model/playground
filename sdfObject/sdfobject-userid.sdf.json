@@ -1,10 +1,14 @@
 {
   "info": {
     "copyright": "Copyright 2016-2019 Open Connectivity Foundation, Inc. All rights reserved.",
-    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+    "license": "BSD-3-Clause",
     "title": "User ID",
     "version": "2019-03-22"
   },
+  "namespace": {
+    "ocf": "https://onedm.org/ecosystem/ocf"
+  },
+  "defaultNamespace": "ocf",
   "sdfObject": {
     "userid": {
       "description": "This Resource describes the Properties associated with user id of an OCF Client. The userid Property is a single value of type string. The userid Property is a read-only value that is provided by the Server.",
