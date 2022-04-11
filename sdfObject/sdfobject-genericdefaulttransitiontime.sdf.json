@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "Example Bluetooth mesh Generic Default Transition Time Model", 
-    "version": "20210-03-05", 
+    "version": "2022-04-11", 
     "copyright": "Copyright Bluetooth SIG, Inc. All rights reserved.", 
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   }, 

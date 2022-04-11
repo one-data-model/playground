@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "Example Bluetooth mesh Generic Default Transition Time Model, data type version", 
-    "version": "2021-03-30", 
+    "version": "2022-04-11", 
     "copyright": "Copyright Bluetooth SIG, Inc. All rights reserved.", 
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   }, 
@@ -23,6 +23,7 @@
         },
         "StepResolution": {
           "description": "Time per step",
+          "type": "integer",
           "sdfChoice": {
             "100 Milliseconds": {
               "default": 0

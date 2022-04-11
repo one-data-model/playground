@@ -87,10 +87,8 @@
           "type": "number",
           "unit": "s",
           "minimum": 0,
-          "maximum": 255,
-          "multipleOf": 1,
-          "scaleMinimum": 0,
-          "scaleMaximum": 1.275
+          "maximum": 1.275,
+          "multipleOf": 0.005
         }
       }
     }
