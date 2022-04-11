@@ -23,18 +23,21 @@
         },
         "StepResolution": {
           "description": "Time per step",
-          "type": "integer",
           "sdfChoice": {
             "100 Milliseconds": {
+              "type": "integer",
               "default": 0
             }, 
             "1 Second": {
+              "type": "integer",
               "default": 1
             }, 
             "10 Seconds": {
+              "type": "integer",
               "default": 2
             }, 
             "10 Minutes": {
+              "type": "integer",
               "default": 3
             }
           }
