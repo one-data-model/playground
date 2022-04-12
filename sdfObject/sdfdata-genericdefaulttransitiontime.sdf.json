@@ -48,14 +48,16 @@
       "description": "data elements packed into an array to represent the Bluetooth Mesh state",
       "type": "array",
       "uniqueItems": true,
-      "items": [
-        { 
-          "sdfRef": "#/sdfData/GenericDefaultTransitionTime/properties/TransitionTimeSteps" 
-        },
-        { 
-          "sdfRef": "#/sdfData/GenericDefaultTransitionTime/properties/StepResolution" 
+      "items": {
+        "sdfChoice": {
+          "TransitionTimeSteps":{ 
+            "sdfRef": "#/sdfData/GenericDefaultTransitionTime/properties/TransitionTimeSteps" 
+          },
+          "StepResolution": { 
+            "sdfRef": "#/sdfData/GenericDefaultTransitionTime/properties/StepResolution" 
+          }
         }
-      ]
+      }
     }
   }
 }
