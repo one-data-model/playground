@@ -48,6 +48,7 @@
       "description": "data elements packed into an array to represent the Bluetooth Mesh state",
       "type": "array",
       "uniqueItems": true,
+      "minItems": 2,
       "items": {
         "sdfChoice": {
           "TransitionTimeSteps":{ 
