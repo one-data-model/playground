@@ -1,35 +1,12 @@
 {
   "title": "sdf-validation.cddl",
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "$comment": "Generated: 2022-06-06T12:10:06Z",
   "$ref": "#/definitions/sdf-syntax",
   "definitions": {
     "sdf-syntax": {
       "type": "object",
       "properties": {
-        "info": {
-          "$ref": "#/definitions/sdfinfo"
-        },
-        "namespace": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          }
-        },
-        "defaultNamespace": {
-          "type": "string"
-        },
-        "sdfThing": {
-          "type": "object",
-          "additionalProperties": {
-            "$ref": "#/definitions/thingqualities"
-          }
-        },
-        "sdfObject": {
-          "type": "object",
-          "additionalProperties": {
-            "$ref": "#/definitions/objectqualities"
-          }
-        },
         "sdfProperty": {
           "type": "object",
           "additionalProperties": {
@@ -52,6 +29,30 @@
           "type": "object",
           "additionalProperties": {
             "$ref": "#/definitions/dataqualities"
+          }
+        },
+        "info": {
+          "$ref": "#/definitions/sdfinfo"
+        },
+        "namespace": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "defaultNamespace": {
+          "type": "string"
+        },
+        "sdfThing": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/thingqualities"
+          }
+        },
+        "sdfObject": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/objectqualities"
           }
         }
       },
@@ -78,6 +79,36 @@
     "thingqualities": {
       "type": "object",
       "properties": {
+        "minItems": {
+          "$ref": "#/definitions/uint"
+        },
+        "maxItems": {
+          "$ref": "#/definitions/uint"
+        },
+        "sdfProperty": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/propertyqualities"
+          }
+        },
+        "sdfAction": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/actionqualities"
+          }
+        },
+        "sdfEvent": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/eventqualities"
+          }
+        },
+        "sdfData": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/dataqualities"
+          }
+        },
         "description": {
           "type": "string"
         },
@@ -120,26 +151,11 @@
     "objectqualities": {
       "type": "object",
       "properties": {
-        "description": {
-          "type": "string"
-        },
-        "label": {
-          "type": "string"
-        },
-        "$comment": {
-          "type": "string"
-        },
-        "sdfRef": {
-          "$ref": "#/definitions/sdf-pointer"
-        },
-        "sdfRequired": {
-          "$ref": "#/definitions/pointer-list"
-        },
         "minItems": {
-          "type": "number"
+          "$ref": "#/definitions/uint"
         },
         "maxItems": {
-          "type": "number"
+          "$ref": "#/definitions/uint"
         },
         "sdfProperty": {
           "type": "object",
@@ -164,6 +180,21 @@
           "additionalProperties": {
             "$ref": "#/definitions/dataqualities"
           }
+        },
+        "description": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "$comment": {
+          "type": "string"
+        },
+        "sdfRef": {
+          "$ref": "#/definitions/sdf-pointer"
+        },
+        "sdfRequired": {
+          "$ref": "#/definitions/pointer-list"
         }
       },
       "additionalProperties": false
@@ -183,551 +214,6 @@
                 "array"
               ]
             },
-            "enum": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              },
-              "minItems": 1
-            },
-            "const": {
-              "$ref": "#/definitions/allowed-types"
-            },
-            "default": {
-              "$ref": "#/definitions/allowed-types"
-            },
-            "minimum": {
-              "type": "number"
-            },
-            "maximum": {
-              "type": "number"
-            },
-            "exclusiveMinimum": {
-              "anyOf": [
-                {
-                  "type": "boolean"
-                },
-                {
-                  "type": "number"
-                }
-              ]
-            },
-            "exclusiveMaximum": {
-              "anyOf": [
-                {
-                  "type": "boolean"
-                },
-                {
-                  "type": "number"
-                }
-              ]
-            },
-            "multipleOf": {
-              "type": "number"
-            },
-            "minLength": {
-              "type": "number"
-            },
-            "maxLength": {
-              "type": "number"
-            },
-            "pattern": {
-              "type": "string"
-            },
-            "format": {
-              "type": "string",
-              "enum": [
-                "date-time",
-                "date",
-                "time",
-                "uri",
-                "uri-reference",
-                "uuid"
-              ]
-            },
-            "minItems": {
-              "type": "number"
-            },
-            "maxItems": {
-              "type": "number"
-            },
-            "uniqueItems": {
-              "type": "boolean"
-            },
-            "items": {
-              "anyOf": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "enum": [
-                        "number",
-                        "string",
-                        "boolean",
-                        "integer"
-                      ]
-                    },
-                    "sdfRef": {
-                      "$ref": "#/definitions/sdf-pointer"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "$comment": {
-                      "type": "string"
-                    },
-                    "minimum": {
-                      "type": "number"
-                    },
-                    "maximum": {
-                      "type": "number"
-                    },
-                    "enum": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "minItems": 1
-                    },
-                    "format": {
-                      "type": "string"
-                    },
-                    "minLength": {
-                      "type": "number"
-                    },
-                    "maxLength": {
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": false
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "const": "object"
-                    },
-                    "required": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "minItems": 1
-                    },
-                    "properties": {
-                      "type": "object",
-                      "additionalProperties": {
-                        "$ref": "#/definitions/dataqualities"
-                      }
-                    },
-                    "sdfRef": {
-                      "$ref": "#/definitions/sdf-pointer"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "$comment": {
-                      "type": "string"
-                    },
-                    "minimum": {
-                      "type": "number"
-                    },
-                    "maximum": {
-                      "type": "number"
-                    },
-                    "enum": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "minItems": 1
-                    },
-                    "format": {
-                      "type": "string"
-                    },
-                    "minLength": {
-                      "type": "number"
-                    },
-                    "maxLength": {
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": false
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "sdfChoice": {
-                      "type": "object",
-                      "additionalProperties": {
-                        "$ref": "#/definitions/dataqualities"
-                      }
-                    },
-                    "sdfRef": {
-                      "$ref": "#/definitions/sdf-pointer"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "$comment": {
-                      "type": "string"
-                    },
-                    "minimum": {
-                      "type": "number"
-                    },
-                    "maximum": {
-                      "type": "number"
-                    },
-                    "enum": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "minItems": 1
-                    },
-                    "format": {
-                      "type": "string"
-                    },
-                    "minLength": {
-                      "type": "number"
-                    },
-                    "maxLength": {
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ]
-            },
-            "description": {
-              "type": "string"
-            },
-            "label": {
-              "type": "string"
-            },
-            "$comment": {
-              "type": "string"
-            },
-            "sdfRef": {
-              "$ref": "#/definitions/sdf-pointer"
-            },
-            "sdfRequired": {
-              "$ref": "#/definitions/pointer-list"
-            },
-            "unit": {
-              "type": "string"
-            },
-            "nullable": {
-              "type": "boolean"
-            },
-            "sdfType": {
-              "type": "string",
-              "enum": [
-                "byte-string",
-                "unix-time"
-              ]
-            },
-            "contentFormat": {
-              "type": "string"
-            },
-            "observable": {
-              "type": "boolean"
-            },
-            "readable": {
-              "type": "boolean"
-            },
-            "writable": {
-              "type": "boolean"
-            }
-          },
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "type": {
-              "type": "string",
-              "const": "object"
-            },
-            "required": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              },
-              "minItems": 1
-            },
-            "properties": {
-              "type": "object",
-              "additionalProperties": {
-                "$ref": "#/definitions/dataqualities"
-              }
-            },
-            "enum": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              },
-              "minItems": 1
-            },
-            "const": {
-              "$ref": "#/definitions/allowed-types"
-            },
-            "default": {
-              "$ref": "#/definitions/allowed-types"
-            },
-            "minimum": {
-              "type": "number"
-            },
-            "maximum": {
-              "type": "number"
-            },
-            "exclusiveMinimum": {
-              "anyOf": [
-                {
-                  "type": "boolean"
-                },
-                {
-                  "type": "number"
-                }
-              ]
-            },
-            "exclusiveMaximum": {
-              "anyOf": [
-                {
-                  "type": "boolean"
-                },
-                {
-                  "type": "number"
-                }
-              ]
-            },
-            "multipleOf": {
-              "type": "number"
-            },
-            "minLength": {
-              "type": "number"
-            },
-            "maxLength": {
-              "type": "number"
-            },
-            "pattern": {
-              "type": "string"
-            },
-            "format": {
-              "type": "string",
-              "enum": [
-                "date-time",
-                "date",
-                "time",
-                "uri",
-                "uri-reference",
-                "uuid"
-              ]
-            },
-            "minItems": {
-              "type": "number"
-            },
-            "maxItems": {
-              "type": "number"
-            },
-            "uniqueItems": {
-              "type": "boolean"
-            },
-            "items": {
-              "anyOf": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "enum": [
-                        "number",
-                        "string",
-                        "boolean",
-                        "integer"
-                      ]
-                    },
-                    "sdfRef": {
-                      "$ref": "#/definitions/sdf-pointer"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "$comment": {
-                      "type": "string"
-                    },
-                    "minimum": {
-                      "type": "number"
-                    },
-                    "maximum": {
-                      "type": "number"
-                    },
-                    "enum": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "minItems": 1
-                    },
-                    "format": {
-                      "type": "string"
-                    },
-                    "minLength": {
-                      "type": "number"
-                    },
-                    "maxLength": {
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": false
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "const": "object"
-                    },
-                    "required": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "minItems": 1
-                    },
-                    "properties": {
-                      "type": "object",
-                      "additionalProperties": {
-                        "$ref": "#/definitions/dataqualities"
-                      }
-                    },
-                    "sdfRef": {
-                      "$ref": "#/definitions/sdf-pointer"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "$comment": {
-                      "type": "string"
-                    },
-                    "minimum": {
-                      "type": "number"
-                    },
-                    "maximum": {
-                      "type": "number"
-                    },
-                    "enum": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "minItems": 1
-                    },
-                    "format": {
-                      "type": "string"
-                    },
-                    "minLength": {
-                      "type": "number"
-                    },
-                    "maxLength": {
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": false
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "sdfChoice": {
-                      "type": "object",
-                      "additionalProperties": {
-                        "$ref": "#/definitions/dataqualities"
-                      }
-                    },
-                    "sdfRef": {
-                      "$ref": "#/definitions/sdf-pointer"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "$comment": {
-                      "type": "string"
-                    },
-                    "minimum": {
-                      "type": "number"
-                    },
-                    "maximum": {
-                      "type": "number"
-                    },
-                    "enum": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "minItems": 1
-                    },
-                    "format": {
-                      "type": "string"
-                    },
-                    "minLength": {
-                      "type": "number"
-                    },
-                    "maxLength": {
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ]
-            },
-            "description": {
-              "type": "string"
-            },
-            "label": {
-              "type": "string"
-            },
-            "$comment": {
-              "type": "string"
-            },
-            "sdfRef": {
-              "$ref": "#/definitions/sdf-pointer"
-            },
-            "sdfRequired": {
-              "$ref": "#/definitions/pointer-list"
-            },
-            "unit": {
-              "type": "string"
-            },
-            "nullable": {
-              "type": "boolean"
-            },
-            "sdfType": {
-              "type": "string",
-              "enum": [
-                "byte-string",
-                "unix-time"
-              ]
-            },
-            "contentFormat": {
-              "type": "string"
-            },
-            "observable": {
-              "type": "boolean"
-            },
-            "readable": {
-              "type": "boolean"
-            },
-            "writable": {
-              "type": "boolean"
-            }
-          },
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
             "sdfChoice": {
               "type": "object",
               "additionalProperties": {
@@ -828,6 +314,12 @@
                     "$comment": {
                       "type": "string"
                     },
+                    "sdfChoice": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "$ref": "#/definitions/dataqualities"
+                      }
+                    },
                     "minimum": {
                       "type": "number"
                     },
@@ -882,6 +374,208 @@
                     "$comment": {
                       "type": "string"
                     },
+                    "sdfChoice": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "$ref": "#/definitions/dataqualities"
+                      }
+                    },
+                    "minimum": {
+                      "type": "number"
+                    },
+                    "maximum": {
+                      "type": "number"
+                    },
+                    "enum": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 1
+                    },
+                    "format": {
+                      "type": "string"
+                    },
+                    "minLength": {
+                      "type": "number"
+                    },
+                    "maxLength": {
+                      "type": "number"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            },
+            "description": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "$comment": {
+              "type": "string"
+            },
+            "sdfRef": {
+              "$ref": "#/definitions/sdf-pointer"
+            },
+            "sdfRequired": {
+              "$ref": "#/definitions/pointer-list"
+            },
+            "unit": {
+              "type": "string"
+            },
+            "nullable": {
+              "type": "boolean"
+            },
+            "sdfType": {
+              "type": "string",
+              "enum": [
+                "byte-string",
+                "unix-time"
+              ]
+            },
+            "contentFormat": {
+              "type": "string"
+            },
+            "observable": {
+              "type": "boolean"
+            },
+            "readable": {
+              "type": "boolean"
+            },
+            "writable": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "object"
+            },
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "properties": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/definitions/dataqualities"
+              }
+            },
+            "sdfChoice": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/definitions/dataqualities"
+              }
+            },
+            "enum": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "const": {
+              "$ref": "#/definitions/allowed-types"
+            },
+            "default": {
+              "$ref": "#/definitions/allowed-types"
+            },
+            "minimum": {
+              "type": "number"
+            },
+            "maximum": {
+              "type": "number"
+            },
+            "exclusiveMinimum": {
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            },
+            "exclusiveMaximum": {
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            },
+            "multipleOf": {
+              "type": "number"
+            },
+            "minLength": {
+              "type": "number"
+            },
+            "maxLength": {
+              "type": "number"
+            },
+            "pattern": {
+              "type": "string"
+            },
+            "format": {
+              "type": "string",
+              "enum": [
+                "date-time",
+                "date",
+                "time",
+                "uri",
+                "uri-reference",
+                "uuid"
+              ]
+            },
+            "minItems": {
+              "type": "number"
+            },
+            "maxItems": {
+              "type": "number"
+            },
+            "uniqueItems": {
+              "type": "boolean"
+            },
+            "items": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "number",
+                        "string",
+                        "boolean",
+                        "integer"
+                      ]
+                    },
+                    "sdfRef": {
+                      "$ref": "#/definitions/sdf-pointer"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "$comment": {
+                      "type": "string"
+                    },
+                    "sdfChoice": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "$ref": "#/definitions/dataqualities"
+                      }
+                    },
                     "minimum": {
                       "type": "number"
                     },
@@ -910,7 +604,18 @@
                 {
                   "type": "object",
                   "properties": {
-                    "sdfChoice": {
+                    "type": {
+                      "type": "string",
+                      "const": "object"
+                    },
+                    "required": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 1
+                    },
+                    "properties": {
                       "type": "object",
                       "additionalProperties": {
                         "$ref": "#/definitions/dataqualities"
@@ -924,6 +629,12 @@
                     },
                     "$comment": {
                       "type": "string"
+                    },
+                    "sdfChoice": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "$ref": "#/definitions/dataqualities"
+                      }
                     },
                     "minimum": {
                       "type": "number"
@@ -1012,533 +723,6 @@
                 "array"
               ]
             },
-            "enum": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              },
-              "minItems": 1
-            },
-            "const": {
-              "$ref": "#/definitions/allowed-types"
-            },
-            "default": {
-              "$ref": "#/definitions/allowed-types"
-            },
-            "minimum": {
-              "type": "number"
-            },
-            "maximum": {
-              "type": "number"
-            },
-            "exclusiveMinimum": {
-              "anyOf": [
-                {
-                  "type": "boolean"
-                },
-                {
-                  "type": "number"
-                }
-              ]
-            },
-            "exclusiveMaximum": {
-              "anyOf": [
-                {
-                  "type": "boolean"
-                },
-                {
-                  "type": "number"
-                }
-              ]
-            },
-            "multipleOf": {
-              "type": "number"
-            },
-            "minLength": {
-              "type": "number"
-            },
-            "maxLength": {
-              "type": "number"
-            },
-            "pattern": {
-              "type": "string"
-            },
-            "format": {
-              "type": "string",
-              "enum": [
-                "date-time",
-                "date",
-                "time",
-                "uri",
-                "uri-reference",
-                "uuid"
-              ]
-            },
-            "minItems": {
-              "type": "number"
-            },
-            "maxItems": {
-              "type": "number"
-            },
-            "uniqueItems": {
-              "type": "boolean"
-            },
-            "items": {
-              "anyOf": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "enum": [
-                        "number",
-                        "string",
-                        "boolean",
-                        "integer"
-                      ]
-                    },
-                    "sdfRef": {
-                      "$ref": "#/definitions/sdf-pointer"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "$comment": {
-                      "type": "string"
-                    },
-                    "minimum": {
-                      "type": "number"
-                    },
-                    "maximum": {
-                      "type": "number"
-                    },
-                    "enum": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "minItems": 1
-                    },
-                    "format": {
-                      "type": "string"
-                    },
-                    "minLength": {
-                      "type": "number"
-                    },
-                    "maxLength": {
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": false
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "const": "object"
-                    },
-                    "required": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "minItems": 1
-                    },
-                    "properties": {
-                      "type": "object",
-                      "additionalProperties": {
-                        "$ref": "#/definitions/dataqualities"
-                      }
-                    },
-                    "sdfRef": {
-                      "$ref": "#/definitions/sdf-pointer"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "$comment": {
-                      "type": "string"
-                    },
-                    "minimum": {
-                      "type": "number"
-                    },
-                    "maximum": {
-                      "type": "number"
-                    },
-                    "enum": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "minItems": 1
-                    },
-                    "format": {
-                      "type": "string"
-                    },
-                    "minLength": {
-                      "type": "number"
-                    },
-                    "maxLength": {
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": false
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "sdfChoice": {
-                      "type": "object",
-                      "additionalProperties": {
-                        "$ref": "#/definitions/dataqualities"
-                      }
-                    },
-                    "sdfRef": {
-                      "$ref": "#/definitions/sdf-pointer"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "$comment": {
-                      "type": "string"
-                    },
-                    "minimum": {
-                      "type": "number"
-                    },
-                    "maximum": {
-                      "type": "number"
-                    },
-                    "enum": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "minItems": 1
-                    },
-                    "format": {
-                      "type": "string"
-                    },
-                    "minLength": {
-                      "type": "number"
-                    },
-                    "maxLength": {
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ]
-            },
-            "description": {
-              "type": "string"
-            },
-            "label": {
-              "type": "string"
-            },
-            "$comment": {
-              "type": "string"
-            },
-            "sdfRef": {
-              "$ref": "#/definitions/sdf-pointer"
-            },
-            "sdfRequired": {
-              "$ref": "#/definitions/pointer-list"
-            },
-            "unit": {
-              "type": "string"
-            },
-            "nullable": {
-              "type": "boolean"
-            },
-            "sdfType": {
-              "type": "string",
-              "enum": [
-                "byte-string",
-                "unix-time"
-              ]
-            },
-            "contentFormat": {
-              "type": "string"
-            }
-          },
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "type": {
-              "type": "string",
-              "const": "object"
-            },
-            "required": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              },
-              "minItems": 1
-            },
-            "properties": {
-              "type": "object",
-              "additionalProperties": {
-                "$ref": "#/definitions/dataqualities"
-              }
-            },
-            "enum": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              },
-              "minItems": 1
-            },
-            "const": {
-              "$ref": "#/definitions/allowed-types"
-            },
-            "default": {
-              "$ref": "#/definitions/allowed-types"
-            },
-            "minimum": {
-              "type": "number"
-            },
-            "maximum": {
-              "type": "number"
-            },
-            "exclusiveMinimum": {
-              "anyOf": [
-                {
-                  "type": "boolean"
-                },
-                {
-                  "type": "number"
-                }
-              ]
-            },
-            "exclusiveMaximum": {
-              "anyOf": [
-                {
-                  "type": "boolean"
-                },
-                {
-                  "type": "number"
-                }
-              ]
-            },
-            "multipleOf": {
-              "type": "number"
-            },
-            "minLength": {
-              "type": "number"
-            },
-            "maxLength": {
-              "type": "number"
-            },
-            "pattern": {
-              "type": "string"
-            },
-            "format": {
-              "type": "string",
-              "enum": [
-                "date-time",
-                "date",
-                "time",
-                "uri",
-                "uri-reference",
-                "uuid"
-              ]
-            },
-            "minItems": {
-              "type": "number"
-            },
-            "maxItems": {
-              "type": "number"
-            },
-            "uniqueItems": {
-              "type": "boolean"
-            },
-            "items": {
-              "anyOf": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "enum": [
-                        "number",
-                        "string",
-                        "boolean",
-                        "integer"
-                      ]
-                    },
-                    "sdfRef": {
-                      "$ref": "#/definitions/sdf-pointer"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "$comment": {
-                      "type": "string"
-                    },
-                    "minimum": {
-                      "type": "number"
-                    },
-                    "maximum": {
-                      "type": "number"
-                    },
-                    "enum": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "minItems": 1
-                    },
-                    "format": {
-                      "type": "string"
-                    },
-                    "minLength": {
-                      "type": "number"
-                    },
-                    "maxLength": {
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": false
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "const": "object"
-                    },
-                    "required": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "minItems": 1
-                    },
-                    "properties": {
-                      "type": "object",
-                      "additionalProperties": {
-                        "$ref": "#/definitions/dataqualities"
-                      }
-                    },
-                    "sdfRef": {
-                      "$ref": "#/definitions/sdf-pointer"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "$comment": {
-                      "type": "string"
-                    },
-                    "minimum": {
-                      "type": "number"
-                    },
-                    "maximum": {
-                      "type": "number"
-                    },
-                    "enum": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "minItems": 1
-                    },
-                    "format": {
-                      "type": "string"
-                    },
-                    "minLength": {
-                      "type": "number"
-                    },
-                    "maxLength": {
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": false
-                },
-                {
-                  "type": "object",
-                  "properties": {
-                    "sdfChoice": {
-                      "type": "object",
-                      "additionalProperties": {
-                        "$ref": "#/definitions/dataqualities"
-                      }
-                    },
-                    "sdfRef": {
-                      "$ref": "#/definitions/sdf-pointer"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "$comment": {
-                      "type": "string"
-                    },
-                    "minimum": {
-                      "type": "number"
-                    },
-                    "maximum": {
-                      "type": "number"
-                    },
-                    "enum": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "minItems": 1
-                    },
-                    "format": {
-                      "type": "string"
-                    },
-                    "minLength": {
-                      "type": "number"
-                    },
-                    "maxLength": {
-                      "type": "number"
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              ]
-            },
-            "description": {
-              "type": "string"
-            },
-            "label": {
-              "type": "string"
-            },
-            "$comment": {
-              "type": "string"
-            },
-            "sdfRef": {
-              "$ref": "#/definitions/sdf-pointer"
-            },
-            "sdfRequired": {
-              "$ref": "#/definitions/pointer-list"
-            },
-            "unit": {
-              "type": "string"
-            },
-            "nullable": {
-              "type": "boolean"
-            },
-            "sdfType": {
-              "type": "string",
-              "enum": [
-                "byte-string",
-                "unix-time"
-              ]
-            },
-            "contentFormat": {
-              "type": "string"
-            }
-          },
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
             "sdfChoice": {
               "type": "object",
               "additionalProperties": {
@@ -1639,6 +823,12 @@
                     "$comment": {
                       "type": "string"
                     },
+                    "sdfChoice": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "$ref": "#/definitions/dataqualities"
+                      }
+                    },
                     "minimum": {
                       "type": "number"
                     },
@@ -1693,6 +883,199 @@
                     "$comment": {
                       "type": "string"
                     },
+                    "sdfChoice": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "$ref": "#/definitions/dataqualities"
+                      }
+                    },
+                    "minimum": {
+                      "type": "number"
+                    },
+                    "maximum": {
+                      "type": "number"
+                    },
+                    "enum": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 1
+                    },
+                    "format": {
+                      "type": "string"
+                    },
+                    "minLength": {
+                      "type": "number"
+                    },
+                    "maxLength": {
+                      "type": "number"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            },
+            "description": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "$comment": {
+              "type": "string"
+            },
+            "sdfRef": {
+              "$ref": "#/definitions/sdf-pointer"
+            },
+            "sdfRequired": {
+              "$ref": "#/definitions/pointer-list"
+            },
+            "unit": {
+              "type": "string"
+            },
+            "nullable": {
+              "type": "boolean"
+            },
+            "sdfType": {
+              "type": "string",
+              "enum": [
+                "byte-string",
+                "unix-time"
+              ]
+            },
+            "contentFormat": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "const": "object"
+            },
+            "required": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "properties": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/definitions/dataqualities"
+              }
+            },
+            "sdfChoice": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/definitions/dataqualities"
+              }
+            },
+            "enum": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "const": {
+              "$ref": "#/definitions/allowed-types"
+            },
+            "default": {
+              "$ref": "#/definitions/allowed-types"
+            },
+            "minimum": {
+              "type": "number"
+            },
+            "maximum": {
+              "type": "number"
+            },
+            "exclusiveMinimum": {
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            },
+            "exclusiveMaximum": {
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            },
+            "multipleOf": {
+              "type": "number"
+            },
+            "minLength": {
+              "type": "number"
+            },
+            "maxLength": {
+              "type": "number"
+            },
+            "pattern": {
+              "type": "string"
+            },
+            "format": {
+              "type": "string",
+              "enum": [
+                "date-time",
+                "date",
+                "time",
+                "uri",
+                "uri-reference",
+                "uuid"
+              ]
+            },
+            "minItems": {
+              "type": "number"
+            },
+            "maxItems": {
+              "type": "number"
+            },
+            "uniqueItems": {
+              "type": "boolean"
+            },
+            "items": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "number",
+                        "string",
+                        "boolean",
+                        "integer"
+                      ]
+                    },
+                    "sdfRef": {
+                      "$ref": "#/definitions/sdf-pointer"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "$comment": {
+                      "type": "string"
+                    },
+                    "sdfChoice": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "$ref": "#/definitions/dataqualities"
+                      }
+                    },
                     "minimum": {
                       "type": "number"
                     },
@@ -1721,7 +1104,18 @@
                 {
                   "type": "object",
                   "properties": {
-                    "sdfChoice": {
+                    "type": {
+                      "type": "string",
+                      "const": "object"
+                    },
+                    "required": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 1
+                    },
+                    "properties": {
                       "type": "object",
                       "additionalProperties": {
                         "$ref": "#/definitions/dataqualities"
@@ -1735,6 +1129,12 @@
                     },
                     "$comment": {
                       "type": "string"
+                    },
+                    "sdfChoice": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "$ref": "#/definitions/dataqualities"
+                      }
                     },
                     "minimum": {
                       "type": "number"
@@ -1903,6 +1303,10 @@
         }
       },
       "additionalProperties": false
+    },
+    "uint": {
+      "type": "integer",
+      "minimum": 0
     }
   }
 }
