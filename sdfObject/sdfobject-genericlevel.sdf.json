@@ -1,8 +1,8 @@
 {
   "info": {
     "title": "Example Bluetooth mesh Generic Level Model", 
-    "version": "20200710", 
-    "copyright": "Copyright 2020 Bluetooth SIG, Inc. All rights reserved.", 
+    "version": "2021-03-05", 
+    "copyright": "Copyright 2020-2021 Bluetooth SIG, Inc. All rights reserved.", 
     "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
   }, 
   "namespace": {
@@ -19,90 +19,83 @@
       "sdfAction": {
         "LevelGet": {
           "description": "Get the status of the Level server",
-          "sdfData": {
-            "PresentLevel": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/GenericLevelData"
-            },
-            "TargetLevel": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/GenericLevelData"
-            },
-            "RemainingTimeSteps": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeSteps"
-            },
-            "StepResolution": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/StepResolution"
+          "sdfOutputData": {
+            "type": "object",
+            "properties": {
+              "PresentLevel": {
+                "sdfRef": "#/sdfObject/GenericLevel/sdfData/GenericLevelData"
+              },
+              "TargetLevel": {
+                "sdfRef": "#/sdfObject/GenericLevel/sdfData/GenericLevelData"
+              },
+              "RemainingTimeSteps": {
+                "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeSteps"
+              },
+              "StepResolution": {
+                "sdfRef": "#/sdfObject/GenericLevel/sdfData/StepResolution"
+              }  
             }
           }
         },
         "LevelSet": {
           "description": "Set the level server state with time and delay parameters",
-          "sdfInputData": [
-            "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/Level",
-            "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/TransitionTimeSteps",
-            "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/StepResolution",
-            "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/Delay"
-          ],
-          "sdfData": {
-            "Level": {
+          "sdfInputData": {
+            "type": "object",
+            "properties": {
+              "Level": {
                 "sdfRef": "#/sdfObject/GenericLevel/sdfData/GenericLevelData"
-            },
-            "TransitionTimeSteps": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeSteps"
-            },
-            "StepResolution": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/StepResolution"
-            },
-            "Delay": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/DelayData"
+              },
+              "TransitionTimeSteps": {
+                "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeSteps"
+              },
+              "StepResolution": {
+                "sdfRef": "#/sdfObject/GenericLevel/sdfData/StepResolution"
+              },
+              "Delay": {
+                "sdfRef": "#/sdfObject/GenericLevel/sdfData/DelayData"
+              }
             }
           }
         },
         "DeltaSet": {
           "description": "Set the level server state with time and delay parameters",
-          "sdfInputData": [
-            "#/sdfObject/GenericLevel/sdfAction/DeltaSet/sdfData/DeltaLevel",
-            "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/TransitionTimeSteps",
-            "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/StepResolution",
-            "#/sdfObject/GenericLevel/sdfAction/DeltaSet/sdfData/Delay"
-          ],
-          "sdfData": {
-            "DeltaLevel": {
-              "type": "number",
-              "minimum": -65535,
-              "maximum": 65535,
-              "multipleOf": 1
-            },
-            "TransitionTimeSteps": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeSteps"
-            },
-            "StepResolution": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/StepResolution"
-            },
-            "Delay": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/DelayData"
+          "sdfInputData": {
+            "type": "object",
+            "properties": {
+              "DeltaLevel": {
+                "type": "integer",
+                "minimum": -65535,
+                "maximum": 65535
+              },
+              "TransitionTimeSteps": {
+                "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeSteps"
+              },
+              "StepResolution": {
+                "sdfRef": "#/sdfObject/GenericLevel/sdfData/StepResolution"
+              },
+              "Delay": {
+                "sdfRef": "#/sdfObject/GenericLevel/sdfData/DelayData"
+              }
             }
           }
         },
         "MoveSet": {
           "description": "Set the level server state with time and delay parameters",
-            "sdfInputData": [
-              "#/sdfObject/GenericLevel/sdfAction/MoveSet/sdfData/Level",
-              "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/TransitionTimeSteps",
-              "#/sdfObject/GenericLevel/sdfAction/LevelSet/sdfData/StepResolution",
-                "#/sdfObject/GenericLevel/sdfAction/MoveSet/sdfData/Delay"
-            ],
-            "sdfData": {
-            "Level": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/GenericLevelData"
-            },
-            "TransitionTimeSteps": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeSteps"
-            },
-            "StepResolution": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/StepResolution"
-            },
-            "Delay": {
-              "sdfRef": "#/sdfObject/GenericLevel/sdfData/DelayData"
+          "sdfInputData": {
+            "type": "object",
+            "properties": {
+              "Level": {
+                "sdfRef": "#/sdfObject/GenericLevel/sdfData/GenericLevelData"
+              },
+              "TransitionTimeSteps": {
+                "sdfRef": "#/sdfObject/GenericLevel/sdfData/TransitionTimeSteps"
+              },
+              "StepResolution": {
+                "sdfRef": "#/sdfObject/GenericLevel/sdfData/StepResolution"
+              },
+              "Delay": {
+                "sdfRef": "#/sdfObject/GenericLevel/sdfData/DelayData"
+              }
             }
           }
         }
@@ -110,33 +103,40 @@
       "sdfData": {
         "GenericLevelData": {
           "description": "level state data",
-          "type": "number",
+          "type": "integer",
           "minimum": -32768,
-          "maximum": 32767,
-          "multipleOf": 1
+          "maximum": 32767
         },
         "TransitionTimeSteps": {
-          "description": "Number of steps in the transition",
-          "type": "number",
+          "description": "Step count, the number of steps in the transition",
+          "type": "integer",
           "minimum": 0,
-          "maximum": 63,
-          "multipleOf": 1
+          "maximum": 63
         },
         "StepResolution": {
-          "description": "Step Resolution, time per step",
-          "enum": [
-            "100 Milliseconds", 
-            "1 Second", 
-            "10 Seconds", 
-            "10 Minutes"
-          ]
+          "description": "Time per step",
+          "sdfChoice": {
+            "100 Milliseconds": {
+              "default": 0
+            }, 
+            "1 Second": {
+              "default": 1
+            }, 
+            "10 Seconds": {
+              "default": 2
+            }, 
+            "10 Minutes": {
+              "default": 3
+            }
+          }
         },
         "DelayData": {
           "description": "delay in increments of 5mS",
-          "type": "number",
+          "type": "integer",
+          "unit": "s",
           "minimum": 0,
-          "maximum": 255,
-          "multipleOf": 1
+          "maximum": 1.275,
+          "multipleOf": 0.005
         }
       }
     }
