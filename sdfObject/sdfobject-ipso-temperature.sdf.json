@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "OMA LwM2M Temperature (Object ID 3303)",
-    "version": "2022-02-21",
+    "version": "2022-03-26",
     "copyright": "Copyright 2019 Open Mobile Alliance.",
     "license": "BSD-3-Clause"
   },
@@ -73,7 +73,39 @@
         },
         "Measurement_Quality_Indicator": {
           "label": "Measurement Quality Indicator",
-          "description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.",
+          "description": "Measurement quality indicator reported by a smart sensor.",
+          "sdfChoice": {
+            "UNCHECKED": {
+              "const": 0,
+              "description": "No quality checks were done because they do not exist or can not be applied."
+            },
+            "REJECTED WITH CERTAINTY": {
+              "const": 1,
+              "description": "The measured value is invalid."
+            },
+            "REJECTED WITH PROBABILITY": {
+              "const": 2,
+              "description": "The measured value is likely invalid."
+            },
+            "ACCEPTED BUT SUSPICIOUS": {
+              "const": 3,
+              "description": "The measured value is likely OK."
+            },
+            "ACCEPTED": {
+              "const": 4,
+              "description": "The measured value is OK."
+            },
+            "RESERVED": {
+              "minimum": 5,
+              "maximum": 15,
+              "description": "Reserved for future extensions."
+            },
+            "VENDOR SPECIFIC": {
+              "minimum": 16,
+              "maximum": 23,
+              "description": "Vendor specific measurement quality."
+            }
+          },
           "writable": false,
           "type": "integer",
           "minimum": 0,
