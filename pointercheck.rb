@@ -8,6 +8,8 @@ end
 jps = %w[
  sdfRef
  sdfRequired
+]
+jps_old = %w[
  sdfInputData
  sdfRequiredInputData
  sdfOutputData
@@ -70,6 +72,11 @@ ARGV.each do |fn|
       bad << pl.join("/")
     end
   }
+  jps_old.map {|jp| descend([], spec, jp)}.flatten.each do |pt|
+    if String === pt
+      puts "#{fn} (#{copr}): pre-1.1 reference #{pt}"
+    end
+  end
   if bad != []
     puts "#{fn} (#{copr}):"
     bad.each {|b| puts "- #{b}"}
