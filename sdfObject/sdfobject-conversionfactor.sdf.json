@@ -17,8 +17,7 @@
           "description": "Conversion factor to convert a volume of a fuel to energy consumption",
           "writable": false,
           "type": "number",
-          "minimum": 0,
-          "exclusiveMinimum": true
+          "exclusiveMinimum": 0
         },
         "precision": {
           "description": "Accuracy granularity of the exposed value",
