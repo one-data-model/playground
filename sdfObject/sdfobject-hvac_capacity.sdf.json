@@ -15,8 +15,7 @@
       "sdfProperty": {
         "capacity": {
           "description": "The rated capacity for the Device.",
-          "minimum": 0,
-          "exclusiveMinimum": true,
+          "exclusiveMinimum": 0,
           "writable": false,
           "type": "number"
         }
