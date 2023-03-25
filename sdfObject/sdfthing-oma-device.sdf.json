@@ -14,7 +14,7 @@
         "label": "Device",
         "description": "This LwM2M Object provides a range of device related information which can be queried by the LwM2M Server, and a device reboot and factory reset function.",
         "sdfRequired": [
-            "#/sdfObject/Device/sdfAction/",
+            "#/sdfObject/Device/sdfAction/Reboot",
             "#/sdfObject/Device/sdfProperty/Error_Code",
             "#/sdfObject/Device/sdfProperty/Supported_Binding_and_Modes"
         ],
@@ -135,6 +135,14 @@
             "description": "Total amount of storage space which can store data and software in the LwM2M Device (expressed in kilobytes).  Note: 1 kilobyte corresponds to 1000 bytes.",
             "writable": false,
             "type": "integer"
+          },
+          "ExtDevInfo": {
+            "label": "ExtDevInfo",
+            "description": "Reference to external \"Device\" object instance containing information. For example, such an external device can be a Host Device, which is a device into which the Device containing the LwM2M client is embedded. This Resource may be used to retrieve information about the Host Device.",
+            "sdfType": "link",
+            "properties": {
+              "href": { "type": "string"}
+            }
           }
         },
         "sdfAction": {
@@ -186,11 +194,6 @@
                 "unit": "mA"
               }
             }
-          },
-          "ExtDevInfo": {
-            "label": "ExtDevInfo",
-            "description": "Reference to external \"Device\" object instance containing information. For example, such an external device can be a Host Device, which is a device into which the Device containing the LwM2M client is embedded. This Resource may be used to retrieve information about the Host Device.",
-            "sdfRef": ""
           }
         }
       }
