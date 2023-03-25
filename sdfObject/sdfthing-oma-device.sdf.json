@@ -3,8 +3,12 @@
       "title": "OMA LwM2M Device (Object ID 3)",
       "version": "2020-11-10",
       "copyright": "Copyright 2020 Open Mobile Alliance",
-      "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+      "license": "BSD-3-Clause"
     },
+    "namespace": {
+      "oma": "https://onedm.org/ecosystem/oma"
+    },
+    "defaultNamespace": "oma",
     "sdfThing": {
       "Device": {
         "label": "Device",
@@ -56,24 +60,26 @@
           },
           "Error_Code": {
             "label": "Error Code",
-            "description": "9..15=Reserved for future use 16..32=Device specific error codes  When the single Device Object Instance is initiated, there is only one error code Resource Instance whose value is equal to 0 that means no error. When the first error happens, the LwM2M Client changes error code Resource Instance to any non-zero value to indicate the error type. When any other error happens, a new error code Resource Instance is created. When an error associated with a Resource Instance is no longer present, that Resource Instance is deleted. When the single existing error is no longer present, the LwM2M Client returns to the original no error state where Instance 0 has value 0. This error code Resource MAY be observed by the LwM2M Server. How to deal with LwM2M Client's error report depends on the policy of the LwM2M Server. Error codes in between 16 and 32 are specific to the Device and may have different meanings among implementations.",
+            "description": "When the single Device Object Instance is initiated, there is only one error code Resource Instance whose value is equal to 0 that means no error. When the first error happens, the LwM2M Client changes error code Resource Instance to any non-zero value to indicate the error type. When any other error happens, a new error code Resource Instance is created. When an error associated with a Resource Instance is no longer present, that Resource Instance is deleted. When the single existing error is no longer present, the LwM2M Client returns to the original no error state where Instance 0 has value 0. This error code Resource MAY be observed by the LwM2M Server. How to deal with LwM2M Client's error report depends on the policy of the LwM2M Server. Error codes in between 16 and 32 are specific to the Device and may have different meanings among implementations.",
             "writable": false,
             "type": "array",
             "items": {
-              "type": "integer"
-            },
-            "minimum": 0,
-            "maximum": 32,
-            "sdfChoice": {
-                "No error": { "const": 0 },
-                "Low battery power": { "const": 1 },
-                "External power supply off": { "const": 2 },
-                "GPS module failure": { "const": 3 },
-                "Low received signal strength": { "const": 4 },
-                "Out of memory": { "const": 5 },
-                "SMS failure": { "const": 6 },
-                "IP connectivity failure": { "const": 7 },
-                "Peripheral malfunction": { "const": 8}
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 32,
+              "sdfChoice": {
+                  "No error": { "const": 0 },
+                  "Low battery power": { "const": 1 },
+                  "External power supply off": { "const": 2 },
+                  "GPS module failure": { "const": 3 },
+                  "Low received signal strength": { "const": 4 },
+                  "Out of memory": { "const": 5 },
+                  "SMS failure": { "const": 6 },
+                  "IP connectivity failure": { "const": 7 },
+                  "Peripheral malfunction": { "const": 8},
+                  "Reserved for future use": {"type": "integer", "minimum": 9, "maximum": 15},
+                  "Device specific error codes": {"type": "integer", "minimum": 16, "maximum": 32}
+              }
             }
           },
           "Current_Time": {
