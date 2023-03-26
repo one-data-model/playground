@@ -92,34 +92,34 @@
           "sdfChoice": {
             "UNCHECKED": {
               "description": "No quality checks were done because they do not exist or can not be applied.",
-              "const": "0"
+              "const": 0
             },
             "REJECTED WITH CERTAINTY": {
               "description": "The measured value is invalid.",
-              "const": "1"
+              "const": 1
             },
             "REJECTED WITH PROBABILITY": {
               "description": "The measured value is likely invalid.",
-              "const": "2"
+              "const": 2
             },
             "ACCEPTED BUT SUSPICIOUS": {
               "description": "The measured value is likely OK.",
-              "const": "3"
+              "const": 3
             },
             "ACCEPTED": {
               "description": "The measured value is OK.",
-              "const": "4"
+              "const": 4
             },
             "option6": {
               "description": "Reserved for future extensions.",
-              "minimum": "5",
-              "maximum": "15",
+              "minimum": 5,
+              "maximum": 15,
               "type": "integer"
             },
             "option7": {
               "description": "Vendor specific measurement quality.",
-              "minimum": "16",
-              "maximum": "23",
+              "minimum": 16,
+              "maximum": 23,
               "type": "integer"
             }
           }
